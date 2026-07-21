@@ -12,20 +12,20 @@ async function render() {
   );
 }
 
-test("renders the presentation-informed CBD series site", async () => {
+test("renders the Japanese sleep consultation experience", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /草本忘憂/);
-  assert.match(html, /好眠親水枕/);
-  assert.match(html, /微膠囊/);
+  assert.match(html, /今晚/);
+  assert.match(html, /睡眠相談/);
+  assert.match(html, /睡姿診斷/);
+  assert.match(html, /了解睡眠習慣/);
+  assert.match(html, /仰睡為主/);
+  assert.match(html, /海鷗式/);
   assert.match(html, /親水記憶棉/);
-  assert.match(html, /海鷗式釋壓/);
-  assert.match(html, /保潔墊組/);
-  assert.match(html, /旅行頸枕/);
+  assert.match(html, /草本忘憂/);
   assert.match(html, /林國偉/);
   assert.match(html, /非藥品/);
-  assert.match(html, /完整研究設計/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });

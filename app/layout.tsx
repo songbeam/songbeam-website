@@ -9,17 +9,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogUrl = `${protocol}://${host}/og.png`;
 
   return {
-    title: "草本忘憂好眠親水枕｜上品寢具",
-    description: "微膠囊織物、親水記憶棉與海鷗式釋壓曲線，讓仰睡與側睡都能找到穩定承托。探索上品寢具草本忘憂系列。",
+    title: "上品睡眠相談室｜找到肩頸真正放鬆的位置",
+    description: "從睡姿、肩寬與習慣枕高出發，上品睡眠顧問陪你找到適合自己的支撐。認識草本忘憂好眠親水枕。",
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
-      title: "草本忘憂好眠親水枕｜上品寢具",
-      description: "微膠囊織物 × 親水記憶棉 × 海鷗式釋壓曲線",
+      title: "今晚，找到肩頸真正放鬆的位置｜上品寢具",
+      description: "日系睡眠相談室｜從睡姿與肩頸出發",
       type: "website",
       locale: "zh_TW",
-      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品寢具草本忘憂好眠親水枕" }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品寢具日系睡眠相談室與輪廓枕" }],
     },
-    twitter: { card: "summary_large_image", title: "草本忘憂好眠親水枕｜上品寢具", images: [ogUrl] },
+    twitter: { card: "summary_large_image", title: "上品睡眠相談室｜找到肩頸真正放鬆的位置", images: [ogUrl] },
   };
 }
 
