@@ -12,7 +12,7 @@ async function render(pathname = "/") {
   );
 }
 
-test("renders the Japanese sleep consultation experience", async () => {
+test("renders the complete one-page CBD bedding product story", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -21,24 +21,32 @@ test("renders the Japanese sleep consultation experience", async () => {
   assert.match(html, /輕輕交給夜晚/);
   assert.match(html, /從貼合支撐到放鬆睡感/);
   assert.match(html, /shangpin-logo\.png/);
-  assert.match(html, /睡眠相談/);
-  assert.match(html, /睡姿診斷/);
   assert.match(html, /明明很累/);
-  assert.match(html, /肩頸還在緊繃/);
+  assert.match(html, /肩頸仍然緊繃/);
   assert.match(html, /找不到舒服位置/);
   assert.match(html, /枕頭高度不合/);
   assert.match(html, /思緒還停不下來/);
   assert.match(html, /為夜晚，加入一點/);
   assert.match(html, /草本機能表布/);
-  assert.match(html, /微膠囊織物技術/);
-  assert.match(html, /未說明 CBD 直接添加於枕芯/);
-  assert.match(html, /耐洗次數與遞減數據/);
+  assert.match(html, /微膠囊機能織物/);
+  assert.match(html, /並非直接宣稱添加於枕芯/);
+  assert.match(html, /未提供耐洗次數/);
   assert.doesNotMatch(html, /href="\/cbd-series"/);
-  assert.match(html, /仰睡為主/);
-  assert.match(html, /海鷗式/);
+  assert.match(html, /讓睡前，多一點放鬆儀式/);
+  assert.match(html, /不只是柔軟，更懂得好好支撐/);
+  assert.match(html, /慢慢貼合，也慢慢卸下疲憊/);
+  assert.match(html, /海鷗曲線/);
+  assert.match(html, /仰睡｜中央承托/);
+  assert.match(html, /五段式定位/);
   assert.match(html, /親水記憶棉/);
-  assert.match(html, /草本忘憂/);
-  assert.match(html, /林國偉/);
+  assert.match(html, /THC 檢驗結果/);
+  assert.match(html, /不宣稱「不含 THC」/);
+  assert.match(html, /從躺下的那一刻/);
+  assert.match(html, /好好使用/);
+  assert.match(html, /可以改善失眠嗎/);
+  assert.match(html, /商品規格與購買資訊/);
+  assert.match(html, /枕頭合不合適/);
   assert.match(html, /非藥品/);
+  assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
