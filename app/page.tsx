@@ -49,7 +49,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-wash" />
         <div className="hero-content">
-          <p className="overline">CBD HERBAL SLEEP COLLECTION</p><h1>把一天的疲憊，<br />輕輕交給夜晚。</h1><p className="hero-series">CBD 草本忘憂系列</p><p className="hero-lead">從貼合支撐到放鬆睡感，陪你找回舒服入睡的節奏。</p>
+          <p className="overline">CBD HERBAL SLEEP COLLECTION</p><p className="hero-series">CBD 草本忘憂系列</p><h1>把一天的疲憊，<br />輕輕交給夜晚。</h1><p className="hero-lead">從貼合支撐到放鬆睡感，陪你找回舒服入睡的節奏。</p>
           <div className="hero-actions hero-actions-three"><a className="button primary" href="#features">立即了解產品 <span>↓</span></a><a className="button outline-light" href="#stores">前往門市體驗</a><a className="text-link" href="#specs">查看商品規格 →</a></div>
           <div className="hero-credentials"><span>01<br /><b>草本機能表布</b></span><span>02<br /><b>海鷗式支撐</b></span><span>03<br /><b>親水記憶棉</b></span></div>
         </div>
@@ -58,18 +58,16 @@ export default function Home() {
 
       <section className="consultation section" id="concerns">
         <div className="section-label"><span>01</span><p>SLEEP CONCERNS</p></div>
-        <div className="consultation-intro"><div><p className="eyebrow">從熟悉的疲憊開始</p><h2>明明很累，<br />躺下後卻還是放鬆不了？</h2></div><div><p className="lead">身體已經回到床上，白天的緊繃卻不一定跟著離開。</p><p>從肩頸狀態、枕頭高度、睡姿到臥室氛圍，都可能影響身體能不能找到安穩的位置。</p></div></div>
-        <div className="consultation-steps concern-cards">{concerns.map(([no, title, copy, mark]) => <article key={no}><span>{no}</span><div className={`concern-mark ${mark}`} aria-hidden="true" /><h3>{title}</h3><p>{copy}</p></article>)}</div>
-        <div className="consultation-closing"><span>COMFORT × SUPPORT × CALM</span><p>真正舒服的睡眠，不只是柔軟，<br />還需要適合自己的支撐與安心放鬆的睡眠環境。</p><a className="text-link" href="#series">繼續認識系列 <span>↓</span></a></div>
+        <div className="emotion-editorial"><div className="emotion-copy"><p className="eyebrow">從熟悉的疲憊開始</p><h2>有時候，不是真的不累。<br />只是還沒有慢慢放鬆下來。</h2><p className="lead">身體已經回到床上，白天的緊繃卻不一定跟著離開。</p><div className="emotion-list">{concerns.map(([no, title]) => <p key={no}><span>{no}</span>{title}</p>)}</div><blockquote>真正舒服的睡眠，不只是柔軟，<br />還需要適合自己的支撐與安心放鬆的睡眠環境。</blockquote><a className="text-link" href="#series">繼續認識系列 <span>↓</span></a></div><figure><img src="/lifestyle-reading.png" alt="夜晚在床邊閱讀並靠著草本忘憂枕的自然情境" /><figcaption>THE QUIET MOMENT BEFORE SLEEP</figcaption></figure></div>
       </section>
 
       <section className="series-home" id="series">
-        <div className="series-intro section"><div className="section-label"><span>02</span><p>CBD HERBAL COLLECTION</p></div><div className="series-intro-grid"><div><p className="eyebrow">草本 × 寢具設計</p><h2>為夜晚，加入一點<br />自然放鬆的想像。</h2></div><div><p className="series-lead">上品將草本概念融入睡眠用品設計，並搭配枕頭本身的包覆、回彈與支撐機能。</p><p>不把 CBD 描述為治療方式，而是透過機能表布、親水記憶棉與人體工學枕型，營造舒適放鬆的睡眠氛圍，成為每日睡前的放鬆陪伴。</p></div></div><div className="comfort-moments"><article><span>01</span><h3>使用位置</h3><p>依品牌資料，草本概念應用於針織機能表布，並非直接宣稱添加於枕芯。</p></article><article><span>02</span><h3>微膠囊技術</h3><p>草本來源成分形成細微載體，再融入纖維／織物；實際含量以文件為準。</p></article><article><span>03</span><h3>枕芯功能</h3><p>親水記憶棉負責貼合、慢回彈與水氣調節，與草本表布各自分工。</p></article><article><span>04</span><h3>洗滌資訊</h3><p>目前未提供耐洗次數或洗後遞減數據，外布套請依正式洗標清潔。</p></article></div></div>
+        <div className="series-intro section"><div className="section-label"><span>02</span><p>CBD HERBAL COLLECTION</p></div><div className="series-product-editorial"><div className="series-product-copy"><p className="eyebrow">草本 × 寢具設計</p><h2>一顆枕頭，從支撐開始，<br />也從放鬆開始。</h2><p>上品將草本概念融入睡眠用品設計，並搭配枕頭本身的包覆、回彈與支撐機能。不把 CBD 描述為治療方式，而是讓舒適成為每日睡前可以重複的放鬆陪伴。</p><div className="series-short-points"><span>CBD 草本機能</span><span>海鷗曲線支撐</span><span>慢回彈包覆睡感</span></div></div><div className="series-product-image"><img src="/product-pillow-angle.jpg" alt="上品 CBD 草本忘憂海鷗減壓枕" /><i aria-hidden="true" /></div></div></div>
       </section>
 
       <section className="core-features section" id="features">
         <div className="section-label"><span>03</span><p>THREE CORE FEATURES</p></div><div className="feature-heading"><div><p className="eyebrow">三大產品核心特色</p><h2>草本、支撐與包覆，<br />剛好就好。</h2></div><p>不一次塞入太多術語，回到每晚真正能感受的三件事。</p></div>
-        <div className="feature-grid">{features.map(([no, en, title, copy], index) => <article key={no}><div className={`feature-visual visual-${index + 1}`} aria-hidden="true"><i /><b /></div><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
+        <div className="feature-editorial"><figure><img src="/product-press-closeup.png" alt="手部輕壓草本忘憂枕，呈現慢回彈材質" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, title, copy]) => <article key={no}><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
       <section className="pillow-section section" id="pillow">
@@ -93,7 +91,7 @@ export default function Home() {
       </section>
 
       <section className="usage-scenes section" id="scenes">
-        <div className="section-label"><span>08</span><p>FROM NIGHT TO MORNING</p></div><div className="scene-heading"><p className="eyebrow">實際使用情境</p><h2>從躺下的那一刻，<br />讓夜晚慢慢安靜下來。</h2></div><div className="scene-grid"><article><img src="/product-bedding-detail.png" alt="睡前整理寢具的安靜時刻" /><div><span>01 / BEFORE SLEEP</span><h3>睡前</h3><p>洗完澡、放下手機，讓低彩度寢室與柔和觸感成為休息訊號。</p></div></article><article><img src="/hero-night.png" alt="夜晚使用草本忘憂枕入睡" /><div><span>02 / FALLING ASLEEP</span><h3>入睡時</h3><p>頭頸落在海鷗曲線上，讓包覆與支撐陪身體慢慢找到位置。</p></div></article><article><img src="/product-bedding-room.png" alt="清晨自然光臥室情境" /><div><span>03 / MORNING</span><h3>清晨</h3><p>自然光回到房間，以安靜、沒有壓力的生活感開始新的一天。</p></div></article></div>
+        <div className="section-label"><span>08</span><p>FROM NIGHT TO MORNING</p></div><div className="scene-heading"><p className="eyebrow">睡眠生活</p><h2>從躺下的那一刻，<br />讓夜晚慢慢安靜下來。</h2></div><div className="scene-grid magazine"><article><img src="/lifestyle-reading.png" alt="睡前在床邊閱讀" /><div><span>01 / BEFORE SLEEP</span><h3>睡前閱讀</h3><p>洗完澡、放下手機，讓柔和燈光與安靜閱讀成為休息訊號。</p></div></article><article><img src="/hero-night.png" alt="側躺使用草本忘憂枕放鬆" /><div><span>02 / FALLING ASLEEP</span><h3>側睡放鬆</h3><p>頭頸落在海鷗曲線上，讓包覆與支撐陪身體慢慢找到位置。</p></div></article><article><img src="/lifestyle-morning.png" alt="清晨起床拉開窗簾" /><div><span>03 / MORNING</span><h3>清晨醒來</h3><p>自然光回到房間，以安靜、沒有壓力的生活感開始新的一天。</p></div></article></div>
       </section>
 
       <section className="care section" id="care">
@@ -108,7 +106,7 @@ export default function Home() {
         <div className="section-label"><span>11</span><p>PRODUCT SPECIFICATIONS</p></div><div className="spec-heading"><div><p className="eyebrow">商品規格與購買資訊</p><h2>找到適合自己的<br />睡眠選擇。</h2></div><p>未確認的商業與規格資訊保留空白，待正式商品頁資料補齊後再公開。</p></div><div className="spec-layout"><div className="spec-product"><img src="/product-pillow-front.jpg" alt="上品 CBD 草本忘憂好眠親水枕正面" /><p>上品 CBD 草本忘憂好眠親水枕<br /><small>海鷗減壓枕型｜正式品名以商品標示為準</small></p></div><dl className="spec-table"><div><dt>表布</dt><dd>CBD 草本微膠囊機能針織表布</dd></div><div><dt>枕芯</dt><dd>親水記憶棉</dd></div><div><dt>枕型</dt><dd>海鷗式分區曲線</dd></div><div><dt>尺寸／高度</dt><dd className="pending-text">待正式規格確認</dd></div><div><dt>顏色／產地</dt><dd className="pending-text">待正式規格確認</dd></div><div><dt>售價／優惠</dt><dd className="pending-text">待正式售價確認</dd></div><div><dt>保固／配送</dt><dd className="pending-text">待品牌政策確認</dd></div><div><dt>退換貨</dt><dd className="pending-text">依正式銷售通路規則</dd></div></dl></div>
       </section>
 
-      <section className="buy-panel" id="buy"><div><p className="overline">READY FOR YOUR NIGHT</p><h2>想了解價格、規格，<br />或先到門市試躺？</h2><p>由上品寢具人員協助確認現貨、售價、門市與適合的試躺方式。</p></div><div className="buy-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=購買 CBD 草本忘憂好眠親水枕">立即購買 <span>↗</span></a><a className="button outline-dark" href="#stores">查詢門市</a><a className="button outline-dark" href="mailto:service@shangpin-bedding.tw?subject=預約 CBD 草本忘憂枕試躺">預約試躺</a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列">聯絡客服 →</a></div></section>
+      <section className="buy-panel" id="buy"><div className="buy-image"><img src="/product-press-closeup.png" alt="草本忘憂枕材質與曲線情境" /></div><div className="buy-copy"><p className="overline">READY FOR YOUR NIGHT</p><h2>舒服入睡，<br />不必等到很累以後。</h2><p>由上品寢具人員協助確認現貨、售價、門市與適合的試躺方式。</p><div className="buy-actions"><a className="button primary" href="#features">立即了解 <span>↑</span></a><a className="button outline-dark" href="#stores">查看門市</a><a className="button outline-dark" href="mailto:service@shangpin-bedding.tw?subject=預約 CBD 草本忘憂枕試躺">預約體驗</a></div></div></section>
 
       <section className="stores" id="stores"><div className="stores-copy"><p className="overline">IN-STORE PILLOW FITTING</p><h2>枕頭合不合適，<br />躺過才知道。</h2><p>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
