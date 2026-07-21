@@ -47,12 +47,12 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-photo" aria-hidden="true" /><div className="hero-wash" /><div className="dream-haze" aria-hidden="true" /><div className="loose-curve hero-curve" aria-hidden="true" />
+        <div className="hero-photo" aria-hidden="true" /><div className="hero-wash" /><div className="dream-haze" aria-hidden="true" /><div className="loose-curve hero-curve" aria-hidden="true" /><span className="summer-moon" aria-hidden="true">☾</span>
         <div className="hero-content">
-          <p className="overline">CBD HERBAL SLEEP COLLECTION</p><p className="hero-series">CBD 草本忘憂系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead">從草本放鬆到貼合支撐，陪身體回到舒服的睡眠節奏。</p>
+          <p className="overline">A QUIET SUMMER NIGHT</p><p className="hero-series">上品寢具・CBD 草本忘憂系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead">月光落下，讓草本的柔和想像與貼合支撐，陪身體回到舒服的睡眠節奏。</p>
           <div className="hero-actions"><a className="button primary capsule" href="#series">探索草本忘憂系列 <span>→</span></a></div>
         </div>
-        <p className="vertical-note">A QUIET PAUSE BEFORE SLEEP</p>
+        <p className="vertical-note">SUMMER NIGHT · HERBAL REST · SONG BEAM</p>
       </section>
 
       <section className="consultation section" id="concerns">
