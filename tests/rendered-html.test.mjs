@@ -17,7 +17,10 @@ test("renders the Japanese sleep consultation experience", async () => {
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /今晚/);
+  assert.match(html, /把一天的疲憊/);
+  assert.match(html, /輕輕交給夜晚/);
+  assert.match(html, /從貼合支撐到放鬆睡感/);
+  assert.match(html, /shangpin-logo\.png/);
   assert.match(html, /睡眠相談/);
   assert.match(html, /睡姿診斷/);
   assert.match(html, /了解睡眠習慣/);

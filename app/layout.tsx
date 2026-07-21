@@ -9,17 +9,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogUrl = `${protocol}://${host}/og.png`;
 
   return {
-    title: "上品睡眠相談室｜找到肩頸真正放鬆的位置",
-    description: "從睡姿、肩寬與習慣枕高出發，上品睡眠顧問陪你找到適合自己的支撐。認識草本忘憂好眠親水枕。",
+    title: "CBD 草本忘憂系列｜把一天的疲憊，輕輕交給夜晚",
+    description: "從貼合支撐到放鬆睡感，上品寢具 CBD 草本忘憂系列陪你找回舒服入睡的節奏。認識草本忘憂好眠親水枕。",
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
-      title: "今晚，找到肩頸真正放鬆的位置｜上品寢具",
-      description: "日系睡眠相談室｜從睡姿與肩頸出發",
+      title: "把一天的疲憊，輕輕交給夜晚｜上品寢具",
+      description: "CBD 草本忘憂系列｜從貼合支撐到放鬆睡感",
       type: "website",
       locale: "zh_TW",
-      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品寢具日系睡眠相談室與輪廓枕" }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品寢具 CBD 草本忘憂系列夜晚睡眠情境" }],
     },
-    twitter: { card: "summary_large_image", title: "上品睡眠相談室｜找到肩頸真正放鬆的位置", images: [ogUrl] },
+    twitter: { card: "summary_large_image", title: "CBD 草本忘憂系列｜把一天的疲憊，輕輕交給夜晚", images: [ogUrl] },
   };
 }
 

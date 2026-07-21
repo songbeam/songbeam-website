@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING</span></a>
+        <a className="brand brand-logo" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}><img src="/shangpin-logo.png" alt="上品寢具館 SONG BEAM International Bedding Gallery" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
           <a href="#consultation" onClick={closeMenu}>睡眠相談</a>
@@ -43,13 +43,14 @@ export default function Home() {
         <div className="hero-photo" aria-hidden="true" />
         <div className="hero-wash" />
         <div className="hero-content">
-          <p className="overline">SHANG PIN SLEEP CONSULTATION</p>
-          <h1>今晚，找到肩頸<br />真正放鬆的位置。</h1>
-          <p className="hero-lead">從睡姿、肩寬與習慣枕高出發，上品睡眠顧問陪你找到適合自己的支撐。</p>
-          <div className="hero-actions"><a className="button primary" href="#stores">預約睡眠諮詢 <span>↗</span></a><a className="text-link" href="#pillow">認識草本忘憂親水枕 <span>↓</span></a></div>
+          <p className="overline">CBD HERBAL SLEEP COLLECTION</p>
+          <h1>把一天的疲憊，<br />輕輕交給夜晚。</h1>
+          <p className="hero-series">CBD 草本忘憂系列</p>
+          <p className="hero-lead">從貼合支撐到放鬆睡感，陪你找回舒服入睡的節奏。</p>
+          <div className="hero-actions"><a className="button primary" href="#pillow">認識好眠親水枕 <span>↗</span></a><a className="text-link" href="#stores">預約睡眠諮詢 <span>↓</span></a></div>
           <div className="hero-credentials"><span>01<br /><b>睡姿觀察</b></span><span>02<br /><b>肩頸評估</b></span><span>03<br /><b>實際試躺</b></span></div>
         </div>
-        <aside className="hero-note"><p>上品睡眠相談室</p><strong>不是推薦最高級的枕頭，<br />而是找到最適合你的高度。</strong></aside>
+        <aside className="hero-note"><p>上品睡眠相談室</p><strong>草本舒適觸感 × 貼合支撐，<br />陪身體慢慢進入休息節奏。</strong></aside>
       </section>
 
       <section className="consultation section" id="consultation">
