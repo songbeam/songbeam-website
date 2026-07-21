@@ -16,6 +16,13 @@ const faqs = [
   { q: "表布與枕芯要如何保養？", a: "外布套請依洗標溫和清潔並自然陰乾；枕芯避免直接水洗與曝曬。特殊機能表布的清潔方式與耐洗資訊，請以該品項正式標示為準。" },
 ];
 
+const comfortMoments = [
+  ["01", "放鬆氛圍", "以低彩度色彩、柔和觸感與安靜寢室情境，營造舒適放鬆的睡眠氛圍。"],
+  ["02", "卸下疲憊", "讓貼近肌膚的表布與包覆睡感，陪伴身體慢慢卸下白天累積的疲憊。"],
+  ["03", "安穩睡感", "透過回彈枕芯與分區曲線，提供安穩、舒適且不過度下陷的睡眠感受。"],
+  ["04", "每日陪伴", "不強調神奇改變，而是成為每天睡前都能重複建立的放鬆陪伴。"],
+];
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [profile, setProfile] = useState<keyof typeof sleepProfiles>("back");
@@ -32,7 +39,7 @@ export default function Home() {
           <a href="#consultation" onClick={closeMenu}>睡眠相談</a>
           <a href="#diagnosis" onClick={closeMenu}>睡姿診斷</a>
           <a href="#pillow" onClick={closeMenu}>枕型設計</a>
-          <a href="/cbd-series" onClick={closeMenu}>系列介紹</a>
+          <a href="#series" onClick={closeMenu}>系列介紹</a>
           <a href="#advisor" onClick={closeMenu}>專業顧問</a>
           <a href="#faq" onClick={closeMenu}>常見問題</a>
           <a className="nav-cta" href="#stores" onClick={closeMenu}>預約試躺</a>
@@ -65,12 +72,32 @@ export default function Home() {
           <article><span>03</span><div className="concern-mark height-mark" aria-hidden="true" /><h3>枕頭高度不合</h3><p>枕頭過高或過低，睡醒後反而覺得頭頸卡住、身體不夠舒展。</p></article>
           <article><span>04</span><div className="concern-mark mind-mark" aria-hidden="true" /><h3>思緒還停不下來</h3><p>身體已經休息，腦中卻仍反覆整理白天的訊息，很難進入夜晚節奏。</p></article>
         </div>
-        <div className="consultation-closing"><span>COMFORT × SUPPORT × CALM</span><p>真正舒服的睡眠，不只是柔軟，<br />還需要適合自己的支撐與安心放鬆的睡眠環境。</p><a className="text-link" href="/cbd-series">認識 CBD 草本忘憂系列 <span>→</span></a></div>
+        <div className="consultation-closing"><span>COMFORT × SUPPORT × CALM</span><p>真正舒服的睡眠，不只是柔軟，<br />還需要適合自己的支撐與安心放鬆的睡眠環境。</p><a className="text-link" href="#series">認識 CBD 草本忘憂系列 <span>↓</span></a></div>
+      </section>
+
+      <section className="series-home" id="series">
+        <div className="series-intro section">
+          <div className="section-label"><span>02</span><p>CBD HERBAL COLLECTION</p></div>
+          <div className="series-intro-grid">
+            <div><p className="eyebrow">草本 × 寢具設計</p><h2>為夜晚，加入一點<br />自然放鬆的想像。</h2></div>
+            <div><p className="series-lead">上品將草本概念融入睡眠用品設計，並搭配枕頭本身的包覆、回彈與支撐機能。</p><p>不強調神奇療效，而是讓機能表布、親水記憶棉與人體工學枕型共同構成安靜、舒服的睡前體驗，陪伴身體慢慢卸下疲憊。</p></div>
+          </div>
+          <div className="comfort-moments">{comfortMoments.map(([no, title, copy]) => <article key={no}><span>{no}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
+        </div>
+        <div className="ingredient-truth">
+          <div className="truth-heading"><div className="section-label light"><span>i</span><p>WHERE IT IS USED</p></div><p className="eyebrow pale">成分與結構透明說明</p><h2>草本成分，<br />實際用在哪裡？</h2><p>把使用位置說清楚，比放大成分名稱更重要。以下依目前品牌提供資料整理；各品項正式規格仍以商品標示為準。</p></div>
+          <div className="truth-list">
+            <article className="confirmed"><span>01</span><div><small>目前資料可確認</small><h3>應用於草本機能表布</h3><p>品牌資料將 CBD 草本概念描述為織物應用，透過針織表布成為睡眠用品與肌膚接觸的一層。</p></div><b>表布</b></article>
+            <article className="confirmed"><span>02</span><div><small>目前資料可確認</small><h3>使用微膠囊織物技術</h3><p>草本來源成分以微膠囊形成細微載體，再融入纖維／織物。這是材質技術說明，不代表醫療效果。</p></div><b>微膠囊</b></article>
+            <article className="separate"><span>03</span><div><small>功能分層說明</small><h3>枕芯為親水記憶棉</h3><p>枕芯主要負責貼合、回彈與水氣調節。目前品牌資料未說明 CBD 直接添加於枕芯，因此不作此項宣稱。</p></div><b>枕芯</b></article>
+            <article className="pending"><span>04</span><div><small>購買前請確認</small><h3>耐洗次數與遞減數據</h3><p>目前資料未提供可水洗次數、洗後殘留率或機能遞減曲線。外布套應依洗標清潔，並向門市確認該品項的正式耐洗說明。</p></div><b>待確認</b></article>
+          </div>
+        </div>
       </section>
 
       <section className="diagnosis" id="diagnosis">
         <div className="diagnosis-copy">
-          <div className="section-label light"><span>02</span><p>QUICK SLEEP PROFILE</p></div>
+          <div className="section-label light"><span>03</span><p>QUICK SLEEP PROFILE</p></div>
           <p className="eyebrow pale">一分鐘睡姿理解</p>
           <h2>你的夜晚，<br />多半怎麼睡？</h2>
           <p>先選擇最接近自己的睡姿，看看試枕時應該留意什麼。這不是醫療診斷，而是到門市前的簡單準備。</p>
@@ -87,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="pillow-section section" id="pillow">
-        <div className="section-label"><span>03</span><p>PILLOW DESIGN</p></div>
+        <div className="section-label"><span>04</span><p>PILLOW DESIGN</p></div>
         <div className="pillow-heading"><div><p className="eyebrow">草本忘憂好眠親水枕</p><h2>讓每一個區域，<br />承接它該照顧的位置。</h2></div><p>海鷗式輪廓不是造型裝飾，而是把仰睡、側睡與頸部承托安排在一顆枕頭上。</p></div>
         <div className="product-stage">
           <div className="product-photo"><img src="/product-pillow-angle.jpg" alt="草本忘憂好眠親水枕實品" /><span className="callout c1"><b>01</b> 中央凹槽<br />穩定仰睡頭位</span><span className="callout c2"><b>02</b> 頸部曲線<br />自然貼合承托</span><span className="callout c3"><b>03</b> 兩側枕區<br />回應側睡落差</span></div>
@@ -102,7 +129,7 @@ export default function Home() {
       </section>
 
       <section className="material section" id="material">
-        <div className="section-label"><span>04</span><p>MATERIAL STORY</p></div>
+        <div className="section-label"><span>05</span><p>MATERIAL STORY</p></div>
         <div className="material-grid">
           <div className="material-title"><p className="eyebrow">CBD HERBAL COMFORT</p><h2>把草本概念，<br />安靜地留在表布裡。</h2><p>CBD 不需要成為誇張的視覺主角。它只是系列材質故事的一部分，與透氣枕芯、人體工學枕型一起，構成更舒服的睡前接觸。</p></div>
           <div className="material-process">
@@ -117,7 +144,7 @@ export default function Home() {
       <section className="advisor" id="advisor">
         <div className="advisor-photo"><div className="advisor-figure"><span /><i /></div></div>
         <div className="advisor-copy">
-          <div className="section-label light"><span>05</span><p>PROFESSIONAL ADVISORY</p></div>
+          <div className="section-label light"><span>06</span><p>PROFESSIONAL ADVISORY</p></div>
           <p className="eyebrow pale">專業顧問背景</p>
           <h2>枕頭的設計，<br />從理解人體開始。</h2>
           <blockquote>不是把頸部固定住，<br />而是讓它在睡眠中保有自然的位置。</blockquote>
@@ -127,7 +154,7 @@ export default function Home() {
       </section>
 
       <section className="collection section">
-        <div className="section-label"><span>06</span><p>BEDTIME COLLECTION</p></div>
+        <div className="section-label"><span>07</span><p>BEDTIME COLLECTION</p></div>
         <div className="collection-heading"><h2>把熟悉的舒適感，<br />帶進更多生活片刻。</h2><p>從日常臥室到移動旅程，系列以相同的柔和觸感陪伴不同休息場景。</p></div>
         <div className="collection-grid">
           <article className="collection-main"><img src="/product-bedding-room.png" alt="上品寢具床組情境" /><div><span>01 / BEDDING</span><h3>寢具床組</h3><p>低彩度灰藍與霧灰，讓臥室回到安靜。</p></div></article>
@@ -138,7 +165,7 @@ export default function Home() {
       </section>
 
       <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>07</span><p>FREQUENTLY ASKED</p></div><h2>安心了解，<br />再慢慢選擇。</h2><p>關於試躺、枕型、材質與保養，睡眠顧問最常被問到的事。</p></div>
+        <div className="faq-title"><div className="section-label"><span>08</span><p>FREQUENTLY ASKED</p></div><h2>安心了解，<br />再慢慢選擇。</h2><p>關於試躺、枕型、材質與保養，睡眠顧問最常被問到的事。</p></div>
         <div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
       </section>
 
@@ -147,7 +174,7 @@ export default function Home() {
         <div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡眠相談<br />仰睡・側睡實際感受</p></div>
       </section>
 
-      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>讓每一個人，都能找到身體真正舒服的位置。</p></div><div className="footer-nav"><a href="#consultation">睡眠相談</a><a href="#diagnosis">睡姿診斷</a><a href="#pillow">枕型設計</a><a href="/cbd-series">系列介紹</a><a href="#advisor">專業顧問</a><a href="#faq">常見問題</a></div><div className="footer-bottom"><span>© 2026 SONG BEAM BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途。</span></div></footer>
+      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>讓每一個人，都能找到身體真正舒服的位置。</p></div><div className="footer-nav"><a href="#consultation">睡眠相談</a><a href="#series">系列介紹</a><a href="#diagnosis">睡姿診斷</a><a href="#pillow">枕型設計</a><a href="#advisor">專業顧問</a><a href="#faq">常見問題</a></div><div className="footer-bottom"><span>© 2026 SONG BEAM BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途。</span></div></footer>
     </main>
   );
 }
