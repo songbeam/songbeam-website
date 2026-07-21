@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 import "./summer-night.css";
+import "./morandi.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const ogUrl = `${protocol}://${host}/og-summer-night.png`;
+  const ogUrl = `${protocol}://${host}/og-morandi.png`;
 
   return {
     title: "CBD 草本忘憂系列｜讓夜晚，慢慢鬆開",
