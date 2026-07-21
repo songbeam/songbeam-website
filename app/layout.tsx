@@ -4,6 +4,7 @@ import "./globals.css";
 import "./summer-night.css";
 import "./morandi.css";
 import "./render-depth.css";
+import "./product-layout.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
