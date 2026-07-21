@@ -12,20 +12,20 @@ async function render() {
   );
 }
 
-test("renders the complete CBD series landing page", async () => {
+test("renders the presentation-informed CBD series site", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /上品寢具/);
-  assert.match(html, /把夜晚/);
-  assert.match(html, /CBD 草本忘憂系列/);
-  assert.match(html, /系列概念/);
-  assert.match(html, /產品特色/);
-  assert.match(html, /枕型設計/);
-  assert.match(html, /常見問題/);
-  assert.match(html, /門市體驗/);
-  assert.match(html, /立即購買/);
+  assert.match(html, /草本忘憂/);
+  assert.match(html, /好眠親水枕/);
+  assert.match(html, /微膠囊/);
+  assert.match(html, /親水記憶棉/);
+  assert.match(html, /海鷗式釋壓/);
+  assert.match(html, /保潔墊組/);
+  assert.match(html, /旅行頸枕/);
+  assert.match(html, /林國偉/);
   assert.match(html, /非藥品/);
+  assert.match(html, /完整研究設計/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });

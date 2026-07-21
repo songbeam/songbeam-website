@@ -5,30 +5,33 @@ import { useState } from "react";
 const faqs = [
   {
     q: "CBD 草本忘憂系列是藥品嗎？",
-    a: "不是。本系列為寢具商品，設計重點在於親膚材質、貼合支撐與舒適的睡前使用感受，不具醫療用途，也不以治療或改善疾病為訴求。",
+    a: "不是。本系列為寢具商品，重點是表布、枕芯與枕型帶來的日常舒適感受，不具醫療用途，也不以治療失眠、焦慮或疼痛為訴求。",
   },
   {
-    q: "產品會讓人產生依賴或精神作用嗎？",
-    a: "產品定位為日常寢具，訴求舒適睡眠情境，並非藥品或精神作用產品。實際商品成分、檢驗與適用資訊請以商品標示及門市人員說明為準。",
+    q: "微膠囊織物技術是什麼？",
+    a: "依品牌資料，將選用成分包覆為微膠囊並應用於針織纖維，透過日常接觸與摩擦逐步作用。實際成分、含量、耐洗次數與檢驗資訊，請以正式商品標示為準。",
   },
   {
-    q: "我該怎麼選擇適合的枕型？",
-    a: "可依主要睡姿、肩寬與習慣枕高選擇。仰睡重視頸部承托，側睡需要足夠高度填補肩頸落差；若不確定，建議到門市實際躺試。",
+    q: "親水記憶棉和一般記憶棉有何不同？",
+    a: "親水記憶棉著重透氣與水氣調節，藉由吸收並散發熱能，減少睡眠時的悶熱感；同時保留記憶棉貼合頭頸曲線的特性。",
   },
   {
-    q: "枕套可以清洗嗎？",
-    a: "可拆式外布套可依洗標清潔。為延長材質壽命，建議使用中性洗劑、裝洗衣袋並自然陰乾；枕芯請依商品保養標示處理。",
+    q: "海鷗護脊枕適合什麼睡姿？",
+    a: "中央圓弧凹槽穩定仰睡頭位，兩側較完整的承托區可回應側睡時的肩頸落差。每個人的肩寬與枕高習慣不同，仍建議到門市實際躺試。",
+  },
+  {
+    q: "表布與枕芯要如何保養？",
+    a: "外布套請依洗標溫和清潔並自然陰乾；枕芯避免直接水洗與曝曬。若商品含特殊機能表布，清潔方式與耐洗資訊應以該品項標示為準。",
   },
 ];
 
-function LeafMark() {
-  return <span className="leaf-mark" aria-hidden="true"><i /><i /></span>;
+function CapsuleMark() {
+  return <span className="capsule-mark" aria-hidden="true"><i /><i /><i /></span>;
 }
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -36,138 +39,134 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}>
           <span className="brand-cn">上品寢具</span>
-          <span className="brand-en">SHANG PIN</span>
+          <span className="brand-en">SONG BEAM BEDDING</span>
         </a>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-expanded={menuOpen}
-          aria-label={menuOpen ? "關閉選單" : "開啟選單"}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span /><span />
-        </button>
+        <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#concept" onClick={closeMenu}>系列概念</a>
-          <a href="#features" onClick={closeMenu}>產品特色</a>
-          <a href="#shapes" onClick={closeMenu}>枕型設計</a>
+          <a href="#concept" onClick={closeMenu}>系列理念</a>
+          <a href="#technology" onClick={closeMenu}>技術核心</a>
+          <a href="#pillow" onClick={closeMenu}>親水枕</a>
+          <a href="#collection" onClick={closeMenu}>生活系列</a>
+          <a href="#research" onClick={closeMenu}>研發背景</a>
           <a href="#faq" onClick={closeMenu}>常見問題</a>
-          <a href="#stores" onClick={closeMenu}>門市體驗</a>
-          <a className="nav-buy" href="#buy" onClick={closeMenu}>立即購買</a>
+          <a className="nav-buy" href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-image" aria-hidden="true" />
         <div className="hero-shade" />
-        <div className="hero-content">
-          <p className="eyebrow">CBD HERBAL COMFORT COLLECTION</p>
-          <h1>把夜晚，<br />還給舒服的自己。</h1>
-          <p className="hero-copy">不追求神奇的一夜好眠。從貼合的支撐、柔和的觸感開始，陪你慢慢回到安穩的睡前日常。</p>
+        <div className="hero-copy">
+          <p className="eyebrow">CBD HERBAL COMFORT / 2025</p>
+          <h1>草本忘憂<br />好眠親水枕</h1>
+          <p className="hero-lead">把草本纖維科技、親水記憶棉與海鷗式釋壓曲線，收進一顆安靜而穩定的枕頭。</p>
           <div className="hero-actions">
-            <a className="button primary" href="#shapes">探索枕型 <span>↗</span></a>
-            <a className="text-link" href="#concept">認識系列概念 <span>↓</span></a>
+            <a className="button button-light" href="#pillow">認識親水枕 <span>↗</span></a>
+            <a className="quiet-link" href="#technology">探索微膠囊技術 <span>↓</span></a>
           </div>
         </div>
-        <div className="hero-note"><span>01</span><p>草本靈感<br />舒適支撐</p></div>
-      </section>
-
-      <section className="manifesto section" id="concept">
-        <div className="section-number">01 / SERIES CONCEPT</div>
-        <div className="manifesto-grid">
-          <div>
-            <LeafMark />
-            <p className="kicker">忘憂，不是忘記。</p>
-            <h2>是讓今天，<br />在睡前輕輕放下。</h2>
-          </div>
-          <div className="manifesto-copy">
-            <p className="lead">我們相信，好的睡眠日常不該建立在誇大的承諾上，而是來自每晚都能感受到的舒適。</p>
-            <p>上品 CBD 草本忘憂系列，以草本放鬆概念為靈感，結合親膚面料、透氣結構與符合人體工學的枕型設計。當頭頸被穩穩承托，身體便有機會找到自己的放鬆節奏。</p>
-            <p className="caption">本系列為寢具商品，非藥品，無醫療或療效用途。</p>
-          </div>
+        <div className="hero-product-card">
+          <img src="/product-pillow-angle.jpg" alt="草本忘憂親水枕側面實品" />
+          <div><span>海鷗式釋壓造型</span><strong>仰睡・側睡都能穩定承托</strong></div>
         </div>
       </section>
 
-      <section className="ritual">
-        <div className="ritual-intro">
-          <p className="eyebrow">A QUIETER WAY TO REST</p>
-          <h2>睡眠，是一段<br />慢慢安靜的過程。</h2>
-        </div>
-        <div className="ritual-steps">
-          <article><span>18:30</span><div className="ritual-icon sun" /><h3>讓光線柔和下來</h3><p>降低空間亮度，讓一天的節奏逐漸放慢。</p></article>
-          <article><span>21:00</span><div className="ritual-icon cup">⌁</div><h3>留一段自己的時間</h3><p>把訊息放遠，替身體預留轉換的片刻。</p></article>
-          <article><span>23:00</span><div className="ritual-icon moon" /><h3>找到舒服的支撐</h3><p>讓枕頭承接頭頸，把注意力交還給呼吸。</p></article>
-        </div>
-      </section>
-
-      <section className="features section" id="features">
-        <div className="section-heading">
-          <div className="section-number">02 / MATERIAL &amp; COMFORT</div>
-          <h2>舒服，來自每一層<br />恰到好處的選擇。</h2>
-          <p>不是堆疊規格，而是讓每一種材質，都為睡眠感受多做一點。</p>
-        </div>
-        <div className="feature-layout">
-          <div className="pillow-cutaway" aria-label="枕頭四層舒適結構示意圖">
-            <div className="layer layer-1"><span>01</span></div>
-            <div className="layer layer-2"><span>02</span></div>
-            <div className="layer layer-3"><span>03</span></div>
-            <div className="layer layer-4"><span>04</span></div>
+      <section className="concept section" id="concept">
+        <div className="section-index"><span>01</span><p>SERIES PHILOSOPHY</p></div>
+        <div className="concept-grid">
+          <div className="concept-title">
+            <CapsuleMark />
+            <p className="kicker">NATURE × MATERIAL × FORM</p>
+            <h2>不靠誇張承諾，<br />把舒服做進每一層。</h2>
           </div>
-          <div className="feature-list">
-            <article><span className="feature-no">01</span><div><h3>親膚柔觸表布</h3><p>細緻、柔和的第一層接觸，減少睡前肌膚的負擔感。</p></div></article>
-            <article><span className="feature-no">02</span><div><h3>草本舒適層</h3><p>以 CBD 草本概念融入日常寢具，營造平靜、自然的睡眠氛圍。</p></div></article>
-            <article><span className="feature-no">03</span><div><h3>釋壓支撐核心</h3><p>回應頭頸曲線，均衡承托，翻身時也保有穩定支撐。</p></div></article>
-            <article><span className="feature-no">04</span><div><h3>透氣循環結構</h3><p>幫助空氣流動，減少悶熱堆積，維持乾爽睡感。</p></div></article>
+          <div className="concept-body">
+            <p className="large">投影片裡的「草本忘憂」，核心不是神奇療效，而是讓天然靈感、纖維技術與符合人體工學的枕型，共同回應一晚的舒適。</p>
+            <p>系列以漢麻來源 CBD 概念為靈感，將微膠囊技術應用於針織表布；內層選用親水記憶棉，外型則以特殊海鷗曲線分配頭頸壓力。三者相互配合，讓仰睡與側睡都能找到合適的支撐區。</p>
+            <div className="truth-note"><span>關於 CBD</span><p>CBD（漢麻二酚）是漢麻植株中的成分之一，不等同造成迷幻感的物質。此系列為纖維與寢具應用，非吸食性產品。</p></div>
           </div>
         </div>
       </section>
 
-      <section className="shapes section" id="shapes">
-        <div className="section-heading compact">
-          <div className="section-number">03 / PILLOW DESIGN</div>
-          <h2>你怎麼睡，<br />枕頭就怎麼承接。</h2>
+      <section className="technology" id="technology">
+        <div className="tech-intro">
+          <div className="section-index inverse"><span>02</span><p>MICROCAPSULE TEXTILE</p></div>
+          <p className="kicker pale">投影片指定核心技術</p>
+          <h2>把草本概念，<br />留在纖維之間。</h2>
+          <p>依品牌資料，選用成分經包覆形成微膠囊，再應用於針織纖維；日常躺臥、翻身時產生的接觸與摩擦，讓織物機能以更細緻的方式融入睡眠。</p>
         </div>
-        <div className="shape-grid">
-          <article className="shape-card sage">
-            <div className="shape-top"><span>01</span><span>BACK SLEEP</span></div>
-            <div className="pillow-form back"><i /><b /></div>
-            <div className="shape-body"><p>仰睡推薦</p><h3>舒眠曲線枕</h3><p className="desc">中央微凹設計穩定頭部，頸部承托區自然貼合頸椎曲線。</p><div className="tags"><span>低至中枕高</span><span>穩定承托</span></div></div>
-          </article>
-          <article className="shape-card fog">
-            <div className="shape-top"><span>02</span><span>SIDE SLEEP</span></div>
-            <div className="pillow-form side"><i /><b /></div>
-            <div className="shape-body"><p>側睡推薦</p><h3>側眠支撐枕</h3><p className="desc">加高兩側填補肩頸空間，為習慣側睡的人保留舒適呼吸區。</p><div className="tags"><span>中至高枕高</span><span>肩頸貼合</span></div></div>
-          </article>
+        <div className="tech-process" aria-label="微膠囊織物技術三階段示意">
+          <article><div className="tech-orb orb-leaf"><i /></div><span>01</span><h3>草本來源</h3><p>從漢麻來源概念出發，選擇可運用於纖維的成分。</p></article>
+          <article><div className="tech-orb orb-capsule"><i /><i /><i /></div><span>02</span><h3>微膠囊包覆</h3><p>以微膠囊技術包覆，成為可被應用於織物的細微載體。</p></article>
+          <article><div className="tech-orb orb-fiber"><i /><i /><i /></div><span>03</span><h3>編織進纖維</h3><p>融入針織表布，透過日常接觸與摩擦逐步作用。</p></article>
         </div>
-        <div className="shape-help"><span>不知道適合哪一款？</span><p>每個人的肩寬與習慣不同，實際躺過最準確。</p><a href="#stores">預約門市試躺 →</a></div>
+        <p className="tech-disclaimer">技術內容依使用者提供之品牌投影片整理；成分、規格、耐洗與檢驗資訊以正式商品文件為準。</p>
       </section>
 
-      <section className="care section">
-        <div className="care-image"><div className="linen"><span /></div></div>
-        <div className="care-copy">
-          <div className="section-number">04 / DAILY CARE</div>
-          <p className="kicker">讓舒服，陪你久一點。</p>
-          <h2>簡單照顧，<br />每天都像剛開始。</h2>
-          <ul>
-            <li><span>01</span><div><h3>定期通風</h3><p>保持臥室空氣流動，讓枕芯維持乾爽。</p></div></li>
-            <li><span>02</span><div><h3>外布套單獨清潔</h3><p>依洗標溫和洗滌，自然陰乾，保留柔順觸感。</p></div></li>
-            <li><span>03</span><div><h3>輕拍回復</h3><p>每日起床後輕拍枕體，幫助恢復蓬鬆與支撐。</p></div></li>
-          </ul>
+      <section className="pillow section" id="pillow">
+        <div className="section-index"><span>03</span><p>HYDROPHILIC PILLOW</p></div>
+        <div className="pillow-heading">
+          <div><p className="kicker">親水枕 / 海鷗護脊枕</p><h2>一顆枕頭，<br />三個剛好的回應。</h2></div>
+          <p>從睡眠溫度、頭頸曲線到不同睡姿，讓材料與造型各自完成它該做的事。</p>
+        </div>
+        <div className="pillow-showcase">
+          <div className="pillow-gallery">
+            <figure className="gallery-main"><img src="/product-pillow-front.jpg" alt="草本忘憂親水枕正面實品" /><figcaption>FRONT / CENTRAL CONTOUR</figcaption></figure>
+            <figure><img src="/product-pillow-angle.jpg" alt="草本忘憂親水枕斜側實品" /><figcaption>ANGLE / SHOULDER SUPPORT</figcaption></figure>
+            <figure><img src="/product-pillow-side.jpg" alt="草本忘憂親水枕側面高度實品" /><figcaption>SIDE / HEIGHT PROFILE</figcaption></figure>
+          </div>
+          <div className="pillow-features">
+            <article><span>01</span><div><h3>親水涼爽性枕芯</h3><p>親水記憶棉著重透氣與水氣調節，協助吸收並散發熱能，降低悶熱感。</p></div></article>
+            <article><span>02</span><div><h3>特殊海鷗式釋壓曲線</h3><p>中央凹槽穩定頭位，頸部承托區順著生理曲線回應，讓肩頸自然落下。</p></div></article>
+            <article><span>03</span><div><h3>仰睡、側睡雙向支撐</h3><p>不同高度區域回應仰睡與側睡的落差，減少反覆尋找枕位的不安定感。</p></div></article>
+            <a className="button button-dark" href="#stores">預約門市試躺 <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sleep-map">
+        <div className="sleep-map-copy">
+          <p className="eyebrow">FORM FOLLOWS SLEEP</p>
+          <h2>不是只有高與低，<br />而是每個區域都知道<br />該承接哪裡。</h2>
+        </div>
+        <div className="pillow-diagram" aria-label="親水枕支撐區域示意圖">
+          <div className="diagram-pillow"><i className="zone zone-center" /><i className="zone zone-neck" /><i className="zone zone-side left" /><i className="zone zone-side right" /></div>
+          <span className="label label-center"><b>01</b> 穩定頭位</span>
+          <span className="label label-neck"><b>02</b> 頸部承托</span>
+          <span className="label label-side"><b>03</b> 側睡支撐</span>
+        </div>
+      </section>
+
+      <section className="collection section" id="collection">
+        <div className="section-index"><span>04</span><p>HERBAL COMFORT COLLECTION</p></div>
+        <div className="collection-heading"><h2>從臥室到旅程，<br />讓熟悉的舒適感延續。</h2><p>依投影片所列品項，草本忘憂不只是一顆枕頭，也是一套可以進入不同生活場景的寢具系列。</p></div>
+        <div className="collection-grid">
+          <article className="collection-card wide"><div className="collection-image"><img src="/product-protector.jpg" alt="草本忘憂床墊與枕頭保潔墊組" /></div><div className="collection-copy"><span>01 / PROTECTOR SET</span><h3>保潔墊組</h3><p>床墊保潔墊＋枕頭保潔墊，阻隔日常髒污與汗水，為寢具多留一層乾淨保護。</p><small>投影片參考售價：NT$ 3,900 起</small></div></article>
+          <article className="collection-card"><div className="collection-image sage"><img src="/product-travel-pillow.jpg" alt="草本忘憂旅行頸枕" /></div><div className="collection-copy"><span>02 / TRAVEL</span><h3>隨身旅行頸枕</h3><p>長途搭乘飛機或火車時，也能為頸部留住熟悉的承托。</p></div></article>
+          <article className="collection-card"><div className="collection-image"><img src="/product-eye-mask.jpg" alt="草本忘憂旅行眼罩" /></div><div className="collection-copy"><span>03 / EYE MASK</span><h3>舒眠眼罩</h3><p>減少環境光線干擾，讓移動途中的休息更安靜。</p></div></article>
+          <article className="collection-card bedding"><div className="collection-image"><img src="/product-bedding-room.png" alt="上品寢具床組情境" /></div><div className="collection-copy"><span>04 / BEDDING</span><h3>寢具床組</h3><p>灰藍與霧灰層次，把系列的沉靜感延伸到整間臥室。</p></div></article>
+        </div>
+        <p className="collection-note">品項、尺寸、售價與供貨狀況請以門市及正式銷售資訊為準。</p>
+      </section>
+
+      <section className="research" id="research">
+        <div className="research-head">
+          <div className="section-index inverse"><span>05</span><p>DEVELOPMENT &amp; EVIDENCE</p></div>
+          <p className="kicker pale">從人體工學出發</p>
+          <h2>先理解肩頸，<br />再設計一顆枕頭。</h2>
+        </div>
+        <div className="research-grid">
+          <article className="expert"><span>GUIDED DEVELOPMENT</span><strong>美國 Palmer<br />脊骨神經醫學博士</strong><h3>林國偉 博士</h3><p>依品牌投影片所載，參與草本忘憂好眠親水枕之指導開發，從脊椎排列、頭頸受力與睡姿支撐切入枕型設計。</p></article>
+          <article className="study"><span>REFERENCE STUDY / 2022.06.10</span><h3>睡眠品質使用觀察</h3><p>投影片附有中國醫藥大學護理學系之研究摘要，題為「漢麻二酚（Cannabidiol, CBD）枕頭保潔墊改善醫療工作人員睡眠品質之成效」，並呈現總睡眠、淺眠與深睡時間之比較。</p><small>網站不據此宣稱治療效果；完整研究設計、樣本與統計結果應以正式研究文件為準。</small></article>
+          <article className="principle"><span>OUR PRINCIPLE</span><blockquote>研究資料用來理解產品，<br />不拿來承諾每一個人的睡眠結果。</blockquote><p>因此網站聚焦在可被感受的材質、透氣、枕型與支撐，保留消費者做出安心選擇所需要的界線。</p></article>
         </div>
       </section>
 
       <section className="faq section" id="faq">
-        <div className="faq-title">
-          <div className="section-number">05 / FAQ</div>
-          <h2>安心了解，<br />再好好選擇。</h2>
-          <p>關於 CBD 草本忘憂系列，你可能會想知道的事。</p>
-        </div>
+        <div className="faq-title"><div className="section-index"><span>06</span><p>FREQUENTLY ASKED</p></div><h2>把重要的事，<br />說得更清楚。</h2><p>關於材質、技術與使用方式，先了解，再選擇。</p></div>
         <div className="faq-list">
           {faqs.map((item, index) => (
             <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}>
-              <button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}>
-                <span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" />
-              </button>
+              <button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button>
               <div className="faq-answer"><p>{item.a}</p></div>
             </article>
           ))}
@@ -175,35 +174,19 @@ export default function Home() {
       </section>
 
       <section className="stores" id="stores">
-        <div className="stores-card">
-          <p className="eyebrow">FEEL IT IN PERSON</p>
-          <h2>讓身體告訴你，<br />什麼才是剛剛好。</h2>
-          <p>歡迎到上品寢具門市，讓專人依你的睡姿與肩頸條件，陪你找到適合的高度與支撐。</p>
-          <a className="button light" href="#store-list">尋找鄰近門市 <span>↗</span></a>
+        <div className="stores-inner">
+          <p className="eyebrow">FEEL BEFORE YOU CHOOSE</p>
+          <h2>真正適合的枕頭，<br />讓身體躺過才知道。</h2>
+          <p>到上品寢具門市，實際感受親水記憶棉的回彈、海鷗曲線的承托，以及仰睡與側睡的高度差異。</p>
+          <div className="store-actions"><a className="button button-light" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂親水枕試躺">預約試躺 <span>↗</span></a><a className="quiet-link" href="mailto:service@shangpin-bedding.tw?subject=詢問草本忘憂系列">洽詢系列商品 →</a></div>
         </div>
-        <div className="stores-detail" id="store-list">
-          <div><span>全台門市</span><strong>20+</strong><p>提供專業枕型諮詢</p></div>
-          <div><span>體驗時間</span><strong>15<small>min</small></strong><p>從仰睡、側睡實際感受</p></div>
-          <div><span>預約服務</span><strong>1:1</strong><p>專人陪同安心選擇</p></div>
-        </div>
-      </section>
-
-      <section className="purchase section" id="buy">
-        <div className="purchase-art"><div className="mini-pillow" /></div>
-        <div className="purchase-copy">
-          <p className="eyebrow">CBD HERBAL COMFORT COLLECTION</p>
-          <h2>今晚，從一顆<br />舒服的枕頭開始。</h2>
-          <p>上品 CBD 草本忘憂系列</p>
-          <div className="price"><span>系列優惠價</span><strong>NT$ 3,980</strong><del>NT$ 4,680</del></div>
-          <a className="button dark" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列">立即洽詢購買 <span>↗</span></a>
-          <p className="fineprint">實際售價、規格與庫存依各門市及正式銷售頁資訊為準。</p>
-        </div>
+        <div className="store-promise"><span>15 min</span><p>試躺仰睡、側睡<br />找到適合自己的支撐</p></div>
       </section>
 
       <footer>
-        <div className="footer-brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SHANG PIN BEDDING</span><p>好好睡，是我們想陪你完成的日常。</p></div>
-        <div className="footer-links"><div><strong>系列探索</strong><a href="#concept">系列概念</a><a href="#features">產品特色</a><a href="#shapes">枕型設計</a></div><div><strong>購買服務</strong><a href="#faq">常見問題</a><a href="#stores">門市體驗</a><a href="#buy">立即購買</a></div></div>
-        <div className="footer-bottom"><span>© 2026 SHANG PIN BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途。</span></div>
+        <div className="footer-brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span><p>草本忘憂系列｜讓材料與枕型，陪你回到舒服的睡眠日常。</p></div>
+        <div className="footer-links"><a href="#concept">系列理念</a><a href="#technology">技術核心</a><a href="#pillow">親水枕</a><a href="#collection">生活系列</a><a href="#research">研發背景</a><a href="#faq">常見問題</a></div>
+        <div className="footer-bottom"><span>© 2026 SONG BEAM BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途；內容以正式商品標示與檢驗文件為準。</span></div>
       </footer>
     </main>
   );

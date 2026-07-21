@@ -9,17 +9,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogUrl = `${protocol}://${host}/og.png`;
 
   return {
-    title: "上品 CBD 草本忘憂系列｜舒服入睡的日常",
-    description: "上品 CBD 草本忘憂系列，以親膚材質、透氣結構與貼合支撐，陪你建立更舒服的睡前日常。",
+    title: "草本忘憂好眠親水枕｜上品寢具",
+    description: "微膠囊織物、親水記憶棉與海鷗式釋壓曲線，讓仰睡與側睡都能找到穩定承托。探索上品寢具草本忘憂系列。",
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
-      title: "把夜晚，還給舒服的自己。",
-      description: "上品 CBD 草本忘憂系列",
+      title: "草本忘憂好眠親水枕｜上品寢具",
+      description: "微膠囊織物 × 親水記憶棉 × 海鷗式釋壓曲線",
       type: "website",
       locale: "zh_TW",
-      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品 CBD 草本忘憂系列" }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: "上品寢具草本忘憂好眠親水枕" }],
     },
-    twitter: { card: "summary_large_image", title: "把夜晚，還給舒服的自己。", images: [ogUrl] },
+    twitter: { card: "summary_large_image", title: "草本忘憂好眠親水枕｜上品寢具", images: [ogUrl] },
   };
 }
 
