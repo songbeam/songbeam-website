@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import "./summer-night.css";
 import "./morandi.css";
+import "./render-depth.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
