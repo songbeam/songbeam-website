@@ -32,7 +32,7 @@ export default function Home() {
           <a href="#consultation" onClick={closeMenu}>睡眠相談</a>
           <a href="#diagnosis" onClick={closeMenu}>睡姿診斷</a>
           <a href="#pillow" onClick={closeMenu}>枕型設計</a>
-          <a href="#material" onClick={closeMenu}>材質故事</a>
+          <a href="/cbd-series" onClick={closeMenu}>系列介紹</a>
           <a href="#advisor" onClick={closeMenu}>專業顧問</a>
           <a href="#faq" onClick={closeMenu}>常見問題</a>
           <a className="nav-cta" href="#stores" onClick={closeMenu}>預約試躺</a>
@@ -54,17 +54,18 @@ export default function Home() {
       </section>
 
       <section className="consultation section" id="consultation">
-        <div className="section-label"><span>01</span><p>SLEEP CONSULTATION</p></div>
+        <div className="section-label"><span>01</span><p>SLEEP CONCERNS</p></div>
         <div className="consultation-intro">
-          <div><p className="eyebrow">日系睡眠相談室</p><h2>選枕頭之前，<br />先好好理解你的睡姿。</h2></div>
-          <div><p className="lead">真正的專業，不是用一組規格替每個人下結論，而是先聽見你的睡眠習慣。</p><p>枕高會受到肩寬、主要睡姿、床墊軟硬與個人習慣共同影響。上品睡眠顧問透過簡單對談與實際試躺，陪你比較不同支撐區域，找出身體感覺自然的位置。</p></div>
+          <div><p className="eyebrow">睡眠相談室</p><h2>明明很累，<br />躺下後卻還是放鬆不了？</h2></div>
+          <div><p className="lead">有時候，身體已經回到床上，白天的緊繃卻還沒有真正離開。</p><p>睡前的不舒服不一定只有一個原因。從肩頸狀態、枕頭高度、睡姿到臥室氛圍，都可能影響身體能不能找到安穩的位置。</p></div>
         </div>
-        <div className="consultation-steps">
-          <article><span>01</span><div className="step-line head" /><h3>了解睡眠習慣</h3><p>主要睡姿、翻身頻率、習慣枕高，以及目前最在意的感受。</p></article>
-          <article><span>02</span><div className="step-line shoulder" /><h3>觀察肩頸條件</h3><p>從肩寬與頭頸落差，建立適合試躺的高度範圍。</p></article>
-          <article><span>03</span><div className="step-line pillow" /><h3>比較分區承托</h3><p>分別以仰睡、側睡感受中央凹槽與兩側支撐。</p></article>
-          <article><span>04</span><div className="step-line check" /><h3>確認自然排列</h3><p>讓頭、頸與脊椎回到平順位置，而不是追求越高或越硬。</p></article>
+        <div className="consultation-steps concern-cards">
+          <article><span>01</span><div className="concern-mark shoulder-mark" aria-hidden="true" /><h3>肩頸還在緊繃</h3><p>工作一整天，即使躺下，肩膀與頸部仍像沒有真正卸下力氣。</p></article>
+          <article><span>02</span><div className="concern-mark turn-mark" aria-hidden="true" /><h3>找不到舒服位置</h3><p>翻來覆去調整睡姿，卻始終找不到能讓身體安定下來的位置。</p></article>
+          <article><span>03</span><div className="concern-mark height-mark" aria-hidden="true" /><h3>枕頭高度不合</h3><p>枕頭過高或過低，睡醒後反而覺得頭頸卡住、身體不夠舒展。</p></article>
+          <article><span>04</span><div className="concern-mark mind-mark" aria-hidden="true" /><h3>思緒還停不下來</h3><p>身體已經休息，腦中卻仍反覆整理白天的訊息，很難進入夜晚節奏。</p></article>
         </div>
+        <div className="consultation-closing"><span>COMFORT × SUPPORT × CALM</span><p>真正舒服的睡眠，不只是柔軟，<br />還需要適合自己的支撐與安心放鬆的睡眠環境。</p><a className="text-link" href="/cbd-series">認識 CBD 草本忘憂系列 <span>→</span></a></div>
       </section>
 
       <section className="diagnosis" id="diagnosis">
@@ -146,7 +147,7 @@ export default function Home() {
         <div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡眠相談<br />仰睡・側睡實際感受</p></div>
       </section>
 
-      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>讓每一個人，都能找到身體真正舒服的位置。</p></div><div className="footer-nav"><a href="#consultation">睡眠相談</a><a href="#diagnosis">睡姿診斷</a><a href="#pillow">枕型設計</a><a href="#material">材質故事</a><a href="#advisor">專業顧問</a><a href="#faq">常見問題</a></div><div className="footer-bottom"><span>© 2026 SONG BEAM BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途。</span></div></footer>
+      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>讓每一個人，都能找到身體真正舒服的位置。</p></div><div className="footer-nav"><a href="#consultation">睡眠相談</a><a href="#diagnosis">睡姿診斷</a><a href="#pillow">枕型設計</a><a href="/cbd-series">系列介紹</a><a href="#advisor">專業顧問</a><a href="#faq">常見問題</a></div><div className="footer-bottom"><span>© 2026 SONG BEAM BEDDING</span><span>本系列為寢具商品，非藥品，無醫療或療效用途。</span></div></footer>
     </main>
   );
 }
