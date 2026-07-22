@@ -39,7 +39,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /慢慢貼合，/);
   assert.match(html, /也慢慢卸下疲憊/);
   assert.doesNotMatch(html, /只依品牌資料與後續可提出的檢驗說明，不延伸為療效/);
-  assert.match(html, /product-press-closeup\.png/);
+  assert.doesNotMatch(html, /product-press-closeup\.png/);
   assert.doesNotMatch(html, /lifestyle-reading\.png|lifestyle-morning\.png/);
   assert.match(html, /海鷗曲線/);
   assert.match(html, /GLORY 獨家專利 Tempwiser 親水棉/);
@@ -57,7 +57,11 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);
   assert.doesNotMatch(html, /不一次塞入太多術語/);
   assert.match(html, /枕頭合不合適/);
-  assert.match(html, /舒服入睡/);
+  assert.match(html, /吳若權 老師/);
+  assert.match(html, /林國偉 博士/);
+  assert.match(html, /美國脊骨神經醫學博士推薦/);
+  assert.match(html, /href="#endorsements"/);
+  assert.doesNotMatch(html, /舒服入睡|不必等到很累以後|id="buy"|href="#buy"|立即購買/);
   assert.match(html, /非藥品/);
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);

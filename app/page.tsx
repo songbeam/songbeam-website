@@ -241,7 +241,7 @@ export default function Home() {
         <a className="brand brand-logo" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}><img src="/shangpin-logo.png" alt="上品寢具館 SONG BEAM International Bedding Gallery" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a><a className="nav-cta" href="#buy" onClick={closeMenu}>立即購買</a>
+          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -259,9 +259,32 @@ export default function Home() {
         <div className="feature-editorial"><figure><img src="/herbal-tactile-pillow-scene.png" alt="暖晨光中完整展示 CBD 草本忘憂枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
+      <section className="endorsement-section section" id="endorsements">
+        <div className="section-label"><span>02</span><p>BRAND AMBASSADOR &amp; PROFESSIONAL RECOMMENDATION</p></div>
+        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br />都有值得信任的聲音。</h2></div><p>從生活感受，到頭頸支撐的專業觀點，陪你更完整地認識 CBD 草本忘憂系列。</p></div>
+        <div className="endorsement-grid">
+          <article><span className="endorsement-monogram">若權</span><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>CBD 系列產品代言人</strong><p>吳若權老師擔任 CBD 系列產品代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
+          <article><span className="endorsement-monogram">國偉</span><div><small>PROFESSIONAL RECOMMENDATION</small><h3>林國偉 博士</h3><strong>美國脊骨神經醫學博士推薦</strong><p>從日常睡眠支撐與肩頸舒適的角度，推薦 CBD 系列產品與枕型設計。</p></div></article>
+        </div>
+        <p className="endorsement-note">本頁代言與推薦資訊依品牌提供資料呈現；產品為一般寢具用品，非醫療器材，不具診斷或治療功效。</p>
+      </section>
+
+      <section className="pillow-section section" id="pillow">
+        <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
+        <p className="seagull-kicker">海鷗減壓枕型</p>
+        <div className="seagull-editorial">
+          <figure className="seagull-photo"><img src="/herbal-tactile-pillow-scene.png" alt="晨光臥室中展示 CBD 草本忘憂海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
+          <div className="seagull-copy">
+            <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
+            <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
+            <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
       <section className="product-showcase section" id="products">
         <div className="collection-head">
-          <div><div className="section-label"><span>02</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
+          <div><div className="section-label"><span>04</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (
@@ -299,46 +322,31 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <section className="pillow-section section" id="pillow">
-        <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
-        <p className="seagull-kicker">海鷗減壓枕型</p>
-        <div className="seagull-editorial">
-          <figure className="seagull-photo"><img src="/herbal-tactile-pillow-scene.png" alt="晨光臥室中展示 CBD 草本忘憂海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
-          <div className="seagull-copy">
-            <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
-            <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
-            <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
-          </div>
-        </div>
-      </section>
-
       <section className="sleep-fit section" id="fit">
-        <div className="section-label"><span>04</span><p>SLEEP FEEL GUIDE</p></div><div className="fit-layout"><div className="fit-copy"><p className="eyebrow">適合哪些睡眠習慣</p><h2>這顆枕頭，適合正在尋找<br />這些睡感的你。</h2><div className="fit-list">{fitItems.map((item, index) => <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>)}</div></div><div className="scale-panel"><p className="scale-note">睡感溝通示意｜非檢測數值，實際感受請以門市試躺為準</p>{sleepScales.map(([label, value, note]) => <div className="feel-scale" key={label}><div><strong>{label}</strong><span>{note}</span></div><div className="scale-dots" aria-label={`${label}五段式定位 ${value} 格`}>{[1,2,3,4,5].map(n => <i className={n <= value ? "active" : ""} key={n} />)}</div></div>)}</div></div>
+        <div className="section-label"><span>05</span><p>SLEEP FEEL GUIDE</p></div><div className="fit-layout"><div className="fit-copy"><p className="eyebrow">適合哪些睡眠習慣</p><h2>這顆枕頭，適合正在尋找<br />這些睡感的你。</h2><div className="fit-list">{fitItems.map((item, index) => <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>)}</div></div><div className="scale-panel"><p className="scale-note">睡感溝通示意｜非檢測數值，實際感受請以門市試躺為準</p>{sleepScales.map(([label, value, note]) => <div className="feel-scale" key={label}><div><strong>{label}</strong><span>{note}</span></div><div className="scale-dots" aria-label={`${label}五段式定位 ${value} 格`}>{[1,2,3,4,5].map(n => <i className={n <= value ? "active" : ""} key={n} />)}</div></div>)}</div></div>
       </section>
 
       <section className="structure section" id="structure">
-        <div className="section-label"><span>05</span><p>MATERIAL & STRUCTURE</p></div><div className="structure-heading"><div><p className="eyebrow">材質與產品結構</p><h2>每一層，都為舒適睡眠而設計。</h2></div><p>已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目，不先替產品下結論。</p></div>
+        <div className="section-label"><span>06</span><p>MATERIAL & STRUCTURE</p></div><div className="structure-heading"><div><p className="eyebrow">材質與產品結構</p><h2>每一層，都為舒適睡眠而設計。</h2></div><p>已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目，不先替產品下結論。</p></div>
         <div className="exploded"><div className="exploded-visual"><div className="layer l1">01 外布套</div><div className="layer l2">02 內層／內套</div><div className="layer l3">03 親水記憶棉枕芯</div><img src="/product-pillow-side.jpg" alt="草本忘憂枕頭側面結構參考" /></div><div className="structure-list"><article><span>01</span><div><h3>外布套</h3><p>CBD 草本微膠囊機能針織表布；是否可拆洗及耐洗次數，以正式洗標與測試資料為準。</p></div></article><article><span>02</span><div><h3>內套與拉鍊</h3><p>目前提供資料未完整列出內套、拉鍊與可拆結構，待正式商品規格確認。</p></div></article><article><span>03</span><div><h3>枕芯</h3><p>親水記憶棉，著重貼合、回彈與水氣調節；密度數值待原廠文件確認。</p></div></article><article><span>04</span><div><h3>尺寸、高度與產地</h3><p>目前尚無可公開的完整尺寸、高度及產地資料，網站不自行推估。</p></div></article></div></div>
       </section>
 
       <section className="safety" id="safety">
-        <div className="safety-copy"><div className="section-label light"><span>06</span><p>TESTING & SAFETY</p></div><p className="eyebrow pale">檢驗與安全說明</p><h2>看得見的安心，<br />才能放心陪伴每一晚。</h2><p>這裡只呈現目前可以對應品牌資料的內容。檢驗報告尚未提供的項目，統一標示為待文件確認，不採用任何無法直接佐證的等級或認證說法。</p></div>
+        <div className="safety-copy"><div className="section-label light"><span>07</span><p>TESTING & SAFETY</p></div><p className="eyebrow pale">檢驗與安全說明</p><h2>看得見的安心，<br />才能放心陪伴每一晚。</h2><p>這裡只呈現目前可以對應品牌資料的內容。檢驗報告尚未提供的項目，統一標示為待文件確認，不採用任何無法直接佐證的等級或認證說法。</p></div>
         <div className="evidence-list"><article><span className="status known">品牌資料記載</span><h3>微膠囊織物技術</h3><p>品牌簡報記載技術來源為比利時；原料商名稱與技術授權文件待補。</p></article><article><span className="status pending">待檢驗文件</span><h3>CBD 成分與含量</h3><p>需提供成分名稱、來源、添加方式、含量與對應批次報告。</p></article><article><span className="status pending">待檢驗文件</span><h3>THC 檢驗結果</h3><p>目前沒有可公開數值，因此不宣稱「不含 THC」或「零檢出」。</p></article><article><span className="status pending">待法規文件</span><h3>台灣相關規範</h3><p>需依實際材質、輸入與銷售方式確認適用規範並提供文件。</p></article><article><span className="status pending">有報告再上架</span><h3>無毒、耐久與其他檢測</h3><p>抗菌、耐洗、耐久或無毒等項目，僅在有對應測試標準與報告時呈現。</p></article></div>
       </section>
 
       <section className="care section" id="care">
-        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
+        <div className="section-label"><span>08</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
       </section>
 
       <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>08</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
+        <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
       </section>
-
-      <section className="buy-panel" id="buy"><div className="buy-image"><img src="/product-press-closeup.png" alt="草本忘憂枕材質與曲線情境" /></div><div className="buy-copy"><p className="overline">READY FOR YOUR NIGHT</p><h2>舒服入睡，<br />不必等到很累以後。</h2><p>由上品寢具人員協助確認現貨、售價、門市與適合的試躺方式。</p><div className="buy-actions"><a className="button primary" href="#features">立即了解 <span>↑</span></a><a className="button outline-dark" href="#stores">查看門市</a><a className="button outline-dark" href="mailto:service@shangpin-bedding.tw?subject=預約 CBD 草本忘憂枕試躺">預約體驗</a></div></div></section>
 
       <section className="stores" id="stores"><div className="stores-copy"><p className="overline">IN-STORE PILLOW FITTING</p><h2>枕頭合不合適，<br />躺過才知道。</h2><p>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
-      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#pillow">枕型設計</a><a href="#safety">材質檢驗</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 SONG BEAM BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#products">系列商品</a><a href="#safety">材質檢驗</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 SONG BEAM BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }
