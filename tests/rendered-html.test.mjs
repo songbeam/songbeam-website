@@ -63,16 +63,22 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
 
-test("defines the two-step CBD pillow collection dialog", async () => {
+test("defines the two-step CBD product collection dialogs", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(source, /查看商品連結/);
   assert.match(source, /pillow-catalog-modal/);
-  assert.match(source, /selectedPillowIndex/);
+  assert.match(source, /selectedSeriesItemIndex/);
   for (const name of [
     "CBD草本忘憂 天絲枕",
     "CBD草本忘憂 羽絨枕",
     "CBD草本忘憂 好眠雲朵枕",
     "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
     "CBD草本忘憂 海鷗減壓枕",
+    "CBD草本忘憂 海鷗護脊枕",
+    "CBD草本忘憂 好眠 長纖細棉 涼被",
+    "CBD草本忘憂 好眠 長纖細棉 枕套",
+    "CBD草本忘憂 好眠 長纖細棉 床包",
+    "CBD草本忘憂 雙層平面保潔墊（保潔墊＋枕套）",
+    "CBD草本忘憂 毛小孩安撫墊被",
   ]) assert.match(source, new RegExp(name));
 });
