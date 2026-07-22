@@ -117,9 +117,16 @@ export default function Home() {
       </section>
 
       <section className="pillow-section section" id="pillow">
-        <div className="section-label"><span>05</span><p>SEAGULL CONTOUR DESIGN</p></div><div className="pillow-heading"><div><p className="eyebrow">海鷗減壓枕型</p><h2>海鷗曲線，讓肩頸自然<br />找到舒服的位置。</h2></div><p>中央、頸部與兩側各有不同任務，協助仰睡、側睡與翻身時自然轉換。</p></div>
-        <div className="product-stage"><div className="product-photo"><img src="/product-pillow-angle.jpg" alt="CBD 草本忘憂海鷗減壓枕型" /><span className="callout c1"><b>01</b> 頭部<br />穩定承托</span><span className="callout c2"><b>02</b> 頸部<br />自然貼合</span><span className="callout c3"><b>03</b> 兩側<br />側睡更舒適</span></div><div className="product-details"><article><span>01</span><div><h3>中央區</h3><p>以中央凹槽承接後腦，協助維持自然仰睡位置。</p></div></article><article><span>02</span><div><h3>頸部與肩頸區</h3><p>曲線貼近頸部，降低肩膀與枕頭間明顯懸空的感受。</p></div></article><article><span>03</span><div><h3>兩側與波浪曲線</h3><p>提高側睡承托範圍，並讓不同睡姿之間的轉換更連續。</p></div></article><a className="button dark capsule" href="#stores">到門市實際感受 <span>↗</span></a></div></div>
-        <div className="posture-comparison"><article><div className="posture-drawing back"><i /><b /></div><div><span>BACK SLEEP</span><h3>仰睡｜中央承托</h3><p>後腦落在中央凹槽，頸部曲線由枕面承接。</p></div></article><article><div className="posture-drawing side"><i /><b /></div><div><span>SIDE SLEEP</span><h3>側睡｜填補肩頸落差</h3><p>頭部落在較高的兩側枕區，回應肩寬形成的高度。</p></div></article></div>
+        <div className="section-label"><span>05</span><p>SEAGULL CONTOUR DESIGN</p></div>
+        <p className="seagull-kicker">海鷗減壓枕型</p>
+        <div className="seagull-editorial">
+          <figure className="seagull-photo"><img src="/herbal-tactile-pillow-scene.png" alt="晨光臥室中展示 CBD 草本忘憂海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
+          <div className="seagull-copy">
+            <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
+            <div className="product-details seagull-details"><article><span>01</span><div><h3>中央區</h3><p>以中央凹槽承接後腦，協助維持自然仰睡位置。</p></div></article><article><span>02</span><div><h3>頸部與肩頸區</h3><p>曲線貼近頸部，降低肩膀與枕頭間明顯懸空的感受。</p></div></article><article><span>03</span><div><h3>兩側與波浪曲線</h3><p>提高側睡承托範圍，並讓不同睡姿之間的轉換更連續。</p></div></article></div>
+            <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
+          </div>
+        </div>
       </section>
 
       <section className="sleep-fit section" id="fit">
