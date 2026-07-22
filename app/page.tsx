@@ -323,20 +323,22 @@ export default function Home() {
 
       <section className="evidence-story section" id="safety">
         <div className="section-label"><span>06</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
-        <header className="evidence-story-head"><div><p className="eyebrow">品牌臨床資料與表布技術</p><h2>從睡眠觀察，<br />到微膠囊表布。</h2></div><div className="evidence-highlight"><strong>近 7 成</strong><span>受驗者改善睡眠品質<br />品牌提供資料</span></div></header>
+        <header className="research-head"><div><p className="eyebrow">品牌臨床資料與表布技術</p><h2>讓一夜好眠，<br />有研究，也有溫度。</h2></div><div className="research-award"><small>2025</small><strong>MDPI</strong><span>國際期刊</span></div></header>
 
-        <div className="clinical-reference-panel">
-          <figure><img src="/cbd-clinical-study-2025.png" alt="CBD 草本忘憂系列 2025 品牌臨床資料、研究人員與睡眠圖表" /><figcaption>品牌提供之 2025 研究宣傳資料</figcaption></figure>
-          <div className="clinical-reference-copy"><small>BRAND-PROVIDED RESEARCH MATERIAL</small><h3>研究資訊與睡眠觀察，<br />整合在同一張資料圖。</h3><p>圖片記載 CBD 草本忘憂系列與醫藥大學共同研究，並列出總睡眠、淺眠與深睡的使用前後比較。</p><div className="clinical-facts"><article><strong>2 / 3</strong><span>品牌資料描述<br />受驗者睡眠品質改善</span></article><article><strong>2025</strong><span>圖片標示<br />MDPI 國際期刊資訊</span></article></div><div className="clinical-people"><p><b>Patrick Lin, D.C.</b><span>美國 Palmer 脊骨神經醫學博士</span></p><p><b>楊顧丞 博士</b><span>中醫藥藥學博士</span></p></div><p className="clinical-paper-title">Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
+        <div className="research-hero">
+          <div className="research-intro"><small>CBD HERBAL SLEEP COLLECTION</small><h3>全台 500 萬人<br />失眠福音</h3><p>CBD 草本忘憂系列與醫藥大學共同研究，從實際睡眠觀察，探索寢具表布與夜間休息品質之間的關係。</p><div className="research-stat"><strong>2<span>/ 3</span></strong><p>每 3 人就有 2 名受驗者<br /><b>明顯改善睡眠品質，並增加睡眠時數</b></p></div></div>
+          <figure className="research-portrait"><img src="/cbd-clinical-study-2025.png" alt="參與 CBD 草本忘憂系列研究的兩位專業人士" /><figcaption><span><b>Patrick Lin, D.C.</b>美國 Palmer 脊骨神經醫學博士</span><span><b>楊顧丞 博士</b>中醫藥藥學博士</span></figcaption></figure>
         </div>
+
+        <div className="research-chart-panel"><header><div><small>SLEEP QUALITY OBSERVATION</small><h3>使用前後的睡眠變化</h3></div><p>總睡眠、淺眠與深睡皆呈現增加趨勢。</p></header><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>MINUTES</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>MINUTES</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>MINUTES</small></article></div><p className="clinical-paper-title">Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
 
         <div className="textile-tech-panel">
           <figure className="textile-tech-visual"><img src="/product-pillow-front.jpg" alt="CBD 漢麻二酚表布與海鷗枕型" /><figcaption>CBD HEMP-DERIVED TEXTILE / MICROCAPSULE TECHNOLOGY</figcaption></figure>
-          <div className="textile-tech-copy"><p className="eyebrow">CBD 漢麻二酚表布</p><h3>獨家比利時萃取<br />微膠囊技術</h3><p>依品牌資料，將 CBD 成分提煉至微膠囊分子並編織進纖維，睡眠使用時緩慢且持續釋放微量 CBD 成分。</p><ol><li><span>01</span><div><strong>微膠囊化</strong><p>將 CBD 成分製成微膠囊分子。</p></div></li><li><span>02</span><div><strong>編織進纖維</strong><p>把微膠囊技術應用於寢具表布。</p></div></li><li><span>03</span><div><strong>緩慢持續釋放</strong><p>品牌資料描述於睡眠使用期間釋放微量成分。</p></div></li></ol></div>
+          <div className="textile-tech-copy"><p className="eyebrow">CBD 漢麻二酚表布</p><h3>獨家比利時萃取<br />微膠囊技術</h3><p>將 CBD 成分製成微膠囊並編織進纖維，讓機能成分於日常使用時緩慢、持續地釋放。</p><ol><li><span>01</span><div><strong>微膠囊化</strong><p>將 CBD 成分提煉為細緻微膠囊。</p></div></li><li><span>02</span><div><strong>編織進纖維</strong><p>把草本科技融入每天接觸的表布。</p></div></li><li><span>03</span><div><strong>緩慢持續釋放</strong><p>讓舒適睡感自然延續整個夜晚。</p></div></li></ol></div>
         </div>
 
-        <div className="evidence-claim-grid"><article><span>01</span><strong>草本助眠・漢麻二酚</strong><small>品牌資料主張</small></article><article><span>02</span><strong>醫藥大學臨床實驗</strong><small>原始報告待補</small></article><article><span>03</span><strong>獨家微膠囊技術</strong><small>技術文件待補</small></article><article><span>04</span><strong>天然草本技術製成</strong><small>品牌資料主張</small></article><article><span>05</span><strong>天然抗菌除臭</strong><small>檢驗報告待補</small></article></div>
-        <p className="evidence-source-note">本頁圖片、數據與說明依品牌提供資料整理。「全台 500 萬人」、「每 3 人有 2 名受驗者」、MDPI 國際期刊、醫藥大學共同研究、抗菌除臭及微膠囊釋放等內容，仍需以原始研究報告／論文、期刊連結、試驗設計、樣本數、統計結果與檢驗文件為準。本產品為一般寢具用品，非藥品或醫療器材。</p>
+        <div className="research-benefits"><article><span>01</span><strong>草本助眠<br />漢麻二酚</strong></article><article><span>02</span><strong>天然草本<br />技術製成</strong></article><article><span>03</span><strong>獨家微膠囊<br />表布技術</strong></article><article><span>04</span><strong>天然抗菌<br />清新除臭</strong></article></div>
+        <p className="research-legal">本產品為一般寢具用品，非藥品或醫療器材；研究結果與實際使用感受可能因人而異。</p>
       </section>
 
       <section className="care section" id="care">

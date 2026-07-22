@@ -713,6 +713,92 @@
 .clinical-people span{display:block;margin-top:4px;color:#87918d;font-size:9px}
 .clinical-reference-copy .clinical-paper-title{margin-top:18px;color:#929a96;font:8px/1.7 Arial,sans-serif}
 
+/* RESEARCH EDITORIAL — data, people and textile technology in one visual story. */
+.research-head{
+  position:relative;z-index:2;display:grid;grid-template-columns:1fr 190px;gap:7vw;
+  align-items:center;margin:62px 0 58px;
+}
+.research-head h2{
+  margin:12px 0 0;color:#506a63;font-size:clamp(45px,5.2vw,76px);
+  font-weight:300;line-height:1.48;letter-spacing:.065em;
+}
+.research-award{
+  position:relative;width:182px;height:182px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;border:1px solid rgba(177,140,84,.46);border-radius:50%;
+  color:#8d7658;background:rgba(250,247,237,.62);box-shadow:0 20px 50px rgba(91,99,80,.08);
+}
+.research-award:before,.research-award:after{
+  content:"";position:absolute;width:54px;height:112px;top:35px;border:1px solid rgba(191,151,87,.52);border-width:1px 0 0;
+  border-radius:50%;
+}
+.research-award:before{left:13px;transform:rotate(-68deg)}
+.research-award:after{right:13px;transform:rotate(68deg)}
+.research-award small{font-size:12px;letter-spacing:.12em}
+.research-award strong{margin:4px 0;color:#526b63;font:32px Georgia,serif;letter-spacing:.03em}
+.research-award span{font-size:11px;letter-spacing:.14em}
+.research-hero{
+  position:relative;z-index:2;display:grid;grid-template-columns:minmax(360px,.78fr) minmax(0,1.22fr);
+  min-height:660px;overflow:hidden;border:1px solid rgba(255,255,255,.82);border-radius:7px 70px 7px 70px;
+  background:rgba(249,248,241,.76);box-shadow:0 30px 90px rgba(70,96,82,.12);
+}
+.research-intro{padding:64px 55px 55px;display:flex;flex-direction:column;justify-content:center}
+.research-intro>small,.research-chart-panel header small{color:#a0846c;font:9px Arial,sans-serif;letter-spacing:.22em}
+.research-intro h3{
+  margin:13px 0 18px;color:#4d7168;font-size:clamp(38px,4.4vw,62px);
+  font-weight:400;line-height:1.45;letter-spacing:.045em;
+}
+.research-intro>p{max-width:440px;margin:0;color:#71817b;font-size:12px;line-height:2.2}
+.research-stat{
+  display:grid;grid-template-columns:128px 1fr;gap:22px;align-items:center;margin-top:38px;padding-top:30px;
+  border-top:1px solid rgba(83,113,97,.17);
+}
+.research-stat>strong{color:#4e8269;font:500 70px/1 Georgia,serif;letter-spacing:-.05em}
+.research-stat>strong span{font-size:30px;color:#9b826c}
+.research-stat p{margin:0;color:#687a73;font-size:11px;line-height:2}
+.research-stat b{color:#4f6f64;font-weight:500}
+.research-portrait{position:relative;min-height:660px;margin:0;overflow:hidden;background:#e8ebe7}
+.research-portrait:after{
+  content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,246,239,.48),transparent 22% 66%,rgba(232,238,232,.16));
+  pointer-events:none;
+}
+.research-portrait img{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:right center;
+  filter:saturate(.75) contrast(.96) brightness(1.025);transform:scale(1.01);
+}
+.research-portrait figcaption{
+  position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.research-portrait figcaption span{
+  padding:14px 15px;border:1px solid rgba(255,255,255,.7);border-radius:4px 18px;
+  background:rgba(247,246,240,.78);backdrop-filter:blur(10px);color:#718079;font-size:8px;line-height:1.6;
+}
+.research-portrait figcaption b{display:block;color:#526b63;font-size:11px;font-weight:500}
+.research-chart-panel{
+  position:relative;z-index:2;margin-top:34px;padding:46px 48px 35px;border:1px solid rgba(255,255,255,.84);
+  border-radius:54px 7px;background:rgba(249,248,242,.72);box-shadow:0 25px 65px rgba(75,98,85,.08);
+}
+.research-chart-panel>header{display:flex;align-items:end;justify-content:space-between;gap:40px}
+.research-chart-panel>header h3{
+  margin:9px 0 0;color:#536d66;font-size:clamp(28px,3vw,43px);font-weight:400;letter-spacing:.055em;
+}
+.research-chart-panel>header>p{max-width:310px;margin:0 0 6px;color:#74837d;font-size:11px;line-height:1.9}
+.research-chart-panel .sleep-chart-grid{margin-top:36px}
+.research-chart-panel .sleep-chart-grid article{position:relative;padding-bottom:28px}
+.research-chart-panel .sleep-chart-grid article>small{
+  position:absolute;right:18px;top:20px;color:#9a8a79;font:7px Arial,sans-serif;letter-spacing:.15em;
+}
+.research-chart-panel .clinical-paper-title{margin:25px 0 0;color:#8d9691;font:8px/1.7 Arial,sans-serif}
+.research-benefits{
+  position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:34px;
+}
+.research-benefits article{
+  min-height:150px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:26px;
+  border:1px solid rgba(255,255,255,.82);border-radius:5px 30px;background:rgba(250,248,242,.7);
+}
+.research-benefits span{align-self:flex-start;color:#a0846c;font:9px Georgia,serif;letter-spacing:.1em}
+.research-benefits strong{color:#536d64;font-size:16px;font-weight:500;line-height:1.7;letter-spacing:.06em;text-align:right}
+.research-legal{position:relative;z-index:2;margin:30px 0 0;color:#89928e;font-size:9px;line-height:1.9}
+
 /* CARE GUIDE — washing instructions translated into a calm editorial layout. */
 .care{overflow:hidden;background:linear-gradient(150deg,#f7f3eb,#edf1ea 68%,#e8ede5)}
 .care-wash-layout{
@@ -781,6 +867,15 @@
   .evidence-claim-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .clinical-reference-panel{grid-template-columns:1fr;border-radius:5px 42px}
   .clinical-reference-copy{padding:39px 30px 40px}
+  .research-head{grid-template-columns:1fr;gap:28px;margin:48px 0 50px}
+  .research-award{width:165px;height:165px}
+  .research-hero{grid-template-columns:1fr;border-radius:5px 48px}
+  .research-intro{padding:50px 38px}
+  .research-portrait{min-height:580px}
+  .research-chart-panel{padding:38px 28px 31px}
+  .research-chart-panel>header{display:block}
+  .research-chart-panel>header>p{margin-top:15px}
+  .research-benefits{grid-template-columns:1fr 1fr}
   .care-wash-layout{grid-template-columns:1fr;gap:36px}
   .care-wash-layout>header{position:static;max-width:650px}
   .care-source-note{margin-left:0}
@@ -828,6 +923,19 @@
   .clinical-reference-panel figure img{border-radius:3px 20px}
   .clinical-reference-copy{padding:31px 22px 34px}
   .clinical-facts{grid-template-columns:1fr 1fr}
+  .research-head h2{font-size:38px}
+  .research-award{width:150px;height:150px}
+  .research-award strong{font-size:27px}
+  .research-hero{width:calc(100% + 8vw);margin-left:-4vw;border-radius:4px 32px}
+  .research-intro{padding:39px 23px 42px}
+  .research-intro h3{font-size:39px}
+  .research-stat{grid-template-columns:100px 1fr;gap:15px}
+  .research-stat>strong{font-size:57px}
+  .research-portrait{min-height:410px}
+  .research-portrait figcaption{left:12px;right:12px;bottom:12px;grid-template-columns:1fr}
+  .research-chart-panel{width:calc(100% + 8vw);margin-left:-4vw;padding:34px 18px 28px;border-radius:32px 4px}
+  .research-benefits{grid-template-columns:1fr;gap:10px}
+  .research-benefits article{min-height:120px}
   .care-wash-layout{margin-top:35px}
   .care-wash-layout h2{font-size:37px}
   .wash-guide-list article{grid-template-columns:43px 1fr;gap:14px;padding:24px 20px}
