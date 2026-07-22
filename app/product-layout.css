@@ -101,3 +101,74 @@
   .emotion-editorial img{height:auto;aspect-ratio:4/3;object-position:center}
   .emotion-editorial figcaption{right:17px;bottom:16px;font-size:7px}
 }
+
+/* HERO — warm morning light led by the supplied CBD pillow photography */
+.site-header{
+  background:rgba(248,244,236,.9);border-bottom-color:rgba(114,105,87,.1);
+}
+.hero{
+  min-height:calc(100vh - 82px);background:#e8dfd1;color:#585c50;
+  align-items:center;isolation:isolate;
+}
+.hero-photo{
+  inset:0;border-radius:0;background-image:url('/hero-cbd-morning.png');
+  background-position:center center;background-size:cover;
+  filter:saturate(.78) contrast(.94) brightness(1.03);box-shadow:none;
+}
+.hero-photo:after{display:none}
+.hero-wash{
+  z-index:1;background:
+    linear-gradient(90deg,rgba(248,245,238,.97) 0%,rgba(247,242,233,.91) 23%,rgba(242,235,224,.67) 38%,rgba(236,226,211,.14) 56%,transparent 72%),
+    linear-gradient(0deg,rgba(115,101,78,.12),transparent 42%);
+}
+.dream-haze,.hero-curve,.vertical-note{display:none}
+.hero-content{
+  position:relative;z-index:3;width:48%;padding:8vh 0 8vh 8vw;
+  transform:none;align-self:stretch;display:flex;flex-direction:column;justify-content:center;
+}
+.hero-content:before{display:none}
+.hero .hero-series{
+  margin:0 0 14px;color:#7e806f;font-size:13px;letter-spacing:.2em;
+}
+.hero h1{
+  margin:14px 0 25px;color:#566156;font-size:clamp(60px,6.4vw,94px);
+  line-height:1.32;letter-spacing:.1em;font-weight:400;text-shadow:0 2px 22px rgba(255,252,246,.72);
+}
+.hero .hero-lead{
+  max-width:510px;margin:0;color:#6f7167;font-size:14px;line-height:2.15;
+  letter-spacing:.08em;text-shadow:0 1px 12px rgba(255,252,246,.8);
+}
+.hero .hero-actions{margin-top:38px}
+.hero .button.primary{
+  background:rgba(97,109,94,.92);border:1px solid rgba(255,255,255,.6);
+  color:#fffaf1;box-shadow:0 16px 35px rgba(86,80,66,.16);backdrop-filter:blur(12px);
+}
+.hero .button.primary:hover{background:#f4ecdf;color:#5d6658;border-color:#9a927e}
+
+@media(max-width:980px){
+  .hero{min-height:820px;align-items:flex-end}
+  .hero-photo{background-position:62% center}
+  .hero-wash{background:
+    linear-gradient(0deg,rgba(247,243,235,.98) 0%,rgba(247,242,233,.92) 35%,rgba(244,237,226,.48) 55%,rgba(236,225,208,.04) 78%),
+    linear-gradient(90deg,rgba(248,245,238,.36),transparent 54%);
+  }
+  .hero-content{
+    width:75%;padding:120px 25px 72px;align-self:stretch;justify-content:flex-end;
+  }
+  .hero h1{font-size:68px}
+  .hero .hero-lead{color:#666b61}
+}
+
+@media(max-width:640px){
+  .hero{min-height:780px}
+  .hero-photo{background-position:66% center}
+  .hero-wash{background:
+    linear-gradient(0deg,rgba(247,243,235,.99) 0%,rgba(247,242,233,.95) 40%,rgba(244,237,226,.56) 59%,rgba(236,225,208,.03) 80%);
+  }
+  .hero-content{width:100%;padding:100px 7vw 58px}
+  .hero .hero-series{font-size:11px;letter-spacing:.15em}
+  .hero h1{font-size:49px;line-height:1.38;margin:10px 0 18px}
+  .hero .hero-lead{font-size:12px;line-height:2}
+  .hero-lead-nowrap{white-space:normal}
+  .hero .hero-actions{margin-top:28px}
+}
