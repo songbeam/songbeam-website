@@ -45,10 +45,13 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /GLORY 獨家專利 Tempwiser 親水棉/);
   assert.match(html, /海鷗曲線支撐/);
   assert.match(html, /可調高度設計/);
-  assert.match(html, /五段式定位/);
+  assert.doesNotMatch(html, /SLEEP FEEL GUIDE|五段式定位|id="fit"/);
   assert.match(html, /親水記憶棉/);
-  assert.match(html, /THC 檢驗結果/);
-  assert.match(html, /不宣稱「不含 THC」/);
+  assert.match(html, /近 7 成/);
+  assert.match(html, /使用 CBD 枕頭前後的睡眠時間比較/);
+  assert.match(html, /獨家比利時萃取/);
+  assert.match(html, /天然抗菌除臭/);
+  assert.match(html, /原始研究報告/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /好好使用/);
   assert.match(html, /可以改善失眠嗎/);

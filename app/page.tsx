@@ -8,12 +8,6 @@ const features = [
   ["03", "SLOW REBOUND", "慢慢貼合，", "也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
 ];
 
-const fitItems = ["喜歡有包覆感的枕頭", "希望頭頸獲得穩定支撐", "習慣仰睡與側睡交替", "在意睡眠環境與放鬆儀式", "不喜歡過軟、容易塌陷的枕頭", "想親自體驗不同枕頭高度與睡感"];
-
-const sleepScales = [
-  ["柔軟度", 3, "適中"], ["支撐度", 4, "偏高"], ["包覆感", 4, "明顯"], ["回彈速度", 2, "慢回彈"], ["建議睡姿", 4, "仰睡・側睡"],
-] as const;
-
 const collectionProducts = [
   {
     name: "CBD草本忘憂枕頭",
@@ -322,26 +316,41 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <section className="sleep-fit section" id="fit">
-        <div className="section-label"><span>05</span><p>SLEEP FEEL GUIDE</p></div><div className="fit-layout"><div className="fit-copy"><p className="eyebrow">適合哪些睡眠習慣</p><h2>這顆枕頭，適合正在尋找<br />這些睡感的你。</h2><div className="fit-list">{fitItems.map((item, index) => <p key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</p>)}</div></div><div className="scale-panel"><p className="scale-note">睡感溝通示意｜非檢測數值，實際感受請以門市試躺為準</p>{sleepScales.map(([label, value, note]) => <div className="feel-scale" key={label}><div><strong>{label}</strong><span>{note}</span></div><div className="scale-dots" aria-label={`${label}五段式定位 ${value} 格`}>{[1,2,3,4,5].map(n => <i className={n <= value ? "active" : ""} key={n} />)}</div></div>)}</div></div>
-      </section>
-
       <section className="structure section" id="structure">
-        <div className="section-label"><span>06</span><p>MATERIAL & STRUCTURE</p></div><div className="structure-heading"><div><p className="eyebrow">材質與產品結構</p><h2>每一層，都為舒適睡眠而設計。</h2></div><p>已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目，不先替產品下結論。</p></div>
+        <div className="section-label"><span>05</span><p>MATERIAL & STRUCTURE</p></div><div className="structure-heading"><div><p className="eyebrow">材質與產品結構</p><h2>每一層，都為舒適睡眠而設計。</h2></div><p>已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目，不先替產品下結論。</p></div>
         <div className="exploded"><div className="exploded-visual"><div className="layer l1">01 外布套</div><div className="layer l2">02 內層／內套</div><div className="layer l3">03 親水記憶棉枕芯</div><img src="/product-pillow-side.jpg" alt="草本忘憂枕頭側面結構參考" /></div><div className="structure-list"><article><span>01</span><div><h3>外布套</h3><p>CBD 草本微膠囊機能針織表布；是否可拆洗及耐洗次數，以正式洗標與測試資料為準。</p></div></article><article><span>02</span><div><h3>內套與拉鍊</h3><p>目前提供資料未完整列出內套、拉鍊與可拆結構，待正式商品規格確認。</p></div></article><article><span>03</span><div><h3>枕芯</h3><p>親水記憶棉，著重貼合、回彈與水氣調節；密度數值待原廠文件確認。</p></div></article><article><span>04</span><div><h3>尺寸、高度與產地</h3><p>目前尚無可公開的完整尺寸、高度及產地資料，網站不自行推估。</p></div></article></div></div>
       </section>
 
-      <section className="safety" id="safety">
-        <div className="safety-copy"><div className="section-label light"><span>07</span><p>TESTING & SAFETY</p></div><p className="eyebrow pale">檢驗與安全說明</p><h2>看得見的安心，<br />才能放心陪伴每一晚。</h2><p>這裡只呈現目前可以對應品牌資料的內容。檢驗報告尚未提供的項目，統一標示為待文件確認，不採用任何無法直接佐證的等級或認證說法。</p></div>
-        <div className="evidence-list"><article><span className="status known">品牌資料記載</span><h3>微膠囊織物技術</h3><p>品牌簡報記載技術來源為比利時；原料商名稱與技術授權文件待補。</p></article><article><span className="status pending">待檢驗文件</span><h3>CBD 成分與含量</h3><p>需提供成分名稱、來源、添加方式、含量與對應批次報告。</p></article><article><span className="status pending">待檢驗文件</span><h3>THC 檢驗結果</h3><p>目前沒有可公開數值，因此不宣稱「不含 THC」或「零檢出」。</p></article><article><span className="status pending">待法規文件</span><h3>台灣相關規範</h3><p>需依實際材質、輸入與銷售方式確認適用規範並提供文件。</p></article><article><span className="status pending">有報告再上架</span><h3>無毒、耐久與其他檢測</h3><p>抗菌、耐洗、耐久或無毒等項目，僅在有對應測試標準與報告時呈現。</p></article></div>
+      <section className="evidence-story section" id="safety">
+        <div className="section-label"><span>06</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
+        <header className="evidence-story-head"><div><p className="eyebrow">品牌臨床資料與表布技術</p><h2>從睡眠觀察，<br />到微膠囊表布。</h2></div><div className="evidence-highlight"><strong>近 7 成</strong><span>受驗者改善睡眠品質<br />品牌提供資料</span></div></header>
+
+        <div className="sleep-study-panel">
+          <div className="study-panel-heading"><div><small>BRAND-PROVIDED CLINICAL DATA</small><h3>使用 CBD 枕頭前後的睡眠時間比較</h3></div><div className="study-badges"><span>增加睡眠時數</span><span>改善睡眠品質</span></div></div>
+          <div className="sleep-chart-grid">
+            <article><header><h4>總睡眠數</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div></article>
+            <article><header><h4>淺眠</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div></article>
+            <article><header><h4>深睡</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div></article>
+          </div>
+          <p className="study-summary">品牌資料說明：使用 CBD 枕頭後，近 7 成受驗者有明顯改善睡眠品質。</p>
+          <p className="study-title">Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p>
+        </div>
+
+        <div className="textile-tech-panel">
+          <figure className="textile-tech-visual"><img src="/product-pillow-front.jpg" alt="CBD 漢麻二酚表布與海鷗枕型" /><figcaption>CBD HEMP-DERIVED TEXTILE / MICROCAPSULE TECHNOLOGY</figcaption></figure>
+          <div className="textile-tech-copy"><p className="eyebrow">CBD 漢麻二酚表布</p><h3>獨家比利時萃取<br />微膠囊技術</h3><p>依品牌資料，將 CBD 成分提煉至微膠囊分子並編織進纖維，睡眠使用時緩慢且持續釋放微量 CBD 成分。</p><ol><li><span>01</span><div><strong>微膠囊化</strong><p>將 CBD 成分製成微膠囊分子。</p></div></li><li><span>02</span><div><strong>編織進纖維</strong><p>把微膠囊技術應用於寢具表布。</p></div></li><li><span>03</span><div><strong>緩慢持續釋放</strong><p>品牌資料描述於睡眠使用期間釋放微量成分。</p></div></li></ol></div>
+        </div>
+
+        <div className="evidence-claim-grid"><article><span>01</span><strong>草本助眠・漢麻二酚</strong><small>品牌資料主張</small></article><article><span>02</span><strong>醫藥大學臨床實驗</strong><small>原始報告待補</small></article><article><span>03</span><strong>獨家微膠囊技術</strong><small>技術文件待補</small></article><article><span>04</span><strong>天然草本技術製成</strong><small>品牌資料主張</small></article><article><span>05</span><strong>天然抗菌除臭</strong><small>檢驗報告待補</small></article></div>
+        <p className="evidence-source-note">本頁圖表與說明依品牌提供的三張資料截圖重新繪製。「全台近 400 萬人」、「近 7 成受驗者」、醫藥大學臨床實驗、抗菌除臭及微膠囊釋放等內容，仍需以原始研究報告、試驗設計、樣本數、統計結果與檢驗文件為準。本產品為一般寢具用品，非藥品或醫療器材。</p>
       </section>
 
       <section className="care section" id="care">
-        <div className="section-label"><span>08</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
+        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
       </section>
 
       <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
+        <div className="faq-title"><div className="section-label"><span>08</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
       </section>
 
       <section className="stores" id="stores"><div className="stores-copy"><p className="overline">IN-STORE PILLOW FITTING</p><h2>枕頭合不合適，<br />躺過才知道。</h2><p>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
