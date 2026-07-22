@@ -21,14 +21,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /慢慢鬆開/);
   assert.match(html, /從草本放鬆到貼合支撐/);
   assert.match(html, /shangpin-logo\.png/);
-  assert.match(html, /有時候/);
-  assert.match(html, /不是不想睡/);
-  assert.match(html, /肩頸仍然緊繃/);
-  assert.match(html, /找不到舒服位置/);
-  assert.match(html, /枕頭高度不合/);
-  assert.match(html, /思緒還停不下來/);
-  assert.match(html, /一顆枕頭/);
-  assert.match(html, /草本睡眠概念/);
+  assert.doesNotMatch(html, /SLEEP CONCERNS|BODY BEGINS TO UNWIND/);
+  assert.doesNotMatch(html, /有時候，|一顆枕頭，從支撐開始/);
+  assert.doesNotMatch(html, /href="#series"|id="series"|id="concerns"/);
+  assert.match(html, /HERBAL &amp; TACTILE DETAIL/);
   assert.match(html, /微膠囊機能織物/);
   assert.match(html, /應用於表布/);
   assert.match(html, /不自行承諾機能耐洗次數/);
