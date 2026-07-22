@@ -287,3 +287,55 @@
   }
   .feature-editorial img{height:auto;aspect-ratio:1586/992;object-position:center}
 }
+
+/* Place the three feature notes in a horizontal editorial row below the image. */
+.feature-editorial{
+  display:grid;grid-template-columns:1fr;gap:48px;margin-top:52px;
+}
+.feature-editorial figure{
+  width:100%;margin:0;transform:none;overflow:hidden;
+  border-radius:48px 8px 48px 8px;box-shadow:0 30px 72px rgba(82,100,107,.14);
+}
+.feature-editorial figure:before{
+  z-index:2;inset:15px;border:1px solid rgba(255,255,255,.5);
+  border-radius:36px 4px 36px 4px;background:transparent;box-shadow:none;pointer-events:none;
+}
+.feature-editorial img{
+  display:block;width:100%;height:auto;aspect-ratio:1586/992;
+  object-fit:cover;object-position:center;border-radius:0;mask-image:none;
+}
+.feature-editorial figcaption{
+  z-index:3;left:24px;bottom:22px;padding:8px 12px;margin:0;
+  border-radius:999px;background:rgba(248,244,236,.72);color:#657983;
+  backdrop-filter:blur(10px);
+}
+.feature-list{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;
+  padding:0;border:0;align-items:stretch;
+}
+.feature-list article,.feature-list article:nth-child(2),.feature-list article:nth-child(3){
+  display:flex;flex-direction:column;max-width:none;min-height:275px;margin:0;
+  padding:30px 30px 34px;transform:none!important;
+}
+.feature-list article p{margin-bottom:0}
+
+@media(max-width:980px){
+  .feature-editorial{display:grid;grid-template-columns:1fr;gap:34px;margin-top:42px}
+  .feature-editorial figure{width:100%;transform:none;border-radius:36px 6px 36px 6px}
+  .feature-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:0}
+  .feature-list article,.feature-list article:nth-child(2),.feature-list article:nth-child(3){
+    min-height:250px;padding:24px 20px 28px;
+  }
+  .feature-list h3{font-size:18px}
+}
+
+@media(max-width:640px){
+  .feature-editorial{display:grid;gap:28px}
+  .feature-editorial figure{width:calc(100% + 14vw);margin-left:-7vw;border-radius:0}
+  .feature-editorial figure:before{inset:10px;border-radius:0}
+  .feature-editorial figcaption{left:17px;bottom:16px;font-size:7px}
+  .feature-list{grid-template-columns:1fr;gap:14px;padding-top:0}
+  .feature-list article,.feature-list article:nth-child(2),.feature-list article:nth-child(3){
+    min-height:0;padding:26px 24px 30px;
+  }
+}
