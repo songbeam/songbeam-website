@@ -439,3 +439,106 @@
     margin:20px 0 30px;font-size:clamp(13px,4.1vw,17px);white-space:nowrap;
   }
 }
+
+/* Editorial cleanup and modal product stories. */
+.consultation:before{display:none}
+.collection-head{grid-template-columns:1fr}
+.feature-heading{grid-template-columns:1fr}
+.shop-product-info button.product-detail-trigger{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 0 0;border:0;border-top:1px solid rgba(79,98,109,.14);
+  background:transparent;color:#657983;cursor:pointer;text-align:left;
+  font:10px "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.1em;
+}
+.shop-product-info button.product-detail-trigger span{
+  color:#a78b72;font-size:15px;transition:transform .25s;
+}
+.shop-product-info button.product-detail-trigger:hover span{transform:translateX(4px)}
+
+.product-modal-backdrop{
+  position:fixed;z-index:1000;inset:0;display:grid;place-items:center;
+  padding:34px;background:rgba(55,61,56,.55);backdrop-filter:blur(12px);
+  overflow-y:auto;
+}
+.product-modal{
+  position:relative;width:min(1080px,100%);max-height:calc(100vh - 68px);
+  display:grid;grid-template-columns:1fr 1fr;overflow:auto;
+  border:1px solid rgba(255,255,255,.72);border-radius:48px 8px 48px 8px;
+  background:linear-gradient(145deg,#f7f3eb,#e9eeea);color:#5b6d75;
+  box-shadow:0 40px 120px rgba(36,43,40,.3);
+  animation:product-modal-in .28s ease-out;
+}
+@keyframes product-modal-in{
+  from{opacity:0;transform:translateY(18px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+.product-modal-close{
+  position:absolute;z-index:5;right:20px;top:20px;width:44px;height:44px;
+  display:grid;place-items:center;border:1px solid rgba(89,106,111,.18);
+  border-radius:50%;background:rgba(249,246,239,.86);color:#64767c;
+  font:300 28px/1 Arial,sans-serif;cursor:pointer;backdrop-filter:blur(8px);
+}
+.product-modal-close:hover{background:#fff}
+.product-modal-visual{
+  position:relative;min-height:650px;overflow:hidden;
+  background:linear-gradient(145deg,#e2e7e3,#d8dfda);
+}
+.product-modal-image{
+  display:block;width:100%;height:100%;object-fit:cover;
+  filter:saturate(.68) contrast(.94) brightness(1.04);
+}
+.product-modal-image-0{object-fit:contain;padding:13%;mix-blend-mode:multiply}
+.product-modal-image-1{object-position:center 62%}
+.product-modal-image-2{object-position:center}
+.product-modal-accessory{
+  position:absolute;right:24px;bottom:24px;width:34%;height:27%;object-fit:cover;
+  border:7px solid rgba(248,245,238,.92);border-radius:18px;
+  box-shadow:0 18px 42px rgba(62,73,70,.22);
+}
+.product-modal-copy{
+  padding:80px 62px 62px;display:flex;flex-direction:column;justify-content:center;
+}
+.product-modal-copy>small{
+  color:#a28672;font:9px Arial,sans-serif;letter-spacing:.24em;
+}
+.product-modal-copy h2{
+  margin:12px 0 20px;color:#586d76;font-size:clamp(34px,3.4vw,52px);
+  line-height:1.45;letter-spacing:.07em;font-weight:400;
+}
+.product-modal-copy>strong{
+  color:#697a7f;font-size:17px;line-height:1.9;letter-spacing:.05em;font-weight:500;
+}
+.product-modal-copy>p{
+  margin:20px 0 0;color:#768286;font-size:12px;line-height:2;
+}
+.product-modal-copy ul{
+  list-style:none;margin:28px 0 0;padding:0;border-top:1px solid rgba(89,108,116,.15);
+}
+.product-modal-copy li{
+  position:relative;padding:13px 0 13px 25px;border-bottom:1px solid rgba(89,108,116,.15);
+  color:#64767b;font-size:12px;letter-spacing:.06em;
+}
+.product-modal-copy li:before{
+  content:"";position:absolute;left:1px;top:23px;width:11px;height:1px;background:#a58b72;
+}
+.product-modal-copy .product-modal-note{font-size:10px;color:#8a9290}
+.product-modal-actions{display:flex;align-items:center;gap:24px;margin-top:32px}
+.product-modal-actions .button{min-width:175px}
+
+@media(max-width:800px){
+  .product-modal-backdrop{padding:18px}
+  .product-modal{grid-template-columns:1fr;max-height:calc(100vh - 36px);border-radius:32px 6px}
+  .product-modal-visual{min-height:360px}
+  .product-modal-copy{padding:46px 30px 42px}
+  .product-modal-close{right:14px;top:14px}
+}
+
+@media(max-width:480px){
+  .product-modal-backdrop{padding:0}
+  .product-modal{width:100%;max-height:100vh;min-height:100vh;border:0;border-radius:0}
+  .product-modal-visual{min-height:310px}
+  .product-modal-copy{padding:38px 24px 42px}
+  .product-modal-copy h2{font-size:34px}
+  .product-modal-actions{align-items:stretch;flex-direction:column;gap:18px}
+  .product-modal-actions .button{width:100%}
+}

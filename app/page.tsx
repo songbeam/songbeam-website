@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const concerns = [
   ["01", "肩頸仍然緊繃", "工作一整天，即使躺下，肩膀與頸部仍像沒有真正卸下力氣。", "shoulder-mark"],
@@ -28,7 +28,8 @@ const collectionProducts = [
     image: "/product-pillow-angle.jpg",
     statement: "貼合頭頸，也讓睡感保持輕盈。",
     detail: "海鷗式分區曲線搭配親水記憶棉，回應仰睡、側睡與翻身時的承托需求。",
-    href: "#pillow",
+    highlights: ["海鷗式分區曲線", "親水記憶棉支撐", "仰睡與側睡皆可試躺"],
+    note: "實際尺寸、高度、售價與適用睡姿，請以門市說明及商品標示為準。",
   },
   {
     name: "CBD 寢具保潔墊組",
@@ -36,7 +37,8 @@ const collectionProducts = [
     image: "/product-protector.jpg",
     statement: "把日常髒污留在床墊與枕頭之外。",
     detail: "床墊與枕頭保潔墊組，作為寢具與日常使用之間的保護層；正式尺寸與洗滌方式以商品標示為準。",
-    href: "#care",
+    highlights: ["床墊與枕頭保潔組", "建立寢具日常防護層", "洗滌方式依商品標示"],
+    note: "實際組合、尺寸與清潔方式，請以品牌正式商品資訊及洗標為準。",
   },
   {
     name: "隨身旅行頸枕／眼罩",
@@ -45,7 +47,8 @@ const collectionProducts = [
     accessoryImage: "/product-eye-mask.jpg",
     statement: "離開臥室，也保留熟悉的放鬆節奏。",
     detail: "適合飛機、火車與長途移動使用；頸枕與眼罩的實際販售方式，以品牌正式商品資訊為準。",
-    href: "#specs",
+    highlights: ["旅行頸枕與眼罩", "適合長途移動情境", "輕巧延續熟悉睡感"],
+    note: "頸枕與眼罩的販售組合、材質與尺寸，請以正式商品資訊為準。",
   },
 ];
 
@@ -62,7 +65,23 @@ const faqs = [
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
+  const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
+  const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    if (selectedProductIndex === null) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedProductIndex(null);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [selectedProductIndex]);
 
   return (
     <main>
@@ -70,7 +89,7 @@ export default function Home() {
         <a className="brand brand-logo" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}><img src="/shangpin-logo.png" alt="上品寢具館 SONG BEAM International Bedding Gallery" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#series" onClick={closeMenu}>系列概念</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#specs" onClick={closeMenu}>商品規格</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a><a className="nav-cta" href="#buy" onClick={closeMenu}>立即購買</a>
+          <a href="#series" onClick={closeMenu}>系列概念</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a><a className="nav-cta" href="#buy" onClick={closeMenu}>立即購買</a>
         </nav>
       </header>
 
@@ -89,13 +108,12 @@ export default function Home() {
       </section>
 
       <section className="series-home" id="series">
-        <div className="series-intro section"><div className="series-product-editorial"><div className="series-product-copy"><h2 className="series-heading"><span>一顆枕頭，從支撐開始</span><span>也從放鬆開始。</span></h2><div className="series-short-points"><span>貼合頭頸</span><span>慢回彈包覆</span><span>草本睡眠概念</span></div></div><div className="series-product-image"><img src="/series-support-pillow-scene.png" alt="暖晨光臥室中展示上品 CBD 草本忘憂枕的支撐輪廓" /></div></div></div>
+        <div className="series-intro section"><div className="section-label"><span>02</span><p>BODY BEGINS TO UNWIND</p></div><div className="series-product-editorial"><div className="series-product-copy"><h2 className="series-heading"><span>一顆枕頭，從支撐開始</span><span>也從放鬆開始。</span></h2><div className="series-short-points"><span>貼合頭頸</span><span>慢回彈包覆</span><span>草本睡眠概念</span></div></div><div className="series-product-image"><img src="/series-support-pillow-scene.png" alt="暖晨光臥室中展示上品 CBD 草本忘憂枕的支撐輪廓" /></div></div></div>
       </section>
 
       <section className="product-showcase section" id="products">
         <div className="collection-head">
           <div><div className="section-label"><span>03</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
-          <p>以直覺的大圖、簡短睡感描述與必要資訊，先看見每項商品最重要的使用情境。</p>
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (
@@ -105,14 +123,22 @@ export default function Home() {
                 {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><a href={product.href}>查看商品細節 <span>→</span></a></div>
+              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品細節 <span>→</span></button></div>
             </article>
           ))}
         </div>
       </section>
 
+      {selectedProduct ? <div className="product-modal-backdrop" onMouseDown={() => setSelectedProductIndex(null)}>
+        <section className="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="關閉商品介紹" onClick={() => setSelectedProductIndex(null)} autoFocus>×</button>
+          <div className="product-modal-visual"><img className={`product-modal-image product-modal-image-${selectedProductIndex}`} src={selectedProduct.image} alt={selectedProduct.name} />{selectedProduct.accessoryImage ? <img className="product-modal-accessory" src={selectedProduct.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}</div>
+          <div className="product-modal-copy"><small>{selectedProduct.en}</small><h2 id="product-modal-title">{selectedProduct.name}</h2><strong>{selectedProduct.statement}</strong><p>{selectedProduct.detail}</p><ul>{selectedProduct.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedProduct.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={() => setSelectedProductIndex(null)}>到門市體驗 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列商品">詢問商品資訊 →</a></div></div>
+        </section>
+      </div> : null}
+
       <section className="core-features section" id="features">
-        <div className="section-label"><span>04</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div><p>不一次塞入太多術語，回到每晚真正能感受的三件事。</p></div>
+        <div className="section-label"><span>04</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div></div>
         <div className="feature-editorial"><figure><img src="/herbal-tactile-pillow-scene.png" alt="暖晨光中完整展示 CBD 草本忘憂枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, title, copy]) => <article key={no}><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
@@ -155,15 +181,11 @@ export default function Home() {
         <div className="faq-title"><div className="section-label"><span>11</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
       </section>
 
-      <section className="specs section" id="specs">
-        <div className="section-label"><span>12</span><p>PRODUCT SPECIFICATIONS</p></div><div className="spec-heading"><div><p className="eyebrow">商品規格與購買資訊</p><h2>找到適合自己的<br />睡眠選擇。</h2></div><p>未確認的商業與規格資訊保留空白，待正式商品頁資料補齊後再公開。</p></div><div className="spec-layout"><div className="spec-product"><img src="/product-pillow-front.jpg" alt="上品 CBD 草本忘憂好眠親水枕正面" /><p>上品 CBD 草本忘憂好眠親水枕<br /><small>海鷗減壓枕型｜正式品名以商品標示為準</small></p></div><dl className="spec-table"><div><dt>表布</dt><dd>CBD 草本微膠囊機能針織表布</dd></div><div><dt>枕芯</dt><dd>親水記憶棉</dd></div><div><dt>枕型</dt><dd>海鷗式分區曲線</dd></div><div><dt>尺寸／高度</dt><dd className="pending-text">待正式規格確認</dd></div><div><dt>顏色／產地</dt><dd className="pending-text">待正式規格確認</dd></div><div><dt>售價／優惠</dt><dd className="pending-text">待正式售價確認</dd></div><div><dt>保固／配送</dt><dd className="pending-text">待品牌政策確認</dd></div><div><dt>退換貨</dt><dd className="pending-text">依正式銷售通路規則</dd></div></dl></div>
-      </section>
-
       <section className="buy-panel" id="buy"><div className="buy-image"><img src="/product-press-closeup.png" alt="草本忘憂枕材質與曲線情境" /></div><div className="buy-copy"><p className="overline">READY FOR YOUR NIGHT</p><h2>舒服入睡，<br />不必等到很累以後。</h2><p>由上品寢具人員協助確認現貨、售價、門市與適合的試躺方式。</p><div className="buy-actions"><a className="button primary" href="#features">立即了解 <span>↑</span></a><a className="button outline-dark" href="#stores">查看門市</a><a className="button outline-dark" href="mailto:service@shangpin-bedding.tw?subject=預約 CBD 草本忘憂枕試躺">預約體驗</a></div></div></section>
 
       <section className="stores" id="stores"><div className="stores-copy"><p className="overline">IN-STORE PILLOW FITTING</p><h2>枕頭合不合適，<br />躺過才知道。</h2><p>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
-      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#series">系列概念</a><a href="#features">產品特色</a><a href="#pillow">枕型設計</a><a href="#safety">材質檢驗</a><a href="#specs">商品規格</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 SONG BEAM BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#series">系列概念</a><a href="#features">產品特色</a><a href="#pillow">枕型設計</a><a href="#safety">材質檢驗</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 SONG BEAM BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }

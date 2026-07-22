@@ -48,7 +48,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /從躺下的那一刻/);
   assert.match(html, /好好使用/);
   assert.match(html, /可以改善失眠嗎/);
-  assert.match(html, /商品規格與購買資訊/);
+  assert.match(html, /product-detail-trigger/);
+  assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
+  assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);
+  assert.doesNotMatch(html, /不一次塞入太多術語/);
   assert.match(html, /枕頭合不合適/);
   assert.match(html, /舒服入睡/);
   assert.match(html, /非藥品/);
