@@ -21,7 +21,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /讓夜晚/);
   assert.match(html, /慢慢鬆開/);
   assert.match(html, /從草本放鬆到貼合支撐/);
-  assert.match(html, /shangpin-logo\.png/);
+  assert.match(html, /glory-logo\.jpg/);
   assert.doesNotMatch(html, /SLEEP CONCERNS|BODY BEGINS TO UNWIND/);
   assert.doesNotMatch(html, /有時候，|一顆枕頭，從支撐開始/);
   assert.doesNotMatch(html, /href="#series"|id="series"|id="concerns"/);
@@ -55,6 +55,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /除臭/);
   assert.doesNotMatch(html, /Patrick Lin, D\.C\.|MDPI|全台 500 萬人/);
   assert.match(html, /從睡眠數據/);
+  assert.match(html, /safety-title-nowrap/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /讓舒服/);
   assert.match(html, /陪伴更久/);
@@ -68,6 +69,12 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /wash-instruction-lines/);
   assert.match(html, /浸泡時間請勿超過 30 分鐘/);
   assert.match(html, /可以改善失眠嗎/);
+  assert.match(html, /新聞報導/);
+  assert.match(html, /id="news"/);
+  assert.match(html, /href="#news"/);
+  assert.match(html, /最新報導，即將上線/);
+  assert.doesNotMatch(html, /IN-STORE PILLOW FITTING/);
+  assert.match(html, /store-intro-lines/);
   assert.match(html, /product-detail-trigger/);
   assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
   assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);

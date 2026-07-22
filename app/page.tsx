@@ -8,6 +8,8 @@ const features = [
   ["03", "SLOW REBOUND", "慢慢貼合，", "也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
 ];
 
+const newsItems: { date: string; source: string; title: string; summary: string; image: string; url?: string }[] = [];
+
 const collectionProducts = [
   {
     name: "CBD草本忘憂枕頭",
@@ -232,10 +234,10 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand brand-logo" href="#top" aria-label="上品寢具首頁" onClick={closeMenu}><img src="/shangpin-logo.png" alt="上品寢具館 SONG BEAM International Bedding Gallery" /></a>
+        <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -323,7 +325,7 @@ export default function Home() {
 
       <section className="evidence-story section" id="safety">
         <div className="section-label"><span>06</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
-        <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br />看見安心的依據。</h2><p>臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡。</p></header>
+        <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2><p>臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡。</p></header>
 
         <div className="clinical-data-card">
           <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 400 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
@@ -345,13 +347,19 @@ export default function Home() {
         <p className="care-source-note">以上內容依品牌提供之洗滌說明整理。若商品洗標、材質標示或原廠文件另有規定，請優先依實際商品標示操作。</p>
       </section>
 
-      <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>08</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
+      <section className="news-section section" id="news">
+        <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
+        <header className="news-heading"><div><p className="eyebrow">新聞報導</p><h2>關於好眠，<br />我們持續被看見。</h2></div><p>品牌消息、專題採訪與媒體報導，將在這裡留下每一段值得閱讀的紀錄。</p></header>
+        {newsItems.length ? <div className="news-grid">{newsItems.map((item, index) => <article key={`${item.date}-${item.title}`}><div className="news-image"><img src={item.image} alt="" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="news-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">閱讀完整報導 <span>↗</span></a> : null}</div></article>)}</div> : <div className="news-coming-soon"><div aria-hidden="true"><span>PRESS</span><strong>NEWS</strong><i>08</i></div><div><small>STORIES ARE COMING</small><h3>最新報導，即將上線。</h3><p>品牌專訪、產品報導與睡眠生活專題，將陸續在此與你見面。</p></div></div>}
       </section>
 
-      <section className="stores" id="stores"><div className="stores-copy"><p className="overline">IN-STORE PILLOW FITTING</p><h2>枕頭合不合適，<br />躺過才知道。</h2><p>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+      <section className="faq section" id="faq">
+        <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
+      </section>
 
-      <footer><div className="footer-top"><div className="brand"><span className="brand-cn">上品寢具</span><span className="brand-en">SONG BEAM BEDDING CO., LTD</span></div><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#products">系列商品</a><a href="#safety">材質檢驗</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 SONG BEAM BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#products">系列商品</a><a href="#safety">材質檢驗</a><a href="#news">新聞報導</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }
