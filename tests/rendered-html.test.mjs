@@ -72,7 +72,12 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /新聞報導/);
   assert.match(html, /id="news"/);
   assert.match(html, /href="#news"/);
-  assert.match(html, /最新報導，即將上線/);
+  assert.match(html, /TOP U\.S\. MEDIA COVERAGE/);
+  assert.match(html, /Yahoo! Finance/);
+  assert.match(html, /CBS Lake Charles/);
+  assert.match(html, /Coast to Coast Newspaper/);
+  assert.match(html, /news-card/);
+  assert.doesNotMatch(html, /品牌消息、專題採訪與媒體報導，將在這裡留下每一段值得閱讀的紀錄|最新報導，即將上線/);
   assert.doesNotMatch(html, /IN-STORE PILLOW FITTING/);
   assert.match(html, /store-intro-lines/);
   assert.match(html, /product-detail-trigger/);
@@ -112,4 +117,15 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD草本忘憂 旅行好眠頸枕 護頸枕",
     "CBD草本忘憂 好眠旅行組",
   ]) assert.match(source, new RegExp(name));
+});
+
+test("defines the U.S. media grid and embedded article dialog", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /selectedNewsIndex/);
+  assert.match(source, /news-modal-backdrop/);
+  assert.match(source, /<iframe/);
+  assert.match(source, /開啟原文/);
+  assert.match(source, /finance\.yahoo\.com/);
+  assert.match(source, /pr\.cbslakecharles\.tv/);
+  assert.match(source, /ccnewspaper\.com/);
 });

@@ -8,7 +8,35 @@ const features = [
   ["03", "SLOW REBOUND", "慢慢貼合，", "也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
 ];
 
-const newsItems: { date: string; source: string; title: string; summary: string; image: string; url?: string }[] = [];
+const newsItems = [
+  {
+    date: "2026.07.18",
+    source: "Yahoo! Finance",
+    short: "YAHOO!",
+    title: "Innovative CBD-Coated Bedding Clinically Proven to Improve Sleep Quality",
+    summary: "Song Beam Bedding 與中國醫藥大學睡眠研究獲美國財經媒體報導。",
+    url: "https://finance.yahoo.com/healthcare/articles/innovative-cbd-coated-bedding-clinically-090000842.html",
+    tone: "yahoo",
+  },
+  {
+    date: "2026.07.18",
+    source: "CBS Lake Charles",
+    short: "CBS",
+    title: "Song Beam Bedding and China Medical University’s Joint Study Published in Healthcare",
+    summary: "CBD 機能寢具與睡眠品質研究登上 CBS Lake Charles 媒體頁面。",
+    url: "https://pr.cbslakecharles.tv/article/Innovative-CBD-Coated-Bedding-Clinically-Proven-to-Improve-Sleep-Quality-Song-Beam-Bedding-and-China-Medical-Universitys-Joint-Study-Published-in-International-Journal-Healthcare?storyId=6a5b4169fef76cbb7d73e15a",
+    tone: "cbs",
+  },
+  {
+    date: "2026.07.18",
+    source: "Coast to Coast Newspaper",
+    short: "C2C",
+    title: "Innovative CBD-Coated Bedding Clinically Proven to Improve Sleep Quality",
+    summary: "研究消息同步刊載於 Coast to Coast Newspaper 新產品新聞專區。",
+    url: "https://ccnewspaper.com/newproductnews?rkey=20260718HK02853&filter=28087",
+    tone: "coast",
+  },
+] as const;
 
 const collectionProducts = [
   {
@@ -200,6 +228,7 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
+  const [selectedNewsIndex, setSelectedNewsIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
   const catalogConfig = selectedProductIndex === 0
     ? { en: "CBD PILLOW COLLECTION", title: "CBD草本忘憂枕頭系列", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
@@ -209,6 +238,7 @@ export default function Home() {
         ? { en: "CBD TRAVEL REST COLLECTION", title: "CBD隨身旅行組系列", copy: "從枕套、眼罩到頸枕，選擇一項旅行配件查看完整介紹。", items: travelSeries }
         : null;
   const selectedSeriesItem = selectedSeriesItemIndex === null ? null : catalogConfig?.items[selectedSeriesItemIndex] ?? null;
+  const selectedNews = selectedNewsIndex === null ? null : newsItems[selectedNewsIndex];
   const closeMenu = () => setMenuOpen(false);
   const closeProductModal = () => {
     setSelectedSeriesItemIndex(null);
@@ -216,10 +246,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (selectedProductIndex === null && selectedSeriesItemIndex === null) return;
+    if (selectedProductIndex === null && selectedSeriesItemIndex === null && selectedNewsIndex === null) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
-      if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
+      if (selectedNewsIndex !== null) setSelectedNewsIndex(null);
+      else if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
       else setSelectedProductIndex(null);
     };
     const previousOverflow = document.body.style.overflow;
@@ -229,7 +260,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex, selectedSeriesItemIndex]);
+  }, [selectedProductIndex, selectedSeriesItemIndex, selectedNewsIndex]);
 
   return (
     <main>
@@ -349,9 +380,11 @@ export default function Home() {
 
       <section className="news-section section" id="news">
         <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
-        <header className="news-heading"><div><p className="eyebrow">新聞報導</p><h2>關於好眠，<br />我們持續被看見。</h2></div><p>品牌消息、專題採訪與媒體報導，將在這裡留下每一段值得閱讀的紀錄。</p></header>
-        {newsItems.length ? <div className="news-grid">{newsItems.map((item, index) => <article key={`${item.date}-${item.title}`}><div className="news-image"><img src={item.image} alt="" /><span>{String(index + 1).padStart(2, "0")}</span></div><div className="news-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">閱讀完整報導 <span>↗</span></a> : null}</div></article>)}</div> : <div className="news-coming-soon"><div aria-hidden="true"><span>PRESS</span><strong>NEWS</strong><i>08</i></div><div><small>STORIES ARE COMING</small><h3>最新報導，即將上線。</h3><p>品牌專訪、產品報導與睡眠生活專題，將陸續在此與你見面。</p></div></div>}
+        <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
+        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><button type="button" onClick={() => setSelectedNewsIndex(index)} aria-label={`閱讀 ${item.source} 新聞報導`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></button></article>)}</div>
       </section>
+
+      {selectedNews ? <div className="news-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedNewsIndex(null); }}><section className="news-modal" role="dialog" aria-modal="true" aria-label={`${selectedNews.source} 新聞報導`}><header><div><small>TOP U.S. MEDIA COVERAGE</small><strong>{selectedNews.source}</strong></div><div><a href={selectedNews.url} target="_blank" rel="noreferrer">開啟原文 ↗</a><button type="button" onClick={() => setSelectedNewsIndex(null)} aria-label="關閉新聞視窗">×</button></div></header><div className="news-frame-wrap"><iframe src={selectedNews.url} title={`${selectedNews.source}：${selectedNews.title}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><footer><p>若媒體網站限制內嵌顯示，請使用右上方「開啟原文」閱讀完整報導。</p></footer></section></div> : null}
 
       <section className="faq section" id="faq">
         <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
