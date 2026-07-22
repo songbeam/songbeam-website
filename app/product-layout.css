@@ -20,3 +20,84 @@
 
 @media(max-width:980px){.collection-head{grid-template-columns:1fr;gap:14px}.shop-product-grid{grid-template-columns:1fr 1fr}.shop-product-card:last-child{grid-column:1/3;width:calc(50% - 12px);justify-self:center}.shop-product-info p{min-height:auto}}
 @media(max-width:640px){.collection-head{margin-bottom:44px}.collection-head h2{font-size:38px}.shop-product-grid{grid-template-columns:1fr;gap:28px}.shop-product-card:last-child{grid-column:auto;width:auto}.shop-product-image{aspect-ratio:5/5.6}.shop-product-info strong{min-height:auto}.shop-product-info p{min-height:auto}.shop-product-card{border-radius:24px}.shop-product-image{border-radius:18px}}
+
+/* SLEEP CONCERNS — wide editorial photo presentation */
+.consultation{padding-top:170px;padding-bottom:180px}
+.emotion-editorial{display:grid;grid-template-columns:1fr;gap:64px}
+.emotion-copy{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  column-gap:2.4vw;row-gap:30px;align-items:end;padding:0;
+}
+.emotion-copy .concern-heading{
+  grid-column:1/7;margin:0;font-size:clamp(52px,5.5vw,82px);line-height:1.42;
+}
+.emotion-copy>.lead{
+  grid-column:8/13;margin:0 0 10px;font-size:19px;line-height:2;color:#71818a;
+}
+.emotion-copy .emotion-list{
+  grid-column:1/13;width:100%;margin:26px 0 10px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid rgba(90,111,122,.17);border-bottom:1px solid rgba(90,111,122,.17);
+}
+.emotion-copy .emotion-list p{
+  margin:0;padding:22px 1.4vw;border-right:1px solid rgba(90,111,122,.14);
+  transform:none;font-size:13px;letter-spacing:.06em;
+}
+.emotion-copy .emotion-list p:last-child{border-right:0}
+.emotion-copy .emotion-list p span{display:block;margin:0 0 7px;color:#a58b72;font:10px Georgia,serif}
+.emotion-copy .concern-quote{
+  grid-column:1/10;margin:10px 0 0;padding-left:6vw;font-size:16px;line-height:2.05;
+}
+.emotion-copy .concern-quote:before{left:0;width:70px}
+.emotion-copy>.text-link{grid-column:11/13;justify-self:end;align-self:end;margin-bottom:5px}
+.emotion-editorial figure{
+  width:100%;margin:0;transform:none;position:relative;overflow:hidden;
+  border-radius:48px 8px 48px 8px;background:#e5e5dd;
+  box-shadow:0 34px 80px rgba(82,100,107,.17);
+}
+.emotion-editorial figure:before{
+  z-index:2;inset:16px;border:1px solid rgba(255,255,255,.55);
+  border-radius:36px 4px 36px 4px;background:transparent;box-shadow:none;pointer-events:none;
+}
+.emotion-editorial img{
+  display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;
+  border-radius:0;mask-image:none;filter:saturate(.72) contrast(.94) brightness(1.03);
+  transition:transform .8s ease;
+}
+.emotion-editorial figure:hover img{transform:scale(1.015)}
+.emotion-editorial figcaption{
+  z-index:3;right:26px;top:auto;bottom:24px;writing-mode:horizontal-tb;
+  padding:8px 12px;border-radius:999px;background:rgba(249,247,241,.7);
+  backdrop-filter:blur(10px);color:#657983;font:8px Arial,sans-serif;letter-spacing:.2em;
+}
+
+@media(max-width:980px){
+  .consultation{padding-top:135px;padding-bottom:145px}
+  .emotion-editorial{gap:48px}
+  .emotion-copy .concern-heading{grid-column:1/7;font-size:58px}
+  .emotion-copy>.lead{grid-column:7/13}
+  .emotion-copy .emotion-list{grid-template-columns:1fr 1fr}
+  .emotion-copy .emotion-list p:nth-child(2){border-right:0}
+  .emotion-copy .emotion-list p:nth-child(-n+2){border-bottom:1px solid rgba(90,111,122,.14)}
+  .emotion-copy .concern-quote{grid-column:1/11;padding-left:8vw}
+  .emotion-copy>.text-link{grid-column:11/13}
+  .emotion-editorial figure{transform:none;border-radius:36px 6px 36px 6px}
+  .emotion-editorial img{height:auto;aspect-ratio:16/10}
+}
+
+@media(max-width:640px){
+  .consultation{padding-top:110px;padding-bottom:120px}
+  .emotion-editorial{display:grid;gap:38px}
+  .emotion-copy{display:block}
+  .emotion-copy .concern-heading{font-size:43px}
+  .emotion-copy>.lead{margin:22px 0 30px;font-size:17px}
+  .emotion-copy .emotion-list{display:grid;width:100%;margin:0 0 32px;grid-template-columns:1fr 1fr}
+  .emotion-copy .emotion-list p{padding:17px 12px;font-size:11px}
+  .emotion-copy .concern-quote{margin:0;padding-left:0;font-size:13px}
+  .emotion-copy .concern-quote:before{display:none}
+  .emotion-copy>.text-link{display:inline-block;margin-top:25px}
+  .emotion-editorial figure{width:calc(100% + 14vw);margin-left:-7vw;transform:none;border-radius:0}
+  .emotion-editorial figure:before{inset:10px;border-radius:0}
+  .emotion-editorial img{height:auto;aspect-ratio:4/3;object-position:center}
+  .emotion-editorial figcaption{right:17px;bottom:16px;font-size:7px}
+}

@@ -85,7 +85,7 @@ export default function Home() {
 
       <section className="consultation section" id="concerns">
         <div className="section-label"><span>01</span><p>SLEEP CONCERNS</p></div>
-        <div className="emotion-editorial"><div className="emotion-copy"><h2 className="concern-heading"><span>有時候，</span><span className="concern-nowrap">不是不想睡。</span></h2><p className="lead">只是白天的疲憊，<br />還沒有慢慢放下來。</p><div className="emotion-list">{concerns.map(([no, title]) => <p key={no}><span>{no}</span>{title}</p>)}</div><blockquote className="concern-quote"><span>真正舒服的睡眠，不只是柔軟，</span><span className="concern-nowrap">還需要適合自己的支撐與安心放鬆的睡眠環境。</span></blockquote><a className="text-link" href="#series">讓身體慢慢鬆開 <span>↓</span></a></div><figure><img src="/sleep-concerns-cbd-pillow.png" alt="晨光臥室中陳列草本 CBD 忘憂枕的自然情境" /><figcaption>THE QUIET MOMENT BEFORE SLEEP</figcaption></figure></div>
+        <div className="emotion-editorial"><div className="emotion-copy"><h2 className="concern-heading"><span>有時候，</span><span className="concern-nowrap">不是不想睡。</span></h2><p className="lead">只是白天的疲憊，<br />還沒有慢慢放下來。</p><div className="emotion-list">{concerns.map(([no, title]) => <p key={no}><span>{no}</span>{title}</p>)}</div><blockquote className="concern-quote"><span>真正舒服的睡眠，不只是柔軟，</span><span className="concern-nowrap">還需要適合自己的支撐與安心放鬆的睡眠環境。</span></blockquote><a className="text-link" href="#series">讓身體慢慢鬆開 <span>↓</span></a></div><figure><img src="/sleep-concerns-cbd-pillow-wide.png" alt="自然晨光中以橫幅構圖展示上品 CBD 草本忘憂枕" /><figcaption>THE QUIET MOMENT BEFORE SLEEP</figcaption></figure></div>
       </section>
 
       <section className="series-home" id="series">
