@@ -112,8 +112,8 @@ export default function Home() {
       </section>
 
       <section className="core-features section" id="features">
-        <div className="section-label"><span>04</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><p className="eyebrow">第四幕｜草本與材質</p><h2>將草本的柔和想像，<br />放進每天最靠近你的枕頭裡。</h2></div><p>不一次塞入太多術語，回到每晚真正能感受的三件事。</p></div>
-        <div className="feature-editorial"><figure><img src="/product-press-closeup.png" alt="手部輕壓草本忘憂枕，呈現慢回彈材質" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, title, copy]) => <article key={no}><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>
+        <div className="section-label"><span>04</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div><p>不一次塞入太多術語，回到每晚真正能感受的三件事。</p></div>
+        <div className="feature-editorial"><figure><img src="/herbal-tactile-pillow-scene.png" alt="暖晨光中完整展示 CBD 草本忘憂枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, title, copy]) => <article key={no}><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
       <section className="pillow-section section" id="pillow">
