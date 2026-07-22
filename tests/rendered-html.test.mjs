@@ -40,7 +40,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /product-press-closeup\.png/);
   assert.match(html, /lifestyle-morning\.png/);
   assert.match(html, /海鷗曲線/);
-  assert.match(html, /仰睡｜中央承托/);
+  assert.match(html, /中央凹槽承接後腦/);
   assert.match(html, /五段式定位/);
   assert.match(html, /親水記憶棉/);
   assert.match(html, /THC 檢驗結果/);

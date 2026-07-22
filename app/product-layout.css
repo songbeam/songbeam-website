@@ -424,3 +424,18 @@
   .seagull-details h3{font-size:16px}
   .seagull-button{width:100%;margin-top:30px}
 }
+
+/* Copy refinements for the first two editorial pages. */
+.emotion-copy>.concern-subline{
+  grid-column:1/8;margin:0 0 8px;white-space:nowrap;
+}
+
+@media(max-width:980px){
+  .emotion-copy>.concern-subline{grid-column:1/9;margin:0}
+}
+
+@media(max-width:640px){
+  .emotion-copy>.concern-subline{
+    margin:20px 0 30px;font-size:clamp(13px,4.1vw,17px);white-space:nowrap;
+  }
+}
