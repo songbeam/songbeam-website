@@ -57,6 +57,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /從睡眠數據/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /讓舒服陪伴更久/);
+  assert.doesNotMatch(html, /順著材質照顧/);
+  assert.match(html, /care-title-nowrap/);
+  assert.match(html, /日常以除塵、局部清潔為主；枕芯與布套請分開處理/);
+  assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /防護布套/);
   assert.match(html, /CBD 外布套/);
   assert.match(html, /浸泡時間請勿超過 30 分鐘/);
