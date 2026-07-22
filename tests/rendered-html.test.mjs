@@ -80,5 +80,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD草本忘憂 好眠 長纖細棉 床包",
     "CBD草本忘憂 雙層平面保潔墊（保潔墊＋枕套）",
     "CBD草本忘憂 毛小孩安撫墊被",
+    "CBD草本忘憂 信封式枕頭套",
+    "CBD草本忘憂 好眠眼罩",
+    "CBD草本忘憂 旅行好眠頸枕 護頸枕",
+    "CBD草本忘憂 好眠旅行組",
   ]) assert.match(source, new RegExp(name));
 });

@@ -150,6 +150,45 @@ const protectorSeries = [
   },
 ];
 
+const travelSeries = [
+  {
+    name: "CBD草本忘憂 信封式枕頭套",
+    en: "ENVELOPE PILLOWCASE",
+    image: "/product-bedding-detail.png",
+    statement: "簡潔包覆，讓熟悉的枕頭成為旅途中的安心陪伴。",
+    detail: "信封式枕頭套以簡潔包覆方式整理枕頭表面，適合搭配旅行與日常寢具使用。",
+    highlights: ["信封式包覆設計", "適合旅行收納搭配", "延續熟悉寢具觸感"],
+    note: "實際材質、尺寸、適用枕型與洗滌方式，請以正式商品標示及洗標為準。",
+  },
+  {
+    name: "CBD草本忘憂 好眠眼罩",
+    en: "SLEEP EYE MASK",
+    image: "/product-eye-mask.jpg",
+    statement: "輕柔遮蔽視線，為移動中的休息留一點安靜。",
+    detail: "好眠眼罩適合睡前與旅途中使用，透過柔和包覆感協助建立較安靜的休息情境。",
+    highlights: ["柔和眼周包覆", "適合旅途休息使用", "輕巧方便隨身攜帶"],
+    note: "實際表布、填充材質、尺寸與清潔方式，請以正式商品標示及洗標為準。",
+  },
+  {
+    name: "CBD草本忘憂 旅行好眠頸枕 護頸枕",
+    en: "TRAVEL NECK PILLOW",
+    image: "/product-travel-pillow.jpg",
+    statement: "環抱頸部，讓長途移動也保有熟悉的承托感。",
+    detail: "旅行好眠頸枕以環繞式輪廓回應乘車、飛行與等待時的頸部支撐需求，適合隨身攜帶使用。",
+    highlights: ["環繞式頸部承托", "適合長途移動情境", "輕巧隨身休息配件"],
+    note: "「護頸枕」為商品系列名稱，實際材質、尺寸與承托感受請以正式商品標示及試用結果為準。",
+  },
+  {
+    name: "CBD草本忘憂 好眠旅行組",
+    en: "TRAVEL SLEEP SET",
+    image: "/lifestyle-reading.png",
+    statement: "把熟悉的放鬆節奏，整理成一組帶著走的旅途陪伴。",
+    detail: "好眠旅行組整合旅途中常用的休息配件，讓飛行、乘車與住宿時也能延續較熟悉的睡前習慣。",
+    highlights: ["旅行休息配件組合", "回應多種移動情境", "方便整理與隨身攜帶"],
+    note: "實際組合內容、材質、尺寸與收納方式，請以品牌正式商品資訊及商品標示為準。",
+  },
+];
+
 const faqs = [
   { q: "CBD 是什麼？在這款寢具中如何使用？", a: "本頁僅就商品應用說明。依目前品牌資料，CBD 草本概念透過微膠囊機能織物應用於表布，並非食品或藥品；實際成分名稱、含量與來源仍應以原廠文件及檢驗報告為準。" },
   { q: "這款產品含有 THC 嗎？", a: "目前提供的品牌資料未附可供網站公開的 THC 檢驗數值，因此網站不宣稱零檢出或不含 THC。購買前建議向門市索取對應品項與批次的正式檢驗文件。" },
@@ -170,7 +209,9 @@ export default function Home() {
     ? { en: "CBD PILLOW COLLECTION", title: "CBD草本忘憂枕頭系列", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
     : selectedProductIndex === 1
       ? { en: "CBD BEDDING PROTECTOR COLLECTION", title: "CBD寢具保潔墊組系列", copy: "從寢具搭配到日常防護，選擇一項產品查看完整介紹。", items: protectorSeries }
-      : null;
+      : selectedProductIndex === 2
+        ? { en: "CBD TRAVEL REST COLLECTION", title: "CBD隨身旅行組系列", copy: "從枕套、眼罩到頸枕，選擇一項旅行配件查看完整介紹。", items: travelSeries }
+        : null;
   const selectedSeriesItem = selectedSeriesItemIndex === null ? null : catalogConfig?.items[selectedSeriesItemIndex] ?? null;
   const closeMenu = () => setMenuOpen(false);
   const closeProductModal = () => {
@@ -230,7 +271,7 @@ export default function Home() {
                 {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>{index < 2 ? "查看商品連結" : "查看商品細節"} <span>→</span></button></div>
+              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品連結 <span>→</span></button></div>
             </article>
           ))}
         </div>
