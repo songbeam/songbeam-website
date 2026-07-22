@@ -17,6 +17,7 @@
   filter:blur(18px);pointer-events:none;
 }
 .hero h1{font-size:clamp(60px,6.5vw,94px)}
+.hero-lead>span{display:block}.hero-lead-nowrap{white-space:nowrap}
 
 .consultation,.core-features,.pillow-section,.structure,.usage-scenes,.care,.specs{isolation:isolate;overflow:hidden}
 .consultation:after,.core-features:after,.structure:after,.care:after,.specs:after{
