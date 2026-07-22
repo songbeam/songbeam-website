@@ -45,6 +45,54 @@ const collectionProducts = [
   },
 ];
 
+const pillowSeries = [
+  {
+    name: "CBD草本忘憂 天絲枕",
+    en: "TENCEL PILLOW",
+    image: "/sleep-concerns-cbd-pillow-wide.png",
+    statement: "滑順親膚，延續柔和安定的睡眠感受。",
+    detail: "將草本忘憂系列的舒適概念融入天絲枕款，適合偏好細緻觸感與輕柔包覆感的睡眠選擇。",
+    highlights: ["細緻親膚觸感", "柔和包覆睡感", "適合到門市實際試躺"],
+    note: "實際表布成分、枕芯材質、尺寸與高度，請以正式商品標示及門市說明為準。",
+  },
+  {
+    name: "CBD草本忘憂 羽絨枕",
+    en: "DOWN PILLOW",
+    image: "/cbd-hero.png",
+    statement: "蓬鬆包覆，給喜歡柔軟睡感的你。",
+    detail: "以羽絨枕款回應偏好輕盈、蓬鬆與包覆感的睡眠習慣，讓頭頸自然落在柔軟承托之中。",
+    highlights: ["蓬鬆柔軟睡感", "輕盈包覆頭頸", "建議依睡姿試躺選擇"],
+    note: "實際羽絨比例、填充量、尺寸與清潔方式，請以正式商品標示及門市說明為準。",
+  },
+  {
+    name: "CBD草本忘憂 好眠雲朵枕",
+    en: "SLEEP CLOUD PILLOW",
+    image: "/series-support-pillow-scene.png",
+    statement: "像雲朵般輕柔，保留舒服的包覆空間。",
+    detail: "以柔和蓬鬆感作為主要睡感方向，適合喜歡枕頭輕柔承接、身體慢慢放鬆的使用者。",
+    highlights: ["雲朵般輕柔感", "舒適包覆設計", "依個人睡姿感受選擇"],
+    note: "實際枕芯材質、軟硬度、尺寸與高度，請以正式商品標示及門市說明為準。",
+  },
+  {
+    name: "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
+    en: "HYDROPHILIC CONTOUR PILLOW",
+    image: "/product-pillow-angle.jpg",
+    statement: "慢回彈貼合，回應仰睡與側睡的承托需求。",
+    detail: "親水記憶棉搭配海鷗式分區輪廓，透過中央、頸部與兩側區域，協助頭頸在不同睡姿中找到合適位置。",
+    highlights: ["親水記憶棉", "海鷗式分區輪廓", "仰睡與側睡皆可試躺"],
+    note: "「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效；實際效果因個人狀況而異。",
+  },
+  {
+    name: "CBD草本忘憂 海鷗減壓枕",
+    en: "SEAGULL PRESSURE-RELIEF PILLOW",
+    image: "/herbal-tactile-pillow-scene.png",
+    statement: "海鷗曲線承托，讓肩頸自然找到舒服位置。",
+    detail: "特殊海鷗造型回應仰睡、側睡與翻身時的高度變化，並可依不同身形與睡眠習慣調整使用感受。",
+    highlights: ["海鷗曲線支撐", "回應多種睡姿", "可依身形調整睡感"],
+    note: "實際高度調整方式、尺寸與適用睡姿，請以正式商品標示及門市試躺結果為準。",
+  },
+];
+
 const faqs = [
   { q: "CBD 是什麼？在這款寢具中如何使用？", a: "本頁僅就商品應用說明。依目前品牌資料，CBD 草本概念透過微膠囊機能織物應用於表布，並非食品或藥品；實際成分名稱、含量與來源仍應以原廠文件及檢驗報告為準。" },
   { q: "這款產品含有 THC 嗎？", a: "目前提供的品牌資料未附可供網站公開的 THC 檢驗數值，因此網站不宣稱零檢出或不含 THC。購買前建議向門市索取對應品項與批次的正式檢驗文件。" },
@@ -59,13 +107,21 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
+  const [selectedPillowIndex, setSelectedPillowIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
+  const selectedPillow = selectedPillowIndex === null ? null : pillowSeries[selectedPillowIndex];
   const closeMenu = () => setMenuOpen(false);
+  const closeProductModal = () => {
+    setSelectedPillowIndex(null);
+    setSelectedProductIndex(null);
+  };
 
   useEffect(() => {
-    if (selectedProductIndex === null) return;
+    if (selectedProductIndex === null && selectedPillowIndex === null) return;
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelectedProductIndex(null);
+      if (event.key !== "Escape") return;
+      if (selectedPillowIndex !== null) setSelectedPillowIndex(null);
+      else setSelectedProductIndex(null);
     };
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -74,7 +130,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex]);
+  }, [selectedProductIndex, selectedPillowIndex]);
 
   return (
     <main>
@@ -112,17 +168,31 @@ export default function Home() {
                 {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品細節 <span>→</span></button></div>
+              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>{index === 0 ? "查看商品連結" : "查看商品細節"} <span>→</span></button></div>
             </article>
           ))}
         </div>
       </section>
 
-      {selectedProduct ? <div className="product-modal-backdrop" onMouseDown={() => setSelectedProductIndex(null)}>
+      {selectedProductIndex === 0 ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
+        <section className="pillow-catalog-modal" role="dialog" aria-modal="true" aria-labelledby="pillow-catalog-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="關閉枕頭系列" onClick={closeProductModal} autoFocus>×</button>
+          <header className="pillow-catalog-heading"><small>CBD PILLOW COLLECTION</small><h2 id="pillow-catalog-title">CBD草本忘憂枕頭系列</h2><p>從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。</p></header>
+          <div className="pillow-catalog-grid">{pillowSeries.map((pillow, index) => <button className="pillow-catalog-card" type="button" key={pillow.name} onClick={() => setSelectedPillowIndex(index)}><span className="pillow-catalog-image"><img src={pillow.image} alt={pillow.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{pillow.en}</small><strong>{pillow.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>)}</div>
+        </section>
+      </div> : selectedProduct ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
         <section className="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" onMouseDown={(event) => event.stopPropagation()}>
-          <button className="product-modal-close" type="button" aria-label="關閉商品介紹" onClick={() => setSelectedProductIndex(null)} autoFocus>×</button>
+          <button className="product-modal-close" type="button" aria-label="關閉商品介紹" onClick={closeProductModal} autoFocus>×</button>
           <div className="product-modal-visual"><img className={`product-modal-image product-modal-image-${selectedProductIndex}`} src={selectedProduct.image} alt={selectedProduct.name} />{selectedProduct.accessoryImage ? <img className="product-modal-accessory" src={selectedProduct.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}</div>
-          <div className="product-modal-copy"><small>{selectedProduct.en}</small><h2 id="product-modal-title">{selectedProduct.name}</h2><strong>{selectedProduct.statement}</strong><p>{selectedProduct.detail}</p><ul>{selectedProduct.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedProduct.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={() => setSelectedProductIndex(null)}>到門市體驗 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列商品">詢問商品資訊 →</a></div></div>
+          <div className="product-modal-copy"><small>{selectedProduct.en}</small><h2 id="product-modal-title">{selectedProduct.name}</h2><strong>{selectedProduct.statement}</strong><p>{selectedProduct.detail}</p><ul>{selectedProduct.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedProduct.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列商品">詢問商品資訊 →</a></div></div>
+        </section>
+      </div> : null}
+
+      {selectedPillow ? <div className="product-modal-backdrop pillow-detail-layer" onMouseDown={() => setSelectedPillowIndex(null)}>
+        <section className="product-modal pillow-series-detail" role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="返回枕頭系列" onClick={() => setSelectedPillowIndex(null)} autoFocus>←</button>
+          <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedPillowIndex}`} src={selectedPillow.image} alt={selectedPillow.name} /></div>
+          <div className="product-modal-copy"><small>{selectedPillow.en}</small><h2 id="pillow-detail-title">{selectedPillow.name}</h2><strong>{selectedPillow.statement}</strong><p>{selectedPillow.detail}</p><ul>{selectedPillow.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedPillow.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedPillowIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}
 

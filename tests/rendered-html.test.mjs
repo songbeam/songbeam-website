@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -60,4 +61,18 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /非藥品/);
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
+});
+
+test("defines the two-step CBD pillow collection dialog", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /查看商品連結/);
+  assert.match(source, /pillow-catalog-modal/);
+  assert.match(source, /selectedPillowIndex/);
+  for (const name of [
+    "CBD草本忘憂 天絲枕",
+    "CBD草本忘憂 羽絨枕",
+    "CBD草本忘憂 好眠雲朵枕",
+    "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
+    "CBD草本忘憂 海鷗減壓枕",
+  ]) assert.match(source, new RegExp(name));
 });

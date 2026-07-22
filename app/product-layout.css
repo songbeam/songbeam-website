@@ -525,12 +525,44 @@
 .product-modal-actions{display:flex;align-items:center;gap:24px;margin-top:32px}
 .product-modal-actions .button{min-width:175px}
 
+.pillow-catalog-modal{
+  position:relative;width:min(1220px,100%);max-height:calc(100vh - 68px);overflow:auto;
+  padding:58px 54px 54px;border:1px solid rgba(255,255,255,.74);
+  border-radius:48px 8px;background:linear-gradient(145deg,#f8f4ed,#e8eeea);
+  color:#5b6d75;box-shadow:0 40px 120px rgba(36,43,40,.3);
+  animation:product-modal-in .28s ease-out;
+}
+.pillow-catalog-heading{max-width:720px;margin-bottom:34px}
+.pillow-catalog-heading small{color:#a28672;font:9px Arial,sans-serif;letter-spacing:.24em}
+.pillow-catalog-heading h2{margin:11px 0 12px;font-size:clamp(34px,4vw,56px);font-weight:400;letter-spacing:.07em;color:#586d76}
+.pillow-catalog-heading p{margin:0;font-size:12px;line-height:2;color:#768286}
+.pillow-catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pillow-catalog-card{display:flex;flex-direction:column;padding:0;overflow:hidden;text-align:left;cursor:pointer;border:1px solid rgba(255,255,255,.78);border-radius:24px 5px;background:rgba(250,247,241,.82);box-shadow:0 18px 44px rgba(83,103,108,.09);transition:transform .3s ease,box-shadow .3s ease}
+.pillow-catalog-card:hover{transform:translateY(-5px);box-shadow:0 25px 54px rgba(83,103,108,.15)}
+.pillow-catalog-image{position:relative;display:block;height:210px;overflow:hidden;background:linear-gradient(145deg,#e3e8e5,#d8dfdc)}
+.pillow-catalog-image img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.65) contrast(.93) brightness(1.04);transition:transform .45s ease}
+.pillow-catalog-card:hover img{transform:scale(1.035)}
+.pillow-catalog-card:nth-child(4) .pillow-catalog-image img{object-fit:contain;padding:8%;mix-blend-mode:multiply}
+.pillow-catalog-image i{position:absolute;left:13px;top:13px;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:rgba(250,247,241,.9);color:#9b7f71;font:10px Georgia,serif;font-style:normal}
+.pillow-catalog-copy{display:flex;flex:1;flex-direction:column;padding:19px 19px 18px}
+.pillow-catalog-copy small{color:#a28672;font:8px Arial,sans-serif;letter-spacing:.2em}
+.pillow-catalog-copy strong{margin:8px 0 18px;color:#586d76;font-size:16px;line-height:1.75;letter-spacing:.05em;font-weight:500}
+.pillow-catalog-copy em{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:13px;border-top:1px solid rgba(89,108,116,.14);color:#687a80;font:10px "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.08em;font-style:normal}
+.pillow-catalog-copy b{color:#a78b72;font-size:15px;font-weight:400}
+.pillow-detail-layer{z-index:1010;background:rgba(49,56,52,.68)}
+.pillow-series-image{object-position:center}
+.pillow-series-image-3{object-fit:contain;padding:12%;mix-blend-mode:multiply}
+.pillow-back-button{padding:0;border:0;border-bottom:1px solid rgba(89,108,116,.28);background:transparent;color:#687a80;font:11px "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.08em;cursor:pointer}
+
 @media(max-width:800px){
   .product-modal-backdrop{padding:18px}
   .product-modal{grid-template-columns:1fr;max-height:calc(100vh - 36px);border-radius:32px 6px}
   .product-modal-visual{min-height:360px}
   .product-modal-copy{padding:46px 30px 42px}
   .product-modal-close{right:14px;top:14px}
+  .pillow-catalog-modal{max-height:calc(100vh - 36px);padding:52px 28px 36px;border-radius:32px 6px}
+  .pillow-catalog-grid{grid-template-columns:1fr 1fr}
+  .pillow-catalog-image{height:190px}
 }
 
 @media(max-width:480px){
@@ -541,4 +573,12 @@
   .product-modal-copy h2{font-size:34px}
   .product-modal-actions{align-items:stretch;flex-direction:column;gap:18px}
   .product-modal-actions .button{width:100%}
+  .pillow-catalog-modal{width:100%;max-height:100vh;min-height:100vh;padding:66px 18px 30px;border:0;border-radius:0}
+  .pillow-catalog-heading h2{font-size:32px}
+  .pillow-catalog-grid{grid-template-columns:1fr;gap:14px}
+  .pillow-catalog-card{display:grid;grid-template-columns:42% 58%;min-height:170px}
+  .pillow-catalog-image{height:100%}
+  .pillow-catalog-copy{padding:16px}
+  .pillow-catalog-copy strong{font-size:15px;margin-bottom:12px}
+  .pillow-back-button{align-self:center;padding:8px 0}
 }
