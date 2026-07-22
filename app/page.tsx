@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const features = [
-  ["01", "HERBAL RITUAL", "讓睡前，多一點放鬆儀式。", "草本概念透過微膠囊機能織物融入表布；只依品牌資料與後續可提出的檢驗說明，不延伸為療效。"],
-  ["02", "ERGONOMIC SUPPORT", "不只是柔軟，更懂得好好支撐。", "海鷗式輪廓以中央凹槽、頸部曲線與兩側枕區，回應仰睡、側睡及翻身時的不同高度。"],
-  ["03", "SLOW REBOUND", "慢慢貼合，也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
+  ["01", "HERBAL RITUAL", "讓睡前，多一點放鬆儀式。", "", "草本概念透過微膠囊機能織物融入表布。"],
+  ["02", "ERGONOMIC SUPPORT", "不只是柔軟，", "更懂得好好支撐。", "海鷗式輪廓以中央凹槽、頸部曲線與兩側枕區，回應仰睡、側睡及翻身時的不同高度。"],
+  ["03", "SLOW REBOUND", "慢慢貼合，", "也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
 ];
 
 const fitItems = ["喜歡有包覆感的枕頭", "希望頭頸獲得穩定支撐", "習慣仰睡與側睡交替", "在意睡眠環境與放鬆儀式", "不喜歡過軟、容易塌陷的枕頭", "想親自體驗不同枕頭高度與睡感"];
@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="core-features section" id="features">
         <div className="section-label"><span>01</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div></div>
-        <div className="feature-editorial"><figure><img src="/herbal-tactile-pillow-scene.png" alt="暖晨光中完整展示 CBD 草本忘憂枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, title, copy]) => <article key={no}><span>{no} / {en}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>
+        <div className="feature-editorial"><figure><img src="/herbal-tactile-pillow-scene.png" alt="暖晨光中完整展示 CBD 草本忘憂枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
       <section className="product-showcase section" id="products">
@@ -133,7 +133,7 @@ export default function Home() {
           <figure className="seagull-photo"><img src="/herbal-tactile-pillow-scene.png" alt="晨光臥室中展示 CBD 草本忘憂海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
           <div className="seagull-copy">
             <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
-            <div className="product-details seagull-details"><article><span>01</span><div><h3>中央區</h3><p>以中央凹槽承接後腦，協助維持自然仰睡位置。</p></div></article><article><span>02</span><div><h3>頸部與肩頸區</h3><p>曲線貼近頸部，降低肩膀與枕頭間明顯懸空的感受。</p></div></article><article><span>03</span><div><h3>兩側與波浪曲線</h3><p>提高側睡承托範圍，並讓不同睡姿之間的轉換更連續。</p></div></article></div>
+            <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
             <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
           </div>
         </div>
