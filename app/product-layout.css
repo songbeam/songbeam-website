@@ -882,10 +882,12 @@
   margin:14px 0 20px;color:#526b63;font-size:clamp(39px,4.5vw,62px);
   font-weight:300;line-height:1.55;letter-spacing:.05em;
 }
-.care-wash-layout .care-title-nowrap{white-space:nowrap}
+.care-title-lines span{display:block;white-space:nowrap}
 .care-intro-lines{font-size:clamp(10px,.86vw,12px)!important}
 .care-intro-lines span{display:block;white-space:nowrap}
 .care-intro-lines span+span{margin-top:6px}
+.wash-instruction-lines span{display:block;white-space:nowrap}
+.wash-instruction-lines span+span{margin-top:4px}
 .care-wash-layout>header>p:last-of-type{max-width:440px;color:#75827d;font-size:12px;line-height:2.1}
 .care-symbols{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .care-symbols span{
@@ -1042,8 +1044,10 @@
   .safety-feature-grid article{min-height:112px}
   .care-wash-layout{margin-top:35px}
   .care-wash-layout h2{font-size:37px}
-  .care-wash-layout .care-title-nowrap{font-size:35px}
+  .care-wash-layout .care-title-lines{font-size:35px}
   .care-intro-lines{font-size:9px!important;letter-spacing:-.015em}
+  .wash-guide-list .wash-cover{grid-template-columns:1fr}
+  .wash-guide-list .wash-instruction-lines{font-size:6.8px;letter-spacing:-.035em}
   .wash-guide-list article{grid-template-columns:43px 1fr;gap:14px;padding:24px 20px}
   .wash-guide-list article:nth-child(even){transform:none}
   .wash-guide-list article>span{width:36px;height:36px}
