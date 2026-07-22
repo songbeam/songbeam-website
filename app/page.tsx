@@ -16,7 +16,7 @@ const sleepScales = [
 
 const collectionProducts = [
   {
-    name: "CBD 草本忘憂親水枕",
+    name: "CBD草本忘憂枕頭",
     en: "HYDROPHILIC PILLOW",
     image: "/product-pillow-angle.jpg",
     statement: "貼合頭頸，也讓睡感保持輕盈。",
@@ -34,7 +34,7 @@ const collectionProducts = [
     note: "實際組合、尺寸與清潔方式，請以品牌正式商品資訊及洗標為準。",
   },
   {
-    name: "隨身旅行頸枕／眼罩",
+    name: "CBD隨身旅行組",
     en: "TRAVEL REST SET",
     image: "/product-travel-pillow.jpg",
     accessoryImage: "/product-eye-mask.jpg",
@@ -153,16 +153,12 @@ export default function Home() {
         <div className="evidence-list"><article><span className="status known">品牌資料記載</span><h3>微膠囊織物技術</h3><p>品牌簡報記載技術來源為比利時；原料商名稱與技術授權文件待補。</p></article><article><span className="status pending">待檢驗文件</span><h3>CBD 成分與含量</h3><p>需提供成分名稱、來源、添加方式、含量與對應批次報告。</p></article><article><span className="status pending">待檢驗文件</span><h3>THC 檢驗結果</h3><p>目前沒有可公開數值，因此不宣稱「不含 THC」或「零檢出」。</p></article><article><span className="status pending">待法規文件</span><h3>台灣相關規範</h3><p>需依實際材質、輸入與銷售方式確認適用規範並提供文件。</p></article><article><span className="status pending">有報告再上架</span><h3>無毒、耐久與其他檢測</h3><p>抗菌、耐洗、耐久或無毒等項目，僅在有對應測試標準與報告時呈現。</p></article></div>
       </section>
 
-      <section className="usage-scenes section" id="scenes">
-        <div className="section-label"><span>07</span><p>FROM NIGHT TO MORNING</p></div><div className="scene-heading"><p className="eyebrow">第五幕｜一夜的使用故事</p><h2>從躺下的那一刻，<br />讓夜晚慢慢安靜下來。</h2></div><div className="scene-grid magazine"><article><img src="/lifestyle-reading.png" alt="睡前在床邊閱讀" /><div><span>22:30 / BEFORE SLEEP</span><h3>慢慢關掉白天的聲音</h3><p>洗完澡、放下手機，讓柔和燈光與安靜閱讀成為休息訊號。</p></div></article><article><img src="/hero-night.png" alt="側躺使用草本忘憂枕放鬆" /><div><span>23:10 / FALLING ASLEEP</span><h3>找到身體舒服的位置</h3><p>頭頸落在海鷗曲線上，讓包覆與支撐陪身體慢慢找到位置。</p></div></article><article><img src="/lifestyle-morning.png" alt="清晨起床拉開窗簾" /><div><span>07:00 / MORNING</span><h3>在柔和晨光裡醒來</h3><p>自然光回到房間，以安靜、沒有壓力的生活感開始新的一天。</p></div></article></div>
-      </section>
-
       <section className="care section" id="care">
-        <div className="section-label"><span>08</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
+        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
       </section>
 
       <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
+        <div className="faq-title"><div className="section-label"><span>08</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
       </section>
 
       <section className="buy-panel" id="buy"><div className="buy-image"><img src="/product-press-closeup.png" alt="草本忘憂枕材質與曲線情境" /></div><div className="buy-copy"><p className="overline">READY FOR YOUR NIGHT</p><h2>舒服入睡，<br />不必等到很累以後。</h2><p>由上品寢具人員協助確認現貨、售價、門市與適合的試躺方式。</p><div className="buy-actions"><a className="button primary" href="#features">立即了解 <span>↑</span></a><a className="button outline-dark" href="#stores">查看門市</a><a className="button outline-dark" href="mailto:service@shangpin-bedding.tw?subject=預約 CBD 草本忘憂枕試躺">預約體驗</a></div></div></section>

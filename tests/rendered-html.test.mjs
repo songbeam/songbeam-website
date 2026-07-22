@@ -28,6 +28,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /微膠囊機能織物/);
   assert.match(html, /應用於表布/);
   assert.match(html, /不自行承諾機能耐洗次數/);
+  assert.match(html, /CBD草本忘憂枕頭/);
+  assert.match(html, /CBD隨身旅行組/);
+  assert.doesNotMatch(html, /CBD 草本忘憂親水枕|隨身旅行頸枕／眼罩/);
   assert.doesNotMatch(html, /href="\/cbd-series"/);
   assert.match(html, /讓睡前，多一點放鬆儀式/);
   assert.match(html, /不只是柔軟，/);
@@ -35,9 +38,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /慢慢貼合，/);
   assert.match(html, /也慢慢卸下疲憊/);
   assert.doesNotMatch(html, /只依品牌資料與後續可提出的檢驗說明，不延伸為療效/);
-  assert.match(html, /lifestyle-reading\.png/);
   assert.match(html, /product-press-closeup\.png/);
-  assert.match(html, /lifestyle-morning\.png/);
+  assert.doesNotMatch(html, /lifestyle-reading\.png|lifestyle-morning\.png/);
   assert.match(html, /海鷗曲線/);
   assert.match(html, /GLORY 獨家專利 Tempwiser 親水棉/);
   assert.match(html, /海鷗曲線支撐/);
@@ -46,7 +48,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /親水記憶棉/);
   assert.match(html, /THC 檢驗結果/);
   assert.match(html, /不宣稱「不含 THC」/);
-  assert.match(html, /從躺下的那一刻/);
+  assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /好好使用/);
   assert.match(html, /可以改善失眠嗎/);
   assert.match(html, /product-detail-trigger/);
