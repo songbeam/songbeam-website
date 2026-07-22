@@ -325,15 +325,9 @@ export default function Home() {
         <div className="section-label"><span>06</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
         <header className="evidence-story-head"><div><p className="eyebrow">品牌臨床資料與表布技術</p><h2>從睡眠觀察，<br />到微膠囊表布。</h2></div><div className="evidence-highlight"><strong>近 7 成</strong><span>受驗者改善睡眠品質<br />品牌提供資料</span></div></header>
 
-        <div className="sleep-study-panel">
-          <div className="study-panel-heading"><div><small>BRAND-PROVIDED CLINICAL DATA</small><h3>使用 CBD 枕頭前後的睡眠時間比較</h3></div><div className="study-badges"><span>增加睡眠時數</span><span>改善睡眠品質</span></div></div>
-          <div className="sleep-chart-grid">
-            <article><header><h4>總睡眠數</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div></article>
-            <article><header><h4>淺眠</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div></article>
-            <article><header><h4>深睡</h4><p>分鐘</p></header><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div></article>
-          </div>
-          <p className="study-summary">品牌資料說明：使用 CBD 枕頭後，近 7 成受驗者有明顯改善睡眠品質。</p>
-          <p className="study-title">Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p>
+        <div className="clinical-reference-panel">
+          <figure><img src="/cbd-clinical-study-2025.png" alt="CBD 草本忘憂系列 2025 品牌臨床資料、研究人員與睡眠圖表" /><figcaption>品牌提供之 2025 研究宣傳資料</figcaption></figure>
+          <div className="clinical-reference-copy"><small>BRAND-PROVIDED RESEARCH MATERIAL</small><h3>研究資訊與睡眠觀察，<br />整合在同一張資料圖。</h3><p>圖片記載 CBD 草本忘憂系列與醫藥大學共同研究，並列出總睡眠、淺眠與深睡的使用前後比較。</p><div className="clinical-facts"><article><strong>2 / 3</strong><span>品牌資料描述<br />受驗者睡眠品質改善</span></article><article><strong>2025</strong><span>圖片標示<br />MDPI 國際期刊資訊</span></article></div><div className="clinical-people"><p><b>Patrick Lin, D.C.</b><span>美國 Palmer 脊骨神經醫學博士</span></p><p><b>楊顧丞 博士</b><span>中醫藥藥學博士</span></p></div><p className="clinical-paper-title">Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
 
         <div className="textile-tech-panel">
@@ -342,11 +336,13 @@ export default function Home() {
         </div>
 
         <div className="evidence-claim-grid"><article><span>01</span><strong>草本助眠・漢麻二酚</strong><small>品牌資料主張</small></article><article><span>02</span><strong>醫藥大學臨床實驗</strong><small>原始報告待補</small></article><article><span>03</span><strong>獨家微膠囊技術</strong><small>技術文件待補</small></article><article><span>04</span><strong>天然草本技術製成</strong><small>品牌資料主張</small></article><article><span>05</span><strong>天然抗菌除臭</strong><small>檢驗報告待補</small></article></div>
-        <p className="evidence-source-note">本頁圖表與說明依品牌提供的三張資料截圖重新繪製。「全台近 400 萬人」、「近 7 成受驗者」、醫藥大學臨床實驗、抗菌除臭及微膠囊釋放等內容，仍需以原始研究報告、試驗設計、樣本數、統計結果與檢驗文件為準。本產品為一般寢具用品，非藥品或醫療器材。</p>
+        <p className="evidence-source-note">本頁圖片、數據與說明依品牌提供資料整理。「全台 500 萬人」、「每 3 人有 2 名受驗者」、MDPI 國際期刊、醫藥大學共同研究、抗菌除臭及微膠囊釋放等內容，仍需以原始研究報告／論文、期刊連結、試驗設計、樣本數、統計結果與檢驗文件為準。本產品為一般寢具用品，非藥品或醫療器材。</p>
       </section>
 
       <section className="care section" id="care">
-        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div><div className="care-layout"><div><p className="eyebrow">使用與保養方式</p><h2>好好使用，也讓舒服<br />陪伴得更久。</h2><p>以下為保守使用原則；若正式洗標與原廠說明不同，請以商品文件為準。</p></div><div className="care-grid"><article><span>01</span><h3>初次使用</h3><p>依包裝說明處理；若開封後有材質氣味，可先置於陰涼通風處。</p></article><article><span>02</span><h3>外布套</h3><p>是否可拆洗、洗程與水溫請依洗標，不自行承諾機能耐洗次數。</p></article><article><span>03</span><h3>枕芯</h3><p>親水記憶棉避免直接水洗、扭轉、曝曬與高溫烘乾。</p></article><article><span>04</span><h3>日常整理</h3><p>置於陰涼通風處，保持乾爽；避免長時間潮濕與重物壓放。</p></article><article><span>05</span><h3>草本機能期限</h3><p>目前未提供使用期限或洗滌遞減資料，需由品牌與原料商補充。</p></article><article><span>06</span><h3>建議更換時間</h3><p>未有固定年限資料；若明顯塌陷、支撐改變或表布損壞，建議評估更換。</p></article></div></div>
+        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div>
+        <div className="care-wash-layout"><header><p className="eyebrow">使用與保養方式</p><h2>順著材質照顧，<br />讓舒服陪伴更久。</h2><p>日常以除塵、局部清潔為主；枕芯與布套請分開處理。實際洗滌仍以商品洗標為準。</p><div className="care-symbols"><span>低溫</span><span>勿漂白</span><span>枕芯勿機洗</span></div></header><div className="wash-guide-list"><article><span>01</span><div><h3>無明顯髒污</h3><p>可用吸塵器清除表面的灰塵或皮屑。</p></div></article><article><span>02</span><div><h3>有局部污跡</h3><p>可用濕布沾少許肥皂，溫和地輕輕清潔。</p></div></article><article><span>03</span><div><h3>枕芯特殊材質</h3><p>勿機洗，避免直接曝曬於太陽下，或以高溫方式處理。</p></div></article><article className="wash-cover"><span>04</span><div><h3>防護布套</h3><p>可水洗、可乾洗；勿烘乾及漂白。浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</p></div></article><article className="wash-cover cbd"><span>05</span><div><h3>CBD 外布套</h3><p>可水洗、可乾洗、可低溫烘乾；勿漂白。浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</p></div></article></div></div>
+        <p className="care-source-note">以上內容依品牌提供之洗滌說明整理。若商品洗標、材質標示或原廠文件另有規定，請優先依實際商品標示操作。</p>
       </section>
 
       <section className="faq section" id="faq">

@@ -682,6 +682,78 @@
   background:rgba(255,255,255,.34);color:#7e8a85;font-size:9px;line-height:2;letter-spacing:.025em;
 }
 
+.clinical-reference-panel{
+  position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.48fr) minmax(340px,.52fr);
+  overflow:hidden;border:1px solid rgba(255,255,255,.82);border-radius:7px 62px 7px 62px;
+  background:rgba(249,249,243,.76);box-shadow:0 30px 80px rgba(76,99,86,.11);
+}
+.clinical-reference-panel figure{margin:0;padding:26px;background:linear-gradient(145deg,#eef1ec,#e2eae3)}
+.clinical-reference-panel figure img{
+  display:block;width:100%;height:auto;border-radius:3px 32px 3px 32px;
+  filter:saturate(.72) contrast(.96) brightness(1.02);box-shadow:0 18px 45px rgba(65,84,73,.12);
+}
+.clinical-reference-panel figcaption{margin-top:12px;color:#7f8d87;font:8px Arial,sans-serif;letter-spacing:.15em}
+.clinical-reference-copy{padding:48px 40px 42px;display:flex;flex-direction:column;justify-content:center}
+.clinical-reference-copy>small{color:#9b806d;font:8px Arial,sans-serif;letter-spacing:.2em}
+.clinical-reference-copy h3{
+  margin:11px 0 17px;color:#536d66;font-size:clamp(27px,2.7vw,40px);
+  font-weight:400;line-height:1.55;letter-spacing:.045em;
+}
+.clinical-reference-copy>p{margin:0;color:#6e7e78;font-size:11px;line-height:2}
+.clinical-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 20px}
+.clinical-facts article{
+  min-height:125px;padding:20px 16px;border:1px solid rgba(80,111,94,.13);border-radius:4px 24px;
+  background:linear-gradient(145deg,rgba(225,237,221,.8),rgba(247,245,238,.72));
+}
+.clinical-facts strong{display:block;color:#4f7c65;font-size:26px;font-weight:500;letter-spacing:.03em}
+.clinical-facts span{display:block;margin-top:7px;color:#73827c;font-size:9px;line-height:1.7}
+.clinical-people{border-top:1px solid rgba(80,111,94,.14)}
+.clinical-people p{margin:0;padding:13px 0;border-bottom:1px solid rgba(80,111,94,.14)}
+.clinical-people b{display:block;color:#566e65;font-size:12px;font-weight:500;letter-spacing:.03em}
+.clinical-people span{display:block;margin-top:4px;color:#87918d;font-size:9px}
+.clinical-reference-copy .clinical-paper-title{margin-top:18px;color:#929a96;font:8px/1.7 Arial,sans-serif}
+
+/* CARE GUIDE — washing instructions translated into a calm editorial layout. */
+.care{overflow:hidden;background:linear-gradient(150deg,#f7f3eb,#edf1ea 68%,#e8ede5)}
+.care-wash-layout{
+  display:grid;grid-template-columns:minmax(300px,.68fr) minmax(0,1.32fr);gap:8vw;
+  align-items:start;margin-top:56px;
+}
+.care-wash-layout>header{position:sticky;top:115px;padding:15px 0 30px}
+.care-wash-layout h2{
+  margin:14px 0 20px;color:#526b63;font-size:clamp(39px,4.5vw,62px);
+  font-weight:300;line-height:1.55;letter-spacing:.05em;
+}
+.care-wash-layout>header>p:last-of-type{max-width:440px;color:#75827d;font-size:12px;line-height:2.1}
+.care-symbols{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.care-symbols span{
+  padding:8px 13px;border:1px solid rgba(87,119,102,.18);border-radius:999px;
+  background:rgba(255,255,255,.5);color:#6d7f76;font-size:9px;letter-spacing:.07em;
+}
+.wash-guide-list{display:grid;gap:12px}
+.wash-guide-list article{
+  display:grid;grid-template-columns:54px 1fr;gap:22px;align-items:start;padding:28px 30px;
+  border:1px solid rgba(255,255,255,.86);border-radius:5px 34px 5px 34px;
+  background:rgba(252,250,245,.72);box-shadow:0 16px 44px rgba(75,98,85,.07);
+}
+.wash-guide-list article:nth-child(even){transform:translateX(18px)}
+.wash-guide-list article>span{
+  width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(158,129,101,.48);
+  border-radius:50%;color:#9c806b;font:10px Georgia,serif;
+}
+.wash-guide-list h3{margin:2px 0 8px;color:#536c63;font-size:17px;font-weight:500;letter-spacing:.07em}
+.wash-guide-list p{margin:0;color:#77837e;font-size:11px;line-height:2}
+.wash-guide-list .wash-cover{
+  background:linear-gradient(145deg,rgba(238,230,218,.78),rgba(250,248,242,.78));
+}
+.wash-guide-list .wash-cover.cbd{
+  background:linear-gradient(145deg,rgba(218,232,215,.86),rgba(249,247,240,.8));
+}
+.care-source-note{
+  margin:42px 0 0 41%;padding:18px 22px;border-left:2px solid rgba(93,127,108,.34);
+  color:#818c87;background:rgba(255,255,255,.34);font-size:9px;line-height:1.9;
+}
+
 @media(max-width:800px){
   .product-modal-backdrop{padding:18px}
   .product-modal{grid-template-columns:1fr;max-height:calc(100vh - 36px);border-radius:32px 6px}
@@ -707,6 +779,11 @@
   .textile-tech-visual{min-height:410px}
   .textile-tech-copy{padding:42px 34px}
   .evidence-claim-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .clinical-reference-panel{grid-template-columns:1fr;border-radius:5px 42px}
+  .clinical-reference-copy{padding:39px 30px 40px}
+  .care-wash-layout{grid-template-columns:1fr;gap:36px}
+  .care-wash-layout>header{position:static;max-width:650px}
+  .care-source-note{margin-left:0}
 }
 
 @media(max-width:480px){
@@ -746,4 +823,15 @@
   .evidence-claim-grid article{min-height:0;padding:23px 21px}
   .evidence-claim-grid strong{margin-top:15px}
   .evidence-claim-grid small{margin-top:7px;padding-top:8px}
+  .clinical-reference-panel{width:calc(100% + 8vw);margin-left:-4vw;border-radius:4px 30px}
+  .clinical-reference-panel figure{padding:12px}
+  .clinical-reference-panel figure img{border-radius:3px 20px}
+  .clinical-reference-copy{padding:31px 22px 34px}
+  .clinical-facts{grid-template-columns:1fr 1fr}
+  .care-wash-layout{margin-top:35px}
+  .care-wash-layout h2{font-size:37px}
+  .wash-guide-list article{grid-template-columns:43px 1fr;gap:14px;padding:24px 20px}
+  .wash-guide-list article:nth-child(even){transform:none}
+  .wash-guide-list article>span{width:36px;height:36px}
+  .care-source-note{margin-top:30px}
 }
