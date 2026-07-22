@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       <section className="series-home" id="series">
-        <div className="series-intro section"><div className="section-label"><span>02</span><p>BODY BEGINS TO UNWIND</p></div><div className="series-product-editorial"><div className="series-product-copy"><p className="eyebrow">第二幕｜身體開始慢慢鬆開</p><h2>一顆枕頭，<br />從支撐開始，也從放鬆開始。</h2><p>上品將草本概念融入睡眠用品設計，並搭配枕頭本身的包覆、回彈與支撐機能。不把 CBD 描述為治療方式，而是讓舒適成為每日睡前可以重複的放鬆陪伴。</p><div className="series-short-points"><span>貼合頭頸</span><span>慢回彈包覆</span><span>草本睡眠概念</span></div></div><div className="series-product-image"><img src="/product-pillow-angle.jpg" alt="上品 CBD 草本忘憂海鷗減壓枕" /><i aria-hidden="true" /><b className="product-orbit" aria-hidden="true">BREATHE · RELEASE · REST ·</b></div></div></div>
+        <div className="series-intro section"><div className="section-label"><span>02</span><p>BODY BEGINS TO UNWIND</p></div><div className="series-product-editorial"><div className="series-product-copy"><h2 className="series-heading"><span>一顆枕頭，從支撐開始</span><span>也從放鬆開始。</span></h2><p>上品將草本概念融入睡眠用品設計，並搭配枕頭本身的包覆、回彈與支撐機能。不把 CBD 描述為治療方式，而是讓舒適成為每日睡前可以重複的放鬆陪伴。</p><div className="series-short-points"><span>貼合頭頸</span><span>慢回彈包覆</span><span>草本睡眠概念</span></div></div><div className="series-product-image"><img src="/series-support-pillow-scene.png" alt="暖晨光臥室中展示上品 CBD 草本忘憂枕的支撐輪廓" /></div></div></div>
       </section>
 
       <section className="product-showcase section" id="products">
