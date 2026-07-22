@@ -87,6 +87,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /枕頭合不合適/);
   assert.match(html, /吳若權 老師/);
   assert.match(html, /林國偉 博士/);
+  assert.match(html, /wu-ruo-quan\.jpg/);
+  assert.match(html, /dr-lin-kuo-wei\.png/);
+  assert.match(html, /endorsement-title-nowrap/);
+  assert.doesNotMatch(html, /從生活感受，到頭頸支撐的專業觀點/);
   assert.match(html, /美國脊骨神經醫學博士推薦/);
   assert.match(html, /href="#endorsements"/);
   assert.doesNotMatch(html, /舒服入睡|不必等到很累以後|id="buy"|href="#buy"|立即購買/);

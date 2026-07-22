@@ -288,10 +288,10 @@ export default function Home() {
 
       <section className="endorsement-section section" id="endorsements">
         <div className="section-label"><span>02</span><p>BRAND AMBASSADOR &amp; PROFESSIONAL RECOMMENDATION</p></div>
-        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br />都有值得信任的聲音。</h2></div><p>從生活感受，到頭頸支撐的專業觀點，陪你更完整地認識 CBD 草本忘憂系列。</p></div>
+        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br /><span className="endorsement-title-nowrap">都有值得信任的聲音。</span></h2></div></div>
         <div className="endorsement-grid">
-          <article><span className="endorsement-monogram">若權</span><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>CBD 系列產品代言人</strong><p>吳若權老師擔任 CBD 系列產品代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
-          <article><span className="endorsement-monogram">國偉</span><div><small>PROFESSIONAL RECOMMENDATION</small><h3>林國偉 博士</h3><strong>美國脊骨神經醫學博士推薦</strong><p>從日常睡眠支撐與肩頸舒適的角度，推薦 CBD 系列產品與枕型設計。</p></div></article>
+          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>CBD 系列產品代言人</strong><p>吳若權老師擔任 CBD 系列產品代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
+          <article><figure className="endorsement-portrait lin"><img src="/dr-lin-kuo-wei.png" alt="林國偉博士" /></figure><div><small>PROFESSIONAL RECOMMENDATION</small><h3>林國偉 博士</h3><strong>美國脊骨神經醫學博士推薦</strong><p>從日常睡眠支撐與肩頸舒適的角度，推薦 CBD 系列產品與枕型設計。</p></div></article>
         </div>
         <p className="endorsement-note">本頁代言與推薦資訊依品牌提供資料呈現；產品為一般寢具用品，非醫療器材，不具診斷或治療功效。</p>
       </section>

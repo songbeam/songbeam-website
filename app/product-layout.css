@@ -529,13 +529,16 @@
 .endorsement-section:before,.endorsement-section:after{content:"";position:absolute;border:1px solid rgba(164,140,107,.3);border-radius:50%;pointer-events:none}
 .endorsement-section:before{width:62vw;height:20vw;right:-18vw;top:12%;transform:rotate(-11deg)}
 .endorsement-section:after{width:48vw;height:17vw;left:-20vw;bottom:7%;transform:rotate(8deg)}
-.endorsement-intro{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:end;margin:70px 0 65px}
+.endorsement-intro{position:relative;z-index:2;margin:70px 0 65px}
 .endorsement-intro h2{margin:12px 0 0;color:#536b75;font-size:clamp(46px,5.4vw,78px);font-weight:300;line-height:1.5;letter-spacing:.06em}
-.endorsement-intro>p{max-width:420px;margin:0 0 12px;color:#718287;font-size:13px;line-height:2.2}
+.endorsement-title-nowrap{white-space:nowrap}
 .endorsement-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.endorsement-grid article{display:grid;grid-template-columns:150px 1fr;gap:30px;align-items:center;min-height:330px;padding:44px;border:1px solid rgba(255,255,255,.72);border-radius:6px 70px 6px 70px;background:rgba(250,248,243,.72);box-shadow:0 25px 70px rgba(74,91,96,.08);backdrop-filter:blur(10px)}
+.endorsement-grid article{display:grid;grid-template-columns:170px 1fr;gap:30px;align-items:center;min-height:360px;padding:36px;border:1px solid rgba(255,255,255,.72);border-radius:6px 70px 6px 70px;background:rgba(250,248,243,.72);box-shadow:0 25px 70px rgba(74,91,96,.08);backdrop-filter:blur(10px)}
 .endorsement-grid article:nth-child(2){transform:translateY(42px);border-radius:70px 6px 70px 6px}
-.endorsement-monogram{width:142px;height:190px;display:grid;place-items:center;border:1px solid rgba(164,140,107,.38);border-radius:48% 48% 8px 8px / 28% 28% 8px 8px;color:#8b765e;background:linear-gradient(180deg,rgba(231,222,210,.75),rgba(222,231,229,.72));font-size:28px;letter-spacing:.12em;writing-mode:vertical-rl}
+.endorsement-portrait{width:170px;height:250px;margin:0;overflow:hidden;border:1px solid rgba(164,140,107,.3);border-radius:48% 48% 8px 8px / 23% 23% 8px 8px;background:#f7f6f2;box-shadow:0 18px 38px rgba(77,92,94,.12)}
+.endorsement-portrait img{width:100%;height:100%;display:block;object-fit:cover}
+.endorsement-portrait.wu img{object-position:50% 24%}
+.endorsement-portrait.lin img{object-position:50% 58%}
 .endorsement-grid small{color:#a28672;font:8px Arial,sans-serif;letter-spacing:.21em}
 .endorsement-grid h3{margin:10px 0 6px;color:#566d77;font-size:30px;font-weight:400;letter-spacing:.08em}
 .endorsement-grid strong{display:block;color:#687b82;font-size:14px;line-height:1.8;font-weight:500;letter-spacing:.05em}
@@ -1098,9 +1101,9 @@
   .pillow-catalog-copy strong{font-size:15px;margin-bottom:12px}
   .pillow-back-button{align-self:center;padding:8px 0}
   .endorsement-intro{margin:48px 0 38px}
-  .endorsement-intro h2{font-size:38px}
-  .endorsement-grid article{grid-template-columns:90px 1fr;gap:18px;min-height:auto;padding:26px 20px;border-radius:5px 42px}
-  .endorsement-monogram{width:82px;height:130px;font-size:20px}
+  .endorsement-intro h2{font-size:30px;letter-spacing:.035em}
+  .endorsement-grid article{grid-template-columns:108px 1fr;gap:18px;min-height:auto;padding:24px 18px;border-radius:5px 42px}
+  .endorsement-portrait{width:108px;height:160px}
   .endorsement-grid h3{font-size:24px}
   .endorsement-note{margin-top:45px}
   .evidence-story-head h2{font-size:38px}
