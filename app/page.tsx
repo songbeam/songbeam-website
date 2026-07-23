@@ -250,10 +250,18 @@ const protectorSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 毛小孩安撫墊被",
     en: "PET COMFORT MAT QUILT",
-    image: "/lifestyle-morning.png",
-    statement: "為毛小孩準備一處柔和、熟悉的休息角落。",
-    detail: "可作為毛小孩日常休息時使用的墊被，將草本忘憂系列的柔和居家感延伸到共享生活空間。",
-    highlights: ["毛小孩休息墊被", "柔和居家使用情境", "輕巧融入日常空間"],
+    image: "/cbd-pet-comfort-mat-quilt.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "具抗菌效果",
+    ],
     note: "實際材質、尺寸、適用寵物與清潔方式，請以正式商品標示及洗標為準。",
   },
 ];
