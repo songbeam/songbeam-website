@@ -151,6 +151,8 @@ test("defines the two-step CBD product collection dialogs", async () => {
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
+  const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
+  assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
   for (const detail of [
     "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "GLORY 獨家專利「Tempwiser 親水棉」",

@@ -571,7 +571,6 @@
 .pillow-catalog-copy b{color:#a78b72;font-size:15px;font-weight:400}
 .pillow-detail-layer{z-index:1010;background:rgba(49,56,52,.68)}
 .pillow-series-image{object-position:center}
-.pillow-series-image-3{object-fit:contain;padding:12%;mix-blend-mode:multiply}
 .pillow-series-expanded{width:min(1240px,100%);grid-template-columns:43% 57%}
 .pillow-series-expanded .product-modal-visual{min-height:760px}
 .pillow-series-expanded .pillow-series-copy{justify-content:flex-start;padding:58px 54px 48px}
