@@ -572,6 +572,25 @@
 .pillow-detail-layer{z-index:1010;background:rgba(49,56,52,.68)}
 .pillow-series-image{object-position:center}
 .pillow-series-image-3{object-fit:contain;padding:12%;mix-blend-mode:multiply}
+.tencel-series-detail{width:min(1240px,100%);grid-template-columns:43% 57%}
+.tencel-series-detail .product-modal-visual{min-height:760px}
+.tencel-series-detail .pillow-series-copy{justify-content:flex-start;padding:58px 54px 48px}
+.tencel-title-nowrap{
+  white-space:nowrap;font-size:clamp(28px,3vw,46px)!important;letter-spacing:.045em!important;
+}
+.pillow-feature-details{margin-top:28px;padding:25px 26px 21px;border-radius:5px 28px;background:rgba(255,255,255,.45)}
+.pillow-feature-details>small{color:#a28672;font:8px Arial,sans-serif;letter-spacing:.22em}
+.pillow-feature-details h3{margin:8px 0 14px;color:#5d7279;font-size:17px;font-weight:500;letter-spacing:.055em}
+.pillow-feature-details ol{list-style:none;margin:0;padding:0;border-top:1px solid rgba(89,108,116,.13)}
+.pillow-feature-details li{
+  display:grid;grid-template-columns:28px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid rgba(89,108,116,.13);
+}
+.pillow-feature-details li:last-child{border-bottom:0}
+.pillow-feature-details li:before{display:none}
+.pillow-feature-details li>span{color:#a28672;font:9px Georgia,serif;letter-spacing:.04em}
+.pillow-feature-details li>p{margin:0;color:#687a7f;font-size:10.5px;line-height:1.85;letter-spacing:.025em}
+.tencel-series-detail .product-modal-note{margin-top:18px}
+.tencel-series-detail .product-modal-actions{margin-top:24px}
 .pillow-back-button{padding:0;border:0;border-bottom:1px solid rgba(89,108,116,.28);background:transparent;color:#687a80;font:11px "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.08em;cursor:pointer}
 
 /* TESTING & TEXTILE TECHNOLOGY — supplied study figures redrawn for the web. */
@@ -1033,6 +1052,9 @@
   .product-modal-visual{min-height:360px}
   .product-modal-copy{padding:46px 30px 42px}
   .product-modal-close{right:14px;top:14px}
+  .tencel-series-detail{grid-template-columns:1fr}
+  .tencel-series-detail .product-modal-visual{min-height:380px}
+  .tencel-series-detail .pillow-series-copy{padding:46px 30px 42px}
   .pillow-catalog-modal{max-height:calc(100vh - 36px);padding:52px 28px 36px;border-radius:32px 6px}
   .pillow-catalog-grid{grid-template-columns:1fr 1fr}
   .pillow-catalog-image{height:190px}
@@ -1096,6 +1118,13 @@
   .product-modal-visual{min-height:310px}
   .product-modal-copy{padding:38px 24px 42px}
   .product-modal-copy h2{font-size:34px}
+  .tencel-series-detail .product-modal-visual{min-height:300px}
+  .tencel-series-detail .pillow-series-copy{padding:38px 20px 42px}
+  .tencel-title-nowrap{font-size:clamp(23px,7.25vw,32px)!important;letter-spacing:.015em!important}
+  .pillow-feature-details{padding:22px 18px 17px}
+  .pillow-feature-details h3{font-size:15px}
+  .pillow-feature-details li{grid-template-columns:25px 1fr;gap:7px}
+  .pillow-feature-details li>p{font-size:10px;line-height:1.8}
   .product-modal-actions{align-items:stretch;flex-direction:column;gap:18px}
   .product-modal-actions .button{width:100%}
   .pillow-catalog-modal{width:100%;max-height:100vh;min-height:100vh;padding:66px 18px 30px;border:0;border-radius:0}

@@ -133,6 +133,15 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD草本忘憂 旅行好眠頸枕 護頸枕",
     "CBD草本忘憂 好眠旅行組",
   ]) assert.match(source, new RegExp(name));
+  for (const detail of [
+    "30% 天絲＋70% 聚酯纖維",
+    "100% 純棉表布",
+    "睡感偏軟",
+    "獨家比利時萃取微膠囊技術",
+    "天絲纖維能舒緩過敏感性的肌膚",
+  ]) assert.match(source, new RegExp(detail));
+  assert.match(source, /tencel-title-nowrap/);
+  assert.match(source, /pillow-feature-details/);
 });
 
 test("defines direct original links for all U.S. media cards", async () => {
