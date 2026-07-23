@@ -158,6 +158,13 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "接觸空氣後會產生泛黃狀況",
     "cbd-sleep-cloud-pillow-bedroom.png",
   ]) assert.match(source, new RegExp(detail));
+  for (const detail of [
+    "獨家比利時萃取微膠囊技術",
+    "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+    "特殊造型，正睡、側睡，都能完美支撐",
+    "止鼾枕」為商品系列名稱",
+    "cbd-hydrophilic-contour-pillow-bedroom.png",
+  ]) assert.match(source, new RegExp(detail));
 });
 
 test("defines direct original links for all U.S. media cards", async () => {

@@ -139,11 +139,22 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
     en: "HYDROPHILIC CONTOUR PILLOW",
-    image: "/product-pillow-angle.jpg",
-    statement: "慢回彈貼合，回應仰睡與側睡的承托需求。",
-    detail: "親水記憶棉搭配海鷗式分區輪廓，透過中央、頸部與兩側區域，協助頭頸在不同睡姿中找到合適位置。",
-    highlights: ["親水記憶棉", "海鷗式分區輪廓", "仰睡與側睡皆可試躺"],
-    note: "「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效；實際效果因個人狀況而異。",
+    image: "/cbd-hydrophilic-contour-pillow-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "醫藥大學臨床實驗證明",
+      "特殊造型，正睡、側睡，都能完美支撐。",
+      "完全釋放肩頸壓力，給你最佳的睡眠品質。",
+    ],
+    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效。",
   },
   {
     name: "CBD草本忘憂 海鷗減壓枕",
