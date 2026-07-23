@@ -307,10 +307,19 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 好眠旅行組",
     en: "TRAVEL SLEEP SET",
-    image: "/lifestyle-reading.png",
-    statement: "把熟悉的放鬆節奏，整理成一組帶著走的旅途陪伴。",
-    detail: "好眠旅行組整合旅途中常用的休息配件，讓飛行、乘車與住宿時也能延續較熟悉的睡前習慣。",
-    highlights: ["旅行休息配件組合", "回應多種移動情境", "方便整理與隨身攜帶"],
+    image: "/cbd-travel-sleep-set-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+      "輕巧好攜帶，陪你把好眠帶到每個地方。",
+    ],
     note: "實際組合內容、材質、尺寸與收納方式，請以品牌正式商品資訊及商品標示為準。",
   },
 ];
