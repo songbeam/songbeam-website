@@ -91,6 +91,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /IN-STORE PILLOW FITTING/);
   assert.match(html, /store-intro-lines/);
   assert.match(html, /product-detail-trigger/);
+  assert.match(html, /<button class="shop-product-card"[^>]*aria-label="查看 CBD草本忘憂枕頭 商品選單"/);
   assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
   assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);
   assert.doesNotMatch(html, /不一次塞入太多術語/);
@@ -113,6 +114,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
 
 test("defines the two-step CBD product collection dialogs", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /<button className="shop-product-card"[^>]*onClick=\{\(\) => setSelectedProductIndex\(index\)\}/);
   assert.match(source, /查看商品連結/);
   assert.match(source, /pillow-catalog-modal/);
   assert.match(source, /selectedSeriesItemIndex/);

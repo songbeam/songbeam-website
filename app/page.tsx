@@ -436,14 +436,14 @@ export default function Home() {
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (
-            <article className="shop-product-card" key={product.name}>
+            <button className="shop-product-card" type="button" key={product.name} onClick={() => setSelectedProductIndex(index)} aria-label={`查看 ${product.name} 商品選單`}>
               <div className="shop-product-image">
                 <img src={product.image} alt={product.name} />
                 {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品連結 <span>→</span></button></div>
-            </article>
+              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><span className="product-detail-trigger">查看商品連結 <span>→</span></span></div>
+            </button>
           ))}
         </div>
       </section>

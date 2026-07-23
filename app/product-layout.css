@@ -5,8 +5,9 @@
 .collection-head .section-label{margin-bottom:42px}.collection-head h2{font-size:clamp(42px,5vw,70px);line-height:1.48;letter-spacing:.1em;font-weight:400;color:#5a6f7a;margin:14px 0 0}
 .collection-head>p{font-size:12px;line-height:2;color:#6f8087;padding-bottom:14px}
 .shop-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
-.shop-product-card{padding:12px 12px 28px;border-radius:30px;background:rgba(250,247,241,.78);border:1px solid rgba(255,255,255,.78);box-shadow:0 22px 58px rgba(83,103,108,.11);backdrop-filter:blur(12px);transition:transform .35s ease,box-shadow .35s ease}
+.shop-product-card{width:100%;padding:12px 12px 28px;border-radius:30px;background:rgba(250,247,241,.78);border:1px solid rgba(255,255,255,.78);box-shadow:0 22px 58px rgba(83,103,108,.11);backdrop-filter:blur(12px);transition:transform .35s ease,box-shadow .35s ease;text-align:left;color:inherit;font:inherit;cursor:pointer}
 .shop-product-card:hover{transform:translateY(-6px);box-shadow:0 30px 72px rgba(83,103,108,.16)}
+.shop-product-card:focus-visible{outline:2px solid #84988f;outline-offset:5px}
 .shop-product-image{aspect-ratio:4/5;position:relative;overflow:hidden;margin-bottom:24px;border-radius:22px;background:linear-gradient(145deg,#e3e8e5,#d8dfdc)}
 .shop-product-image>img:first-child{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.66) contrast(.93) brightness(1.03);transition:transform .55s ease}
 .shop-product-card:hover .shop-product-image>img:first-child{transform:scale(1.035)}
@@ -444,16 +445,16 @@
 .consultation:before{display:none}
 .collection-head{grid-template-columns:1fr}
 .feature-heading{grid-template-columns:1fr}
-.shop-product-info button.product-detail-trigger{
+.shop-product-info .product-detail-trigger{
   width:100%;display:flex;justify-content:space-between;align-items:center;
   padding:16px 0 0;border:0;border-top:1px solid rgba(79,98,109,.14);
   background:transparent;color:#657983;cursor:pointer;text-align:left;
   font:10px "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.1em;
 }
-.shop-product-info button.product-detail-trigger span{
+.shop-product-info .product-detail-trigger span{
   color:#a78b72;font-size:15px;transition:transform .25s;
 }
-.shop-product-info button.product-detail-trigger:hover span{transform:translateX(4px)}
+.shop-product-card:hover .product-detail-trigger span{transform:translateX(4px)}
 
 .product-modal-backdrop{
   position:fixed;z-index:1000;inset:0;display:grid;place-items:center;
