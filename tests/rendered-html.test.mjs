@@ -132,14 +132,13 @@ test("defines the two-step CBD product collection dialogs", async () => {
   ]) assert.match(source, new RegExp(name));
 });
 
-test("defines the U.S. media grid and embedded article dialog", async () => {
+test("defines direct original links for all U.S. media cards", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(source, /selectedNewsIndex/);
-  assert.match(source, /news-modal-backdrop/);
-  assert.match(source, /<iframe/);
-  assert.match(source, /開啟原文/);
+  assert.doesNotMatch(source, /selectedNewsIndex|news-modal-backdrop|<iframe|window\.open\(item\.url/);
   assert.match(source, /finance\.yahoo\.com/);
   assert.match(source, /pr\.cbslakecharles\.tv/);
   assert.match(source, /ccnewspaper\.com/);
-  assert.match(source, /window\.open\(item\.url/);
+  assert.match(source, /className="news-card-link"/);
+  assert.match(source, /target="_blank"/);
+  assert.match(source, /rel="noreferrer"/);
 });

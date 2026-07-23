@@ -17,7 +17,6 @@ const newsItems = [
     summary: "Song Beam Bedding 與中國醫藥大學睡眠研究獲美國財經媒體報導。",
     url: "https://finance.yahoo.com/healthcare/articles/innovative-cbd-coated-bedding-clinically-090000842.html",
     tone: "yahoo",
-    embed: false,
   },
   {
     date: "2026.07.18",
@@ -27,7 +26,6 @@ const newsItems = [
     summary: "CBD 機能寢具與睡眠品質研究登上 CBS Lake Charles 媒體頁面。",
     url: "https://pr.cbslakecharles.tv/article/Innovative-CBD-Coated-Bedding-Clinically-Proven-to-Improve-Sleep-Quality-Song-Beam-Bedding-and-China-Medical-Universitys-Joint-Study-Published-in-International-Journal-Healthcare?storyId=6a5b4169fef76cbb7d73e15a",
     tone: "cbs",
-    embed: true,
   },
   {
     date: "2026.07.18",
@@ -37,7 +35,6 @@ const newsItems = [
     summary: "研究消息同步刊載於 Coast to Coast Newspaper 新產品新聞專區。",
     url: "https://ccnewspaper.com/newproductnews?rkey=20260718HK02853&filter=28087",
     tone: "coast",
-    embed: true,
   },
 ] as const;
 
@@ -231,7 +228,6 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
-  const [selectedNewsIndex, setSelectedNewsIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
   const catalogConfig = selectedProductIndex === 0
     ? { en: "CBD PILLOW COLLECTION", title: "CBD草本忘憂枕頭系列", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
@@ -241,7 +237,6 @@ export default function Home() {
         ? { en: "CBD TRAVEL REST COLLECTION", title: "CBD隨身旅行組系列", copy: "從枕套、眼罩到頸枕，選擇一項旅行配件查看完整介紹。", items: travelSeries }
         : null;
   const selectedSeriesItem = selectedSeriesItemIndex === null ? null : catalogConfig?.items[selectedSeriesItemIndex] ?? null;
-  const selectedNews = selectedNewsIndex === null ? null : newsItems[selectedNewsIndex];
   const closeMenu = () => setMenuOpen(false);
   const closeProductModal = () => {
     setSelectedSeriesItemIndex(null);
@@ -249,11 +244,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (selectedProductIndex === null && selectedSeriesItemIndex === null && selectedNewsIndex === null) return;
+    if (selectedProductIndex === null && selectedSeriesItemIndex === null) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
-      if (selectedNewsIndex !== null) setSelectedNewsIndex(null);
-      else if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
+      if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
       else setSelectedProductIndex(null);
     };
     const previousOverflow = document.body.style.overflow;
@@ -263,7 +257,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex, selectedSeriesItemIndex, selectedNewsIndex]);
+  }, [selectedProductIndex, selectedSeriesItemIndex]);
 
   return (
     <main>
@@ -389,10 +383,8 @@ export default function Home() {
       <section className="news-section section" id="news">
         <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
         <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
-        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><button type="button" onClick={() => { if (!item.embed) { window.open(item.url, "_blank", "noopener,noreferrer"); return; } setSelectedNewsIndex(index); }} aria-label={`閱讀 ${item.source} 新聞報導`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></button></article>)}</div>
+        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
       </section>
-
-      {selectedNews ? <div className="news-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedNewsIndex(null); }}><section className="news-modal" role="dialog" aria-modal="true" aria-label={`${selectedNews.source} 新聞報導`}><header><div><small>TOP U.S. MEDIA COVERAGE</small><strong>{selectedNews.source}</strong></div><div><a href={selectedNews.url} target="_blank" rel="noreferrer">開啟原文 ↗</a><button type="button" onClick={() => setSelectedNewsIndex(null)} aria-label="關閉新聞視窗">×</button></div></header><div className="news-frame-wrap"><iframe src={selectedNews.url} title={`${selectedNews.source}：${selectedNews.title}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><footer><p>若媒體網站限制內嵌顯示，請使用右上方「開啟原文」閱讀完整報導。</p></footer></section></div> : null}
 
       <section className="faq section" id="faq">
         <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
