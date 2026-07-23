@@ -52,7 +52,7 @@ const collectionProducts = [
     name: "CBD 寢具保潔墊組",
     en: "BEDDING PROTECTOR SET",
     image: "/product-protector.jpg",
-    cardImage: "/cbd-sleep-collection-protector-card.png",
+    cardImage: "/cbd-sleep-collection-protector-card-clean.jpg",
     statement: "乾淨，是舒適睡眠的開始",
     detail: "為床墊建立一道安心防護，減少日常髒污與磨損，讓每一次躺下，都像第一次一樣舒適",
     highlights: ["床墊與枕頭保潔組", "建立寢具日常防護層", "洗滌方式依商品標示"],
