@@ -287,13 +287,22 @@ const travelSeries: SeriesProduct[] = [
     note: "實際表布、填充材質、尺寸與清潔方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 旅行好眠頸枕 護頸枕",
+    name: "CBD草本忘憂 旅行好眠頸枕",
     en: "TRAVEL NECK PILLOW",
-    image: "/product-travel-pillow.jpg",
-    statement: "環抱頸部，讓長途移動也保有熟悉的承托感。",
-    detail: "旅行好眠頸枕以環繞式輪廓回應乘車、飛行與等待時的頸部支撐需求，適合隨身攜帶使用。",
-    highlights: ["環繞式頸部承托", "適合長途移動情境", "輕巧隨身休息配件"],
-    note: "「護頸枕」為商品系列名稱，實際材質、尺寸與承托感受請以正式商品標示及試用結果為準。",
+    image: "/cbd-travel-neck-pillow-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+      "輕巧好攜帶，陪你把好眠帶到每個地方。",
+    ],
+    note: "實際材質、尺寸與承托感受，請以正式商品標示及試用結果為準。",
   },
   {
     name: "CBD草本忘憂 好眠旅行組",
