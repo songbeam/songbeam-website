@@ -99,11 +99,22 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 羽絨枕",
     en: "DOWN PILLOW",
-    image: "/cbd-hero.png",
-    statement: "蓬鬆包覆，給喜歡柔軟睡感的你。",
-    detail: "以羽絨枕款回應偏好輕盈、蓬鬆與包覆感的睡眠習慣，讓頭頸自然落在柔軟承托之中。",
-    highlights: ["蓬鬆柔軟睡感", "輕盈包覆頭頸", "建議依睡姿試躺選擇"],
-    note: "實際羽絨比例、填充量、尺寸與清潔方式，請以正式商品標示及門市說明為準。",
+    image: "/cbd-down-pillow-bedroom.png",
+    statement: "睡感軟硬適中，枕型飽滿，支撐性高。",
+    detail: "羽絨枕芯表布為緹花樣式，每批花色不同。",
+    highlights: [
+      "尺寸：長 75 cm × 寬 48 cm",
+      "大小可適用一般床罩組之枕套",
+      "內容物：90% 天然羽毛＋10% 天然羽絨",
+      "重量：1.2 kg",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+      "獨家比利時萃取微膠囊技術，將 CBD 成分提煉至微膠囊分子，編織進纖維。睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+      "羽毛絨可隨溫度變化自然收縮膨脹，不怕擠壓也不易變形；透氣性佳，非常適合台灣的氣候。",
+    ],
+    note: "實際表布緹花樣式、尺寸與重量，請以收到商品及正式商品標示為準。",
   },
   {
     name: "CBD草本忘憂 好眠雲朵枕",
@@ -338,10 +349,10 @@ export default function Home() {
       </div> : null}
 
       {selectedSeriesItem ? <div className="product-modal-backdrop pillow-detail-layer" onMouseDown={() => setSelectedSeriesItemIndex(null)}>
-        <section className={`product-modal pillow-series-detail ${selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "tencel-series-detail" : ""}`} role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
+        <section className={`product-modal pillow-series-detail ${selectedProductIndex === 0 ? "pillow-series-expanded" : ""}`} role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="返回產品系列" onClick={() => setSelectedSeriesItemIndex(null)} autoFocus>←</button>
           <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
-          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "tencel-title-nowrap" : ""}>{selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label="CBD 草本忘憂天絲枕產品特色"><small>PRODUCT FEATURES</small><h3>草本科技與天絲親膚特色</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
+          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={selectedProductIndex === 0 ? `pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""}` : ""}>{selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}
 

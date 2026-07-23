@@ -140,8 +140,17 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "獨家比利時萃取微膠囊技術",
     "天絲纖維能舒緩過敏感性的肌膚",
   ]) assert.match(source, new RegExp(detail));
-  assert.match(source, /tencel-title-nowrap/);
   assert.match(source, /pillow-feature-details/);
+  for (const detail of [
+    "睡感軟硬適中，枕型飽滿，支撐性高",
+    "長 75 cm × 寬 48 cm",
+    "90% 天然羽毛＋10% 天然羽絨",
+    "重量：1.2 kg",
+    "羽毛絨可隨溫度變化自然收縮膨脹",
+    "cbd-down-pillow-bedroom.png",
+  ]) assert.match(source, new RegExp(detail));
+  assert.match(source, /pillow-series-expanded/);
+  assert.match(source, /pillow-series-title-nowrap/);
 });
 
 test("defines direct original links for all U.S. media cards", async () => {
