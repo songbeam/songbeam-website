@@ -47,6 +47,11 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /可調高度設計/);
   assert.doesNotMatch(html, /SLEEP FEEL GUIDE|五段式定位|id="fit"/);
   assert.match(html, /親水記憶棉/);
+  assert.match(html, /structure-title-nowrap/);
+  assert.match(html, /structure-editorial/);
+  assert.match(html, /structure-spec-panel/);
+  assert.match(html, /材質資訊，一目了然/);
+  assert.doesNotMatch(html, /已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目/);
   assert.match(html, /近 7 成/);
   assert.match(html, /全台近 400 萬人/);
   assert.match(html, /總睡眠、淺眠與深睡變化/);

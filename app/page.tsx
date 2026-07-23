@@ -350,8 +350,13 @@ export default function Home() {
       </div> : null}
 
       <section className="structure section" id="structure">
-        <div className="section-label"><span>05</span><p>MATERIAL & STRUCTURE</p></div><div className="structure-heading"><div><p className="eyebrow">材質與產品結構</p><h2>每一層，都為舒適睡眠而設計。</h2></div><p>已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目，不先替產品下結論。</p></div>
-        <div className="exploded"><div className="exploded-visual"><div className="layer l1">01 外布套</div><div className="layer l2">02 內層／內套</div><div className="layer l3">03 親水記憶棉枕芯</div><img src="/product-pillow-side.jpg" alt="草本忘憂枕頭側面結構參考" /></div><div className="structure-list"><article><span>01</span><div><h3>外布套</h3><p>CBD 草本微膠囊機能針織表布；是否可拆洗及耐洗次數，以正式洗標與測試資料為準。</p></div></article><article><span>02</span><div><h3>內套與拉鍊</h3><p>目前提供資料未完整列出內套、拉鍊與可拆結構，待正式商品規格確認。</p></div></article><article><span>03</span><div><h3>枕芯</h3><p>親水記憶棉，著重貼合、回彈與水氣調節；密度數值待原廠文件確認。</p></div></article><article><span>04</span><div><h3>尺寸、高度與產地</h3><p>目前尚無可公開的完整尺寸、高度及產地資料，網站不自行推估。</p></div></article></div></div>
+        <div className="section-label"><span>05</span><p>MATERIAL &amp; STRUCTURE</p></div>
+        <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
+        <div className="structure-editorial">
+          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/product-pillow-side.jpg" alt="CBD 草本忘憂枕頭側面與輪廓" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
+          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>親水記憶棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
+        </div>
+        <div className="structure-spec-panel"><div><small>MATERIAL NOTES</small><h3>材質資訊，一目了然。</h3></div><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
       </section>
 
       <section className="evidence-story section" id="safety">
