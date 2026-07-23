@@ -31,6 +31,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /CBD草本忘憂枕頭/);
   assert.match(html, /CBD隨身旅行組/);
+  assert.match(html, /讓頭頸找到最舒服的位置/);
+  assert.match(html, /乾淨，是舒適睡眠的開始/);
+  assert.match(html, /無論走到哪裡，都睡得安心/);
   assert.doesNotMatch(html, /CBD 草本忘憂親水枕|隨身旅行頸枕／眼罩/);
   assert.doesNotMatch(html, /href="\/cbd-series"/);
   assert.match(html, /讓睡前，多一點放鬆儀式/);
