@@ -17,6 +17,7 @@ const newsItems = [
     summary: "Song Beam Bedding 與中國醫藥大學睡眠研究獲美國財經媒體報導。",
     url: "https://finance.yahoo.com/healthcare/articles/innovative-cbd-coated-bedding-clinically-090000842.html",
     tone: "yahoo",
+    embed: false,
   },
   {
     date: "2026.07.18",
@@ -26,6 +27,7 @@ const newsItems = [
     summary: "CBD 機能寢具與睡眠品質研究登上 CBS Lake Charles 媒體頁面。",
     url: "https://pr.cbslakecharles.tv/article/Innovative-CBD-Coated-Bedding-Clinically-Proven-to-Improve-Sleep-Quality-Song-Beam-Bedding-and-China-Medical-Universitys-Joint-Study-Published-in-International-Journal-Healthcare?storyId=6a5b4169fef76cbb7d73e15a",
     tone: "cbs",
+    embed: true,
   },
   {
     date: "2026.07.18",
@@ -35,6 +37,7 @@ const newsItems = [
     summary: "研究消息同步刊載於 Coast to Coast Newspaper 新產品新聞專區。",
     url: "https://ccnewspaper.com/newproductnews?rkey=20260718HK02853&filter=28087",
     tone: "coast",
+    embed: true,
   },
 ] as const;
 
@@ -268,7 +271,7 @@ export default function Home() {
         <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -309,24 +312,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="product-showcase section" id="products">
-        <div className="collection-head">
-          <div><div className="section-label"><span>04</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
-        </div>
-        <div className="shop-product-grid">
-          {collectionProducts.map((product, index) => (
-            <article className="shop-product-card" key={product.name}>
-              <div className="shop-product-image">
-                <img src={product.image} alt={product.name} />
-                {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
-                <span className="shop-product-number">0{index + 1}</span>
-              </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品連結 <span>→</span></button></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       {catalogConfig ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
         <section className="pillow-catalog-modal" role="dialog" aria-modal="true" aria-labelledby="pillow-catalog-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉產品系列" onClick={closeProductModal} autoFocus>×</button>
@@ -350,18 +335,18 @@ export default function Home() {
       </div> : null}
 
       <section className="structure section" id="structure">
-        <div className="section-label"><span>05</span><p>MATERIAL &amp; STRUCTURE</p></div>
+        <div className="section-label"><span>04</span><p>MATERIAL &amp; STRUCTURE</p></div>
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
           <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/product-pillow-side.jpg" alt="CBD 草本忘憂枕頭側面與輪廓" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
           <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>親水記憶棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
-        <div className="structure-spec-panel"><div><small>MATERIAL NOTES</small><h3>材質資訊，一目了然。</h3></div><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
+        <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
       </section>
 
       <section className="evidence-story section" id="safety">
-        <div className="section-label"><span>06</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
-        <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2><p>臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡。</p></header>
+        <div className="section-label"><span>05</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
+        <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
 
         <div className="clinical-data-card">
           <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 400 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
@@ -370,11 +355,29 @@ export default function Home() {
 
         <div className="cbd-textile-story">
           <figure><img src="/product-pillow-front.jpg" alt="CBD 漢麻二酚表布與海鷗枕型" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
-          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3>CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><div className="release-path"><span>CBD 萃取</span><i>→</i><span>微膠囊化</span><i>→</i><span>編織進纖維</span></div></div>
+          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><div className="release-path"><span>CBD 萃取</span><i>→</i><span>微膠囊化</span><i>→</i><span>編織進纖維</span></div></div>
         </div>
 
         <div className="safety-feature-grid"><article><span>01</span><strong>草本助眠<br />漢麻二酚</strong></article><article><span>02</span><strong>醫藥大學<br />臨床實驗證明</strong></article><article><span>03</span><strong>獨家微膠囊<br />技術</strong></article><article><span>04</span><strong>天然草本<br />技術製成</strong></article><article><span>05</span><strong>天然抗菌<br />除臭</strong></article></div>
         <p className="safety-legal">本產品為一般寢具用品，非藥品或醫療器材；實際使用感受可能因人而異。</p>
+      </section>
+
+      <section className="product-showcase section" id="products">
+        <div className="collection-head">
+          <div><div className="section-label"><span>06</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
+        </div>
+        <div className="shop-product-grid">
+          {collectionProducts.map((product, index) => (
+            <article className="shop-product-card" key={product.name}>
+              <div className="shop-product-image">
+                <img src={product.image} alt={product.name} />
+                {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
+                <span className="shop-product-number">0{index + 1}</span>
+              </div>
+              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><button className="product-detail-trigger" type="button" onClick={() => setSelectedProductIndex(index)}>查看商品連結 <span>→</span></button></div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="care section" id="care">
@@ -386,7 +389,7 @@ export default function Home() {
       <section className="news-section section" id="news">
         <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
         <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
-        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><button type="button" onClick={() => setSelectedNewsIndex(index)} aria-label={`閱讀 ${item.source} 新聞報導`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></button></article>)}</div>
+        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><button type="button" onClick={() => { if (!item.embed) { window.open(item.url, "_blank", "noopener,noreferrer"); return; } setSelectedNewsIndex(index); }} aria-label={`閱讀 ${item.source} 新聞報導`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></button></article>)}</div>
       </section>
 
       {selectedNews ? <div className="news-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedNewsIndex(null); }}><section className="news-modal" role="dialog" aria-modal="true" aria-label={`${selectedNews.source} 新聞報導`}><header><div><small>TOP U.S. MEDIA COVERAGE</small><strong>{selectedNews.source}</strong></div><div><a href={selectedNews.url} target="_blank" rel="noreferrer">開啟原文 ↗</a><button type="button" onClick={() => setSelectedNewsIndex(null)} aria-label="關閉新聞視窗">×</button></div></header><div className="news-frame-wrap"><iframe src={selectedNews.url} title={`${selectedNews.source}：${selectedNews.title}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><footer><p>若媒體網站限制內嵌顯示，請使用右上方「開啟原文」閱讀完整報導。</p></footer></section></div> : null}
@@ -397,7 +400,7 @@ export default function Home() {
 
       <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#products">系列商品</a><a href="#safety">材質檢驗</a><a href="#news">新聞報導</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }

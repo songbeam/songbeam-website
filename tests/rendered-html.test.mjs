@@ -50,7 +50,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /structure-title-nowrap/);
   assert.match(html, /structure-editorial/);
   assert.match(html, /structure-spec-panel/);
-  assert.match(html, /材質資訊，一目了然/);
+  assert.doesNotMatch(html, /材質資訊，一目了然/);
   assert.doesNotMatch(html, /已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目/);
   assert.match(html, /近 7 成/);
   assert.match(html, /全台近 400 萬人/);
@@ -61,6 +61,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /Patrick Lin, D\.C\.|MDPI|全台 500 萬人/);
   assert.match(html, /從睡眠數據/);
   assert.match(html, /safety-title-nowrap/);
+  assert.match(html, /cbd-textile-title-nowrap/);
+  assert.doesNotMatch(html, /臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /讓舒服/);
   assert.match(html, /陪伴更久/);
@@ -102,6 +104,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /非藥品/);
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
+  assert.ok(html.indexOf('id="safety"') < html.indexOf('id="products"'));
+  assert.ok(html.indexOf('id="products"') < html.indexOf('id="news"'));
 });
 
 test("defines the two-step CBD product collection dialogs", async () => {
@@ -137,4 +141,5 @@ test("defines the U.S. media grid and embedded article dialog", async () => {
   assert.match(source, /finance\.yahoo\.com/);
   assert.match(source, /pr\.cbslakecharles\.tv/);
   assert.match(source, /ccnewspaper\.com/);
+  assert.match(source, /window\.open\(item\.url/);
 });

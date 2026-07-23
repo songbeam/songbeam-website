@@ -857,11 +857,12 @@
 .cbd-textile-story figcaption{position:absolute;left:26px;bottom:22px;color:#7e8e86;font:8px Arial,sans-serif;letter-spacing:.16em}
 .cbd-textile-copy{padding:57px 53px;display:flex;flex-direction:column;justify-content:center}
 .cbd-textile-copy h3{margin:11px 0 0;color:#536d64;font-size:clamp(34px,3.5vw,52px);font-weight:400;letter-spacing:.045em}
+.cbd-textile-title-nowrap{white-space:nowrap;font-size:clamp(30px,3vw,44px)!important;letter-spacing:.03em!important}
 .cbd-textile-copy h4{margin:12px 0 22px;color:#789075;font-size:18px;font-weight:500;line-height:1.7;letter-spacing:.05em}
 .cbd-textile-copy>p{margin:0;color:#74817b;font-size:12px;line-height:2.15}
-.release-path{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid rgba(80,111,94,.15)}
-.release-path span{padding:9px 12px;border-radius:999px;background:#e3ecde;color:#5c7867;font-size:9px;letter-spacing:.06em}
-.release-path i{color:#a38972;font-style:normal}
+.release-path{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:38px;padding-top:28px;border-top:1px solid rgba(80,111,94,.15)}
+.release-path span{padding:12px 16px;border-radius:999px;background:#e3ecde;color:#5c7867;font-size:12px;font-weight:500;letter-spacing:.055em}
+.release-path i{color:#a38972;font-size:18px;font-style:normal}
 .safety-feature-grid{
   position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px;
 }
@@ -1042,10 +1043,9 @@
 .structure-layers article>span{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(174,148,111,.42);border-radius:50%;color:#9a8067;font:10px Arial,sans-serif}
 .structure-layers h4{margin:0;color:#587078;font-size:17px;font-weight:500;letter-spacing:.055em}
 .structure-layers p{margin:7px 0 0;color:#71817e;font-size:13px;line-height:1.9}
-.structure-spec-panel{display:grid;grid-template-columns:.32fr .68fr;gap:50px;align-items:start;margin-top:34px;padding:38px 42px;border-radius:5px 46px;background:linear-gradient(120deg,#dfe7e3,#f1eee7)}
-.structure-spec-panel>div h3{margin:9px 0 0;color:#536b75;font-size:24px;font-weight:400;letter-spacing:.06em}
-.structure-spec-panel table{width:100%;border-collapse:collapse;color:#63756f}
-.structure-spec-panel th,.structure-spec-panel td{padding:15px 14px;border-bottom:1px solid rgba(83,107,100,.15);text-align:left;vertical-align:top;font-size:12px;line-height:1.7}
+.structure-spec-panel{display:flex;justify-content:center;margin-top:34px;padding:42px 48px;border-radius:5px 46px;background:linear-gradient(120deg,#dfe7e3,#f1eee7)}
+.structure-spec-panel table{width:100%;max-width:1080px;margin:0 auto;border-collapse:collapse;color:#63756f}
+.structure-spec-panel th,.structure-spec-panel td{padding:18px 16px;border-bottom:1px solid rgba(83,107,100,.15);text-align:center;vertical-align:middle;font-size:14px;line-height:1.75}
 .structure-spec-panel tr:last-child th,.structure-spec-panel tr:last-child td{border-bottom:0}
 .structure-spec-panel th{width:14%;color:#8f7761;font-weight:500;white-space:nowrap}
 .structure-spec-panel td{width:36%}
@@ -1182,8 +1182,10 @@
   .cbd-textile-story{width:calc(100% + 8vw);margin-left:-4vw;border-radius:30px 4px}
   .cbd-textile-story figure{min-height:310px;padding:9%}
   .cbd-textile-copy{padding:35px 23px 38px}
-  .release-path{gap:7px}
-  .release-path span{padding:8px 10px}
+  .cbd-textile-title-nowrap{font-size:31px!important}
+  .release-path{gap:7px;margin-top:31px;padding-top:23px}
+  .release-path span{padding:10px 12px;font-size:10px}
+  .release-path i{font-size:15px}
   .safety-feature-grid{grid-template-columns:1fr;gap:10px}
   .safety-feature-grid article{min-height:112px}
   .care-wash-layout{margin-top:35px}
@@ -1230,6 +1232,6 @@
   .structure-spec-panel table,.structure-spec-panel tbody,.structure-spec-panel tr,.structure-spec-panel th,.structure-spec-panel td{display:block;width:100%}
   .structure-spec-panel tr{padding:10px 0;border-bottom:1px solid rgba(83,107,100,.15)}
   .structure-spec-panel tr:last-child{border-bottom:0}
-  .structure-spec-panel th{padding:10px 0 3px;border:0;font-size:10px}
-  .structure-spec-panel td{padding:0 0 10px;border:0;font-size:11px}
+  .structure-spec-panel th{padding:11px 0 3px;border:0;font-size:11px;text-align:center}
+  .structure-spec-panel td{padding:0 0 11px;border:0;font-size:12px;text-align:center}
 }
