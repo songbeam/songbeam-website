@@ -281,7 +281,7 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 好眠眼罩",
     en: "SLEEP EYE MASK",
-    image: "/cbd-sleep-eye-mask-bedroom.png",
+    image: "/cbd-sleep-eye-mask-travel-set.jpg",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
