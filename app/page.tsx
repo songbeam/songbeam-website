@@ -271,10 +271,19 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 好眠眼罩",
     en: "SLEEP EYE MASK",
-    image: "/product-eye-mask.jpg",
-    statement: "輕柔遮蔽視線，為移動中的休息留一點安靜。",
-    detail: "好眠眼罩適合睡前與旅途中使用，透過柔和包覆感協助建立較安靜的休息情境。",
-    highlights: ["柔和眼周包覆", "適合旅途休息使用", "輕巧方便隨身攜帶"],
+    image: "/cbd-sleep-eye-mask-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+      "輕巧好攜帶，陪你把好眠帶到每個地方。",
+    ],
     note: "實際表布、填充材質、尺寸與清潔方式，請以正式商品標示及洗標為準。",
   },
   {
