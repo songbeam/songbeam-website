@@ -151,6 +151,13 @@ test("defines the two-step CBD product collection dialogs", async () => {
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
+  for (const detail of [
+    "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
+    "GLORY 獨家專利「Tempwiser 親水棉」",
+    "正睡、側睡，都能完美支撐",
+    "接觸空氣後會產生泛黃狀況",
+    "cbd-sleep-cloud-pillow-bedroom.png",
+  ]) assert.match(source, new RegExp(detail));
 });
 
 test("defines direct original links for all U.S. media cards", async () => {

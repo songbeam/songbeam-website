@@ -119,11 +119,22 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 好眠雲朵枕",
     en: "SLEEP CLOUD PILLOW",
-    image: "/series-support-pillow-scene.png",
-    statement: "像雲朵般輕柔，保留舒服的包覆空間。",
-    detail: "以柔和蓬鬆感作為主要睡感方向，適合喜歡枕頭輕柔承接、身體慢慢放鬆的使用者。",
-    highlights: ["雲朵般輕柔感", "舒適包覆設計", "依個人睡姿感受選擇"],
-    note: "實際枕芯材質、軟硬度、尺寸與高度，請以正式商品標示及門市說明為準。",
+    image: "/cbd-sleep-cloud-pillow-bedroom.png",
+    statement: "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
+    detail: "保有親水記憶枕支撐性佳、服貼肩頸的特性，同時擁有羽絨枕的可塑性與纖維枕的蓬鬆感。",
+    highlights: [
+      "順應睡姿包覆頭頸部，紓壓護頸，正躺、側躺都好眠",
+      "親水棉有效吸濕排熱",
+      "棉粒間保有空隙，加速排熱並增加涼爽舒適度",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "GLORY 獨家專利「Tempwiser 親水棉」",
+      "醫藥大學臨床實驗證明",
+      "正睡、側睡，都能完美支撐。",
+      "完全釋放肩頸壓力，給你最佳的睡眠品質。",
+    ],
+    note: "Tempwiser 親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
     name: "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
