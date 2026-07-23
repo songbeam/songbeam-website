@@ -27,7 +27,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /href="#series"|id="series"|id="concerns"/);
   assert.match(html, /HERBAL &amp; TACTILE DETAIL/);
   assert.match(html, /微膠囊機能織物/);
-  assert.match(html, /應用於表布/);
+  assert.match(html, /融入表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /CBD草本忘憂枕頭/);
   assert.match(html, /cbd-sleep-collection-pillow-card.png/);
@@ -79,7 +79,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /CBD 外布套/);
   assert.match(html, /wash-instruction-lines/);
   assert.match(html, /浸泡時間請勿超過 30 分鐘/);
-  assert.match(html, /可以改善失眠嗎/);
+  assert.doesNotMatch(html, /常見問題|FREQUENTLY ASKED|id="faq"|href="#faq"|可以改善失眠嗎/);
   assert.match(html, /新聞報導/);
   assert.match(html, /id="news"/);
   assert.match(html, /href="#news"/);
@@ -91,6 +91,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /品牌消息、專題採訪與媒體報導，將在這裡留下每一段值得閱讀的紀錄|最新報導，即將上線/);
   assert.doesNotMatch(html, /IN-STORE PILLOW FITTING/);
   assert.match(html, /store-intro-lines/);
+  assert.match(html, /查看全台門市/);
+  assert.doesNotMatch(html, /預約門市體驗/);
   assert.match(html, /product-detail-trigger/);
   assert.match(html, /<button class="shop-product-card"[^>]*aria-label="查看 CBD草本忘憂枕頭 商品選單"/);
   assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
@@ -111,6 +113,18 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
   assert.ok(html.indexOf('id="safety"') < html.indexOf('id="products"'));
   assert.ok(html.indexOf('id="products"') < html.indexOf('id="news"'));
+});
+
+test("defines the official store directory dialog", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.doesNotMatch(source, /const faqs|openFaq|href="#faq"|id="faq"|常見問題|FREQUENTLY ASKED/);
+  assert.match(source, /storeModalOpen/);
+  assert.match(source, /className="store-modal"/);
+  assert.match(source, /共 11 間門市/);
+  assert.match(source, /name: "南京館"/);
+  assert.match(source, /name: "斗六館"/);
+  assert.match(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775/);
+  assert.doesNotMatch(source, /預約門市體驗/);
 });
 
 test("defines the two-step CBD product collection dialogs", async () => {

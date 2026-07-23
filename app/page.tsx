@@ -384,19 +384,23 @@ const travelSeries: SeriesProduct[] = [
   },
 ];
 
-const faqs = [
-  { q: "CBD 是什麼？在這款寢具中如何使用？", a: "本頁僅就商品應用說明。依目前品牌資料，CBD 草本概念透過微膠囊機能織物應用於表布，並非食品或藥品；實際成分名稱、含量與來源仍應以原廠文件及檢驗報告為準。" },
-  { q: "這款產品含有 THC 嗎？", a: "目前提供的品牌資料未附可供網站公開的 THC 檢驗數值，因此網站不宣稱零檢出或不含 THC。購買前建議向門市索取對應品項與批次的正式檢驗文件。" },
-  { q: "使用 CBD 寢具會產生依賴性嗎？", a: "本產品是一般寢具，使用方式為接觸表布，並非食用或藥用。依賴性屬醫療判斷，網站不自行推論；如對成分或特殊健康狀況有疑慮，請先查看檢驗資料並諮詢專業醫療人員。" },
-  { q: "可以改善失眠嗎？", a: "本產品為一般寢具用品，主要提供舒適支撐與睡眠使用感受，不具有診斷、治療或改善疾病的用途。若長期有睡眠困擾，建議諮詢專業醫療人員。" },
-  { q: "適合側睡嗎？", a: "海鷗式枕型的兩側區域提供較明確的側睡承托，但是否合適仍取決於肩寬、枕高、床墊軟硬與個人習慣，建議到門市實際試躺。" },
-  { q: "枕頭高度適合所有人嗎？", a: "不一定。每個人的肩寬、體型、主要睡姿與床墊下陷程度不同；同一高度不會適合所有人，建議由門市人員陪同比較仰睡與側睡位置。" },
-  { q: "孕婦、兒童或特殊族群可以使用嗎？", a: "目前資料不足以對所有特殊族群作一致建議。請先確認原廠適用規範與成分檢驗；孕婦、兒童、過敏體質或有特殊健康狀況者，建議使用前諮詢專業人員。" },
+const stores = [
+  { name: "南京館", address: "台北市松山區南京東路五段 8 號", phone: "(02) 2765-8701", tags: ["可刷卡", "國旅卡"] },
+  { name: "竹北館", address: "新竹縣竹北市文興路一段 136 號", phone: "(03) 667-0229", tags: ["可刷卡", "停車場"] },
+  { name: "豐原館", address: "台中市豐原區中山路 39 號", phone: "(04) 2535-0160", tags: ["可刷卡", "停車場"] },
+  { name: "崇德館", address: "台中市北屯區崇德路二段 32 號", phone: "(04) 2236-7963", tags: ["可刷卡", "國旅卡"] },
+  { name: "經貿館", address: "台中市北屯區新平里經貿五路 68 號", phone: "(04) 2426-0752", tags: ["可刷卡", "國旅卡"] },
+  { name: "精誠館", address: "台中市西區精誠路 340 號", phone: "(04) 2321-4988", tags: ["可刷卡", "停車場", "國旅卡"] },
+  { name: "惠中館", address: "台中市西屯區惠中路二段 43 號", phone: "(04) 2255-0169", tags: ["可刷卡", "停車場", "國旅卡"] },
+  { name: "大里館", address: "台中市大里區國光路二段 711 號", phone: "(04) 2407-1007", tags: ["可刷卡", "國旅卡"] },
+  { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", phone: "(049) 230-7036", tags: ["可刷卡", "國旅卡"] },
+  { name: "田中館", address: "彰化縣田中鎮新福路 43 號", phone: "(04) 875-5753", tags: ["可刷卡"] },
+  { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", phone: "(05) 522-1585", tags: ["可刷卡", "國旅卡"] },
 ];
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+  const [storeModalOpen, setStoreModalOpen] = useState(false);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
@@ -415,10 +419,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (selectedProductIndex === null && selectedSeriesItemIndex === null) return;
+    if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
-      if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
+      if (storeModalOpen) setStoreModalOpen(false);
+      else if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
       else setSelectedProductIndex(null);
     };
     const previousOverflow = document.body.style.overflow;
@@ -428,7 +433,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex, selectedSeriesItemIndex]);
+  }, [selectedProductIndex, selectedSeriesItemIndex, storeModalOpen]);
 
   return (
     <main>
@@ -436,7 +441,7 @@ export default function Home() {
         <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#faq" onClick={closeMenu}>常見問題</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -557,13 +562,18 @@ export default function Home() {
         <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
       </section>
 
-      <section className="faq section" id="faq">
-        <div className="faq-title"><div className="section-label"><span>09</span><p>FREQUENTLY ASKED</p></div><h2>資訊說清楚，<br />再放心選擇。</h2><p>成分、側睡、枕高與特殊族群等選購前常見問題。</p></div><div className="faq-list">{faqs.map((item, index) => <article className={openFaq === index ? "faq-item open" : "faq-item"} key={item.q}><button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} aria-expanded={openFaq === index}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.q}</strong><i aria-hidden="true" /></button><div className="faq-answer"><p>{item.a}</p></div></article>)}</div>
-      </section>
+      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><button className="button primary store-list-trigger" type="button" onClick={() => setStoreModalOpen(true)}>查看全台門市 <span>↗</span></button></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
-      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><a className="button primary" href="mailto:service@shangpin-bedding.tw?subject=查詢上品寢具全台門市">查看全台門市 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=預約草本忘憂枕試躺">預約門市體驗 →</a></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+      {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
+        <section className="store-modal" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
+          <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 11 間門市，歡迎於前往前先致電確認營業時間與試躺服務。</p></header>
+          <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>上品寢具床墊館【{store.name}】</h3><p>{store.address}</p><a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>
+          <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p><a className="button dark capsule" href="https://www.songbeam.com.tw/v2/Shop/StoreList/38775" target="_blank" rel="noreferrer">查看官方門市頁 <span>↗</span></a></footer>
+        </section>
+      </div> : null}
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#faq">常見問題</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }
