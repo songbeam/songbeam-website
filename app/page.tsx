@@ -52,6 +52,7 @@ const collectionProducts = [
     name: "CBD 寢具保潔墊組",
     en: "BEDDING PROTECTOR SET",
     image: "/product-protector.jpg",
+    cardImage: "/cbd-sleep-collection-protector-card.png",
     statement: "乾淨，是舒適睡眠的開始",
     detail: "為床墊建立一道安心防護，減少日常髒污與磨損，讓每一次躺下，都像第一次一樣舒適",
     highlights: ["床墊與枕頭保潔組", "建立寢具日常防護層", "洗滌方式依商品標示"],
@@ -61,6 +62,7 @@ const collectionProducts = [
     name: "CBD隨身旅行組",
     en: "TRAVEL REST SET",
     image: "/product-travel-pillow.jpg",
+    cardImage: "/cbd-sleep-collection-travel-card.png",
     accessoryImage: "/product-eye-mask.jpg",
     statement: "無論走到哪裡，都睡得安心",
     detail: "將熟悉的睡眠感受隨身帶著，在每一段旅程中，都保留屬於自己的放鬆節奏",
@@ -475,8 +477,8 @@ export default function Home() {
           {collectionProducts.map((product, index) => (
             <button className="shop-product-card" type="button" key={product.name} onClick={() => setSelectedProductIndex(index)} aria-label={`查看 ${product.name} 商品選單`}>
               <div className="shop-product-image">
-                <img src={product.image} alt={product.name} />
-                {product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
+                <img src={product.cardImage ?? product.image} alt={product.name} />
+                {!product.cardImage && product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
               <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><span className="product-detail-trigger">查看商品連結 <span>→</span></span></div>
