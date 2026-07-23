@@ -252,10 +252,20 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 信封式枕頭套",
     en: "ENVELOPE PILLOWCASE",
-    image: "/product-bedding-detail.png",
-    statement: "簡潔包覆，讓熟悉的枕頭成為旅途中的安心陪伴。",
-    detail: "信封式枕頭套以簡潔包覆方式整理枕頭表面，適合搭配旅行與日常寢具使用。",
-    highlights: ["信封式包覆設計", "適合旅行收納搭配", "延續熟悉寢具觸感"],
+    image: "/cbd-envelope-pillowcase-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+      "不換枕頭，同樣可以有深層睡眠。",
+      "輕巧好攜帶，陪你把好眠帶到每個地方。",
+    ],
     note: "實際材質、尺寸、適用枕型與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
