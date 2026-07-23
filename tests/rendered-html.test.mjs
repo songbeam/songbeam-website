@@ -30,6 +30,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /應用於表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /CBD草本忘憂枕頭/);
+  assert.match(html, /cbd-sleep-collection-pillow-card.png/);
   assert.match(html, /CBD隨身旅行組/);
   assert.match(html, /讓頭頸找到最舒服的位置/);
   assert.match(html, /乾淨，是舒適睡眠的開始/);
@@ -156,6 +157,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
+  assert.doesNotMatch(styles, /\.shop-product-card:first-child[^{]*\{[^}]*object-fit:contain/);
   for (const detail of [
     "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "GLORY 獨家專利「Tempwiser 親水棉」",

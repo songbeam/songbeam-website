@@ -42,7 +42,7 @@ const collectionProducts = [
   {
     name: "CBD草本忘憂枕頭",
     en: "HYDROPHILIC PILLOW",
-    image: "/product-pillow-angle.jpg",
+    image: "/cbd-sleep-collection-pillow-card.png",
     statement: "讓頭頸找到最舒服的位置",
     detail: "從支撐到包覆，每一處細節都為放鬆而設計，陪伴身體慢慢沉靜，迎接每一夜好眠",
     highlights: ["海鷗式分區曲線", "親水記憶棉支撐", "仰睡與側睡皆可試躺"],
