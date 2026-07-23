@@ -173,6 +173,11 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "可依照不同身形添增高度，更加貼合保護頸椎",
     "cbd-seagull-pressure-relief-pillow-bedroom.png",
   ]) assert.match(source, new RegExp(detail));
+  for (const detail of [
+    "CBD草本忘憂 海鷗護脊枕",
+    "護脊枕」為商品系列名稱",
+    "cbd-seagull-spine-support-pillow-bedroom.png",
+  ]) assert.match(source, new RegExp(detail));
 });
 
 test("defines direct original links for all U.S. media cards", async () => {

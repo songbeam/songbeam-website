@@ -180,11 +180,23 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 海鷗護脊枕",
     en: "SEAGULL SPINE-SUPPORT PILLOW",
-    image: "/product-pillow-side.jpg",
-    statement: "以分區曲線承托，回應頭頸與肩部的不同高度。",
-    detail: "海鷗式輪廓以中央與兩側枕區建立不同承托位置，讓仰睡、側睡與翻身時的睡感更連續。",
-    highlights: ["海鷗式分區輪廓", "頭頸與肩部承托", "建議依體型與睡姿試躺"],
-    note: "「護脊枕」為商品系列名稱，實際尺寸、高度與適用睡姿請以正式商品標示及門市說明為準。",
+    image: "/cbd-seagull-spine-support-pillow-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "醫藥大學臨床實驗證明",
+      "特殊海鷗造型，正睡、側睡，都能完美支撐。",
+      "完全釋放肩頸壓力，給你最佳的睡眠品質。",
+      "可依照不同身形添增高度，更加貼合保護頸椎。",
+    ],
+    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「護脊枕」為商品系列名稱，實際高度與適用睡姿請以正式商品標示及門市說明為準。",
   },
 ];
 
