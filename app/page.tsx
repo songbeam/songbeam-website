@@ -233,10 +233,18 @@ const protectorSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 雙層平面保潔墊（保潔墊＋枕套）",
     en: "DOUBLE-LAYER PROTECTOR SET",
-    image: "/product-protector.jpg",
-    statement: "雙層平面防護，照顧床墊與枕頭的日常使用。",
-    detail: "由保潔墊與枕套組成的寢具防護組合，作為床墊、枕頭與日常使用之間的保護層。",
-    highlights: ["保潔墊與枕套組合", "雙層平面防護", "建立寢具日常保護層"],
+    image: "/cbd-sleep-collection-protector-card-clean.jpg",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "醫藥大學臨床實驗證明",
+    ],
     note: "實際組合內容、尺寸、防護特性與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
