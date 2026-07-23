@@ -154,6 +154,8 @@ test("defines the two-step CBD product collection dialogs", async () => {
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
+  assert.match(source, /className="product-modal pillow-series-detail pillow-series-expanded"/);
+  assert.doesNotMatch(source, /selectedProductIndex === 0 \? "pillow-series-expanded"/);
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
