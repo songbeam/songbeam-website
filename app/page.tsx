@@ -159,11 +159,23 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD草本忘憂 海鷗減壓枕",
     en: "SEAGULL PRESSURE-RELIEF PILLOW",
-    image: "/herbal-tactile-pillow-scene.png",
-    statement: "海鷗曲線承托，讓肩頸自然找到舒服位置。",
-    detail: "特殊海鷗造型回應仰睡、側睡與翻身時的高度變化，並可依不同身形與睡眠習慣調整使用感受。",
-    highlights: ["海鷗曲線支撐", "回應多種睡姿", "可依身形調整睡感"],
-    note: "實際高度調整方式、尺寸與適用睡姿，請以正式商品標示及門市試躺結果為準。",
+    image: "/cbd-seagull-pressure-relief-pillow-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "醫藥大學臨床實驗證明",
+      "特殊海鷗造型，正睡、側睡，都能完美支撐。",
+      "完全釋放肩頸壓力，給你最佳的睡眠品質。",
+      "可依照不同身形添增高度，更加貼合保護頸椎。",
+    ],
+    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。實際高度調整方式與適用睡姿，請以正式商品標示及門市試躺結果為準。",
   },
   {
     name: "CBD草本忘憂 海鷗護脊枕",
