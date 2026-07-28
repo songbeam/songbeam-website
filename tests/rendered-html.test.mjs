@@ -125,7 +125,7 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /共 11 間門市/);
   assert.match(source, /name: "南京館"/);
   assert.match(source, /name: "斗六館"/);
-  assert.match(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775/);
+  assert.doesNotMatch(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775|查看官方門市頁/);
   assert.doesNotMatch(source, /預約門市體驗/);
 });
 

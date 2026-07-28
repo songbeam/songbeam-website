@@ -569,7 +569,7 @@ export default function Home() {
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
           <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 11 間門市，歡迎於前往前先致電確認營業時間與試躺服務。</p></header>
           <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>上品寢具床墊館【{store.name}】</h3><p>{store.address}</p><a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>
-          <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p><a className="button dark capsule" href="https://www.songbeam.com.tw/v2/Shop/StoreList/38775" target="_blank" rel="noreferrer">查看官方門市頁 <span>↗</span></a></footer>
+          <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p></footer>
         </section>
       </div> : null}
 
