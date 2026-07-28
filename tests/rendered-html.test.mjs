@@ -106,10 +106,14 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /吳若權 老師/);
   assert.match(html, /林國偉 博士/);
   assert.match(html, /wu-ruo-quan\.jpg/);
-  assert.match(html, /dr-lin-kuo-wei\.png/);
+  assert.match(html, /professional-doctors-lin-yang\.jpg/);
+  assert.match(html, /林國偉 博士 × 楊韻丞 博士/);
+  assert.match(html, /美國 Palmer 脊骨神經醫學博士 Patrick Lin, D\.C/);
+  assert.match(html, /中醫藥學博士 楊韻丞/);
+  assert.match(html, /理想的枕頭可填補因脊椎弧度產生的空隙/);
+  assert.match(html, /結合纖維編織工法，經兩年多時間研發/);
   assert.match(html, /endorsement-title-nowrap/);
   assert.doesNotMatch(html, /從生活感受，到頭頸支撐的專業觀點/);
-  assert.match(html, /美國脊骨神經醫學博士推薦/);
   assert.match(html, /href="#endorsements"/);
   assert.doesNotMatch(html, /舒服入睡|不必等到很累以後|id="buy"|href="#buy"|立即購買/);
   assert.match(html, /非藥品/);
