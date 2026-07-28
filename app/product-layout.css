@@ -568,6 +568,8 @@
 .professional-card .professional-profile{margin-top:16px;padding-top:16px;border-top:1px solid rgba(82,105,88,.18)}
 .professional-card .professional-profile:first-of-type{margin-top:12px;padding-top:0;border-top:0}
 .professional-card .professional-profile h3{margin:0;font-size:17px;line-height:1.55;letter-spacing:.035em}
+.professional-card .professional-title-role,.professional-card .professional-title-name{display:block}
+.professional-card .professional-title-name{white-space:nowrap}
 .professional-card .professional-profile p{margin-top:8px;font-size:10.2px;line-height:1.9}
 .endorsement-grid small{color:#a28672;font:8px Arial,sans-serif;letter-spacing:.21em}
 .endorsement-grid h3{margin:10px 0 6px;color:#566d77;font-size:30px;font-weight:400;letter-spacing:.08em}

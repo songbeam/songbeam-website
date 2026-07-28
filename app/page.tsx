@@ -482,11 +482,17 @@ export default function Home() {
             <div className="professional-copy">
               <small>PROFESSIONAL RECOMMENDATION</small>
               <section className="professional-profile">
-                <h3>美國脊骨神經醫學 林國偉 博士</h3>
+                <h3>
+                  <span className="professional-title-role">美國脊骨神經醫學博士</span>
+                  <span className="professional-title-name">林國偉 博士</span>
+                </h3>
                 <p>理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。</p>
               </section>
               <section className="professional-profile">
-                <h3>中醫藥學博士 楊顓丞 博士</h3>
+                <h3>
+                  <span className="professional-title-role">中醫藥學博士</span>
+                  <span className="professional-title-name">楊顓丞 博士</span>
+                </h3>
                 <p>漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。</p>
               </section>
             </div>

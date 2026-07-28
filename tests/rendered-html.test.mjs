@@ -107,8 +107,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /林國偉 博士/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /professional-doctors-lin-yang\.jpg/);
-  assert.match(html, /美國脊骨神經醫學 林國偉 博士/);
-  assert.match(html, /中醫藥學博士 楊顓丞 博士/);
+  assert.match(html, /professional-title-role">美國脊骨神經醫學博士/);
+  assert.match(html, /professional-title-name">林國偉 博士/);
+  assert.match(html, /professional-title-role">中醫藥學博士/);
+  assert.match(html, /professional-title-name">楊顓丞 博士/);
   assert.match(html, /理想的枕頭可填補因脊椎弧度產生的空隙/);
   assert.match(html, /結合纖維編織工法，經兩年多時間研發/);
   assert.doesNotMatch(html, /楊韻丞|睡不好還在吃安眠藥嗎/);
