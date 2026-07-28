@@ -26,6 +26,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /有時候，|一顆枕頭，從支撐開始/);
   assert.doesNotMatch(html, /href="#series"|id="series"|id="concerns"/);
   assert.match(html, /HERBAL &amp; TACTILE DETAIL/);
+  assert.match(html, /cbd-seagull-spine-support-pillow-bedroom\.png/);
   assert.match(html, /微膠囊機能織物/);
   assert.match(html, /融入表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
@@ -46,6 +47,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /product-press-closeup\.png/);
   assert.doesNotMatch(html, /lifestyle-reading\.png|lifestyle-morning\.png/);
   assert.match(html, /海鷗曲線/);
+  assert.match(html, /cbd-seagull-pressure-relief-pillow-bedroom\.png/);
   assert.match(html, /GLORY 獨家專利 Tempwiser 親水棉/);
   assert.match(html, /海鷗曲線支撐/);
   assert.match(html, /可調高度設計/);
