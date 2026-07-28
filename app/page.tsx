@@ -475,7 +475,22 @@ export default function Home() {
         <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br /><span className="endorsement-title-nowrap">都有值得信任的聲音。</span></h2></div></div>
         <div className="endorsement-grid">
           <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>CBD 系列產品代言人</strong><p>吳若權老師擔任 CBD 系列產品代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
-          <article className="professional-card"><figure className="endorsement-portrait professional-duo"><img src="/professional-doctors-lin-yang.jpg" alt="美國 Palmer 脊骨神經醫學博士林國偉與中醫藥學博士楊韻丞共同推薦 CBD 草本忘憂護脊枕" /></figure><div className="professional-copy"><small>PROFESSIONAL RECOMMENDATION</small><h3>林國偉 博士 × 楊韻丞 博士</h3><strong>美國 Palmer 脊骨神經醫學博士 Patrick Lin, D.C<br />中醫藥學博士 楊韻丞</strong><p>理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。</p><p>漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。睡不好還在吃安眠藥嗎？先來上品找一顆好睡的枕頭。</p></div></article>
+          <article className="professional-card">
+            <figure className="endorsement-portrait professional-duo">
+              <img src="/professional-doctors-lin-yang.jpg" alt="美國脊骨神經醫學林國偉博士與中醫藥學博士楊顓丞博士共同推薦 CBD 草本忘憂護脊枕" />
+            </figure>
+            <div className="professional-copy">
+              <small>PROFESSIONAL RECOMMENDATION</small>
+              <section className="professional-profile">
+                <h3>美國脊骨神經醫學 林國偉 博士</h3>
+                <p>理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。</p>
+              </section>
+              <section className="professional-profile">
+                <h3>中醫藥學博士 楊顓丞 博士</h3>
+                <p>漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。</p>
+              </section>
+            </div>
+          </article>
         </div>
         <p className="endorsement-note">本頁代言與推薦資訊依品牌提供資料呈現；產品為一般寢具用品，非醫療器材，不具診斷或治療功效。</p>
       </section>
