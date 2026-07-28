@@ -417,6 +417,17 @@ export default function Home() {
     setSelectedSeriesItemIndex(null);
     setSelectedProductIndex(null);
   };
+  const openProductCatalog = (index: number) => {
+    setStoreModalOpen(false);
+    setSelectedSeriesItemIndex(null);
+    setSelectedProductIndex(index);
+  };
+  const openStoreDirectory = () => {
+    setMenuOpen(false);
+    setSelectedSeriesItemIndex(null);
+    setSelectedProductIndex(null);
+    setStoreModalOpen(true);
+  };
 
   useEffect(() => {
     if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen) return;
@@ -483,7 +494,7 @@ export default function Home() {
       </section>
 
       {catalogConfig ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
-        <section className="pillow-catalog-modal" role="dialog" aria-modal="true" aria-labelledby="pillow-catalog-title" onMouseDown={(event) => event.stopPropagation()}>
+        <section className="pillow-catalog-modal" id="product-catalog-dialog" role="dialog" aria-modal="true" aria-labelledby="pillow-catalog-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉產品系列" onClick={closeProductModal} autoFocus>×</button>
           <header className="pillow-catalog-heading"><small>{catalogConfig.en}</small><h2 id="pillow-catalog-title">{catalogConfig.title}</h2><p>{catalogConfig.copy}</p></header>
           <div className="pillow-catalog-grid">{catalogConfig.items.map((item, index) => <button className="pillow-catalog-card" type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong>{item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>)}</div>
@@ -538,7 +549,7 @@ export default function Home() {
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (
-            <button className="shop-product-card" type="button" key={product.name} onClick={() => setSelectedProductIndex(index)} aria-label={`查看 ${product.name} 商品選單`}>
+            <button className="shop-product-card" type="button" key={product.name} onClick={() => openProductCatalog(index)} aria-label={`查看 ${product.name} 商品選單`} aria-haspopup="dialog" aria-controls="product-catalog-dialog">
               <div className="shop-product-image">
                 <img src={product.cardImage ?? product.image} alt={product.name} />
                 {!product.cardImage && product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
@@ -562,10 +573,10 @@ export default function Home() {
         <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
       </section>
 
-      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><button className="button primary store-list-trigger" type="button" onClick={() => setStoreModalOpen(true)}>查看全台門市 <span>↗</span></button></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
       {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
-        <section className="store-modal" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
+        <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
           <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 11 間門市，歡迎於前往前先致電確認營業時間與試躺服務。</p></header>
           <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>上品寢具床墊館【{store.name}】</h3><p>{store.address}</p><a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>

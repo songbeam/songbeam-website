@@ -124,6 +124,10 @@ test("defines the official store directory dialog", async () => {
   assert.doesNotMatch(source, /const faqs|openFaq|href="#faq"|id="faq"|常見問題|FREQUENTLY ASKED/);
   assert.match(source, /storeModalOpen/);
   assert.match(source, /className="store-modal"/);
+  assert.match(source, /const openStoreDirectory = \(\) =>/);
+  assert.match(source, /onClick=\{openStoreDirectory\}/);
+  assert.match(source, /aria-controls="store-directory-dialog"/);
+  assert.match(source, /id="store-directory-dialog"/);
   assert.match(source, /共 11 間門市/);
   assert.match(source, /name: "南京館"/);
   assert.match(source, /name: "斗六館"/);
@@ -133,7 +137,10 @@ test("defines the official store directory dialog", async () => {
 
 test("defines the two-step CBD product collection dialogs", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(source, /<button className="shop-product-card"[^>]*onClick=\{\(\) => setSelectedProductIndex\(index\)\}/);
+  assert.match(source, /const openProductCatalog = \(index: number\) =>/);
+  assert.match(source, /<button className="shop-product-card"[^>]*onClick=\{\(\) => openProductCatalog\(index\)\}/);
+  assert.match(source, /aria-controls="product-catalog-dialog"/);
+  assert.match(source, /id="product-catalog-dialog"/);
   assert.match(source, /查看商品連結/);
   assert.match(source, /pillow-catalog-modal/);
   assert.match(source, /selectedSeriesItemIndex/);
