@@ -56,6 +56,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /structure-title-nowrap/);
   assert.match(html, /structure-editorial/);
   assert.match(html, /structure-spec-panel/);
+  assert.match(html, /cbd-hydrophilic-contour-pillow-bedroom\.png/);
   assert.doesNotMatch(html, /材質資訊，一目了然/);
   assert.doesNotMatch(html, /已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目/);
   assert.match(html, /近 7 成/);
@@ -68,6 +69,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /從睡眠數據/);
   assert.match(html, /safety-title-nowrap/);
   assert.match(html, /cbd-textile-title-nowrap/);
+  assert.match(html, /cbd-down-pillow-bedroom\.png/);
   assert.doesNotMatch(html, /臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
   assert.match(html, /讓舒服/);

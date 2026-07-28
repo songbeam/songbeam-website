@@ -508,7 +508,7 @@ export default function Home() {
         <div className="section-label"><span>04</span><p>MATERIAL &amp; STRUCTURE</p></div>
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
-          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/product-pillow-side.jpg" alt="CBD 草本忘憂枕頭側面與輪廓" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
+          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
           <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>親水記憶棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
         <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
@@ -524,7 +524,7 @@ export default function Home() {
         </div>
 
         <div className="cbd-textile-story">
-          <figure><img src="/product-pillow-front.jpg" alt="CBD 漢麻二酚表布與海鷗枕型" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
+          <figure><img src="/cbd-down-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂羽絨枕與漢麻二酚表布" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
           <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><div className="release-path"><span>CBD 萃取</span><i>→</i><span>微膠囊化</span><i>→</i><span>編織進纖維</span></div></div>
         </div>
 

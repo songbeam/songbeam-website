@@ -890,12 +890,13 @@
   margin-top:36px;overflow:hidden;border:1px solid rgba(255,255,255,.86);border-radius:58px 6px;
   background:rgba(249,248,242,.76);box-shadow:0 26px 70px rgba(73,98,84,.09);
 }
-.cbd-textile-story figure{position:relative;min-height:540px;margin:0;padding:7%;background:linear-gradient(145deg,#e0e8df,#edf1e8)}
+.cbd-textile-story figure{position:relative;min-height:540px;margin:0;padding:0;overflow:hidden;background:linear-gradient(145deg,#e0e8df,#edf1e8)}
+.cbd-textile-story figure:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(50,65,57,.38))}
 .cbd-textile-story figure img{
-  display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;
-  filter:saturate(.66) contrast(.94) brightness(1.04);
+  display:block;width:100%;height:100%;min-height:540px;object-fit:cover;object-position:center;
+  filter:saturate(.72) contrast(.94) brightness(1.04);
 }
-.cbd-textile-story figcaption{position:absolute;left:26px;bottom:22px;color:#7e8e86;font:8px Arial,sans-serif;letter-spacing:.16em}
+.cbd-textile-story figcaption{position:absolute;z-index:2;left:26px;bottom:22px;color:#fff;font:8px Arial,sans-serif;letter-spacing:.16em;text-shadow:0 1px 8px rgba(32,45,39,.45)}
 .cbd-textile-copy{padding:57px 53px;display:flex;flex-direction:column;justify-content:center}
 .cbd-textile-copy h3{margin:11px 0 0;color:#536d64;font-size:clamp(34px,3.5vw,52px);font-weight:400;letter-spacing:.045em}
 .cbd-textile-title-nowrap{white-space:nowrap;font-size:clamp(30px,3vw,44px)!important;letter-spacing:.03em!important}
@@ -1047,11 +1048,11 @@
 .structure-title span{display:block}
 .structure-title-nowrap{white-space:nowrap}
 .structure-editorial{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:stretch;margin-top:64px}
-.structure-product-photo{position:relative;min-height:620px;margin:0;overflow:hidden;border-radius:5px 72px 5px 72px;background:radial-gradient(circle at 48% 46%,#f8f6f0 0,#e6ece9 58%,#d7e0dc 100%)}
-.structure-product-photo:before{content:"";position:absolute;width:78%;height:31%;left:11%;top:30%;border:1px solid rgba(154,128,95,.28);border-radius:50%;transform:rotate(-8deg)}
-.structure-product-photo>span{position:absolute;z-index:2;left:34px;top:30px;color:#9b816b;font:9px Arial,sans-serif;letter-spacing:.2em}
-.structure-product-photo img{position:absolute;z-index:1;left:7%;top:15%;width:86%;height:67%;display:block;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 30px 28px rgba(76,96,91,.15));transform:rotate(-3deg)}
-.structure-product-photo figcaption{position:absolute;z-index:2;left:35px;right:35px;bottom:30px;padding-top:18px;border-top:1px solid rgba(83,107,100,.16);color:#73837d;font-size:12px;line-height:1.9;letter-spacing:.035em}
+.structure-product-photo{position:relative;min-height:620px;margin:0;overflow:hidden;border-radius:5px 72px 5px 72px;background:#dfe6df}
+.structure-product-photo:before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(48,64,55,.2),transparent 30%,rgba(48,64,55,.52));pointer-events:none}
+.structure-product-photo>span{position:absolute;z-index:3;left:34px;top:30px;color:#fff;font:9px Arial,sans-serif;letter-spacing:.2em;text-shadow:0 1px 8px rgba(35,48,42,.5)}
+.structure-product-photo img{position:absolute;z-index:1;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(.72) contrast(.94) brightness(1.04)}
+.structure-product-photo figcaption{position:absolute;z-index:3;left:35px;right:35px;bottom:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.45);color:#fff;font-size:12px;line-height:1.9;letter-spacing:.035em;text-shadow:0 1px 10px rgba(35,48,42,.5)}
 .structure-layers{padding:44px 44px 35px;border:1px solid rgba(174,148,111,.26);border-radius:70px 5px 70px 5px;background:rgba(250,248,243,.76);box-shadow:0 28px 70px rgba(72,92,89,.07)}
 .structure-layers header{padding:2px 0 25px;border-bottom:1px solid rgba(83,107,100,.14)}
 .structure-layers header small,.structure-spec-panel>div small{color:#a0846d;font:9px Arial,sans-serif;letter-spacing:.21em}
@@ -1119,6 +1120,7 @@
   .clinical-charts{padding:34px 24px 28px}
   .cbd-textile-story{grid-template-columns:1fr;border-radius:44px 5px}
   .cbd-textile-story figure{min-height:420px}
+  .cbd-textile-story figure img{min-height:420px}
   .cbd-textile-copy{padding:43px 34px}
   .safety-feature-grid{grid-template-columns:repeat(2,1fr)}
   .care-wash-layout{grid-template-columns:1fr;gap:36px}
@@ -1211,7 +1213,8 @@
   .clinical-charts .sleep-chart-grid article{padding:24px 22px}
   .clinical-charts .chart-bars{height:220px;gap:34px}
   .cbd-textile-story{width:calc(100% + 8vw);margin-left:-4vw;border-radius:30px 4px}
-  .cbd-textile-story figure{min-height:310px;padding:9%}
+  .cbd-textile-story figure{min-height:310px;padding:0}
+  .cbd-textile-story figure img{min-height:310px}
   .cbd-textile-copy{padding:35px 23px 38px}
   .cbd-textile-title-nowrap{font-size:31px!important}
   .release-path{gap:7px;margin-top:31px;padding-top:23px}
@@ -1244,7 +1247,7 @@
   .structure-title{font-size:29px!important;letter-spacing:.03em!important}
   .structure-editorial{width:calc(100% + 8vw);margin-left:-4vw;margin-top:40px;gap:18px}
   .structure-product-photo{min-height:430px;border-radius:4px 36px}
-  .structure-product-photo img{left:3%;top:12%;width:94%;height:67%}
+  .structure-product-photo img{inset:0;width:100%;height:100%}
   .structure-product-photo>span{left:22px;top:22px;font-size:8px}
   .structure-product-photo figcaption{left:23px;right:23px;bottom:22px;font-size:10px}
   .structure-layers{padding:34px 23px 29px;border-radius:36px 4px}
