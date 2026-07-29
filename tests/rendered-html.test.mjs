@@ -13,6 +13,39 @@ async function render(pathname = "/") {
   );
 }
 
+test("keeps all explicitly sized site text at 10pt or larger", async () => {
+  const cssFiles = [
+    "globals.css",
+    "product-layout.css",
+    "render-depth.css",
+    "summer-night.css",
+  ];
+  const styles = (
+    await Promise.all(
+      cssFiles.map((file) =>
+        readFile(new URL(`../app/${file}`, import.meta.url), "utf8"),
+      ),
+    )
+  ).join("\n");
+  const assertMinimum = (value, declaration) => {
+    for (const [, amount, unit] of value.matchAll(/(\d+(?:\.\d+)?)(px|pt|rem)\b/g)) {
+      const size = Number(amount);
+      const isTooSmall =
+        (unit === "px" && size < 13.32) ||
+        (unit === "pt" && size < 10) ||
+        (unit === "rem" && size < 0.833);
+      assert.ok(!isTooSmall, `text below 10pt in ${declaration}`);
+    }
+  };
+
+  for (const match of styles.matchAll(/font-size\s*:\s*([^;}]+)/g)) {
+    assertMinimum(match[1], match[0]);
+  }
+  for (const match of styles.matchAll(/font\s*:\s*([^;}]+)/g)) {
+    assertMinimum(match[1], match[0]);
+  }
+});
+
 test("renders the complete one-page CBD bedding product story", async () => {
   const response = await render();
   assert.equal(response.status, 200);

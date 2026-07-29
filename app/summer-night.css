@@ -32,10 +32,10 @@ h1,h2,h3,.hero-series,.stores-stamp strong{font-family:"Songti TC","Noto Serif T
 .hero-curve{width:72vw;height:19vw;left:-17vw;bottom:7vw;border-color:rgba(232,214,172,.34);transform:rotate(8deg)}
 .summer-moon{position:absolute;z-index:3;left:7.5vw;top:17%;font:300 58px/1 Georgia,serif;color:#edddb9;text-shadow:0 0 24px rgba(236,216,176,.28)}
 .hero-content{position:relative;z-index:3;width:49%;padding:118px 0 80px 8vw;transform:none;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
-.hero .overline{color:#c5d0d3;font-size:9px;letter-spacing:.38em;margin-bottom:20px}
+.hero .overline{color:#c5d0d3;font-size:10pt;letter-spacing:.38em;margin-bottom:20px}
 .hero .hero-series{color:#e3e6e0;font-size:15px;letter-spacing:.18em;margin-bottom:12px}
 .hero h1{font-size:clamp(64px,7vw,104px);font-weight:400;line-height:1.38;letter-spacing:.13em;color:#e1e8e9;margin:18px 0 26px;text-shadow:0 4px 28px rgba(0,0,0,.24)}
-.hero .hero-lead{max-width:430px;color:#c7d1d1;font-size:13px;line-height:2.15;letter-spacing:.11em}
+.hero .hero-lead{max-width:430px;color:#c7d1d1;font-size:10pt;line-height:2.15;letter-spacing:.11em}
 .hero .button.primary{background:rgba(242,237,227,.1);color:#f5efe4;border:1px solid rgba(232,214,172,.65);backdrop-filter:blur(14px)}
 .hero .button.primary:hover{background:#e9dfcd;color:#17334c}
 .vertical-note{right:2.5vw;top:22%;color:rgba(245,241,233,.72)}
@@ -92,5 +92,5 @@ footer{background:#102a43;color:#e3e8e6}.footer-top>p,.footer-nav,.footer-bottom
 }
 
 @media(max-width:640px){
-  .hero{min-height:820px}.hero-photo{inset:0;background-position:69% center}.hero-wash{background:linear-gradient(0deg,rgba(6,23,39,.99) 0%,rgba(8,27,46,.93) 54%,rgba(8,27,46,.2) 91%)}.hero-content{width:100%;padding:120px 7vw 115px}.hero h1{font-size:48px;line-height:1.42}.hero .hero-lead{font-size:12px;max-width:88%}.summer-moon{font-size:44px;left:7vw;top:14%}.series-product-image{transform:none}.series-product-image img{width:112%}.scene-grid.magazine article>div{margin:-20px 10px 0}.buy-copy h2{font-size:38px}
+  .hero{min-height:820px}.hero-photo{inset:0;background-position:69% center}.hero-wash{background:linear-gradient(0deg,rgba(6,23,39,.99) 0%,rgba(8,27,46,.93) 54%,rgba(8,27,46,.2) 91%)}.hero-content{width:100%;padding:120px 7vw 115px}.hero h1{font-size:48px;line-height:1.42}.hero .hero-lead{font-size:10pt;max-width:88%}.summer-moon{font-size:44px;left:7vw;top:14%}.series-product-image{transform:none}.series-product-image img{width:112%}.scene-grid.magazine article>div{margin:-20px 10px 0}.buy-copy h2{font-size:38px}
 }
