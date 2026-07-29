@@ -159,6 +159,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /id="product-catalog-dialog"/);
   assert.match(source, /查看商品連結/);
   assert.match(source, /pillow-catalog-modal/);
+  assert.match(source, /titleClass: "pillow-catalog-title-nowrap"/);
+  assert.match(source, /hydrophilic-title-lines/);
+  assert.match(source, /CBD 草本忘憂好眠寢具 好眠親水枕<\/span><span>（海鷗枕／止鼾枕）/);
   assert.match(source, /selectedSeriesItemIndex/);
   for (const name of [
     "CBD 草本忘憂好眠寢具 天絲枕",
@@ -201,9 +204,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.shop-product-card:first-child[^{]*\{[^}]*object-fit:contain/);
-  assert.match(styles, /\.shop-product-info strong\{[^}]*font-size:12pt/);
-  assert.match(styles, /\.shop-product-info p\{[^}]*font-size:12pt/);
-  assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:12pt/);
+  assert.match(styles, /\.shop-product-info strong\{[^}]*font-size:10pt/);
+  assert.match(styles, /\.shop-product-info p\{[^}]*font-size:10pt/);
+  assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:10pt/);
   for (const detail of [
     "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "GLORY 獨家專利「Tempwiser 親水棉」",
