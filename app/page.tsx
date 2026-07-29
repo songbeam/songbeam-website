@@ -481,7 +481,7 @@ export default function Home() {
         <div className="section-label"><span>02</span><p>BRAND AMBASSADOR &amp; PROFESSIONAL RECOMMENDATION</p></div>
         <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br /><span className="endorsement-title-nowrap">都有值得信任的聲音。</span></h2></div></div>
         <div className="endorsement-grid">
-          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>GLORY 葛洛麗品牌 CBD 好眠寢具代言人</strong><p>吳若權老師擔任 GLORY 葛洛麗品牌 CBD 好眠寢具代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
+          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>吳若權老師擔任 GLORY 葛洛麗品牌 CBD 草本忘憂好眠寢具代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
           <article className="professional-card">
             <figure className="endorsement-portrait professional-duo">
               <img src="/professional-doctors-lin-yang.jpg" alt="美國脊骨神經醫學林國偉博士與中醫藥學博士楊顓丞博士共同推薦 CBD 草本忘憂好眠寢具護脊枕" />

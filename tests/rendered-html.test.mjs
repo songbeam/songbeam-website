@@ -104,7 +104,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /不一次塞入太多術語/);
   assert.match(html, /枕頭合不合適/);
   assert.match(html, /吳若權 老師/);
-  assert.match(html, /GLORY 葛洛麗品牌 CBD 好眠寢具代言人/);
+  assert.match(html, /ambassador-title-lines/);
+  assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
   assert.match(html, /林國偉 博士/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /professional-doctors-lin-yang\.jpg/);
