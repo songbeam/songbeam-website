@@ -40,7 +40,7 @@ const newsItems = [
 
 const collectionProducts = [
   {
-    name: "CBD草本忘憂枕頭",
+    name: "CBD 草本忘憂好眠寢具枕頭",
     en: "HYDROPHILIC PILLOW",
     image: "/cbd-sleep-collection-pillow-card.png",
     statement: "讓頭頸找到最舒服的位置",
@@ -84,7 +84,7 @@ type SeriesProduct = {
 
 const pillowSeries: SeriesProduct[] = [
   {
-    name: "CBD草本忘憂 天絲枕",
+    name: "CBD 草本忘憂好眠寢具 天絲枕",
     en: "TENCEL PILLOW",
     image: "/sleep-concerns-cbd-pillow-wide.png",
     statement: "30% 天絲＋70% 聚酯纖維，立體邊設計，表布鋪棉。",
@@ -99,7 +99,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "實際材質成分、尺寸、高度與清潔方式，請以商品洗標及正式商品標示為準。",
   },
   {
-    name: "CBD草本忘憂 羽絨枕",
+    name: "CBD 草本忘憂好眠寢具 羽絨枕",
     en: "DOWN PILLOW",
     image: "/cbd-down-pillow-bedroom.png",
     statement: "睡感軟硬適中，枕型飽滿，支撐性高。",
@@ -119,7 +119,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "實際表布緹花樣式、尺寸與重量，請以收到商品及正式商品標示為準。",
   },
   {
-    name: "CBD草本忘憂 好眠雲朵枕",
+    name: "CBD 草本忘憂好眠寢具 好眠雲朵枕",
     en: "SLEEP CLOUD PILLOW",
     image: "/cbd-sleep-cloud-pillow-bedroom.png",
     statement: "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
@@ -139,7 +139,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "Tempwiser 親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
-    name: "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
+    name: "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）",
     en: "HYDROPHILIC CONTOUR PILLOW",
     image: "/cbd-hydrophilic-contour-pillow-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -159,7 +159,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效。",
   },
   {
-    name: "CBD草本忘憂 海鷗減壓枕",
+    name: "CBD 草本忘憂好眠寢具 海鷗減壓枕",
     en: "SEAGULL PRESSURE-RELIEF PILLOW",
     image: "/cbd-seagull-pressure-relief-pillow-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -180,7 +180,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。實際高度調整方式與適用睡姿，請以正式商品標示及門市試躺結果為準。",
   },
   {
-    name: "CBD草本忘憂 海鷗護脊枕",
+    name: "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     en: "SEAGULL SPINE-SUPPORT PILLOW",
     image: "/cbd-seagull-spine-support-pillow-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -204,7 +204,7 @@ const pillowSeries: SeriesProduct[] = [
 
 const protectorSeries: SeriesProduct[] = [
   {
-    name: "CBD草本忘憂 好眠 長纖細棉 涼被",
+    name: "CBD 草本忘憂好眠寢具 好眠 長纖細棉 涼被",
     en: "LONG-STAPLE COTTON SUMMER QUILT",
     image: "/product-bedding-room.png",
     statement: "選用高等級 60 支長纖棉，紗線更細、織密更緊。",
@@ -227,7 +227,7 @@ const protectorSeries: SeriesProduct[] = [
     note: "實際材質比例、尺寸、重量與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 好眠 長纖細棉 枕套",
+    name: "CBD 草本忘憂好眠寢具 好眠 長纖細棉 枕套",
     en: "LONG-STAPLE COTTON PILLOWCASE",
     image: "/product-bedding-detail.png",
     statement: "選用高等級 60 支長纖棉，紗線更細、織密更緊。",
@@ -250,7 +250,7 @@ const protectorSeries: SeriesProduct[] = [
     note: "實際尺寸、開口形式、材質比例與清潔方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 好眠 長纖細棉 床包",
+    name: "CBD 草本忘憂好眠寢具 好眠 長纖細棉 床包",
     en: "LONG-STAPLE COTTON FITTED SHEET",
     image: "/cbd-long-staple-cotton-fitted-sheet.png",
     statement: "選用高等級 60 支長纖棉，紗線更細、織密更緊。",
@@ -273,7 +273,7 @@ const protectorSeries: SeriesProduct[] = [
     note: "實際適用床墊尺寸、包覆高度、材質比例與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 雙層平面保潔墊（保潔墊＋枕套）",
+    name: "CBD 草本忘憂好眠寢具 雙層平面保潔墊（保潔墊＋枕套）",
     en: "DOUBLE-LAYER PROTECTOR SET",
     image: "/cbd-sleep-collection-protector-card-clean.jpg",
     statement: "獨家比利時萃取微膠囊技術",
@@ -290,7 +290,7 @@ const protectorSeries: SeriesProduct[] = [
     note: "實際組合內容、尺寸、防護特性與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 毛小孩安撫墊被",
+    name: "CBD 草本忘憂好眠寢具 毛小孩安撫墊被",
     en: "PET COMFORT MAT QUILT",
     image: "/cbd-pet-comfort-mat-quilt.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -310,7 +310,7 @@ const protectorSeries: SeriesProduct[] = [
 
 const travelSeries: SeriesProduct[] = [
   {
-    name: "CBD草本忘憂 信封式枕頭套",
+    name: "CBD 草本忘憂好眠寢具 信封式枕頭套",
     en: "ENVELOPE PILLOWCASE",
     image: "/cbd-envelope-pillowcase-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -329,7 +329,7 @@ const travelSeries: SeriesProduct[] = [
     note: "實際材質、尺寸、適用枕型與洗滌方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 好眠眼罩",
+    name: "CBD 草本忘憂好眠寢具 好眠眼罩",
     en: "SLEEP EYE MASK",
     image: "/cbd-sleep-eye-mask-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -347,7 +347,7 @@ const travelSeries: SeriesProduct[] = [
     note: "實際表布、填充材質、尺寸與清潔方式，請以正式商品標示及洗標為準。",
   },
   {
-    name: "CBD草本忘憂 旅行好眠頸枕",
+    name: "CBD 草本忘憂好眠寢具 旅行好眠頸枕",
     en: "TRAVEL NECK PILLOW",
     image: "/cbd-travel-neck-pillow-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -365,7 +365,7 @@ const travelSeries: SeriesProduct[] = [
     note: "實際材質、尺寸與承托感受，請以正式商品標示及試用結果為準。",
   },
   {
-    name: "CBD草本忘憂 好眠旅行組",
+    name: "CBD 草本忘憂好眠寢具 好眠旅行組",
     en: "TRAVEL SLEEP SET",
     image: "/cbd-travel-sleep-set-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -396,6 +396,13 @@ const stores = [
   { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", phone: "(049) 230-7036", tags: ["可刷卡", "國旅卡"] },
   { name: "田中館", address: "彰化縣田中鎮新福路 43 號", phone: "(04) 875-5753", tags: ["可刷卡"] },
   { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", phone: "(05) 522-1585", tags: ["可刷卡", "國旅卡"] },
+  {
+    name: "台中榮總",
+    displayName: "上品寢具 CBD 專櫃【台中榮總】",
+    address: "台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）",
+    phone: "",
+    tags: ["CBD 專櫃"],
+  },
 ];
 
 export default function Home() {
@@ -405,7 +412,7 @@ export default function Home() {
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
   const catalogConfig = selectedProductIndex === 0
-    ? { en: "CBD PILLOW COLLECTION", title: "CBD草本忘憂枕頭系列", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
+    ? { en: "CBD PILLOW COLLECTION", title: "CBD 草本忘憂好眠寢具枕頭系列", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
     : selectedProductIndex === 1
       ? { en: "CBD BEDDING PROTECTOR COLLECTION", title: "CBD寢具保潔墊組系列", copy: "從寢具搭配到日常防護，選擇一項產品查看完整介紹。", items: protectorSeries }
       : selectedProductIndex === 2
@@ -459,7 +466,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-wash" /><div className="dream-haze" aria-hidden="true" /><div className="loose-curve hero-curve" aria-hidden="true" /><span className="summer-moon" aria-hidden="true">☾</span>
         <div className="hero-content">
-          <p className="hero-series">上品寢具・CBD 草本忘憂系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead"><span>月光落下，讓草本的柔和想像與貼合支撐，</span><span className="hero-lead-nowrap">陪身體回到舒服的睡眠節奏。</span></p>
+          <p className="hero-series">上品寢具・CBD 草本忘憂好眠寢具系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead"><span>月光落下，讓草本的柔和想像與貼合支撐，</span><span className="hero-lead-nowrap">陪身體回到舒服的睡眠節奏。</span></p>
           <div className="hero-actions"><a className="button primary capsule" href="#features">探索草本忘憂系列 <span>→</span></a></div>
         </div>
         <p className="vertical-note">SUMMER NIGHT · HERBAL REST · SONG BEAM</p>
@@ -467,17 +474,17 @@ export default function Home() {
 
       <section className="core-features section" id="features">
         <div className="section-label"><span>01</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div></div>
-        <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂海鷗護脊枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
+        <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂好眠寢具海鷗護脊枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
       <section className="endorsement-section section" id="endorsements">
         <div className="section-label"><span>02</span><p>BRAND AMBASSADOR &amp; PROFESSIONAL RECOMMENDATION</p></div>
         <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br /><span className="endorsement-title-nowrap">都有值得信任的聲音。</span></h2></div></div>
         <div className="endorsement-grid">
-          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>CBD 系列產品代言人</strong><p>吳若權老師擔任 CBD 系列產品代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
+          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong>GLORY 葛洛麗品牌 CBD 好眠寢具代言人</strong><p>吳若權老師擔任 GLORY 葛洛麗品牌 CBD 好眠寢具代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
           <article className="professional-card">
             <figure className="endorsement-portrait professional-duo">
-              <img src="/professional-doctors-lin-yang.jpg" alt="美國脊骨神經醫學林國偉博士與中醫藥學博士楊顓丞博士共同推薦 CBD 草本忘憂護脊枕" />
+              <img src="/professional-doctors-lin-yang.jpg" alt="美國脊骨神經醫學林國偉博士與中醫藥學博士楊顓丞博士共同推薦 CBD 草本忘憂好眠寢具護脊枕" />
             </figure>
             <div className="professional-copy">
               <small>PROFESSIONAL RECOMMENDATION</small>
@@ -505,7 +512,7 @@ export default function Home() {
         <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
         <p className="seagull-kicker">海鷗減壓枕型</p>
         <div className="seagull-editorial">
-          <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
+          <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
           <div className="seagull-copy">
             <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
             <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
@@ -524,7 +531,7 @@ export default function Home() {
         <section className="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉商品介紹" onClick={closeProductModal} autoFocus>×</button>
           <div className="product-modal-visual"><img className={`product-modal-image product-modal-image-${selectedProductIndex}`} src={selectedProduct.image} alt={selectedProduct.name} />{selectedProduct.accessoryImage ? <img className="product-modal-accessory" src={selectedProduct.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}</div>
-          <div className="product-modal-copy"><small>{selectedProduct.en}</small><h2 id="product-modal-title">{selectedProduct.name}</h2><strong>{selectedProduct.statement}</strong><p>{selectedProduct.detail}</p><ul>{selectedProduct.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedProduct.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂系列商品">詢問商品資訊 →</a></div></div>
+          <div className="product-modal-copy"><small>{selectedProduct.en}</small><h2 id="product-modal-title">{selectedProduct.name}</h2><strong>{selectedProduct.statement}</strong><p>{selectedProduct.detail}</p><ul>{selectedProduct.highlights.map((item) => <li key={item}>{item}</li>)}</ul><p className="product-modal-note">{selectedProduct.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><a className="text-link" href="mailto:service@shangpin-bedding.tw?subject=詢問 CBD 草本忘憂好眠寢具系列商品">詢問商品資訊 →</a></div></div>
         </section>
       </div> : null}
 
@@ -540,7 +547,7 @@ export default function Home() {
         <div className="section-label"><span>04</span><p>MATERIAL &amp; STRUCTURE</p></div>
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
-          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
+          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
           <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>親水記憶棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
         <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
@@ -556,7 +563,7 @@ export default function Home() {
         </div>
 
         <div className="cbd-textile-story">
-          <figure><img src="/cbd-down-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂羽絨枕與漢麻二酚表布" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
+          <figure><img src="/cbd-down-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具羽絨枕與漢麻二酚表布" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
           <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><div className="release-path"><span>CBD 萃取</span><i>→</i><span>微膠囊化</span><i>→</i><span>編織進纖維</span></div></div>
         </div>
 
@@ -599,8 +606,8 @@ export default function Home() {
       {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
-          <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 11 間門市，歡迎於前往前先致電確認營業時間與試躺服務。</p></header>
-          <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>上品寢具床墊館【{store.name}】</h3><p>{store.address}</p><a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>
+          <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 12 處門市與專櫃，歡迎於前往前確認營業時間與試躺服務。</p></header>
+          <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p>{store.phone ? <a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a> : null}<ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>
           <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p></footer>
         </section>
       </div> : null}

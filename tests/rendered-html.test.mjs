@@ -30,13 +30,13 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /微膠囊機能織物/);
   assert.match(html, /融入表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
-  assert.match(html, /CBD草本忘憂枕頭/);
+  assert.match(html, /CBD 草本忘憂好眠寢具枕頭/);
   assert.match(html, /cbd-sleep-collection-pillow-card.png/);
   assert.match(html, /CBD隨身旅行組/);
   assert.match(html, /讓頭頸找到最舒服的位置/);
   assert.match(html, /乾淨，是舒適睡眠的開始/);
   assert.match(html, /無論走到哪裡，都睡得安心/);
-  assert.doesNotMatch(html, /CBD 草本忘憂親水枕|隨身旅行頸枕／眼罩/);
+  assert.doesNotMatch(html, /CBD 草本忘憂好眠寢具親水枕|隨身旅行頸枕／眼罩/);
   assert.doesNotMatch(html, /href="\/cbd-series"/);
   assert.match(html, /讓睡前，多一點放鬆儀式/);
   assert.match(html, /不只是柔軟，/);
@@ -98,12 +98,13 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /查看全台門市/);
   assert.doesNotMatch(html, /預約門市體驗/);
   assert.match(html, /product-detail-trigger/);
-  assert.match(html, /<button class="shop-product-card"[^>]*aria-label="查看 CBD草本忘憂枕頭 商品選單"/);
+  assert.match(html, /<button class="shop-product-card"[^>]*aria-label="查看 CBD 草本忘憂好眠寢具枕頭 商品選單"/);
   assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
   assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);
   assert.doesNotMatch(html, /不一次塞入太多術語/);
   assert.match(html, /枕頭合不合適/);
   assert.match(html, /吳若權 老師/);
+  assert.match(html, /GLORY 葛洛麗品牌 CBD 好眠寢具代言人/);
   assert.match(html, /林國偉 博士/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /professional-doctors-lin-yang\.jpg/);
@@ -134,9 +135,11 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /onClick=\{openStoreDirectory\}/);
   assert.match(source, /aria-controls="store-directory-dialog"/);
   assert.match(source, /id="store-directory-dialog"/);
-  assert.match(source, /共 11 間門市/);
+  assert.match(source, /共 12 處門市與專櫃/);
   assert.match(source, /name: "南京館"/);
   assert.match(source, /name: "斗六館"/);
+  assert.match(source, /displayName: "上品寢具 CBD 專櫃【台中榮總】"/);
+  assert.match(source, /台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）/);
   assert.doesNotMatch(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775|查看官方門市頁/);
   assert.doesNotMatch(source, /預約門市體驗/);
 });
@@ -151,21 +154,21 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /pillow-catalog-modal/);
   assert.match(source, /selectedSeriesItemIndex/);
   for (const name of [
-    "CBD草本忘憂 天絲枕",
-    "CBD草本忘憂 羽絨枕",
-    "CBD草本忘憂 好眠雲朵枕",
-    "CBD草本忘憂 好眠親水枕（海鷗枕／止鼾枕）",
-    "CBD草本忘憂 海鷗減壓枕",
-    "CBD草本忘憂 海鷗護脊枕",
-    "CBD草本忘憂 好眠 長纖細棉 涼被",
-    "CBD草本忘憂 好眠 長纖細棉 枕套",
-    "CBD草本忘憂 好眠 長纖細棉 床包",
-    "CBD草本忘憂 雙層平面保潔墊（保潔墊＋枕套）",
-    "CBD草本忘憂 毛小孩安撫墊被",
-    "CBD草本忘憂 信封式枕頭套",
-    "CBD草本忘憂 好眠眼罩",
-    "CBD草本忘憂 旅行好眠頸枕",
-    "CBD草本忘憂 好眠旅行組",
+    "CBD 草本忘憂好眠寢具 天絲枕",
+    "CBD 草本忘憂好眠寢具 羽絨枕",
+    "CBD 草本忘憂好眠寢具 好眠雲朵枕",
+    "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）",
+    "CBD 草本忘憂好眠寢具 海鷗減壓枕",
+    "CBD 草本忘憂好眠寢具 海鷗護脊枕",
+    "CBD 草本忘憂好眠寢具 好眠 長纖細棉 涼被",
+    "CBD 草本忘憂好眠寢具 好眠 長纖細棉 枕套",
+    "CBD 草本忘憂好眠寢具 好眠 長纖細棉 床包",
+    "CBD 草本忘憂好眠寢具 雙層平面保潔墊（保潔墊＋枕套）",
+    "CBD 草本忘憂好眠寢具 毛小孩安撫墊被",
+    "CBD 草本忘憂好眠寢具 信封式枕頭套",
+    "CBD 草本忘憂好眠寢具 好眠眼罩",
+    "CBD 草本忘憂好眠寢具 旅行好眠頸枕",
+    "CBD 草本忘憂好眠寢具 好眠旅行組",
   ]) assert.match(source, new RegExp(name));
   for (const detail of [
     "30% 天絲＋70% 聚酯纖維",
@@ -211,7 +214,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "cbd-seagull-pressure-relief-pillow-bedroom.png",
   ]) assert.match(source, new RegExp(detail));
   for (const detail of [
-    "CBD草本忘憂 海鷗護脊枕",
+    "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     "護脊枕」為商品系列名稱",
     "cbd-seagull-spine-support-pillow-bedroom.png",
   ]) assert.match(source, new RegExp(detail));
