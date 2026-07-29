@@ -31,8 +31,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /融入表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /CBD 草本忘憂好眠寢具枕頭/);
+  assert.match(html, /GLORY 葛洛麗品牌・CBD 草本忘憂好眠寢具系列/);
   assert.match(html, /cbd-sleep-collection-pillow-card.png/);
-  assert.match(html, /CBD隨身旅行組/);
+  assert.match(html, /CBD 草本忘憂好眠寢具保潔墊組/);
+  assert.match(html, /CBD 草本忘憂好眠寢具隨身旅行組/);
   assert.match(html, /讓頭頸找到最舒服的位置/);
   assert.match(html, /乾淨，是舒適睡眠的開始/);
   assert.match(html, /無論走到哪裡，都睡得安心/);
@@ -98,6 +100,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /查看全台門市/);
   assert.doesNotMatch(html, /預約門市體驗/);
   assert.match(html, /product-detail-trigger/);
+  assert.match(html, /collection-eyebrow-nowrap">CBD 草本忘憂好眠寢具/);
+  assert.match(html, /shop-product-title"><span>CBD 草本忘憂好眠寢具<\/span><span>枕頭/);
+  assert.match(html, /shop-product-title"><span>CBD 草本忘憂好眠寢具<\/span><span>保潔墊組/);
+  assert.match(html, /shop-product-title"><span>CBD 草本忘憂好眠寢具<\/span><span>隨身旅行組/);
   assert.match(html, /<button class="shop-product-card"[^>]*aria-label="查看 CBD 草本忘憂好眠寢具枕頭 商品選單"/);
   assert.doesNotMatch(html, /商品規格與購買資訊|href="#specs"/);
   assert.doesNotMatch(html, /以直覺的大圖、簡短睡感描述與必要資訊/);
@@ -195,6 +201,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.shop-product-card:first-child[^{]*\{[^}]*object-fit:contain/);
+  assert.match(styles, /\.shop-product-info strong\{[^}]*font-size:12pt/);
+  assert.match(styles, /\.shop-product-info p\{[^}]*font-size:12pt/);
+  assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:12pt/);
   for (const detail of [
     "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "GLORY 獨家專利「Tempwiser 親水棉」",

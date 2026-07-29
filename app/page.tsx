@@ -41,6 +41,7 @@ const newsItems = [
 const collectionProducts = [
   {
     name: "CBD 草本忘憂好眠寢具枕頭",
+    category: "枕頭",
     en: "HYDROPHILIC PILLOW",
     image: "/cbd-sleep-collection-pillow-card.png",
     statement: "讓頭頸找到最舒服的位置",
@@ -49,7 +50,8 @@ const collectionProducts = [
     note: "實際尺寸、高度、售價與適用睡姿，請以門市說明及商品標示為準。",
   },
   {
-    name: "CBD 寢具保潔墊組",
+    name: "CBD 草本忘憂好眠寢具保潔墊組",
+    category: "保潔墊組",
     en: "BEDDING PROTECTOR SET",
     image: "/product-protector.jpg",
     cardImage: "/cbd-sleep-collection-protector-card-clean.jpg",
@@ -59,7 +61,8 @@ const collectionProducts = [
     note: "實際組合、尺寸與清潔方式，請以品牌正式商品資訊及洗標為準。",
   },
   {
-    name: "CBD隨身旅行組",
+    name: "CBD 草本忘憂好眠寢具隨身旅行組",
+    category: "隨身旅行組",
     en: "TRAVEL REST SET",
     image: "/product-travel-pillow.jpg",
     cardImage: "/cbd-sleep-collection-travel-card.png",
@@ -466,7 +469,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-wash" /><div className="dream-haze" aria-hidden="true" /><div className="loose-curve hero-curve" aria-hidden="true" /><span className="summer-moon" aria-hidden="true">☾</span>
         <div className="hero-content">
-          <p className="hero-series">上品寢具・CBD 草本忘憂好眠寢具系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead"><span>月光落下，讓草本的柔和想像與貼合支撐，</span><span className="hero-lead-nowrap">陪身體回到舒服的睡眠節奏。</span></p>
+          <p className="hero-series">GLORY 葛洛麗品牌・CBD 草本忘憂好眠寢具系列</p><h1>讓夜晚，<br />慢慢鬆開。</h1><p className="hero-lead"><span>月光落下，讓草本的柔和想像與貼合支撐，</span><span className="hero-lead-nowrap">陪身體回到舒服的睡眠節奏。</span></p>
           <div className="hero-actions"><a className="button primary capsule" href="#features">探索草本忘憂系列 <span>→</span></a></div>
         </div>
         <p className="vertical-note">SUMMER NIGHT · HERBAL REST · SONG BEAM</p>
@@ -573,7 +576,7 @@ export default function Home() {
 
       <section className="product-showcase section" id="products">
         <div className="collection-head">
-          <div><div className="section-label"><span>06</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow">草本忘憂系列商品</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
+          <div><div className="section-label"><span>06</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow collection-eyebrow-nowrap">CBD 草本忘憂好眠寢具</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (
@@ -583,7 +586,7 @@ export default function Home() {
                 {!product.cardImage && product.accessoryImage ? <img className="accessory-image" src={product.accessoryImage} alt="CBD 草本旅行眼罩" /> : null}
                 <span className="shop-product-number">0{index + 1}</span>
               </div>
-              <div className="shop-product-info"><small>{product.en}</small><h3>{product.name}</h3><strong>{product.statement}</strong><p>{product.detail}</p><span className="product-detail-trigger">查看商品連結 <span>→</span></span></div>
+              <div className="shop-product-info"><small>{product.en}</small><h3 className="shop-product-title"><span>CBD 草本忘憂好眠寢具</span><span>{product.category}</span></h3><strong>{product.statement}</strong><p>{product.detail}</p><span className="product-detail-trigger">查看商品連結 <span>→</span></span></div>
             </button>
           ))}
         </div>
