@@ -38,6 +38,24 @@ const newsItems = [
   },
 ] as const;
 
+const testimonials = [
+  {
+    quote: "記錄枕頭高度、肩頸承托與門市試躺後的真實感受。",
+    name: "枕頭試躺感受",
+    profile: "使用者內容確認後上架",
+  },
+  {
+    quote: "分享表布觸感、日常清潔與每晚使用後的睡眠體驗。",
+    name: "寢具日常使用",
+    profile: "使用者內容確認後上架",
+  },
+  {
+    quote: "收藏旅途中使用頸枕、眼罩與隨身寢具的陪伴故事。",
+    name: "旅行睡眠陪伴",
+    profile: "使用者內容確認後上架",
+  },
+] as const;
+
 const collectionProducts = [
   {
     name: "CBD 草本忘憂好眠寢具枕頭",
@@ -408,9 +426,17 @@ const stores = [
   },
 ];
 
+const storeGroups = [
+  { name: "北部地區", en: "NORTH", stores: stores.filter((store) => /台北市|新北市|基隆市|桃園市|新竹/.test(store.address)) },
+  { name: "中部地區", en: "CENTRAL", stores: stores.filter((store) => /苗栗|台中市|彰化|南投|雲林/.test(store.address) && store.name !== "台中榮總") },
+  { name: "南部地區", en: "SOUTH", stores: stores.filter((store) => /嘉義|台南|高雄|屏東/.test(store.address)) },
+  { name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: stores.filter((store) => store.name === "台中榮總") },
+];
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [storeModalOpen, setStoreModalOpen] = useState(false);
+  const [partnerModalOpen, setPartnerModalOpen] = useState(false);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
@@ -438,12 +464,18 @@ export default function Home() {
     setSelectedProductIndex(null);
     setStoreModalOpen(true);
   };
+  const openPartnerContact = () => {
+    setMenuOpen(false);
+    setStoreModalOpen(false);
+    setPartnerModalOpen(true);
+  };
 
   useEffect(() => {
-    if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen) return;
+    if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen && !partnerModalOpen) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
-      if (storeModalOpen) setStoreModalOpen(false);
+      if (partnerModalOpen) setPartnerModalOpen(false);
+      else if (storeModalOpen) setStoreModalOpen(false);
       else if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
       else setSelectedProductIndex(null);
     };
@@ -454,7 +486,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex, selectedSeriesItemIndex, storeModalOpen]);
+  }, [selectedProductIndex, selectedSeriesItemIndex, storeModalOpen, partnerModalOpen]);
 
   return (
     <main>
@@ -462,7 +494,7 @@ export default function Home() {
         <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>CBD 漢麻二酚簡介</a><a href="#endorsements" onClick={closeMenu}>品牌代言</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>CBD 漢麻二酚簡介</a><a href="#endorsements" onClick={closeMenu}>品牌代言</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#testimonials" onClick={closeMenu}>使用者見證</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -478,6 +510,7 @@ export default function Home() {
       <section className="core-features section" id="features">
         <div className="section-label"><span>01</span><p>INTRODUCTION TO CANNABIDIOL</p></div><div className="feature-heading cbd-intro-heading"><div><p className="eyebrow">CBD 漢麻二酚簡介</p><h2 className="feature-title"><span>CBD 漢麻二酚（大麻二酚），</span><span>是什麼？</span></h2><p className="cbd-intro-lead">從植物中的天然成分開始，認識 CBD 與 THC 的差異，以及 GLORY 如何將草本概念帶進每日寢具。</p></div></div>
         <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂好眠寢具海鷗護脊枕的表布與立體輪廓" /><figcaption>CBD / CANNABIDIOL / TEXTILE</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
+        <article className="doctor-story-card yang-story"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><p>從草本成分研究到纖維應用，以專業觀點說明 CBD 如何走進每日貼近肌膚的寢具表布。</p></div></article>
       </section>
 
       <section className="endorsement-section section" id="endorsements">
@@ -500,6 +533,7 @@ export default function Home() {
             <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
           </div>
         </div>
+        <article className="doctor-story-card lin-story"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
       </section>
 
       {catalogConfig ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
@@ -585,18 +619,33 @@ export default function Home() {
         <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
       </section>
 
-      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="hero-actions"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button></div></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+      <section className="testimonial-section section" id="testimonials">
+        <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
+        <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2>每一段好眠故事，<br />都從找到適合自己開始。</h2></div><p>此頁保留給經使用者授權的門市試躺與日常使用感受，後續可持續新增照片、姓名顯示方式與完整分享。</p></header>
+        <div className="testimonial-grid">{testimonials.map((item, index) => <article key={item.name}><span className="testimonial-number">0{index + 1}</span><blockquote>「{item.quote}」</blockquote><div className="testimonial-person"><strong>{item.name}</strong><small>{item.profile}</small></div></article>)}</div>
+        <p className="testimonial-note">正式見證內容將於取得使用者授權並完成品牌確認後公開。</p>
+      </section>
+
+      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
       {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
           <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 12 處門市與專櫃，歡迎於前往前確認營業時間與試躺服務。</p></header>
-          <div className="store-modal-grid">{stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p>{store.phone ? <a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a> : null}<ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div>
+          <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p>{store.phone ? <a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a> : null}<ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
           <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p></footer>
         </section>
       </div> : null}
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      {partnerModalOpen ? <div className="product-modal-backdrop partner-modal-backdrop" onMouseDown={() => setPartnerModalOpen(false)}>
+        <section className="partner-modal" id="partner-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="partner-modal-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="關閉合作洽詢" onClick={() => setPartnerModalOpen(false)} autoFocus>×</button>
+          <div className="partner-modal-copy"><small>GLORY PARTNERSHIP</small><h2 id="partner-modal-title">讓專人與你接洽</h2><p>使用 LINE 掃描 QR Code，加入上品寢具官方帳號後留下合作需求，我們將由專人與你聯繫。</p><strong>LINE 官方帳號<br />@0800-800660</strong><a href="https://line.me/R/ti/p/@0800-800660" target="_blank" rel="noreferrer">手機直接開啟 LINE <span>↗</span></a></div>
+          <figure className="partner-qr"><span>SCAN TO CONNECT</span><img src="/line-official-qr.png" alt="上品寢具 LINE 官方帳號 QR Code" /><figcaption>掃描加入 LINE 官方帳號</figcaption></figure>
+        </section>
+      </div> : null}
+
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#testimonials">使用者見證</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }

@@ -154,7 +154,13 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /WHY GLORY/);
   assert.match(html, /為什麼願意成為/);
   assert.match(html, /從睡眠開始，善待自己/);
-  assert.doesNotMatch(html, /professional-doctors-lin-yang\.jpg|PROFESSIONAL RECOMMENDATION|professional-card/);
+  assert.doesNotMatch(html, /PROFESSIONAL RECOMMENDATION|professional-card/);
+  assert.match(html, /doctor-story-card yang-story/);
+  assert.match(html, /中醫藥學博士/);
+  assert.match(html, /楊顓丞 博士/);
+  assert.match(html, /doctor-story-card lin-story/);
+  assert.match(html, /美國脊骨神經醫學博士/);
+  assert.match(html, /林國偉 博士/);
   assert.doesNotMatch(html, /本頁代言與推薦資訊依品牌提供資料呈現/);
   assert.match(html, /endorsement-title-nowrap/);
   assert.doesNotMatch(html, /從生活感受，到頭頸支撐的專業觀點/);
@@ -179,12 +185,28 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /aria-controls="store-directory-dialog"/);
   assert.match(source, /id="store-directory-dialog"/);
   assert.match(source, /共 12 處門市與專櫃/);
+  assert.match(source, /const storeGroups =/);
+  for (const region of ["北部地區", "中部地區", "南部地區", "醫療院所"]) assert.match(source, new RegExp(region));
   assert.match(source, /name: "南京館"/);
   assert.match(source, /name: "斗六館"/);
   assert.match(source, /displayName: "上品寢具 CBD 專櫃【台中榮總】"/);
   assert.match(source, /台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）/);
   assert.doesNotMatch(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775|查看官方門市頁/);
   assert.doesNotMatch(source, /預約門市體驗/);
+});
+
+test("defines testimonials and official LINE partnership contact", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(source, /id="testimonials"/);
+  assert.match(source, />使用者見證</);
+  assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));
+  assert.ok(source.indexOf('id="testimonials"') < source.indexOf('id="stores"'));
+  assert.match(source, /partnerModalOpen/);
+  assert.match(source, /aria-controls="partner-contact-dialog"/);
+  assert.match(source, /id="partner-contact-dialog"/);
+  assert.match(source, /專人接洽/);
+  assert.match(source, /line-official-qr\.png/);
+  assert.match(source, /https:\/\/line\.me\/R\/ti\/p\/@0800-800660/);
 });
 
 test("defines the two-step CBD product collection dialogs", async () => {
