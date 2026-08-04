@@ -44,6 +44,8 @@ test("keeps all explicitly sized site text at 10pt or larger", async () => {
   for (const match of styles.matchAll(/font\s*:\s*([^;}]+)/g)) {
     assertMinimum(match[1], match[0]);
   }
+  assert.match(styles, /\.site-header\{[^}]*position:fixed[^}]*z-index:900/);
+  assert.match(styles, /\.site-header \.glory-brand-logo\{width:104px;height:88px/);
 });
 
 test("renders the complete one-page CBD bedding product story", async () => {
@@ -58,10 +60,15 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /SLEEP CONCERNS|BODY BEGINS TO UNWIND/);
   assert.doesNotMatch(html, /有時候，|一顆枕頭，從支撐開始/);
   assert.doesNotMatch(html, /href="#series"|id="series"|id="concerns"/);
-  assert.match(html, /HERBAL &amp; TACTILE DETAIL/);
+  assert.match(html, /INTRODUCTION TO CANNABIDIOL/);
+  assert.match(html, /CBD 漢麻二酚簡介/);
+  assert.match(html, /CBD 漢麻二酚（大麻二酚）/);
+  assert.match(html, /CBD 是 Cannabidiol 的縮寫/);
+  assert.match(html, /CBD 本身不會產生 THC 所帶來的精神活性與陶醉感/);
+  assert.doesNotMatch(html, /HERBAL &amp; TACTILE DETAIL/);
   assert.match(html, /cbd-seagull-spine-support-pillow-bedroom\.png/);
-  assert.match(html, /微膠囊機能織物/);
-  assert.match(html, /融入表布/);
+  assert.match(html, /微膠囊技術融入纖維/);
+  assert.match(html, /草本機能表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);
   assert.match(html, /CBD 草本忘憂好眠寢具枕頭/);
   assert.match(html, /GLORY 葛洛麗品牌・CBD 草本忘憂好眠寢具系列/);
@@ -73,11 +80,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /無論走到哪裡，都睡得安心/);
   assert.doesNotMatch(html, /CBD 草本忘憂好眠寢具親水枕|隨身旅行頸枕／眼罩/);
   assert.doesNotMatch(html, /href="\/cbd-series"/);
-  assert.match(html, /讓睡前，多一點放鬆儀式/);
-  assert.match(html, /不只是柔軟，/);
-  assert.match(html, /更懂得好好支撐/);
-  assert.match(html, /慢慢貼合，/);
-  assert.match(html, /也慢慢卸下疲憊/);
+  assert.match(html, /來自大麻植物的/);
+  assert.match(html, /CBD 與 THC/);
+  assert.match(html, /從植物成分概念/);
   assert.doesNotMatch(html, /只依品牌資料與後續可提出的檢驗說明，不延伸為療效/);
   assert.doesNotMatch(html, /product-press-closeup\.png/);
   assert.doesNotMatch(html, /lifestyle-reading\.png|lifestyle-morning\.png/);
@@ -145,19 +150,17 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /吳若權 老師/);
   assert.match(html, /ambassador-title-lines/);
   assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
-  assert.match(html, /林國偉 博士/);
   assert.match(html, /wu-ruo-quan\.jpg/);
-  assert.match(html, /professional-doctors-lin-yang\.jpg/);
-  assert.match(html, /professional-title-role">美國脊骨神經醫學博士/);
-  assert.match(html, /professional-title-name">林國偉 博士/);
-  assert.match(html, /professional-title-role">中醫藥學博士/);
-  assert.match(html, /professional-title-name">楊顓丞 博士/);
-  assert.match(html, /理想的枕頭可填補因脊椎弧度產生的空隙/);
-  assert.match(html, /結合纖維編織工法，經兩年多時間研發/);
-  assert.doesNotMatch(html, /楊韻丞|睡不好還在吃安眠藥嗎/);
+  assert.match(html, /WHY GLORY/);
+  assert.match(html, /為什麼願意成為/);
+  assert.match(html, /從睡眠開始，善待自己/);
+  assert.doesNotMatch(html, /professional-doctors-lin-yang\.jpg|PROFESSIONAL RECOMMENDATION|professional-card/);
+  assert.doesNotMatch(html, /本頁代言與推薦資訊依品牌提供資料呈現/);
   assert.match(html, /endorsement-title-nowrap/);
   assert.doesNotMatch(html, /從生活感受，到頭頸支撐的專業觀點/);
   assert.match(html, /href="#endorsements"/);
+  assert.match(html, />品牌代言</);
+  assert.match(html, />CBD 漢麻二酚簡介</);
   assert.doesNotMatch(html, /舒服入睡|不必等到很累以後|id="buy"|href="#buy"|立即購買/);
   assert.match(html, /非藥品/);
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);

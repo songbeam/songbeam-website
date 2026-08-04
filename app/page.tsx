@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const features = [
-  ["01", "HERBAL RITUAL", "讓睡前，多一點放鬆儀式。", "", "草本概念透過微膠囊機能織物融入表布。"],
-  ["02", "ERGONOMIC SUPPORT", "不只是柔軟，", "更懂得好好支撐。", "海鷗式輪廓以中央凹槽、頸部曲線與兩側枕區，回應仰睡、側睡及翻身時的不同高度。"],
-  ["03", "SLOW REBOUND", "慢慢貼合，", "也慢慢卸下疲憊。", "親水記憶棉在受壓後逐步貼合頭頸，以包覆、回彈與水氣調節共同建立舒適睡感。"],
+  ["01", "WHAT IS CBD", "來自大麻植物的", "天然化合物。", "CBD 是 Cannabidiol 的縮寫，中文常稱大麻二酚或漢麻二酚，是大麻植物中天然存在的多種大麻素之一。"],
+  ["02", "CBD & THC", "CBD 與 THC，", "是不同的成分。", "讓人產生迷幻或「嗨」感的是 THC；CBD 本身不會產生 THC 所帶來的精神活性與陶醉感。"],
+  ["03", "TEXTILE APPLICATION", "從植物成分概念，", "走進日常寢具。", "GLORY 將 CBD 成分以微膠囊技術融入纖維，讓草本機能表布成為每天貼近肌膚的睡眠素材。"],
 ];
 
 const newsItems = [
@@ -462,7 +462,7 @@ export default function Home() {
         <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>產品特色</a><a href="#endorsements" onClick={closeMenu}>品牌推薦</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>CBD 漢麻二酚簡介</a><a href="#endorsements" onClick={closeMenu}>品牌代言</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -476,39 +476,17 @@ export default function Home() {
       </section>
 
       <section className="core-features section" id="features">
-        <div className="section-label"><span>01</span><p>HERBAL &amp; TACTILE DETAIL</p></div><div className="feature-heading"><div><h2 className="feature-title"><span>將草本的柔和想像，</span><span>放進每天最靠近你的枕頭裡。</span></h2></div></div>
-        <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂好眠寢具海鷗護脊枕的表布與立體輪廓" /><figcaption>SLOW REBOUND / TACTILE DETAIL</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
+        <div className="section-label"><span>01</span><p>INTRODUCTION TO CANNABIDIOL</p></div><div className="feature-heading cbd-intro-heading"><div><p className="eyebrow">CBD 漢麻二酚簡介</p><h2 className="feature-title"><span>CBD 漢麻二酚（大麻二酚），</span><span>是什麼？</span></h2><p className="cbd-intro-lead">從植物中的天然成分開始，認識 CBD 與 THC 的差異，以及 GLORY 如何將草本概念帶進每日寢具。</p></div></div>
+        <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂好眠寢具海鷗護脊枕的表布與立體輪廓" /><figcaption>CBD / CANNABIDIOL / TEXTILE</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
       </section>
 
       <section className="endorsement-section section" id="endorsements">
-        <div className="section-label"><span>02</span><p>BRAND AMBASSADOR &amp; PROFESSIONAL RECOMMENDATION</p></div>
-        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言與專業推薦</p><h2>讓每一種舒服，<br /><span className="endorsement-title-nowrap">都有值得信任的聲音。</span></h2></div></div>
+        <div className="section-label"><span>02</span><p>BRAND AMBASSADOR</p></div>
+        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
         <div className="endorsement-grid">
-          <article><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>吳若權老師擔任 GLORY 葛洛麗品牌 CBD 草本忘憂好眠寢具代言人，陪伴品牌傳遞柔和、舒適而貼近日常的睡眠生活想像。</p></div></article>
-          <article className="professional-card">
-            <figure className="endorsement-portrait professional-duo">
-              <img src="/professional-doctors-lin-yang.jpg" alt="美國脊骨神經醫學林國偉博士與中醫藥學博士楊顓丞博士共同推薦 CBD 草本忘憂好眠寢具護脊枕" />
-            </figure>
-            <div className="professional-copy">
-              <small>PROFESSIONAL RECOMMENDATION</small>
-              <section className="professional-profile">
-                <h3>
-                  <span className="professional-title-role">美國脊骨神經醫學博士</span>
-                  <span className="professional-title-name">林國偉 博士</span>
-                </h3>
-                <p>理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。</p>
-              </section>
-              <section className="professional-profile">
-                <h3>
-                  <span className="professional-title-role">中醫藥學博士</span>
-                  <span className="professional-title-name">楊顓丞 博士</span>
-                </h3>
-                <p>漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。</p>
-              </section>
-            </div>
-          </article>
+          <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
+          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>為什麼願意成為<br />GLORY 好眠寢具代言人？</h3><p>吳若權老師長期倡議在日常中照顧身心，也重視真正能被實踐的生活品質。他認同 GLORY 從舒適材質、貼合支撐到睡前放鬆感受的完整思考，讓好眠不只是夜晚的片刻，而是每天好好照顧自己的開始。</p><p>這份對「從睡眠開始，善待自己」的共同信念，成為他願意擔任 <strong>GLORY 葛洛麗品牌 CBD 草本忘憂好眠寢具代言人</strong>的原因。</p></div></article>
         </div>
-        <p className="endorsement-note">本頁代言與推薦資訊依品牌提供資料呈現；產品為一般寢具用品，非醫療器材，不具診斷或治療功效。</p>
       </section>
 
       <section className="pillow-section section" id="pillow">
@@ -618,7 +596,7 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">產品特色</a><a href="#endorsements">品牌推薦</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
     </main>
   );
 }
