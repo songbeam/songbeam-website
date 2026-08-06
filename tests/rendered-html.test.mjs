@@ -71,6 +71,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /cbd-intro-combined-layout/);
   assert.match(html, /cbd-feature-panel/);
   assert.match(html, /cbd-doctor-card/);
+  assert.match(html, /cbd-video-frame/);
+  assert.match(html, /youtube-nocookie\.com\/embed\/BmpU3CbUALE/);
+  assert.match(html, /CBD 漢麻二酚介紹影片/);
   assert.doesNotMatch(html, /cbd-seagull-spine-support-pillow-bedroom\.png|CBD \/ CANNABIDIOL \/ TEXTILE/);
   assert.match(html, /seagull-combined-layout/);
   assert.match(html, /seagull-doctor-card/);
@@ -303,7 +306,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
 
 test("defines direct original links for all U.S. media cards", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.doesNotMatch(source, /selectedNewsIndex|news-modal-backdrop|<iframe|window\.open\(item\.url/);
+  assert.doesNotMatch(source, /selectedNewsIndex|news-modal-backdrop|window\.open\(item\.url/);
   assert.match(source, /finance\.yahoo\.com/);
   assert.match(source, /pr\.cbslakecharles\.tv/);
   assert.match(source, /ccnewspaper\.com/);
