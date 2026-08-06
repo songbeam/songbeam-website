@@ -68,7 +68,11 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /HERBAL &amp; TACTILE DETAIL/);
   assert.match(html, /cbd-intro-title-nowrap/);
   assert.match(html, /CBD 漢麻二酚（大麻二酚）是什麼？/);
-  assert.match(html, /cbd-intro-combined-layout/);
+  assert.match(html, /cbd-intro-showcase/);
+  assert.match(html, /cbd-intro-lower-grid/);
+  assert.match(html, /cbd-video-block/);
+  assert.match(html, /cbd-overview-block/);
+  assert.match(html, /cbd-expert-block/);
   assert.match(html, /cbd-feature-panel/);
   assert.match(html, /cbd-doctor-card/);
   assert.match(html, /cbd-video-frame/);
