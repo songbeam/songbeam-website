@@ -66,7 +66,12 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /CBD 是 Cannabidiol 的縮寫/);
   assert.match(html, /CBD 本身不會產生 THC 所帶來的精神活性與陶醉感/);
   assert.doesNotMatch(html, /HERBAL &amp; TACTILE DETAIL/);
-  assert.match(html, /cbd-seagull-spine-support-pillow-bedroom\.png/);
+  assert.match(html, /cbd-intro-title-nowrap/);
+  assert.match(html, /CBD 漢麻二酚（大麻二酚）是什麼？/);
+  assert.match(html, /cbd-feature-only/);
+  assert.doesNotMatch(html, /cbd-seagull-spine-support-pillow-bedroom\.png|CBD \/ CANNABIDIOL \/ TEXTILE/);
+  assert.match(html, /seagull-combined-layout/);
+  assert.match(html, /seagull-doctor-card/);
   assert.match(html, /微膠囊技術融入纖維/);
   assert.match(html, /草本機能表布/);
   assert.match(html, /實際洗滌仍以商品洗標為準/);

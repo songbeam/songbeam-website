@@ -508,8 +508,8 @@ export default function Home() {
       </section>
 
       <section className="core-features section" id="features">
-        <div className="section-label"><span>01</span><p>INTRODUCTION TO CANNABIDIOL</p></div><div className="feature-heading cbd-intro-heading"><div><p className="eyebrow">CBD 漢麻二酚簡介</p><h2 className="feature-title"><span>CBD 漢麻二酚（大麻二酚），</span><span>是什麼？</span></h2><p className="cbd-intro-lead">從植物中的天然成分開始，認識 CBD 與 THC 的差異，以及 GLORY 如何將草本概念帶進每日寢具。</p></div></div>
-        <div className="feature-editorial"><figure><img src="/cbd-seagull-spine-support-pillow-bedroom.png" alt="暖晨光中完整展示 CBD 草本忘憂好眠寢具海鷗護脊枕的表布與立體輪廓" /><figcaption>CBD / CANNABIDIOL / TEXTILE</figcaption></figure><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
+        <div className="section-label"><span>01</span><p>INTRODUCTION TO CANNABIDIOL</p></div><div className="feature-heading cbd-intro-heading"><div><p className="eyebrow">CBD 漢麻二酚簡介</p><h2 className="feature-title cbd-intro-title-nowrap">CBD 漢麻二酚（大麻二酚）是什麼？</h2><p className="cbd-intro-lead">從植物中的天然成分開始，認識 CBD 與 THC 的差異，以及 GLORY 如何將草本概念帶進每日寢具。</p></div></div>
+        <div className="feature-editorial cbd-feature-only"><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
         <article className="doctor-story-card yang-story"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><p>從草本成分研究到纖維應用，以專業觀點說明 CBD 如何走進每日貼近肌膚的寢具表布。</p></div></article>
       </section>
 
@@ -525,15 +525,17 @@ export default function Home() {
       <section className="pillow-section section" id="pillow">
         <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
         <p className="seagull-kicker">海鷗減壓枕型</p>
-        <div className="seagull-editorial">
-          <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
-          <div className="seagull-copy">
-            <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
-            <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
-            <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
+        <div className="seagull-combined-layout">
+          <div className="seagull-editorial">
+            <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
+            <div className="seagull-copy">
+              <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
+              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
+              <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
+            </div>
           </div>
+          <article className="doctor-story-card lin-story seagull-doctor-card"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
         </div>
-        <article className="doctor-story-card lin-story"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
       </section>
 
       {catalogConfig ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
