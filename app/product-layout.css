@@ -1360,8 +1360,10 @@ main{padding-top:92px}
 /* Real sleep stories. */
 .testimonial-section{position:relative;overflow:hidden;background:linear-gradient(145deg,#f5f0e7 0%,#e6ebe2 100%)}
 .testimonial-section:before{content:"“";position:absolute;right:4vw;top:50px;color:rgba(91,111,108,.07);font:260px Georgia,serif;line-height:1}
-.testimonial-heading{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.65fr);gap:8vw;align-items:end;margin-bottom:58px}
+.testimonial-heading{display:grid;grid-template-columns:1fr;gap:0;align-items:end;margin-bottom:58px}
 .testimonial-heading h2{margin:15px 0 0;color:#536a70;font-size:clamp(38px,4.6vw,64px);font-weight:400;line-height:1.55;letter-spacing:.07em}
+.testimonial-heading h2>span{display:block}
+.testimonial-heading .testimonial-title-nowrap{white-space:nowrap}
 .testimonial-heading>p{margin:0 0 8px;color:#778587;font-size:10pt;line-height:2.1}
 .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .testimonial-grid article{position:relative;display:flex;flex-direction:column;min-height:360px;padding:42px 36px 34px;border:1px solid rgba(255,255,255,.82);border-radius:5px 42px;background:rgba(251,249,244,.72);box-shadow:0 18px 42px rgba(61,82,79,.06)}
@@ -1417,7 +1419,7 @@ main{padding-top:92px}
   .doctor-story-card>div,.doctor-story-card.lin-story>div{order:1;padding:34px 24px 38px}
   .doctor-story-card h3{font-size:29px}
   .doctor-story-card blockquote{padding-left:20px;font-size:10pt}
-  .testimonial-heading h2{font-size:36px}
+  .testimonial-heading h2{font-size:clamp(24px,7.45vw,32px)}
   .testimonial-grid{grid-template-columns:1fr}
   .testimonial-grid article,.testimonial-grid article:last-child{grid-column:auto;min-height:0;padding:32px 25px}
   .testimonial-grid blockquote{font-size:10pt}

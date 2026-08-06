@@ -625,7 +625,7 @@ export default function Home() {
 
       <section className="testimonial-section section" id="testimonials">
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
-        <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2>每一段好眠故事，<br />都從找到適合自己開始。</h2></div><p>此頁保留給經使用者授權的門市試躺與日常使用感受，後續可持續新增照片、姓名顯示方式與完整分享。</p></header>
+        <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-grid">{testimonials.map((item, index) => <article key={item.name}><span className="testimonial-number">0{index + 1}</span><blockquote>「{item.quote}」</blockquote><div className="testimonial-person"><strong>{item.name}</strong><small>{item.profile}</small></div></article>)}</div>
         <p className="testimonial-note">正式見證內容將於取得使用者授權並完成品牌確認後公開。</p>
       </section>

@@ -206,6 +206,9 @@ test("defines testimonials and official LINE partnership contact", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(source, /id="testimonials"/);
   assert.match(source, />使用者見證</);
+  assert.match(source, /testimonial-title-nowrap/);
+  assert.match(source, /都從找到適合自己開始。/);
+  assert.doesNotMatch(source, /此頁保留給經使用者授權的門市試躺與日常使用感受/);
   assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));
   assert.ok(source.indexOf('id="testimonials"') < source.indexOf('id="stores"'));
   assert.match(source, /partnerModalOpen/);
