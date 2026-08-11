@@ -1574,3 +1574,76 @@ main{padding-top:92px}
   .seagull-doctor-card figure img{height:340px;min-height:340px}
   .seagull-doctor-card>div,.doctor-story-card.lin-story.seagull-doctor-card>div{padding:34px 24px 38px}
 }
+
+/* Deeper botanical palette, luminous story cards, and resilient responsive layout. */
+:root{
+  --ink:#405b51;--deep:#355345;--sage:#879f85;--pale:#b6c8b4;
+  --mist:#b8c9bc;--warm:#dfe8dc;--paper:#e8eee5;--linen:#dbe5d9;
+  --line:rgba(62,88,76,.2);
+}
+body{background:#dce6da;color:var(--ink)}
+.site-header{background:rgba(230,237,226,.95);border-bottom-color:rgba(74,103,87,.2)}
+.nav a,.footer-nav a{color:#435e54}
+.section-label p,.eyebrow,.overline{color:#687f73}
+.core-features{background:radial-gradient(circle at 12% 38%,rgba(111,139,112,.25),transparent 31%),linear-gradient(145deg,#d9e5d7,#e8eee4 57%,#d2dfd1)}
+.endorsement-section{background:radial-gradient(circle at 83% 18%,rgba(143,166,139,.2),transparent 28%),linear-gradient(152deg,#e6ece3,#d6e1d4)}
+.pillow-section{background:linear-gradient(180deg,#e8ede4,#d8e3d7 72%,#cbd9ce)}
+.structure{background:linear-gradient(165deg,#dfe8dc,#edf1e8 55%,#d2dfd2)}
+.evidence-story{background:linear-gradient(150deg,#d3dfd1,#e4ebe0 55%,#c6d5c7)}
+.product-showcase{background:linear-gradient(158deg,#e4ebe1,#d3dfd2)}
+.care{background:linear-gradient(155deg,#dce6da,#edf1e8)}
+.news-section{background:radial-gradient(circle at 88% 10%,rgba(107,137,110,.2),transparent 30%),linear-gradient(145deg,#d2dfd1,#e5ebe1)}
+.stores{background:linear-gradient(145deg,#b7cab8,#d1ddd0)}
+footer{background:#d4e0d2}
+.cbd-intro-lead,.feature-list p,.doctor-story-card>div>p:last-child,.news-card-copy p,.care-source-note,.store-intro-lines,.footer-top>p{color:#576d63}
+.cbd-feature-panel,.doctor-story-card,.ambassador-reason-card,.structure-spec-panel,.news-card{box-shadow:0 24px 65px rgba(50,78,64,.11)}
+.cbd-video-block{width:min(100%,920px);margin-inline:auto}
+
+.testimonial-section{
+  position:relative;isolation:isolate;min-height:760px;
+  background:linear-gradient(90deg,rgba(43,69,55,.52),rgba(95,121,96,.3) 50%,rgba(43,69,55,.5)),url('/testimonial-crowd-morandi.png') center/cover no-repeat;
+}
+.testimonial-section:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(224,234,221,.22),rgba(39,66,52,.18))}
+.testimonial-section:before{z-index:-1;color:rgba(241,246,237,.15)}
+.testimonial-section .section-label span{border-color:rgba(248,250,244,.78);color:#f5f7f1}
+.testimonial-section .section-label p,.testimonial-section .eyebrow{color:#eef3eb}
+.testimonial-heading h2{color:#fff;text-shadow:0 2px 20px rgba(30,52,40,.24)}
+.testimonial-grid{position:relative;z-index:1;align-items:stretch;gap:22px}
+.testimonial-grid article{
+  min-width:0;border-color:rgba(255,255,255,.8);
+  background:linear-gradient(145deg,rgba(248,250,243,.93),rgba(226,235,222,.86));
+  box-shadow:0 0 0 1px rgba(255,255,255,.38),0 18px 54px rgba(25,48,36,.25),0 0 55px rgba(233,244,223,.27);
+  backdrop-filter:blur(14px);
+}
+.testimonial-grid article:nth-child(2){background:linear-gradient(145deg,rgba(251,251,245,.97),rgba(219,232,214,.91));box-shadow:0 0 0 1px rgba(255,255,255,.58),0 24px 64px rgba(25,48,36,.3),0 0 72px rgba(239,248,228,.38)}
+.testimonial-grid blockquote{color:#3f5a50}
+.testimonial-person strong{color:#365347}
+.testimonial-person small{color:#63786f}
+
+@media(max-width:980px){
+  .cbd-video-block{width:min(100%,820px)}
+  .testimonial-section{min-height:0;background-position:center top}
+}
+
+@media(max-width:640px){
+  html,body,main{width:100%;max-width:100%;overflow-x:hidden}
+  img,video,iframe,svg{max-width:100%}
+  .section,.stores,footer,.site-header,.nav{max-width:100vw}
+  .section>*,:where(.cbd-intro-lower-grid,.endorsement-grid,.seagull-combined-layout,.structure-editorial,.product-showcase-grid,.care-grid,.news-grid,.testimonial-grid,.store-regions,.store-modal-grid)>*{min-width:0;max-width:100%}
+  :where(h1,h2,h3,h4,p,blockquote,strong,small,span,li,td,th){overflow-wrap:anywhere}
+  .feature-editorial figure,.emotion-editorial figure,.series-product-image,.product-photo,.exploded-visual,.spec-product{width:100%;max-width:100%;transform:none}
+  .feature-list article:nth-child(2),.feature-list article:nth-child(3),.evidence-list article:nth-child(even),.spec-table>div:nth-child(even){transform:none}
+  .structure-spec-panel{width:100%;margin-left:0}
+  .product-modal,.pillow-catalog-modal,.store-modal,.partner-modal{width:100%;max-width:100vw}
+  .product-modal-copy,.pillow-series-copy,.store-modal-heading,.store-modal-grid article{min-width:0;max-width:100%}
+  .pillow-series-title-nowrap,.pillow-series-title-nowrap span,.hydrophilic-title-lines span,.care-title-lines span,.care-intro-lines span,.wash-instruction-lines span,.store-intro-lines span,.partner-invite p{white-space:normal}
+  .collection-head .collection-eyebrow-nowrap,.cbd-textile-title-nowrap,.structure-title-nowrap,.safety-title-nowrap{white-space:normal}
+  .feature-heading .cbd-intro-title-nowrap{white-space:normal;font-size:clamp(24px,7.25vw,32px);line-height:1.55}
+  .testimonial-heading .testimonial-title-nowrap{font-size:clamp(13.32px,4.6vw,20px);letter-spacing:.025em}
+  .testimonial-section{background-position:48% top;padding-left:20px;padding-right:20px}
+  .testimonial-grid{gap:16px}
+  .testimonial-grid article{width:100%;padding:30px 23px;background:rgba(242,247,238,.94)}
+  .testimonial-grid article:nth-child(2){background:rgba(248,250,244,.97)}
+  .cbd-video-block{width:100%}
+  .footer-bottom{align-items:flex-start}
+}

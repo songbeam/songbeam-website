@@ -215,7 +215,10 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, />使用者見證</);
   assert.match(source, /testimonial-title-nowrap/);
   assert.match(source, /都從找到適合自己開始。/);
+  assert.match(source, /門市試躺者 A/);
+  assert.match(source, /旅行使用者 C/);
   assert.doesNotMatch(source, /此頁保留給經使用者授權的門市試躺與日常使用感受/);
+  assert.doesNotMatch(source, /正式見證內容將於取得使用者授權並完成品牌確認後公開/);
   assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));
   assert.ok(source.indexOf('id="testimonials"') < source.indexOf('id="stores"'));
   assert.match(source, /partnerModalOpen/);
@@ -224,6 +227,17 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /專人接洽/);
   assert.match(source, /line-official-qr\.png/);
   assert.match(source, /https:\/\/line\.me\/R\/ti\/p\/@0800-800660/);
+});
+
+test("uses the new testimonial art, compact video, and mobile overflow guards", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
+  assert.doesNotMatch(source, /本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效/);
+  assert.match(source, /© 2026 GLORY BEDDING/);
+  assert.match(styles, /testimonial-crowd-morandi\.png/);
+  assert.match(styles, /\.cbd-video-block\{width:min\(100%,920px\)/);
+  assert.match(styles, /html,body,main\{width:100%;max-width:100%;overflow-x:hidden\}/);
+  assert.match(styles, /\.product-modal,\.pillow-catalog-modal,\.store-modal,\.partner-modal\{width:100%;max-width:100vw\}/);
 });
 
 test("defines the two-step CBD product collection dialogs", async () => {

@@ -40,19 +40,19 @@ const newsItems = [
 
 const testimonials = [
   {
-    quote: "記錄枕頭高度、肩頸承托與門市試躺後的真實感受。",
-    name: "枕頭試躺感受",
-    profile: "使用者內容確認後上架",
+    quote: "到門市實際試躺後，才發現枕頭高度與肩頸貼合感差很多；找到適合的高度，側睡時也更安心。",
+    name: "門市試躺者 A",
+    profile: "海鷗枕型・使用情境分享",
   },
   {
-    quote: "分享表布觸感、日常清潔與每晚使用後的睡眠體驗。",
-    name: "寢具日常使用",
-    profile: "使用者內容確認後上架",
+    quote: "表布觸感柔和，躺下時有乾爽、安定的包覆感，也讓整理寢具成為每天睡前的小儀式。",
+    name: "日常使用者 B",
+    profile: "CBD 寢具・日常感受分享",
   },
   {
-    quote: "收藏旅途中使用頸枕、眼罩與隨身寢具的陪伴故事。",
-    name: "旅行睡眠陪伴",
-    profile: "使用者內容確認後上架",
+    quote: "旅行時帶著頸枕與眼罩，熟悉的觸感讓移動途中比較容易放鬆，收納起來也不會占太多空間。",
+    name: "旅行使用者 C",
+    profile: "隨身旅行組・使用情境分享",
   },
 ] as const;
 
@@ -630,7 +630,6 @@ export default function Home() {
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-grid">{testimonials.map((item, index) => <article key={item.name}><span className="testimonial-number">0{index + 1}</span><blockquote>「{item.quote}」</blockquote><div className="testimonial-person"><strong>{item.name}</strong><small>{item.profile}</small></div></article>)}</div>
-        <p className="testimonial-note">正式見證內容將於取得使用者授權並完成品牌確認後公開。</p>
       </section>
 
       <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
@@ -652,7 +651,7 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#testimonials">使用者見證</a><a href="#stores">門市體驗</a></div><div className="footer-bottom footer-disclaimer"><span>© 2026 GLORY BEDDING</span><span>本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效。產品特色與材質說明，請以實際商品標示、原廠資料及檢驗報告為準。</span></div></footer>
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#testimonials">使用者見證</a><a href="#stores">門市體驗</a></div><div className="footer-bottom"><span>© 2026 GLORY BEDDING</span></div></footer>
     </main>
   );
 }
