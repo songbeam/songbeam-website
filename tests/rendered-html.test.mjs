@@ -127,6 +127,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /CBD 萃取/);
   assert.match(html, /微膠囊化/);
   assert.match(html, /編織進纖維/);
+  assert.match(html, /cbd-textile-cycle\.png/);
   assert.doesNotMatch(html, /CBD HEMP-DERIVED TEXTILE/);
   assert.doesNotMatch(html, /臨床睡眠觀察與表布科技，讓每一項舒適設計都有清楚脈絡/);
   assert.doesNotMatch(html, /FROM NIGHT TO MORNING|從躺下的那一刻|id="scenes"|href="#scenes"/);
@@ -223,6 +224,7 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /旅行使用者 C/);
   assert.match(source, /testimonialCrowd/);
   assert.match(source, /testimonial-crowd/);
+  assert.match(source, /testimonial-crowd\.png/);
   assert.match(source, /crowd-person-featured/);
   assert.match(source, /selectedTestimonialIndex/);
   assert.match(source, /id="testimonial-story-dialog"/);

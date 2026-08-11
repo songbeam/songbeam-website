@@ -72,13 +72,12 @@ const testimonials = [
 ] as const;
 
 const testimonialCrowd = [
-  { slot: "01" }, { slot: "02" }, { slot: "03", testimonial: 0 }, { slot: "04" },
-  { slot: "05" }, { slot: "06", testimonial: 3 }, { slot: "07" }, { slot: "08" },
-  { slot: "09", testimonial: 1 }, { slot: "10" }, { slot: "11" }, { slot: "12" },
-  { slot: "13" }, { slot: "14", testimonial: 4 }, { slot: "15" }, { slot: "16" },
-  { slot: "17", testimonial: 2 }, { slot: "18" }, { slot: "19" }, { slot: "20" },
-  { slot: "21" }, { slot: "22", testimonial: 5 }, { slot: "23" }, { slot: "24" },
-  { slot: "25" }, { slot: "26" }, { slot: "27" }, { slot: "28" },
+  { slot: "01", testimonial: 0 },
+  { slot: "02", testimonial: 1 },
+  { slot: "03", testimonial: 2 },
+  { slot: "04", testimonial: 3 },
+  { slot: "05", testimonial: 4 },
+  { slot: "06", testimonial: 5 },
 ] as const;
 
 const collectionProducts = [
@@ -616,14 +615,8 @@ export default function Home() {
         </div>
 
         <div className="cbd-textile-story">
-          <div className="textile-cycle-visual" role="img" aria-label="CBD 萃取、微膠囊化、編織進纖維循環圖">
-            <div className="textile-cycle-ring" aria-hidden="true">
-              <span className="cycle-stage cycle-stage-one"><b>01</b><strong>CBD 萃取</strong><small>EXTRACTION</small></span>
-              <span className="cycle-stage cycle-stage-two"><b>02</b><strong>微膠囊化</strong><small>MICROCAPSULE</small></span>
-              <span className="cycle-stage cycle-stage-three"><b>03</b><strong>編織進纖維</strong><small>TEXTILE</small></span>
-              <i className="cycle-arrow cycle-arrow-one" aria-label="步驟一指向步驟二">↘</i><i className="cycle-arrow cycle-arrow-two" aria-label="步驟二指向步驟三">←</i><i className="cycle-arrow cycle-arrow-three" aria-label="步驟三回到步驟一">↖</i>
-              <em><span>CBD</span><small>TEXTILE CYCLE</small></em>
-            </div>
+          <div className="textile-cycle-visual">
+            <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
           </div>
           <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p></div>
         </div>
@@ -665,9 +658,8 @@ export default function Home() {
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-crowd" aria-label="使用者見證人物群像">
-          {testimonialCrowd.map((person) => person.testimonial === undefined
-            ? <span className={`crowd-person crowd-person-${person.slot}`} key={person.slot} aria-hidden="true"><i className="person-body" /><i className="person-legs" /></span>
-            : <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /></button>)}
+          <img src="/testimonial-crowd.png" alt="灰色人群示意圖" />
+          {testimonialCrowd.map((person) => <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /></button>)}
         </div>
       </section>
 
