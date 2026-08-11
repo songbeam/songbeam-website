@@ -1776,8 +1776,7 @@ footer{background:#d4e0d2}
 }
 .testimonial-crowd{
   position:relative;z-index:2;width:min(100%,1120px);aspect-ratio:3/2;margin:10px auto 0;
-  overflow:hidden;isolation:isolate;border-radius:4px 42px 4px 4px;background:#eee;
-  box-shadow:0 24px 70px rgba(58,69,63,.16);
+  overflow:hidden;isolation:isolate;background:transparent;
 }
 .testimonial-crowd>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .testimonial-crowd:before{
@@ -1786,7 +1785,7 @@ footer{background:#d4e0d2}
 .crowd-person{
   --person-color:#777e7a;--person-scale:1;
   position:absolute;width:72px;height:142px;margin:0;padding:0;border:0;background:transparent;
-  color:var(--person-color);transform:scale(var(--person-scale));transform-origin:center bottom;
+  color:var(--person-color);transform:scale(var(--person-scale));transform-origin:center top;
   transition:transform .28s ease,color .28s ease,filter .28s ease;appearance:none;
 }
 .crowd-person:before{
@@ -1813,9 +1812,9 @@ footer{background:#d4e0d2}
   transform:translateY(-13px) scale(calc(var(--person-scale) * 1.08));
   filter:drop-shadow(0 0 8px rgba(239,248,210,.9)) drop-shadow(0 16px 12px rgba(47,61,54,.2));
 }
-.crowd-person-01{left:6.3%;top:44%;--person-scale:1.18}.crowd-person-02{left:20.7%;top:54%;--person-scale:1.24}
-.crowd-person-03{left:49.4%;top:45%;--person-scale:1.28}.crowd-person-04{left:65.4%;top:50%;--person-scale:1.26}
-.crowd-person-05{left:80.6%;top:48%;--person-scale:1.22}.crowd-person-06{left:92%;top:47%;--person-scale:1.16}
+.crowd-person-01{left:6.3%;top:44%;--person-scale:2}.crowd-person-02{left:20.7%;top:54%;--person-scale:1.94}
+.crowd-person-03{left:49.4%;top:45%;--person-scale:2.08}.crowd-person-04{left:65.4%;top:49%;--person-scale:2.06}
+.crowd-person-05{left:80.6%;top:47%;--person-scale:2}.crowd-person-06{left:92%;top:45%;--person-scale:1.9}
 
 .testimonial-modal-backdrop{z-index:1060}
 .testimonial-modal{
@@ -1855,7 +1854,7 @@ footer{background:#d4e0d2}
 @media(max-width:640px){
   .testimonial-section{min-height:0;padding-left:18px;padding-right:18px}
   .testimonial-guide{font-size:10pt;margin-bottom:12px}
-  .testimonial-crowd{width:100%;height:auto;aspect-ratio:3/2;overflow:hidden;border-radius:3px 24px 3px 3px}
+  .testimonial-crowd{width:100%;height:auto;aspect-ratio:3/2;overflow:hidden}
   .crowd-person{width:56px;height:116px}
   .crowd-person:before{width:38px;height:38px}
   .crowd-person .person-body{top:34px;width:38px;height:51px}
@@ -1863,7 +1862,8 @@ footer{background:#d4e0d2}
   .crowd-person .person-body:before{left:-6px}.crowd-person .person-body:after{right:-6px}
   .crowd-person .person-legs{top:79px;width:38px;height:37px}
   .crowd-person .person-legs:before,.crowd-person .person-legs:after{width:14px;height:37px}
-  .crowd-person-06{left:86%;--person-scale:.86}
+  .crowd-person-01{--person-scale:.8}.crowd-person-02{--person-scale:.78}.crowd-person-03{--person-scale:.84}
+  .crowd-person-04{--person-scale:.83}.crowd-person-05{--person-scale:.8}.crowd-person-06{left:86%;--person-scale:.76}
   .testimonial-modal{display:flex;flex-direction:column;width:100%;min-height:100vh;max-height:100vh;border-radius:0}
   .testimonial-modal-figure{min-height:280px}
   .testimonial-modal-figure .crowd-person{display:block;--person-scale:1.55}

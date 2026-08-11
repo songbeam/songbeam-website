@@ -658,7 +658,7 @@ export default function Home() {
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-crowd" aria-label="使用者見證人物群像">
-          <img src="/testimonial-crowd.png" alt="灰色人群示意圖" />
+          <img src="/testimonial-crowd-transparent.png" alt="去背灰色人群示意圖" />
           {testimonialCrowd.map((person) => <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /></button>)}
         </div>
       </section>

@@ -224,7 +224,7 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /旅行使用者 C/);
   assert.match(source, /testimonialCrowd/);
   assert.match(source, /testimonial-crowd/);
-  assert.match(source, /testimonial-crowd\.png/);
+  assert.match(source, /testimonial-crowd-transparent\.png/);
   assert.match(source, /crowd-person-featured/);
   assert.match(source, /selectedTestimonialIndex/);
   assert.match(source, /id="testimonial-story-dialog"/);
