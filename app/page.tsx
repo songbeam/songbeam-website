@@ -56,6 +56,14 @@ const testimonials = [
   },
 ] as const;
 
+const testimonialCrowd = [
+  { slot: "01" }, { slot: "02" }, { slot: "03", testimonial: 0 }, { slot: "04" },
+  { slot: "05" }, { slot: "06" }, { slot: "07" }, { slot: "08", testimonial: 1 },
+  { slot: "09" }, { slot: "10" }, { slot: "11" }, { slot: "12" },
+  { slot: "13", testimonial: 2 }, { slot: "14" }, { slot: "15" }, { slot: "16" },
+  { slot: "17" }, { slot: "18" }, { slot: "19" }, { slot: "20" },
+] as const;
+
 const collectionProducts = [
   {
     name: "CBD 草本忘憂好眠寢具枕頭",
@@ -437,6 +445,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [storeModalOpen, setStoreModalOpen] = useState(false);
   const [partnerModalOpen, setPartnerModalOpen] = useState(false);
+  const [selectedTestimonialIndex, setSelectedTestimonialIndex] = useState<number | null>(null);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
@@ -448,6 +457,7 @@ export default function Home() {
         ? { en: "CBD TRAVEL REST COLLECTION", title: "CBD隨身旅行組系列", copy: "從枕套、眼罩到頸枕，選擇一項旅行配件查看完整介紹。", items: travelSeries }
         : null;
   const selectedSeriesItem = selectedSeriesItemIndex === null ? null : catalogConfig?.items[selectedSeriesItemIndex] ?? null;
+  const selectedTestimonial = selectedTestimonialIndex === null ? null : testimonials[selectedTestimonialIndex];
   const closeMenu = () => setMenuOpen(false);
   const closeProductModal = () => {
     setSelectedSeriesItemIndex(null);
@@ -471,10 +481,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen && !partnerModalOpen) return;
+    if (selectedProductIndex === null && selectedSeriesItemIndex === null && !storeModalOpen && !partnerModalOpen && selectedTestimonialIndex === null) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
-      if (partnerModalOpen) setPartnerModalOpen(false);
+      if (selectedTestimonialIndex !== null) setSelectedTestimonialIndex(null);
+      else if (partnerModalOpen) setPartnerModalOpen(false);
       else if (storeModalOpen) setStoreModalOpen(false);
       else if (selectedSeriesItemIndex !== null) setSelectedSeriesItemIndex(null);
       else setSelectedProductIndex(null);
@@ -486,7 +497,7 @@ export default function Home() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, [selectedProductIndex, selectedSeriesItemIndex, storeModalOpen, partnerModalOpen]);
+  }, [selectedProductIndex, selectedSeriesItemIndex, storeModalOpen, partnerModalOpen, selectedTestimonialIndex]);
 
   return (
     <main>
@@ -636,7 +647,12 @@ export default function Home() {
       <section className="testimonial-section section" id="testimonials">
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
-        <div className="testimonial-grid">{testimonials.map((item, index) => <article key={item.name}><span className="testimonial-number">0{index + 1}</span><blockquote>「{item.quote}」</blockquote><div className="testimonial-person"><strong>{item.name}</strong><small>{item.profile}</small></div></article>)}</div>
+        <p className="testimonial-guide"><span>將游標移向深色人物，</span><span>點擊閱讀他的好眠故事。</span></p>
+        <div className="testimonial-crowd" aria-label="使用者見證人物群像">
+          {testimonialCrowd.map((person) => person.testimonial === undefined
+            ? <span className={`crowd-person crowd-person-${person.slot}`} key={person.slot} aria-hidden="true"><i className="person-body" /><i className="person-legs" /></span>
+            : <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /><em>閱讀心得</em></button>)}
+        </div>
       </section>
 
       <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
@@ -655,6 +671,14 @@ export default function Home() {
           <button className="product-modal-close" type="button" aria-label="關閉合作洽詢" onClick={() => setPartnerModalOpen(false)} autoFocus>×</button>
           <div className="partner-modal-copy"><small>GLORY PARTNERSHIP</small><h2 id="partner-modal-title">讓專人與你接洽</h2><p>使用 LINE 掃描 QR Code，加入上品寢具官方帳號後留下合作需求，我們將由專人與你聯繫。</p><strong>LINE 官方帳號<br />@0800-800660</strong><a href="https://line.me/R/ti/p/@0800-800660" target="_blank" rel="noreferrer">手機直接開啟 LINE <span>↗</span></a></div>
           <figure className="partner-qr"><span>SCAN TO CONNECT</span><img src="/line-official-qr.png" alt="上品寢具 LINE 官方帳號 QR Code" /><figcaption>掃描加入 LINE 官方帳號</figcaption></figure>
+        </section>
+      </div> : null}
+
+      {selectedTestimonial ? <div className="product-modal-backdrop testimonial-modal-backdrop" onMouseDown={() => setSelectedTestimonialIndex(null)}>
+        <section className="testimonial-modal" id="testimonial-story-dialog" role="dialog" aria-modal="true" aria-labelledby="testimonial-modal-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="product-modal-close" type="button" aria-label="關閉使用者見證" onClick={() => setSelectedTestimonialIndex(null)} autoFocus>×</button>
+          <div className="testimonial-modal-figure" aria-hidden="true"><span className="crowd-person crowd-person-featured"><i className="person-body" /><i className="person-legs" /></span><small>REAL SLEEP STORY</small></div>
+          <div className="testimonial-modal-copy"><small>USER TESTIMONIAL · {String((selectedTestimonialIndex ?? 0) + 1).padStart(2, "0")}</small><h2 id="testimonial-modal-title">{selectedTestimonial.name}</h2><p>{selectedTestimonial.profile}</p><blockquote>「{selectedTestimonial.quote}」</blockquote><button type="button" onClick={() => setSelectedTestimonialIndex(null)}>回到使用者見證 <span>×</span></button></div>
         </section>
       </div> : null}
 
