@@ -184,8 +184,28 @@ const pillowSeries: SeriesProduct[] = [
     note: "Tempwiser 親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
-    name: "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）",
-    en: "HYDROPHILIC CONTOUR PILLOW",
+    name: "CBD 草本忘憂好眠寢具 好眠親水枕 海鷗枕",
+    en: "HYDROPHILIC SEAGULL PILLOW",
+    image: "/cbd-hydrophilic-contour-pillow-bedroom.png",
+    statement: "獨家比利時萃取微膠囊技術",
+    detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
+    highlights: [
+      "CBD 成分提煉至微膠囊分子",
+      "微膠囊編織進纖維",
+      "睡眠時由表布緩慢且持續釋放",
+    ],
+    featureDetails: [
+      "漢麻二酚，天然草本技術製成",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "醫藥大學臨床實驗證明",
+      "特殊造型，正睡、側睡，都能完美支撐。",
+      "完全釋放肩頸壓力，給你最佳的睡眠品質。",
+    ],
+    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
+  },
+  {
+    name: "CBD 草本忘憂好眠寢具 好眠親水枕 止鼾枕",
+    en: "HYDROPHILIC ANTI-SNORE PILLOW",
     image: "/cbd-hydrophilic-contour-pillow-bedroom.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
@@ -430,22 +450,21 @@ const travelSeries: SeriesProduct[] = [
 ];
 
 const stores = [
-  { name: "南京館", address: "台北市松山區南京東路五段 8 號", phone: "(02) 2765-8701", tags: ["可刷卡", "國旅卡"] },
-  { name: "竹北館", address: "新竹縣竹北市文興路一段 136 號", phone: "(03) 667-0229", tags: ["可刷卡", "停車場"] },
-  { name: "豐原館", address: "台中市豐原區中山路 39 號", phone: "(04) 2535-0160", tags: ["可刷卡", "停車場"] },
-  { name: "崇德館", address: "台中市北屯區崇德路二段 32 號", phone: "(04) 2236-7963", tags: ["可刷卡", "國旅卡"] },
-  { name: "經貿館", address: "台中市北屯區新平里經貿五路 68 號", phone: "(04) 2426-0752", tags: ["可刷卡", "國旅卡"] },
-  { name: "精誠館", address: "台中市西區精誠路 340 號", phone: "(04) 2321-4988", tags: ["可刷卡", "停車場", "國旅卡"] },
-  { name: "惠中館", address: "台中市西屯區惠中路二段 43 號", phone: "(04) 2255-0169", tags: ["可刷卡", "停車場", "國旅卡"] },
-  { name: "大里館", address: "台中市大里區國光路二段 711 號", phone: "(04) 2407-1007", tags: ["可刷卡", "國旅卡"] },
-  { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", phone: "(049) 230-7036", tags: ["可刷卡", "國旅卡"] },
-  { name: "田中館", address: "彰化縣田中鎮新福路 43 號", phone: "(04) 875-5753", tags: ["可刷卡"] },
-  { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", phone: "(05) 522-1585", tags: ["可刷卡", "國旅卡"] },
+  { name: "南京館", address: "台北市松山區南京東路五段 8 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "竹北館", address: "新竹縣竹北市文興路一段 136 號", tags: ["可刷卡", "停車場"] },
+  { name: "豐原館", address: "台中市豐原區中山路 39 號", tags: ["可刷卡", "停車場"] },
+  { name: "崇德館", address: "台中市北屯區崇德路二段 32 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "經貿館", address: "台中市北屯區新平里經貿五路 68 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "精誠館", address: "台中市西區精誠路 340 號", tags: ["可刷卡", "停車場", "國旅卡"] },
+  { name: "惠中館", address: "台中市西屯區惠中路二段 43 號", tags: ["可刷卡", "停車場", "國旅卡"] },
+  { name: "大里館", address: "台中市大里區國光路二段 711 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "田中館", address: "彰化縣田中鎮新福路 43 號", tags: ["可刷卡"] },
+  { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", tags: ["可刷卡", "國旅卡"] },
   {
     name: "台中榮總",
     displayName: "上品寢具 CBD 專櫃【台中榮總】",
     address: "台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）",
-    phone: "",
     tags: ["CBD 專櫃"],
   },
 ];
@@ -575,8 +594,9 @@ export default function Home() {
           <button className="product-modal-close" type="button" aria-label="關閉產品系列" onClick={closeProductModal} autoFocus>×</button>
           <header className="pillow-catalog-heading"><small>{catalogConfig.en}</small><h2 id="pillow-catalog-title" className={catalogConfig.titleClass ?? ""}>{catalogConfig.title}</h2><p>{catalogConfig.copy}</p></header>
           <div className="pillow-catalog-grid">{catalogConfig.items.map((item, index) => {
-            const isHydrophilicContour = item.name === "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）";
-            return <button className={`pillow-catalog-card ${isHydrophilicContour ? "hydrophilic-catalog-card" : ""}`} type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong className={isHydrophilicContour ? "hydrophilic-title-lines" : ""}>{isHydrophilicContour ? <><span>CBD 草本忘憂好眠寢具 好眠親水枕</span><span>（海鷗枕／止鼾枕）</span></> : item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>;
+            const isHydrophilicContour = item.name.includes("好眠親水枕");
+            const hydrophilicType = item.name.endsWith("止鼾枕") ? "止鼾枕" : "海鷗枕";
+            return <button className={`pillow-catalog-card ${isHydrophilicContour ? "hydrophilic-catalog-card" : ""}`} type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong className={isHydrophilicContour ? "hydrophilic-title-lines" : ""}>{isHydrophilicContour ? <><span>CBD 草本忘憂好眠寢具 好眠親水枕</span><span>{hydrophilicType}</span></> : item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>;
           })}</div>
         </section>
       </div> : selectedProduct ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
@@ -591,7 +611,7 @@ export default function Home() {
         <section className="product-modal pillow-series-detail pillow-series-expanded" role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="返回產品系列" onClick={() => setSelectedSeriesItemIndex(null)} autoFocus>←</button>
           <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
-          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name === "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）" ? "hydrophilic-title-lines" : ""}`}>{selectedSeriesItem.name === "CBD 草本忘憂好眠寢具 好眠親水枕（海鷗枕／止鼾枕）" ? <><span>CBD 草本忘憂好眠寢具 好眠親水枕</span><span>（海鷗枕／止鼾枕）</span></> : selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
+          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name.includes("好眠親水枕") ? "hydrophilic-title-lines" : ""}`}>{selectedSeriesItem.name.includes("好眠親水枕") ? <><span>CBD 草本忘憂好眠寢具 好眠親水枕</span><span>{selectedSeriesItem.name.endsWith("止鼾枕") ? "止鼾枕" : "海鷗枕"}</span></> : selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}
 
@@ -669,7 +689,7 @@ export default function Home() {
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
           <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 12 處門市與專櫃，歡迎於前往前確認營業時間與試躺服務。</p></header>
-          <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p>{store.phone ? <a href={`tel:${store.phone.replace(/[^\d]/g, "")}`} aria-label={`致電${store.name} ${store.phone}`}>{store.phone}</a> : null}<ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
+          <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
           <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p></footer>
         </section>
       </div> : null}
