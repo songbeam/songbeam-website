@@ -226,7 +226,8 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /crowd-person-featured/);
   assert.match(source, /selectedTestimonialIndex/);
   assert.match(source, /id="testimonial-story-dialog"/);
-  assert.match(source, /閱讀心得/);
+  assert.doesNotMatch(source, /將游標移向深色人物/);
+  assert.equal((source.match(/testimonial:\s*[0-5]/g) || []).length, 6);
   assert.doesNotMatch(source, /此頁保留給經使用者授權的門市試躺與日常使用感受/);
   assert.doesNotMatch(source, /正式見證內容將於取得使用者授權並完成品牌確認後公開/);
   assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));

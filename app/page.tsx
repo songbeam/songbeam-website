@@ -54,14 +54,31 @@ const testimonials = [
     name: "旅行使用者 C",
     profile: "隨身旅行組・使用情境分享",
   },
+  {
+    quote: "原本習慣側睡，試躺後依肩寬重新挑選高度，頭頸被穩穩承托，翻身時也能維持舒服的支撐感。",
+    name: "門市試躺者 D",
+    profile: "海鷗護脊枕・試躺感受分享",
+  },
+  {
+    quote: "床包與枕套的觸感細緻，透氣度也很舒服；臥室換上整套寢具後，每晚都更期待回到床上休息。",
+    name: "寢具使用者 E",
+    profile: "長纖細棉寢具・日常感受分享",
+  },
+  {
+    quote: "毛小孩很快就習慣在墊被上休息，材質摸起來柔和，日常整理也方便，成了牠最常待的小角落。",
+    name: "毛孩家庭 F",
+    profile: "毛小孩安撫墊被・生活分享",
+  },
 ] as const;
 
 const testimonialCrowd = [
   { slot: "01" }, { slot: "02" }, { slot: "03", testimonial: 0 }, { slot: "04" },
-  { slot: "05" }, { slot: "06" }, { slot: "07" }, { slot: "08", testimonial: 1 },
-  { slot: "09" }, { slot: "10" }, { slot: "11" }, { slot: "12" },
-  { slot: "13", testimonial: 2 }, { slot: "14" }, { slot: "15" }, { slot: "16" },
-  { slot: "17" }, { slot: "18" }, { slot: "19" }, { slot: "20" },
+  { slot: "05" }, { slot: "06", testimonial: 3 }, { slot: "07" }, { slot: "08" },
+  { slot: "09", testimonial: 1 }, { slot: "10" }, { slot: "11" }, { slot: "12" },
+  { slot: "13" }, { slot: "14", testimonial: 4 }, { slot: "15" }, { slot: "16" },
+  { slot: "17", testimonial: 2 }, { slot: "18" }, { slot: "19" }, { slot: "20" },
+  { slot: "21" }, { slot: "22", testimonial: 5 }, { slot: "23" }, { slot: "24" },
+  { slot: "25" }, { slot: "26" }, { slot: "27" }, { slot: "28" },
 ] as const;
 
 const collectionProducts = [
@@ -604,7 +621,7 @@ export default function Home() {
               <span className="cycle-stage cycle-stage-one"><b>01</b><strong>CBD 萃取</strong><small>EXTRACTION</small></span>
               <span className="cycle-stage cycle-stage-two"><b>02</b><strong>微膠囊化</strong><small>MICROCAPSULE</small></span>
               <span className="cycle-stage cycle-stage-three"><b>03</b><strong>編織進纖維</strong><small>TEXTILE</small></span>
-              <i className="cycle-arrow cycle-arrow-one">↘</i><i className="cycle-arrow cycle-arrow-two">↙</i><i className="cycle-arrow cycle-arrow-three">↖</i>
+              <i className="cycle-arrow cycle-arrow-one" aria-label="步驟一指向步驟二">↘</i><i className="cycle-arrow cycle-arrow-two" aria-label="步驟二指向步驟三">←</i><i className="cycle-arrow cycle-arrow-three" aria-label="步驟三回到步驟一">↖</i>
               <em><span>CBD</span><small>TEXTILE CYCLE</small></em>
             </div>
           </div>
@@ -647,11 +664,10 @@ export default function Home() {
       <section className="testimonial-section section" id="testimonials">
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
-        <p className="testimonial-guide"><span>將游標移向深色人物，</span><span>點擊閱讀他的好眠故事。</span></p>
         <div className="testimonial-crowd" aria-label="使用者見證人物群像">
           {testimonialCrowd.map((person) => person.testimonial === undefined
             ? <span className={`crowd-person crowd-person-${person.slot}`} key={person.slot} aria-hidden="true"><i className="person-body" /><i className="person-legs" /></span>
-            : <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /><em>閱讀心得</em></button>)}
+            : <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /></button>)}
         </div>
       </section>
 
