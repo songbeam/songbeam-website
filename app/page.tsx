@@ -491,7 +491,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
+        <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo-transparent.png" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
           <a href="#features" onClick={closeMenu}>CBD 漢麻二酚簡介</a><a href="#endorsements" onClick={closeMenu}>品牌代言</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#testimonials" onClick={closeMenu}>使用者見證</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
@@ -511,9 +511,9 @@ export default function Home() {
         <div className="section-label"><span>01</span><p>INTRODUCTION TO CANNABIDIOL</p></div><div className="feature-heading cbd-intro-heading"><div><p className="eyebrow">CBD 漢麻二酚簡介</p><h2 className="feature-title cbd-intro-title-nowrap">CBD 漢麻二酚（大麻二酚）是什麼？</h2><p className="cbd-intro-lead">從植物中的天然成分開始，認識 CBD 與 THC 的差異，以及 GLORY 如何將草本概念帶進每日寢具。</p></div></div>
         <div className="cbd-intro-showcase">
           <figure className="cbd-video-frame cbd-video-block"><iframe src="https://www.youtube-nocookie.com/embed/BmpU3CbUALE?rel=0" title="CBD 漢麻二酚介紹影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></figure>
-          <div className="cbd-intro-lower-grid">
-            <div className="cbd-feature-panel cbd-overview-block"><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
+          <div className="cbd-intro-lower-grid cbd-intro-stack">
             <article className="doctor-story-card yang-story cbd-doctor-card cbd-expert-block"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><p>從草本成分研究到纖維應用，以專業觀點說明 CBD 如何走進每日貼近肌膚的寢具表布。</p></div></article>
+            <div className="cbd-feature-panel cbd-overview-block"><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
           </div>
         </div>
       </section>
@@ -583,17 +583,24 @@ export default function Home() {
         <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
 
         <div className="clinical-data-card">
-          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 400 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
+          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
 
         <div className="cbd-textile-story">
-          <figure><img src="/cbd-down-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具羽絨枕與漢麻二酚表布" /><figcaption>CBD HEMP-DERIVED TEXTILE</figcaption></figure>
-          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><div className="release-path"><span>CBD 萃取</span><i>→</i><span>微膠囊化</span><i>→</i><span>編織進纖維</span></div></div>
+          <div className="textile-cycle-visual" role="img" aria-label="CBD 萃取、微膠囊化、編織進纖維循環圖">
+            <div className="textile-cycle-ring" aria-hidden="true">
+              <span className="cycle-stage cycle-stage-one"><b>01</b><strong>CBD 萃取</strong><small>EXTRACTION</small></span>
+              <span className="cycle-stage cycle-stage-two"><b>02</b><strong>微膠囊化</strong><small>MICROCAPSULE</small></span>
+              <span className="cycle-stage cycle-stage-three"><b>03</b><strong>編織進纖維</strong><small>TEXTILE</small></span>
+              <i className="cycle-arrow cycle-arrow-one">↘</i><i className="cycle-arrow cycle-arrow-two">↙</i><i className="cycle-arrow cycle-arrow-three">↖</i>
+              <em><span>CBD</span><small>TEXTILE CYCLE</small></em>
+            </div>
+          </div>
+          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p></div>
         </div>
 
         <div className="safety-feature-grid"><article><span>01</span><strong>草本助眠<br />漢麻二酚</strong></article><article><span>02</span><strong>醫藥大學<br />臨床實驗證明</strong></article><article><span>03</span><strong>獨家微膠囊<br />技術</strong></article><article><span>04</span><strong>天然草本<br />技術製成</strong></article><article><span>05</span><strong>天然抗菌<br />除臭</strong></article></div>
-        <p className="safety-legal">本產品為一般寢具用品，非藥品或醫療器材；實際使用感受可能因人而異。</p>
       </section>
 
       <section className="product-showcase section" id="products">
@@ -651,7 +658,7 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo.jpg" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#testimonials">使用者見證</a><a href="#stores">門市體驗</a></div><div className="footer-bottom"><span>© 2026 GLORY BEDDING</span></div></footer>
+      <footer><div className="footer-top"><a className="footer-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁"><img src="/glory-logo-transparent.png" alt="GLORY 1953 德國葛洛麗名床寢具" /></a><p>舒適材質、貼合支撐，以及安心放鬆的睡眠環境。</p></div><div className="footer-nav"><a href="#features">CBD 漢麻二酚簡介</a><a href="#endorsements">品牌代言</a><a href="#pillow">枕型設計</a><a href="#structure">材質結構</a><a href="#safety">材質檢驗</a><a href="#products">系列商品</a><a href="#news">新聞報導</a><a href="#testimonials">使用者見證</a><a href="#stores">門市體驗</a></div><div className="footer-bottom"><span>© 2026 GLORY BEDDING</span></div></footer>
     </main>
   );
 }
