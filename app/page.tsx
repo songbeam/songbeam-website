@@ -40,34 +40,44 @@ const newsItems = [
 
 const testimonials = [
   {
-    quote: "到門市實際試躺後，才發現枕頭高度與肩頸貼合感差很多；找到適合的高度，側睡時也更安心。",
-    name: "門市試躺者 A",
-    profile: "海鷗枕型・使用情境分享",
+    name: "林小姐",
+    profile: "長照家庭",
+    product: "CBD 草本忘憂枕頭＋寢具保潔墊組",
+    headline: "家人的睡眠，也是照護的一部分",
+    paragraphs: ["媽媽已經有一段時間睡不好，所以想先替她試試 CBD 草本忘憂枕頭與寢具保潔墊組。", "沒想到使用後媽媽自己很喜歡，還主動提醒我要再幫她補齊寢具。看到她願意使用，也讓我更期待後續的睡眠感受。", "現在換我也想一起試試，希望我們每天都能好好休息、舒服入睡。"],
+    gender: "female",
   },
   {
-    quote: "表布觸感柔和，躺下時有乾爽、安定的包覆感，也讓整理寢具成為每天睡前的小儀式。",
-    name: "日常使用者 B",
-    profile: "CBD 寢具・日常感受分享",
+    name: "王先生",
+    profile: "工程師",
+    product: "CBD 草本忘憂枕頭",
+    headline: "下班了，但腦袋還在運轉。",
+    paragraphs: ["每天長時間盯著螢幕、處理各種問題，回到家明明身體已經很累，腦袋卻常常還停留在工作的節奏裡。", "開始使用 CBD 草本忘憂枕頭後，我也慢慢把躺上床的這一刻，當成每天從工作切換到休息的時間。", "對我來說，一顆舒服、熟悉的枕頭，不只是睡覺時使用的寢具，也像是在提醒自己：今天的工作結束了，該好好休息了。"],
+    gender: "male",
   },
   {
-    quote: "旅行時帶著頸枕與眼罩，熟悉的觸感讓移動途中比較容易放鬆，收納起來也不會占太多空間。",
-    name: "旅行使用者 C",
-    profile: "隨身旅行組・使用情境分享",
+    name: "陳小姐",
+    profile: "創業者",
+    product: "CBD 草本忘憂枕頭＋寢具保潔墊組",
+    headline: "工作沒有真正的下班時間，更需要留一點時間給自己。",
+    paragraphs: ["自己創業之後才發現，即使人已經回到家，腦袋裡還是會想著客戶、營運和明天要處理的事情。", "所以我替自己的房間換上 CBD 草本忘憂枕頭與寢具保潔墊組，也開始更認真看待每天休息的環境。", "現在回到床上的那一刻，就像是一天真正結束的訊號。再忙，也希望留一段時間給自己，好好休息，再迎接明天。"],
+    gender: "female",
   },
   {
-    quote: "原本習慣側睡，試躺後依肩寬重新挑選高度，頭頸被穩穩承托，翻身時也能維持舒服的支撐感。",
-    name: "門市試躺者 D",
-    profile: "海鷗護脊枕・試躺感受分享",
+    name: "張小姐",
+    profile: "旅行愛好者",
+    product: "CBD 草本忘憂隨身旅行組",
+    headline: "旅行可以一直換風景，熟悉的睡眠感不用跟著換。",
+    paragraphs: ["我很喜歡旅行，但每次換飯店、換枕頭、換一張陌生的床，都需要一點時間適應。", "後來開始把 CBD 草本忘憂隨身旅行組放進行李箱，無論住在哪裡，都能替自己的睡眠空間多留一點熟悉感。", "東西不用帶很多，但有了自己習慣的寢具陪著，旅行中的每一晚，也能多一點屬於自己的舒服。"],
+    gender: "female",
   },
   {
-    quote: "床包與枕套的觸感細緻，透氣度也很舒服；臥室換上整套寢具後，每晚都更期待回到床上休息。",
-    name: "寢具使用者 E",
-    profile: "長纖細棉寢具・日常感受分享",
-  },
-  {
-    quote: "毛小孩很快就習慣在墊被上休息，材質摸起來柔和，日常整理也方便，成了牠最常待的小角落。",
-    name: "毛孩家庭 F",
-    profile: "毛小孩安撫墊被・生活分享",
+    name: "李先生",
+    profile: "長期商務出差",
+    product: "CBD 草本忘憂隨身旅行組",
+    headline: "一個月睡好幾張床，更知道熟悉有多重要。",
+    paragraphs: ["因為工作的關係經常需要到不同城市出差，有時候一個星期就要換好幾間飯店，住宿環境幾乎沒辦法自己決定。", "現在我的行李箱裡，都會固定放著一組 CBD 草本忘憂隨身旅行組。到了飯店整理好房間，也順手把自己的寢具準備好。", "不管今天住在哪個城市，熟悉的睡眠習慣都能跟著自己走。對經常在外工作的人來說，這一點熟悉感，反而成了出差時很重要的小事。"],
+    gender: "male",
   },
 ] as const;
 
@@ -677,7 +687,7 @@ export default function Home() {
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-crowd testimonial-dialogue-scene" aria-label="使用者見證對話群像">
           <img src="/testimonial-dialogue-crowd.png" alt="人群與五則使用者見證對話框" />
-          {testimonialCrowd.map((person) => <button className={`testimonial-bubble testimonial-bubble-${person.slot}${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><span>「{testimonials[person.testimonial].quote.slice(0, 20)}…」</span><small>閱讀完整心得</small></button>)}
+          {testimonialCrowd.map((person) => <button className={`testimonial-bubble testimonial-bubble-${person.slot}${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><span>「{testimonials[person.testimonial].headline}」</span><small>{testimonials[person.testimonial].name}・閱讀完整心得</small></button>)}
         </div>
       </section>
 
@@ -703,8 +713,8 @@ export default function Home() {
       {selectedTestimonial ? <div className="product-modal-backdrop testimonial-modal-backdrop" onMouseDown={() => setSelectedTestimonialIndex(null)}>
         <section className="testimonial-modal" id="testimonial-story-dialog" role="dialog" aria-modal="true" aria-labelledby="testimonial-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉使用者見證" onClick={() => setSelectedTestimonialIndex(null)} autoFocus>×</button>
-          <div className="testimonial-modal-figure" aria-hidden="true"><span className="crowd-person crowd-person-featured"><i className="person-body" /><i className="person-legs" /></span><small>REAL SLEEP STORY</small></div>
-          <div className="testimonial-modal-copy"><small>USER TESTIMONIAL · {String((selectedTestimonialIndex ?? 0) + 1).padStart(2, "0")}</small><h2 id="testimonial-modal-title">{selectedTestimonial.name}</h2><p>{selectedTestimonial.profile}</p><blockquote>「{selectedTestimonial.quote}」</blockquote><button type="button" onClick={() => setSelectedTestimonialIndex(null)}>回到使用者見證 <span>×</span></button></div>
+          <div className={`testimonial-modal-figure testimonial-avatar-${selectedTestimonial.gender}`} aria-hidden="true"><span className="testimonial-avatar"><i className="avatar-head" /><i className="avatar-hair" /><i className="avatar-body" /><i className="avatar-face">◡</i></span><small>REAL SLEEP STORY</small></div>
+          <div className="testimonial-modal-copy"><small>USER TESTIMONIAL · {String((selectedTestimonialIndex ?? 0) + 1).padStart(2, "0")}</small><h2 id="testimonial-modal-title">{selectedTestimonial.name}</h2><p>{selectedTestimonial.profile}</p><strong className="testimonial-product">使用產品｜{selectedTestimonial.product}</strong><blockquote>「{selectedTestimonial.headline}」</blockquote><div className="testimonial-story-body">{selectedTestimonial.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><button type="button" onClick={() => setSelectedTestimonialIndex(null)}>回到使用者見證 <span>×</span></button></div>
         </section>
       </div> : null}
 

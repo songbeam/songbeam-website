@@ -225,8 +225,15 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, />使用者見證</);
   assert.match(source, /testimonial-title-nowrap/);
   assert.match(source, /都從找到適合自己開始。/);
-  assert.match(source, /門市試躺者 A/);
-  assert.match(source, /旅行使用者 C/);
+  assert.match(source, /林小姐/);
+  assert.match(source, /王先生/);
+  assert.match(source, /陳小姐/);
+  assert.match(source, /張小姐/);
+  assert.match(source, /李先生/);
+  assert.match(source, /家人的睡眠，也是照護的一部分/);
+  assert.match(source, /一個月睡好幾張床，更知道熟悉有多重要/);
+  assert.equal((source.match(/gender: "female"/g) || []).length, 3);
+  assert.equal((source.match(/gender: "male"/g) || []).length, 2);
   assert.match(source, /testimonialCrowd/);
   assert.match(source, /testimonial-crowd/);
   assert.match(source, /testimonial-dialogue-crowd\.png/);
@@ -255,6 +262,8 @@ test("uses the new testimonial art, compact video, and mobile overflow guards", 
   assert.match(styles, /\.testimonial-crowd\{/);
   assert.match(styles, /\.testimonial-bubble:hover/);
   assert.match(styles, /\.testimonial-modal\{/);
+  assert.match(styles, /\.testimonial-avatar-female/);
+  assert.match(styles, /\.testimonial-avatar-male/);
   assert.doesNotMatch(styles, /testimonial-crowd-morandi\.png/);
   assert.match(styles, /\.cbd-video-block\{width:min\(100%,920px\)/);
   assert.match(styles, /html,body,main\{width:100%;max-width:100%;overflow-x:hidden\}/);
