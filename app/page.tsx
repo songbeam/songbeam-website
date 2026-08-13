@@ -569,7 +569,7 @@ export default function Home() {
         <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
         <div className="endorsement-grid">
           <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
-          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>為什麼願意成為<br />GLORY 好眠寢具代言人？</h3><p>吳若權老師長期倡議在日常中照顧身心，也重視真正能被實踐的生活品質。他認同 GLORY 從舒適材質、貼合支撐到睡前放鬆感受的完整思考，讓好眠不只是夜晚的片刻，而是每天好好照顧自己的開始。</p><p>這份對「從睡眠開始，善待自己」的共同信念，成為他願意擔任 <strong>GLORY 葛洛麗品牌 CBD 草本忘憂好眠寢具代言人</strong>的原因。</p></div></article>
+          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>學會放鬆，<br />是送給自己最溫柔的禮物</h3><div className="ambassador-message"><p>年輕的時候，我們總以為人生最重要的是努力。努力工作、努力追求目標、努力成為更好的自己。直到走過更多人生階段才發現，真正重要的，不只是向前奔跑的能力，更必須是懂得在適當的時候停下來，好好照顧自己。</p><p>現代人的生活充滿各種壓力。工作上的責任、家庭中的角色、人際之間的期待，讓我們的大腦即使到了深夜，依然停不下來。許多人真的很想睡，但偏偏就是無法真正放鬆。身體躺下了，思緒卻還在忙碌。於是，睡眠變成一件需要學習的事情。</p><p>我一直相信，每個人都應該為自己保留一段安靜的時間。也許，是一杯溫熱的茶、一段輕柔的音樂，或是一個能讓身心逐漸沉澱的睡眠儀式。因為真正的休息，是閉上眼睛的同時，心也能慢慢安靜下來。當我們願意重視睡眠，其實是在重視自己的生活品質；當我們願意創造舒適放鬆的睡眠環境，也是在告訴自己：辛苦了一整天，值得好好被照顧。</p><p>成熟之後才明白：幸福，不是擁有更多；而是懂得善待自己。讓身體放鬆，讓情緒安定，讓每一個夜晚都成為重新充電的開始。因為每一次安心入睡，都是送給未來的自己，一份最溫柔的禮物。</p></div><blockquote>「幸福，是懂得在忙碌之後，好好放鬆自己。」</blockquote></div></article>
         </div>
       </section>
 
@@ -634,14 +634,14 @@ export default function Home() {
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
 
+        <figure className="safety-proof-banner"><img src="/cbd-clinical-certification-banner.png" alt="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證" /></figure>
+
         <div className="cbd-textile-story">
           <div className="textile-cycle-visual">
             <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
           </div>
-          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p></div>
+          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><ul className="cbd-textile-benefits"><li><span>01</span><strong>草本助眠・漢麻二酚</strong></li><li><span>02</span><strong>醫藥大學臨床實驗證明</strong></li><li><span>03</span><strong>獨家微膠囊技術</strong></li><li><span>04</span><strong>天然草本技術製成</strong></li><li><span>05</span><strong>天然抗菌除臭</strong></li></ul></div>
         </div>
-
-        <div className="safety-feature-grid"><article><span>01</span><strong>草本助眠<br />漢麻二酚</strong></article><article><span>02</span><strong>醫藥大學<br />臨床實驗證明</strong></article><article><span>03</span><strong>獨家微膠囊<br />技術</strong></article><article><span>04</span><strong>天然草本<br />技術製成</strong></article><article><span>05</span><strong>天然抗菌<br />除臭</strong></article></div>
       </section>
 
       <section className="product-showcase section" id="products">

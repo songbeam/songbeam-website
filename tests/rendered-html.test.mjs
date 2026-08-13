@@ -119,7 +119,11 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /獨家比利時萃取/);
   assert.match(html, /天然抗菌/);
   assert.match(html, /除臭/);
-  assert.doesNotMatch(html, /Patrick Lin, D\.C\.|MDPI|全台近 400 萬人/);
+  assert.doesNotMatch(html, /Patrick Lin, D\.C\.|全台近 400 萬人/);
+  assert.match(html, /cbd-clinical-certification-banner\.png/);
+  assert.match(html, /2025 MDPI 國際期刊認證/);
+  assert.match(html, /cbd-textile-benefits/);
+  assert.doesNotMatch(html, /class="safety-feature-grid"/);
   assert.match(html, /從睡眠數據/);
   assert.match(html, /safety-title-nowrap/);
   assert.match(html, /cbd-textile-title-nowrap/);
@@ -171,8 +175,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /WHY GLORY/);
-  assert.match(html, /為什麼願意成為/);
-  assert.match(html, /從睡眠開始，善待自己/);
+  assert.doesNotMatch(html, /為什麼願意成為/);
+  assert.match(html, /學會放鬆/);
+  assert.match(html, /幸福，是懂得在忙碌之後，好好放鬆自己/);
   assert.doesNotMatch(html, /PROFESSIONAL RECOMMENDATION|professional-card/);
   assert.match(html, /doctor-story-card yang-story/);
   assert.match(html, /中醫藥學博士/);
