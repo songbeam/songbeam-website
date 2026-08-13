@@ -77,7 +77,6 @@ const testimonialCrowd = [
   { slot: "03", testimonial: 2 },
   { slot: "04", testimonial: 3 },
   { slot: "05", testimonial: 4 },
-  { slot: "06", testimonial: 5 },
 ] as const;
 
 const collectionProducts = [
@@ -634,14 +633,13 @@ export default function Home() {
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
 
-        <figure className="safety-proof-banner"><img src="/cbd-clinical-certification-banner.png" alt="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證" /></figure>
-
         <div className="cbd-textile-story">
           <div className="textile-cycle-visual">
             <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
           </div>
           <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><ul className="cbd-textile-benefits"><li><span>01</span><strong>草本助眠・漢麻二酚</strong></li><li><span>02</span><strong>醫藥大學臨床實驗證明</strong></li><li><span>03</span><strong>獨家微膠囊技術</strong></li><li><span>04</span><strong>天然草本技術製成</strong></li><li><span>05</span><strong>天然抗菌除臭</strong></li></ul></div>
         </div>
+        <figure className="safety-proof-banner"><img src="/cbd-clinical-certification-banner.png" alt="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證" /></figure>
       </section>
 
       <section className="product-showcase section" id="products">
@@ -677,9 +675,9 @@ export default function Home() {
       <section className="testimonial-section section" id="testimonials">
         <div className="section-label"><span>09</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
-        <div className="testimonial-crowd" aria-label="使用者見證人物群像">
-          <img src="/testimonial-crowd-transparent.png" alt="去背灰色人群示意圖" />
-          {testimonialCrowd.map((person) => <button className={`crowd-person crowd-person-${person.slot} crowd-person-featured${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><i className="person-body" /><i className="person-legs" /></button>)}
+        <div className="testimonial-crowd testimonial-dialogue-scene" aria-label="使用者見證對話群像">
+          <img src="/testimonial-dialogue-crowd.png" alt="人群與五則使用者見證對話框" />
+          {testimonialCrowd.map((person) => <button className={`testimonial-bubble testimonial-bubble-${person.slot}${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><span>「{testimonials[person.testimonial].quote.slice(0, 20)}…」</span><small>閱讀完整心得</small></button>)}
         </div>
       </section>
 

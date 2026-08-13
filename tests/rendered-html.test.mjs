@@ -229,12 +229,12 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /旅行使用者 C/);
   assert.match(source, /testimonialCrowd/);
   assert.match(source, /testimonial-crowd/);
-  assert.match(source, /testimonial-crowd-transparent\.png/);
-  assert.match(source, /crowd-person-featured/);
+  assert.match(source, /testimonial-dialogue-crowd\.png/);
+  assert.match(source, /testimonial-bubble/);
   assert.match(source, /selectedTestimonialIndex/);
   assert.match(source, /id="testimonial-story-dialog"/);
   assert.doesNotMatch(source, /將游標移向深色人物/);
-  assert.equal((source.match(/testimonial:\s*[0-5]/g) || []).length, 6);
+  assert.equal((source.match(/testimonial:\s*[0-4]/g) || []).length, 5);
   assert.doesNotMatch(source, /此頁保留給經使用者授權的門市試躺與日常使用感受/);
   assert.doesNotMatch(source, /正式見證內容將於取得使用者授權並完成品牌確認後公開/);
   assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));
@@ -253,7 +253,7 @@ test("uses the new testimonial art, compact video, and mobile overflow guards", 
   assert.doesNotMatch(source, /本產品為一般寢具用品，非藥品或醫療器材，不具診斷、治療、預防疾病或改善失眠之功效/);
   assert.match(source, /© 2026 GLORY BEDDING/);
   assert.match(styles, /\.testimonial-crowd\{/);
-  assert.match(styles, /\.crowd-person-featured:hover/);
+  assert.match(styles, /\.testimonial-bubble:hover/);
   assert.match(styles, /\.testimonial-modal\{/);
   assert.doesNotMatch(styles, /testimonial-crowd-morandi\.png/);
   assert.match(styles, /\.cbd-video-block\{width:min\(100%,920px\)/);

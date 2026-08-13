@@ -901,8 +901,8 @@
 .clinical-charts .sleep-chart-grid article>small{display:block;margin-top:11px;color:#8d9892;font-size:10pt;text-align:center}
 .clinical-charts .chart-bars{height:235px;gap:24px;background:repeating-linear-gradient(to top,transparent 0,transparent 56px,rgba(83,111,96,.07) 57px)}
 .clinical-charts>p{margin:22px 0 0;color:#909995;font:10pt/1.7 Arial,sans-serif}
-.safety-proof-banner{position:relative;z-index:2;margin:36px 0 0;padding:18px 22px;border:1px solid rgba(255,255,255,.88);border-radius:5px 34px;background:rgba(249,248,242,.76);box-shadow:0 22px 58px rgba(73,99,84,.09)}
-.safety-proof-banner img{display:block;width:100%;height:auto;border-radius:3px 22px}
+.safety-proof-banner{position:relative;z-index:2;margin:30px 0 0;padding:0;overflow:hidden;border:1px solid rgba(255,255,255,.88);border-radius:5px 34px;background:#e6ece3;box-shadow:0 22px 58px rgba(73,99,84,.09)}
+.safety-proof-banner img{display:block;width:100%;height:auto;filter:saturate(.58) sepia(.08) hue-rotate(35deg) contrast(.96) brightness(.99)}
 .cbd-textile-story{
   position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.9fr);
   margin-top:36px;overflow:hidden;border:1px solid rgba(255,255,255,.86);border-radius:58px 6px;
@@ -1694,7 +1694,7 @@ footer{background:#d4e0d2}
     radial-gradient(circle at 20% 18%,rgba(143,177,139,.3),transparent 34%),
     linear-gradient(145deg,#d3e2d1,#eaf0e4 54%,#c5d8c8);
 }
-.textile-cycle-visual>img{position:relative;z-index:2;display:block;width:100%;height:auto;object-fit:contain}
+.textile-cycle-visual>img{position:absolute;z-index:2;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .textile-cycle-visual:before,.textile-cycle-visual:after{
   content:"";position:absolute;border:1px solid rgba(71,111,87,.18);border-radius:50%;pointer-events:none;
 }
@@ -1825,6 +1825,16 @@ footer{background:#d4e0d2}
 .crowd-person-03{left:49.4%;top:45%;--person-scale:2.08}.crowd-person-04{left:65.4%;top:49%;--person-scale:2.06}
 .crowd-person-05{left:80.6%;top:47%;--person-scale:2}.crowd-person-06{left:92%;top:45%;--person-scale:1.9}
 
+.testimonial-dialogue-scene{width:min(100%,1240px);aspect-ratio:1.875;border-radius:6px 54px;box-shadow:0 30px 88px rgba(44,69,57,.2)}
+.testimonial-dialogue-scene>img{filter:saturate(.42) sepia(.1) hue-rotate(48deg) contrast(.92) brightness(.94)}
+.testimonial-dialogue-scene:before{z-index:2;background:linear-gradient(180deg,rgba(224,234,221,.15),rgba(49,76,61,.25))}
+.testimonial-bubble{position:absolute;z-index:5;display:flex;flex-direction:column;justify-content:center;gap:9px;margin:0;padding:16px 20px;border:2px solid rgba(89,118,97,.24);border-radius:28px 28px 28px 8px;background:rgba(248,247,238,.05);color:transparent;cursor:pointer;transition:border-color .25s ease,box-shadow .25s ease,background .25s ease,transform .25s ease;appearance:none}
+.testimonial-bubble span,.testimonial-bubble small{opacity:0;transition:opacity .25s ease;color:#405c4f;text-align:left}
+.testimonial-bubble span{font-size:10pt;font-weight:600;line-height:1.65}.testimonial-bubble small{font-size:10pt;letter-spacing:.08em}
+.testimonial-bubble:hover,.testimonial-bubble:focus-visible,.testimonial-bubble.is-active{outline:0;border-color:#8faa80;background:rgba(246,248,237,.96);box-shadow:0 0 0 5px rgba(209,225,194,.34),0 0 30px rgba(223,238,201,.78),0 18px 38px rgba(48,73,59,.18);transform:translateY(-4px)}
+.testimonial-bubble:hover span,.testimonial-bubble:hover small,.testimonial-bubble:focus-visible span,.testimonial-bubble:focus-visible small,.testimonial-bubble.is-active span,.testimonial-bubble.is-active small{opacity:1}
+.testimonial-bubble-01{left:7.6%;top:44%;width:15.4%;height:18%}.testimonial-bubble-02{left:22.2%;top:21.5%;width:16%;height:18%}.testimonial-bubble-03{left:40%;top:27%;width:21%;height:22%}.testimonial-bubble-04{left:63.6%;top:19.8%;width:14.5%;height:17%}.testimonial-bubble-05{left:77.8%;top:44%;width:15.2%;height:18%}
+
 .testimonial-modal-backdrop{z-index:1060}
 .testimonial-modal{
   position:relative;display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);
@@ -1864,6 +1874,11 @@ footer{background:#d4e0d2}
   .testimonial-section{min-height:0;padding-left:18px;padding-right:18px}
   .testimonial-guide{font-size:10pt;margin-bottom:12px}
   .testimonial-crowd{width:100%;height:auto;aspect-ratio:3/2;overflow:hidden}
+  .testimonial-dialogue-scene{aspect-ratio:1.2;border-radius:4px 28px}
+  .testimonial-dialogue-scene>img{object-fit:cover;object-position:center}
+  .testimonial-bubble{padding:8px;border-width:1.5px;border-radius:18px 18px 18px 5px}
+  .testimonial-bubble span{font-size:10pt}.testimonial-bubble small{display:none}
+  .testimonial-bubble-01{left:4%;top:42%;width:20%;height:19%}.testimonial-bubble-02{left:20%;top:21%;width:21%;height:18%}.testimonial-bubble-03{left:38%;top:29%;width:26%;height:21%}.testimonial-bubble-04{left:63%;top:20%;width:20%;height:18%}.testimonial-bubble-05{left:77%;top:43%;width:20%;height:19%}
   .crowd-person{width:56px;height:116px}
   .crowd-person:before{width:38px;height:38px}
   .crowd-person .person-body{top:34px;width:38px;height:51px}
