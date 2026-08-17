@@ -549,7 +549,7 @@ export default function Home() {
         <a className="brand brand-logo glory-brand-logo" href="#top" aria-label="GLORY 葛洛麗名床寢具首頁" onClick={closeMenu}><img src="/glory-logo-transparent.png" alt="GLORY 1953 德國葛洛麗名床寢具" /></a>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-label={menuOpen ? "關閉選單" : "開啟選單"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="主要導覽">
-          <a href="#features" onClick={closeMenu}>CBD 漢麻二酚簡介</a><a href="#endorsements" onClick={closeMenu}>品牌代言</a><a href="#pillow" onClick={closeMenu}>枕型設計</a><a href="#structure" onClick={closeMenu}>材質結構</a><a href="#safety" onClick={closeMenu}>材質檢驗</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#news" onClick={closeMenu}>新聞報導</a><a href="#testimonials" onClick={closeMenu}>使用者見證</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
+          <a href="#features" onClick={closeMenu}>認識 CBD</a><a href="#safety" onClick={closeMenu}>睡眠研究</a><a href="#products" onClick={closeMenu}>系列商品</a><a href="#technology" onClick={closeMenu}>好眠科技</a><a href="#endorsements" onClick={closeMenu}>使用者故事</a><a href="#news" onClick={closeMenu}>媒體報導</a><a href="#stores" onClick={closeMenu}>門市體驗</a>
         </nav>
       </header>
 
@@ -570,31 +570,6 @@ export default function Home() {
             <article className="doctor-story-card yang-story cbd-doctor-card cbd-expert-block"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><p>從草本成分研究到纖維應用，以專業觀點說明 CBD 如何走進每日貼近肌膚的寢具表布。</p></div></article>
             <div className="cbd-feature-panel cbd-overview-block"><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
           </div>
-        </div>
-      </section>
-
-      <section className="endorsement-section section" id="endorsements">
-        <div className="section-label"><span>02</span><p>BRAND AMBASSADOR</p></div>
-        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
-        <div className="endorsement-grid">
-          <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
-          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>學會放鬆，<br />是送給自己最溫柔的禮物</h3><div className="ambassador-message"><p>年輕的時候，我們總以為人生最重要的是努力。努力工作、努力追求目標、努力成為更好的自己。直到走過更多人生階段才發現，真正重要的，不只是向前奔跑的能力，更必須是懂得在適當的時候停下來，好好照顧自己。</p><p>現代人的生活充滿各種壓力。工作上的責任、家庭中的角色、人際之間的期待，讓我們的大腦即使到了深夜，依然停不下來。許多人真的很想睡，但偏偏就是無法真正放鬆。身體躺下了，思緒卻還在忙碌。於是，睡眠變成一件需要學習的事情。</p><p>我一直相信，每個人都應該為自己保留一段安靜的時間。也許，是一杯溫熱的茶、一段輕柔的音樂，或是一個能讓身心逐漸沉澱的睡眠儀式。因為真正的休息，是閉上眼睛的同時，心也能慢慢安靜下來。當我們願意重視睡眠，其實是在重視自己的生活品質；當我們願意創造舒適放鬆的睡眠環境，也是在告訴自己：辛苦了一整天，值得好好被照顧。</p><p>成熟之後才明白：幸福，不是擁有更多；而是懂得善待自己。讓身體放鬆，讓情緒安定，讓每一個夜晚都成為重新充電的開始。因為每一次安心入睡，都是送給未來的自己，一份最溫柔的禮物。</p></div><blockquote>「幸福，是懂得在忙碌之後，好好放鬆自己。」</blockquote></div></article>
-        </div>
-      </section>
-
-      <section className="pillow-section section" id="pillow">
-        <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
-        <p className="seagull-kicker">海鷗減壓枕型</p>
-        <div className="seagull-combined-layout">
-          <div className="seagull-editorial">
-            <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
-            <div className="seagull-copy">
-              <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
-              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × Tempwiser 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
-              <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
-            </div>
-          </div>
-          <article className="doctor-story-card lin-story seagull-doctor-card"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
         </div>
       </section>
 
@@ -624,16 +599,6 @@ export default function Home() {
         </section>
       </div> : null}
 
-      <section className="structure section" id="structure">
-        <div className="section-label"><span>04</span><p>MATERIAL &amp; STRUCTURE</p></div>
-        <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
-        <div className="structure-editorial">
-          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
-          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>Tempwiser 親水棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
-        </div>
-        <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>Tempwiser 親水棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
-      </section>
-
       <section className="evidence-story section" id="safety">
         <div className="section-label"><span>05</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
         <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
@@ -642,14 +607,8 @@ export default function Home() {
           <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
-
-        <div className="cbd-textile-story">
-          <div className="textile-cycle-visual">
-            <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
-          </div>
-          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><ul className="cbd-textile-benefits"><li><span>01</span><strong>草本助眠・漢麻二酚</strong></li><li><span>02</span><strong>醫藥大學臨床實驗證明</strong></li><li><span>03</span><strong>獨家微膠囊技術</strong></li><li><span>04</span><strong>天然草本技術製成</strong></li><li><span>05</span><strong>天然抗菌除臭</strong></li></ul></div>
-        </div>
         <figure className="safety-proof-banner"><img src="/cbd-clinical-certification-banner.png" alt="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證" /></figure>
+
       </section>
 
       <section className="product-showcase section" id="products">
@@ -670,16 +629,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="care section" id="care">
-        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div>
-        <div className="care-wash-layout"><header><p className="eyebrow">使用與保養方式</p><h2 className="care-title-lines"><span>讓舒服</span><span>陪伴更久</span></h2><p className="care-intro-lines"><span>日常以除塵、局部清潔為主；枕芯與布套請分開處理。</span><span>實際洗滌仍以商品洗標為準。</span></p><div className="care-symbols"><span>低溫</span><span>勿漂白</span><span>枕芯勿機洗</span></div></header><div className="wash-guide-list"><article><span>01</span><div><h3>無明顯髒污</h3><p>可用吸塵器清除表面的灰塵或皮屑。</p></div></article><article><span>02</span><div><h3>有局部污跡</h3><p>可用濕布沾少許肥皂，溫和地輕輕清潔。</p></div></article><article><span>03</span><div><h3>枕芯特殊材質</h3><p>勿機洗，避免直接曝曬於太陽下，或以高溫方式處理。</p></div></article><article className="wash-cover"><span>04</span><div><h3>防護布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗；勿烘乾及漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article><article className="wash-cover cbd"><span>05</span><div><h3>CBD 外布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗、可低溫烘乾；勿漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article></div></div>
-        <p className="care-source-note">以上內容依品牌提供之洗滌說明整理。若商品洗標、材質標示或原廠文件另有規定，請優先依實際商品標示操作。</p>
+      <section className="evidence-story section" id="technology">
+
+        <div className="cbd-textile-story">
+          <div className="textile-cycle-visual">
+            <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
+          </div>
+          <div className="cbd-textile-copy"><small>MICROCAPSULE TEXTILE TECHNOLOGY</small><h3 className="cbd-textile-title-nowrap">CBD 漢麻二酚表布</h3><h4>獨家比利時萃取微膠囊技術</h4><p>將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時緩慢且持續釋放微量 CBD 成分。</p><ul className="cbd-textile-benefits"><li><span>01</span><strong>草本助眠・漢麻二酚</strong></li><li><span>02</span><strong>醫藥大學臨床實驗證明</strong></li><li><span>03</span><strong>獨家微膠囊技術</strong></li><li><span>04</span><strong>天然草本技術製成</strong></li><li><span>05</span><strong>天然抗菌除臭</strong></li></ul></div>
+        </div>
       </section>
 
-      <section className="news-section section" id="news">
-        <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
-        <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
-        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
+      <section className="structure section" id="structure">
+        <div className="section-label"><span>04</span><p>MATERIAL &amp; STRUCTURE</p></div>
+        <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
+        <div className="structure-editorial">
+          <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
+          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>Tempwiser 親水棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
+        </div>
+        <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>Tempwiser 親水棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
+      </section>
+
+      <section className="pillow-section section" id="pillow">
+        <div className="section-label"><span>03</span><p>SEAGULL CONTOUR DESIGN</p></div>
+        <p className="seagull-kicker">海鷗減壓枕型</p>
+        <div className="seagull-combined-layout">
+          <div className="seagull-editorial">
+            <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
+            <div className="seagull-copy">
+              <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
+              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × Tempwiser 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
+              <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
+            </div>
+          </div>
+          <article className="doctor-story-card lin-story seagull-doctor-card"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
+        </div>
+      </section>
+
+      <section className="endorsement-section section" id="endorsements">
+        <div className="section-label"><span>02</span><p>BRAND AMBASSADOR</p></div>
+        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
+        <div className="endorsement-grid">
+          <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
+          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>學會放鬆，<br />是送給自己最溫柔的禮物</h3><div className="ambassador-message"><p>年輕的時候，我們總以為人生最重要的是努力。努力工作、努力追求目標、努力成為更好的自己。直到走過更多人生階段才發現，真正重要的，不只是向前奔跑的能力，更必須是懂得在適當的時候停下來，好好照顧自己。</p><p>現代人的生活充滿各種壓力。工作上的責任、家庭中的角色、人際之間的期待，讓我們的大腦即使到了深夜，依然停不下來。許多人真的很想睡，但偏偏就是無法真正放鬆。身體躺下了，思緒卻還在忙碌。於是，睡眠變成一件需要學習的事情。</p><p>我一直相信，每個人都應該為自己保留一段安靜的時間。也許，是一杯溫熱的茶、一段輕柔的音樂，或是一個能讓身心逐漸沉澱的睡眠儀式。因為真正的休息，是閉上眼睛的同時，心也能慢慢安靜下來。當我們願意重視睡眠，其實是在重視自己的生活品質；當我們願意創造舒適放鬆的睡眠環境，也是在告訴自己：辛苦了一整天，值得好好被照顧。</p><p>成熟之後才明白：幸福，不是擁有更多；而是懂得善待自己。讓身體放鬆，讓情緒安定，讓每一個夜晚都成為重新充電的開始。因為每一次安心入睡，都是送給未來的自己，一份最溫柔的禮物。</p></div><blockquote>「幸福，是懂得在忙碌之後，好好放鬆自己。」</blockquote></div></article>
+        </div>
       </section>
 
       <section className="testimonial-section section" id="testimonials">
@@ -689,6 +681,18 @@ export default function Home() {
           <img src="/testimonial-dialogue-crowd.png" alt="人群與五則使用者見證對話框" />
           {testimonialCrowd.map((person) => <button className={`testimonial-bubble testimonial-bubble-${person.slot}${selectedTestimonialIndex === person.testimonial ? " is-active" : ""}`} type="button" key={person.slot} onClick={() => setSelectedTestimonialIndex(person.testimonial)} aria-pressed={selectedTestimonialIndex === person.testimonial} aria-haspopup="dialog" aria-controls="testimonial-story-dialog" aria-label={`閱讀${testimonials[person.testimonial].name}的使用者見證`}><span>「{testimonials[person.testimonial].headline}」</span><small>{testimonials[person.testimonial].name}・閱讀完整心得</small></button>)}
         </div>
+      </section>
+
+      <section className="news-section section" id="news">
+        <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
+        <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
+        <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
+      </section>
+
+      <section className="care section" id="care">
+        <div className="section-label"><span>07</span><p>CARE GUIDE</p></div>
+        <div className="care-wash-layout"><header><p className="eyebrow">使用與保養方式</p><h2 className="care-title-lines"><span>讓舒服</span><span>陪伴更久</span></h2><p className="care-intro-lines"><span>日常以除塵、局部清潔為主；枕芯與布套請分開處理。</span><span>實際洗滌仍以商品洗標為準。</span></p><div className="care-symbols"><span>低溫</span><span>勿漂白</span><span>枕芯勿機洗</span></div></header><div className="wash-guide-list"><article><span>01</span><div><h3>無明顯髒污</h3><p>可用吸塵器清除表面的灰塵或皮屑。</p></div></article><article><span>02</span><div><h3>有局部污跡</h3><p>可用濕布沾少許肥皂，溫和地輕輕清潔。</p></div></article><article><span>03</span><div><h3>枕芯特殊材質</h3><p>勿機洗，避免直接曝曬於太陽下，或以高溫方式處理。</p></div></article><article className="wash-cover"><span>04</span><div><h3>防護布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗；勿烘乾及漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article><article className="wash-cover cbd"><span>05</span><div><h3>CBD 外布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗、可低溫烘乾；勿漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article></div></div>
+        <p className="care-source-note">以上內容依品牌提供之洗滌說明整理。若商品洗標、材質標示或原廠文件另有規定，請優先依實際商品標示操作。</p>
       </section>
 
       <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>

@@ -197,7 +197,39 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
   assert.ok(html.indexOf('id="safety"') < html.indexOf('id="products"'));
-  assert.ok(html.indexOf('id="products"') < html.indexOf('id="news"'));
+  assert.ok(html.indexOf('id="products"') < html.indexOf('id="technology"'));
+});
+
+test("uses the seven-item information architecture without duplicating section anchors", async () => {
+  const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const nav = source.match(/<nav className=\{menuOpen \? "nav open" : "nav"\}[\s\S]*?<\/nav>/)?.[0] ?? "";
+  const expectedNav = [
+    ['#features', '認識 CBD'],
+    ['#safety', '睡眠研究'],
+    ['#products', '系列商品'],
+    ['#technology', '好眠科技'],
+    ['#endorsements', '使用者故事'],
+    ['#news', '媒體報導'],
+    ['#stores', '門市體驗'],
+  ];
+  assert.equal((nav.match(/<a href=/g) || []).length, 7);
+  let previousNavIndex = -1;
+  for (const [href, label] of expectedNav) {
+    const item = `<a href="${href}" onClick={closeMenu}>${label}</a>`;
+    const index = nav.indexOf(item);
+    assert.ok(index > previousNavIndex, `${label} should appear in the requested navigation order`);
+    previousNavIndex = index;
+  }
+
+  const orderedAnchors = ["top", "features", "safety", "products", "technology", "structure", "pillow", "endorsements", "testimonials", "news", "care", "stores"];
+  let previousSectionIndex = -1;
+  for (const id of orderedAnchors) {
+    const marker = `id="${id}"`;
+    assert.equal((source.match(new RegExp(marker, "g")) || []).length, 1, `${id} must remain unique`);
+    const index = source.indexOf(marker);
+    assert.ok(index > previousSectionIndex, `${id} should appear in the requested page order`);
+    previousSectionIndex = index;
+  }
 });
 
 test("defines the official store directory dialog", async () => {
@@ -246,8 +278,10 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.equal((source.match(/testimonial:\s*[0-4]/g) || []).length, 5);
   assert.doesNotMatch(source, /此頁保留給經使用者授權的門市試躺與日常使用感受/);
   assert.doesNotMatch(source, /正式見證內容將於取得使用者授權並完成品牌確認後公開/);
-  assert.ok(source.indexOf('id="news"') < source.indexOf('id="testimonials"'));
-  assert.ok(source.indexOf('id="testimonials"') < source.indexOf('id="stores"'));
+  assert.ok(source.indexOf('id="endorsements"') < source.indexOf('id="testimonials"'));
+  assert.ok(source.indexOf('id="testimonials"') < source.indexOf('id="news"'));
+  assert.ok(source.indexOf('id="news"') < source.indexOf('id="care"'));
+  assert.ok(source.indexOf('id="care"') < source.indexOf('id="stores"'));
   assert.match(source, /partnerModalOpen/);
   assert.match(source, /aria-controls="partner-contact-dialog"/);
   assert.match(source, /id="partner-contact-dialog"/);
