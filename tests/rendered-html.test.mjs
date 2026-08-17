@@ -200,7 +200,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.ok(html.indexOf('id="products"') < html.indexOf('id="technology"'));
 });
 
-test("uses the seven-item information architecture without duplicating section anchors", async () => {
+test("uses the requested navigation architecture without duplicating section anchors", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const nav = source.match(/<nav className=\{menuOpen \? "nav open" : "nav"\}[\s\S]*?<\/nav>/)?.[0] ?? "";
   const expectedNav = [
@@ -208,11 +208,12 @@ test("uses the seven-item information architecture without duplicating section a
     ['#safety', '睡眠研究'],
     ['#products', '系列商品'],
     ['#technology', '好眠科技'],
-    ['#endorsements', '使用者故事'],
+    ['#endorsements', '品牌代言'],
+    ['#testimonials', '使用者故事'],
     ['#news', '媒體報導'],
     ['#stores', '門市體驗'],
   ];
-  assert.equal((nav.match(/<a href=/g) || []).length, 7);
+  assert.equal((nav.match(/<a href=/g) || []).length, 8);
   let previousNavIndex = -1;
   for (const [href, label] of expectedNav) {
     const item = `<a href="${href}" onClick={closeMenu}>${label}</a>`;
@@ -229,6 +230,25 @@ test("uses the seven-item information architecture without duplicating section a
     const index = source.indexOf(marker);
     assert.ok(index > previousSectionIndex, `${id} should appear in the requested page order`);
     previousSectionIndex = index;
+  }
+
+  const orderedSectionLabels = [
+    ['01', 'INTRODUCTION TO CANNABIDIOL'],
+    ['02', 'TESTING &amp; TEXTILE TECHNOLOGY'],
+    ['03', 'CBD SLEEP COLLECTION'],
+    ['04', 'MATERIAL &amp; STRUCTURE'],
+    ['05', 'SEAGULL CONTOUR DESIGN'],
+    ['06', 'BRAND AMBASSADOR'],
+    ['07', 'REAL SLEEP STORIES'],
+    ['08', 'PRESS &amp; NEWS'],
+    ['09', 'CARE GUIDE'],
+  ];
+  let previousLabelIndex = -1;
+  for (const [number, label] of orderedSectionLabels) {
+    const marker = `<div className="section-label"><span>${number}</span><p>${label}</p></div>`;
+    const index = source.indexOf(marker);
+    assert.ok(index > previousLabelIndex, `${label} should use the current page sequence number`);
+    previousLabelIndex = index;
   }
 });
 
