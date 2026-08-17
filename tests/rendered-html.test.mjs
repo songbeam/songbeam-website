@@ -106,7 +106,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /海鷗曲線支撐/);
   assert.match(html, /可調高度設計/);
   assert.doesNotMatch(html, /SLEEP FEEL GUIDE|五段式定位|id="fit"/);
-  assert.match(html, /親水記憶棉/);
+  assert.match(html, /Tempwiser 親水棉枕芯/);
+  assert.doesNotMatch(html, /親水記憶棉/);
   assert.match(html, /structure-title-nowrap/);
   assert.match(html, /structure-editorial/);
   assert.match(html, /structure-spec-panel/);
@@ -234,6 +235,7 @@ test("defines testimonials and official LINE partnership contact", async () => {
   assert.match(source, /一個月睡好幾張床，更知道熟悉有多重要/);
   assert.equal((source.match(/gender: "female"/g) || []).length, 3);
   assert.equal((source.match(/gender: "male"/g) || []).length, 2);
+  assert.match(source, /testimonial-avatar-\$\{selectedTestimonial\.gender\}\.png/);
   assert.match(source, /testimonialCrowd/);
   assert.match(source, /testimonial-crowd/);
   assert.match(source, /testimonial-dialogue-crowd\.png/);
@@ -329,7 +331,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(styles, /\.shop-product-info p\{[^}]*font-size:10pt/);
   assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:10pt/);
   for (const detail of [
-    "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
+    "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "GLORY 獨家專利「Tempwiser 親水棉」",
     "正睡、側睡，都能完美支撐",
     "接觸空氣後會產生泛黃狀況",

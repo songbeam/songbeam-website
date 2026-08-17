@@ -97,7 +97,7 @@ const collectionProducts = [
     image: "/cbd-sleep-collection-pillow-card.png",
     statement: "讓頭頸找到最舒服的位置",
     detail: "從支撐到包覆，每一處細節都為放鬆而設計，陪伴身體慢慢沉靜，迎接每一夜好眠",
-    highlights: ["海鷗式分區曲線", "親水記憶棉支撐", "仰睡與側睡皆可試躺"],
+    highlights: ["海鷗式分區曲線", "Tempwiser 親水棉支撐", "仰睡與側睡皆可試躺"],
     note: "實際尺寸、高度、售價與適用睡姿，請以門市說明及商品標示為準。",
   },
   {
@@ -176,11 +176,11 @@ const pillowSeries: SeriesProduct[] = [
     name: "CBD 草本忘憂好眠寢具 好眠雲朵枕",
     en: "SLEEP CLOUD PILLOW",
     image: "/cbd-sleep-cloud-pillow-bedroom.png",
-    statement: "親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
+    statement: "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
     detail: "保有親水記憶枕支撐性佳、服貼肩頸的特性，同時擁有羽絨枕的可塑性與纖維枕的蓬鬆感。",
     highlights: [
       "順應睡姿包覆頭頸部，紓壓護頸，正躺、側躺都好眠",
-      "親水棉有效吸濕排熱",
+      "Tempwiser 親水棉有效吸濕排熱",
       "棉粒間保有空隙，加速排熱並增加涼爽舒適度",
     ],
     featureDetails: [
@@ -590,7 +590,7 @@ export default function Home() {
             <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
             <div className="seagull-copy">
               <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
-              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
+              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × Tempwiser 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
               <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
             </div>
           </div>
@@ -629,9 +629,9 @@ export default function Home() {
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
           <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
-          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>親水記憶棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
+          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>Tempwiser 親水棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
-        <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>親水記憶棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
+        <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>Tempwiser 親水棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
       </section>
 
       <section className="evidence-story section" id="safety">
@@ -713,7 +713,7 @@ export default function Home() {
       {selectedTestimonial ? <div className="product-modal-backdrop testimonial-modal-backdrop" onMouseDown={() => setSelectedTestimonialIndex(null)}>
         <section className="testimonial-modal" id="testimonial-story-dialog" role="dialog" aria-modal="true" aria-labelledby="testimonial-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉使用者見證" onClick={() => setSelectedTestimonialIndex(null)} autoFocus>×</button>
-          <div className={`testimonial-modal-figure testimonial-avatar-${selectedTestimonial.gender}`} aria-hidden="true"><span className="testimonial-avatar"><i className="avatar-head" /><i className="avatar-hair" /><i className="avatar-body" /><i className="avatar-face">◡</i></span><small>REAL SLEEP STORY</small></div>
+          <div className={`testimonial-modal-figure testimonial-avatar-${selectedTestimonial.gender}`} aria-hidden="true"><img className="testimonial-avatar-image" src={`/testimonial-avatar-${selectedTestimonial.gender}.png`} alt="" /><small>REAL SLEEP STORY</small></div>
           <div className="testimonial-modal-copy"><small>USER TESTIMONIAL · {String((selectedTestimonialIndex ?? 0) + 1).padStart(2, "0")}</small><h2 id="testimonial-modal-title">{selectedTestimonial.name}</h2><p>{selectedTestimonial.profile}</p><strong className="testimonial-product">使用產品｜{selectedTestimonial.product}</strong><blockquote>「{selectedTestimonial.headline}」</blockquote><div className="testimonial-story-body">{selectedTestimonial.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><button type="button" onClick={() => setSelectedTestimonialIndex(null)}>回到使用者見證 <span>×</span></button></div>
         </section>
       </div> : null}
