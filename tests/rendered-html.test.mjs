@@ -263,6 +263,9 @@ test("uses the new testimonial art, compact video, and mobile overflow guards", 
   assert.match(source, /© 2026 GLORY BEDDING/);
   assert.match(styles, /\.testimonial-crowd\{/);
   assert.match(styles, /\.testimonial-bubble:hover/);
+  assert.match(styles, /\.testimonial-bubble\{[^}]*overflow:hidden/);
+  assert.match(styles, /\.testimonial-bubble span\{[^}]*-webkit-line-clamp:3/);
+  assert.match(styles, /\.testimonial-bubble small\{[^}]*text-overflow:ellipsis/);
   assert.match(styles, /\.testimonial-modal\{/);
   assert.match(styles, /\.testimonial-avatar-female/);
   assert.match(styles, /\.testimonial-avatar-male/);
