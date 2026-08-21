@@ -567,7 +567,7 @@ export default function Home() {
         <div className="cbd-intro-showcase">
           <figure className="cbd-video-frame cbd-video-block"><iframe src="https://www.youtube-nocookie.com/embed/BmpU3CbUALE?rel=0" title="CBD 漢麻二酚介紹影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></figure>
           <div className="cbd-intro-lower-grid cbd-intro-stack">
-            <article className="doctor-story-card yang-story cbd-doctor-card cbd-expert-block"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><p>從草本成分研究到纖維應用，以專業觀點說明 CBD 如何走進每日貼近肌膚的寢具表布。</p></div></article>
+            <article className="doctor-story-card yang-story cbd-doctor-card cbd-expert-block"><figure><img src="/professional-doctors-lin-yang.jpg" alt="中醫藥學博士楊顓丞博士" /></figure><div><small>HERBAL TEXTILE RESEARCH</small><p className="doctor-role">中醫藥學博士</p><h3>楊顓丞 博士</h3><blockquote>「漢麻二酚成分及功效，結合纖維編織工法，經兩年多時間研發，並通過醫院臨床實驗，證實有效改善睡眠品質。」</blockquote><div className="doctor-biography"><p>睡眠，是每天生活中不可或缺的一部分，而寢具更是長時間與肌膚貼近的重要日常用品。</p><p>從中醫藥與草本成分的專業研究出發，楊顓丞博士將漢麻二酚（CBD）的成分特性進一步延伸至寢具纖維應用，思考如何透過特殊技術與編織工法，讓草本研究不只停留在實驗室，而能真正走進日常生活。</p><p>歷經兩年多的研發與反覆測試，團隊將 CBD 技術與寢具表布結合，並進一步透過醫院臨床睡眠實驗進行驗證，從科學數據觀察實際使用後的睡眠表現。</p><p>從成分研究、纖維技術到臨床驗證，每一個環節都經過層層探索與確認，也成為GLORY葛洛麗 CBD 草本忘憂好眠系列從研究走向日常的重要基礎。</p><p>讓專業研究不只存在於實驗室，更成為每一晚貼近生活的睡眠科技。</p></div></div></article>
             <div className="cbd-feature-panel cbd-overview-block"><div className="feature-list">{features.map(([no, en, titleLine1, titleLine2, copy]) => <article key={no}><span>{no} / {en}</span><h3><span>{titleLine1}</span>{titleLine2 ? <span>{titleLine2}</span> : null}</h3><p>{copy}</p></article>)}</div></div>
           </div>
         </div>
@@ -661,7 +661,7 @@ export default function Home() {
               <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
             </div>
           </div>
-          <article className="doctor-story-card lin-story seagull-doctor-card"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><p>海鷗曲線與可調高度的設計，回應不同睡姿與身形所需要的頭頸承托。</p></div></article>
+          <article className="doctor-story-card lin-story seagull-doctor-card"><figure><img src="/dr-lin-kuo-wei.png" alt="美國脊骨神經醫學博士林國偉博士" /></figure><div><small>SPINAL SUPPORT PERSPECTIVE</small><p className="doctor-role">美國脊骨神經醫學博士</p><h3>林國偉 博士</h3><blockquote>「理想的枕頭可填補因脊椎弧度產生的空隙，讓頸椎被自然支撐。若枕頭高度不對，會造成神經孔空間改變，神經傳導受到影響。」</blockquote><div className="doctor-biography"><p>一顆真正適合的枕頭，不只是柔軟舒服，更重要的是能否在睡眠時，給予頭部與頸椎恰到好處的承托。</p><p>從脊骨神經醫學的專業角度來看，每個人的身形、肩寬、頸椎弧度與習慣睡姿都不盡相同，因此，枕頭的高度與支撐方式，也不應只有單一標準。</p><p>GLORY 葛洛麗 CBD 草本忘憂好眠枕以人體工學為設計基礎，透過海鷗曲線與可調式高度設計，因應仰睡、側睡等不同睡姿，協助填補頭頸與寢具之間的空隙，讓頭部、頸部與肩部獲得更自然的承托。</p><p>從人體結構出發，把專業醫學觀點融入每一處設計細節，讓枕頭不只是陪伴入睡，更成為每天睡眠中重要的支撐。</p><p>找到適合自己的高度，讓每一次躺下，都回到更自然、舒適的睡眠姿勢。</p></div></div></article>
         </div>
       </section>
 

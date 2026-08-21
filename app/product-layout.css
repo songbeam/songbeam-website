@@ -1365,6 +1365,9 @@ main{padding-top:92px}
 .doctor-story-card h3{margin:4px 0 22px;color:#526a6f;font-size:clamp(29px,3vw,42px);font-weight:400;letter-spacing:.08em}
 .doctor-story-card blockquote{position:relative;margin:0;padding:23px 0 23px 30px;border-left:1px solid rgba(160,132,102,.45);color:#53666a;font-size:15px;line-height:2.05;letter-spacing:.035em}
 .doctor-story-card>div>p:last-child{margin:18px 0 0;color:#7b8989;font-size:10pt;line-height:2}
+.doctor-story-card .doctor-biography{margin-top:18px;color:#576d63}
+.doctor-story-card .doctor-biography p{margin:0;font-size:10pt;line-height:2;text-align:justify}
+.doctor-story-card .doctor-biography p+p{margin-top:12px}
 
 /* Real sleep stories. */
 .testimonial-section{position:relative;overflow:hidden;background:linear-gradient(145deg,#f5f0e7 0%,#e6ebe2 100%)}
