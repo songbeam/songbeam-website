@@ -600,7 +600,7 @@ export default function Home() {
       </div> : null}
 
       <section className="evidence-story section" id="safety">
-        <div className="section-label"><span>02</span><p>TESTING &amp; TEXTILE TECHNOLOGY</p></div>
+        <div className="section-label"><span>02</span><p>CLINICAL SLEEP RESEARCH</p></div>
         <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
 
         <div className="clinical-data-card">
@@ -631,6 +631,8 @@ export default function Home() {
 
       <section className="evidence-story section" id="technology">
 
+        <div className="section-label"><span>04</span><p>SLEEP TECHNOLOGY</p></div>
+
         <div className="cbd-textile-story">
           <div className="textile-cycle-visual">
             <img src="/cbd-textile-cycle.png" alt="CBD 萃取、微膠囊化、編織進纖維循環圖" />
@@ -650,7 +652,7 @@ export default function Home() {
       </section>
 
       <section className="pillow-section section" id="pillow">
-        <div className="section-label"><span>05</span><p>SEAGULL CONTOUR DESIGN</p></div>
+        <div className="section-label"><span>04</span><p>SEAGULL CONTOUR DESIGN</p></div>
         <p className="seagull-kicker">海鷗減壓枕型</p>
         <div className="seagull-combined-layout">
           <div className="seagull-editorial">
@@ -666,7 +668,7 @@ export default function Home() {
       </section>
 
       <section className="endorsement-section section" id="endorsements">
-        <div className="section-label"><span>06</span><p>BRAND AMBASSADOR</p></div>
+        <div className="section-label"><span>05</span><p>BRAND AMBASSADOR</p></div>
         <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
         <div className="endorsement-grid">
           <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
@@ -675,7 +677,7 @@ export default function Home() {
       </section>
 
       <section className="testimonial-section section" id="testimonials">
-        <div className="section-label"><span>07</span><p>REAL SLEEP STORIES</p></div>
+        <div className="section-label"><span>06</span><p>REAL SLEEP STORIES</p></div>
         <header className="testimonial-heading"><div><p className="eyebrow">使用者見證</p><h2><span>每一段好眠故事，</span><span className="testimonial-title-nowrap">都從找到適合自己開始。</span></h2></div></header>
         <div className="testimonial-crowd testimonial-dialogue-scene" aria-label="使用者見證對話群像">
           <img src="/testimonial-dialogue-crowd.png" alt="人群與五則使用者見證對話框" />
@@ -684,18 +686,18 @@ export default function Home() {
       </section>
 
       <section className="news-section section" id="news">
-        <div className="section-label"><span>08</span><p>PRESS &amp; NEWS</p></div>
+        <div className="section-label"><span>07</span><p>PRESS &amp; NEWS</p></div>
         <header className="news-heading compact"><div><p className="eyebrow">TOP U.S. MEDIA COVERAGE</p><h2>來自美國媒體的<br />好眠新消息。</h2></div></header>
         <div className="news-grid">{newsItems.map((item, index) => <article className={`news-card ${item.tone}`} key={`${item.date}-${item.source}`}><a className="news-card-link" href={item.url} target="_blank" rel="noreferrer" aria-label={`前往 ${item.source} 閱讀原始新聞`}><div className="news-card-mark"><span>{item.short}</span><i>{String(index + 1).padStart(2, "0")}</i></div><div className="news-card-copy"><small>{item.date} · {item.source}</small><h3>{item.title}</h3><p>{item.summary}</p><em>閱讀新聞 <span>↗</span></em></div></a></article>)}</div>
       </section>
 
       <section className="care section" id="care">
-        <div className="section-label"><span>09</span><p>CARE GUIDE</p></div>
+        <div className="section-label"><span>08</span><p>CARE GUIDE</p></div>
         <div className="care-wash-layout"><header><p className="eyebrow">使用與保養方式</p><h2 className="care-title-lines"><span>讓舒服</span><span>陪伴更久</span></h2><p className="care-intro-lines"><span>日常以除塵、局部清潔為主；枕芯與布套請分開處理。</span><span>實際洗滌仍以商品洗標為準。</span></p><div className="care-symbols"><span>低溫</span><span>勿漂白</span><span>枕芯勿機洗</span></div></header><div className="wash-guide-list"><article><span>01</span><div><h3>無明顯髒污</h3><p>可用吸塵器清除表面的灰塵或皮屑。</p></div></article><article><span>02</span><div><h3>有局部污跡</h3><p>可用濕布沾少許肥皂，溫和地輕輕清潔。</p></div></article><article><span>03</span><div><h3>枕芯特殊材質</h3><p>勿機洗，避免直接曝曬於太陽下，或以高溫方式處理。</p></div></article><article className="wash-cover"><span>04</span><div><h3>防護布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗；勿烘乾及漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article><article className="wash-cover cbd"><span>05</span><div><h3>CBD 外布套</h3><p className="wash-instruction-lines"><span>可水洗、可乾洗、可低溫烘乾；勿漂白。</span><span>浸泡時間請勿超過 30 分鐘，建議放入大型洗衣袋後再清洗，並以低溫熨燙。</span></p></div></article></div></div>
         <p className="care-source-note">以上內容依品牌提供之洗滌說明整理。若商品洗標、材質標示或原廠文件另有規定，請優先依實際商品標示操作。</p>
       </section>
 
-      <section className="stores" id="stores"><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
+      <section className="stores" id="stores"><div className="section-label"><span>08</span><p>IN-STORE EXPERIENCE</p></div><div className="stores-copy"><h2>枕頭合不合適，<br />躺過才知道。</h2><p className="store-intro-lines"><span>每個人的肩寬、睡姿、床墊軟硬與習慣都不同。</span><span>歡迎至上品寢具門市親自試躺，由專業人員陪你找到更適合自己的枕頭高度與睡感。</span></p><div className="store-action-row"><button className="button primary store-list-trigger" type="button" onClick={openStoreDirectory} aria-haspopup="dialog" aria-controls="store-directory-dialog">查看全台門市 <span>↗</span></button><button className="button partner-trigger" type="button" onClick={openPartnerContact} aria-haspopup="dialog" aria-controls="partner-contact-dialog">專人接洽 <span>↗</span></button></div><aside className="partner-invite"><small>PARTNERSHIP</small><h3>誠徵合作夥伴</h3><p>歡迎設計旅宿、健康生活通路、醫療院所及企業禮贈合作，與 GLORY 一起把更好的睡眠體驗帶進更多日常場景。</p></aside></div><div className="stores-stamp"><strong>15</strong><span>MINUTES</span><p>一對一睡感相談<br />仰睡・側睡實際感受</p></div></section>
 
       {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>

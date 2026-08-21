@@ -240,14 +240,16 @@ test("uses the requested navigation architecture without duplicating section anc
 
   const orderedSectionLabels = [
     ['01', 'INTRODUCTION TO CANNABIDIOL'],
-    ['02', 'TESTING &amp; TEXTILE TECHNOLOGY'],
+    ['02', 'CLINICAL SLEEP RESEARCH'],
     ['03', 'CBD SLEEP COLLECTION'],
+    ['04', 'SLEEP TECHNOLOGY'],
     ['04', 'MATERIAL &amp; STRUCTURE'],
-    ['05', 'SEAGULL CONTOUR DESIGN'],
-    ['06', 'BRAND AMBASSADOR'],
-    ['07', 'REAL SLEEP STORIES'],
-    ['08', 'PRESS &amp; NEWS'],
-    ['09', 'CARE GUIDE'],
+    ['04', 'SEAGULL CONTOUR DESIGN'],
+    ['05', 'BRAND AMBASSADOR'],
+    ['06', 'REAL SLEEP STORIES'],
+    ['07', 'PRESS &amp; NEWS'],
+    ['08', 'CARE GUIDE'],
+    ['08', 'IN-STORE EXPERIENCE'],
   ];
   let previousLabelIndex = -1;
   for (const [number, label] of orderedSectionLabels) {
