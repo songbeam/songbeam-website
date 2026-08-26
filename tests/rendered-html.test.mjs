@@ -355,6 +355,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /hydrophilic-title-lines/);
   assert.match(source, /const hydrophilicType = item\.name\.endsWith\("止鼾枕"\) \? "止鼾枕" : "海鷗枕"/);
   assert.match(source, /selectedSeriesItemIndex/);
+  assert.match(source, /cbd-double-layer-protector-set-2026\.png/);
+  assert.match(source, /cbd-pet-comfort-mat-quilt-2026\.png/);
+  assert.match(source, /pet-comfort-series-image/);
   for (const name of [
     "CBD 草本忘憂好眠寢具 天絲枕",
     "CBD 草本忘憂好眠寢具 羽絨枕",

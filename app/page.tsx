@@ -349,7 +349,7 @@ const protectorSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 雙層平面保潔墊（保潔墊＋枕套）",
     en: "DOUBLE-LAYER PROTECTOR SET",
-    image: "/cbd-sleep-collection-protector-card-clean.jpg",
+    image: "/cbd-double-layer-protector-set-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -366,7 +366,7 @@ const protectorSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 毛小孩安撫墊被",
     en: "PET COMFORT MAT QUILT",
-    image: "/cbd-pet-comfort-mat-quilt.png",
+    image: "/cbd-pet-comfort-mat-quilt-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -615,7 +615,7 @@ export default function Home() {
       {selectedSeriesItem ? <div className="product-modal-backdrop pillow-detail-layer" onMouseDown={() => setSelectedSeriesItemIndex(null)}>
         <section className="product-modal pillow-series-detail pillow-series-expanded" role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="返回產品系列" onClick={() => setSelectedSeriesItemIndex(null)} autoFocus>←</button>
-          <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
+          <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex} ${selectedSeriesItem.en === "PET COMFORT MAT QUILT" ? "pet-comfort-series-image" : ""}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
           <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name.includes("好眠親水枕") ? "hydrophilic-title-lines" : ""}`}>{selectedSeriesItem.name.includes("好眠親水枕") ? <><span>CBD 草本忘憂好眠寢具 好眠親水枕</span><span>{selectedSeriesItem.name.endsWith("止鼾枕") ? "止鼾枕" : "海鷗枕"}</span></> : selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}
