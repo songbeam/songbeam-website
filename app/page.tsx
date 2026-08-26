@@ -468,7 +468,6 @@ const stores = [
   { name: "惠中館", address: "台中市西屯區惠中路二段 43 號", tags: ["可刷卡", "停車場", "國旅卡"] },
   { name: "大里館", address: "台中市大里區國光路二段 711 號", tags: ["可刷卡", "國旅卡"] },
   { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", tags: ["可刷卡", "國旅卡"] },
-  { name: "田中館", address: "彰化縣田中鎮新福路 43 號", tags: ["可刷卡"] },
   { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", tags: ["可刷卡", "國旅卡"] },
   {
     name: "台中榮總",
@@ -478,12 +477,34 @@ const stores = [
   },
 ];
 
+const dealers = [
+  { name: "律倫企業有限公司", displayName: "律倫企業有限公司", address: "臺北市中山區大佳里松江路523號", tags: ["經銷商"] },
+  { name: "康裕網路行銷有限公司(茉莉床單)", displayName: "康裕網路行銷有限公司(茉莉床單)", address: "臺北市士林區天祿里士東路91巷17號1樓", tags: ["經銷商"] },
+  { name: "亞梭傢俬國際股份有限公司－新光A8", displayName: "亞梭傢俬國際股份有限公司", address: "臺北市信義區西村里松高路12號6樓 (新光A8)", tags: ["經銷商"] },
+  { name: "亞梭傢俬國際股份有限公司－大巨蛋", displayName: "亞梭傢俬國際股份有限公司", address: "臺北市信義區新仁里忠孝東路四段505號 5F(大巨蛋)", tags: ["經銷商"] },
+  { name: "璽品屋國際有限公司", displayName: "璽品屋國際有限公司", address: "臺北市中正區文北里仁愛路二段34-1號1樓", tags: ["經銷商"] },
+  { name: "貝里恩有限公司", displayName: "貝里恩有限公司", address: "新北市淡水區協元里中山路176號1樓", tags: ["經銷商"] },
+  { name: "家禾傢俱行(睡眠工藝)", displayName: "家禾傢俱行(睡眠工藝)", address: "新北市中和區中正路866-9號1樓", tags: ["經銷商"] },
+  { name: "亞梭傢俬國際股份有限公司－新竹巨城", displayName: "亞梭傢俬國際股份有限公司", address: "新竹市東區復中里中央路239號號5樓(新竹巨城)", tags: ["經銷商"] },
+  { name: "東城精品寢飾生活館", displayName: "東城精品寢飾生活館", address: "臺中市沙鹿區鹿寮里福星路6號", tags: ["經銷商"] },
+  { name: "愛豐健康股份有限公司", displayName: "愛豐健康股份有限公司", address: "臺中市豐原區東勢里中興路61號", tags: ["經銷商"] },
+  { name: "名坊生活館(上品田中館)", displayName: "名坊生活館(上品田中館)", address: "彰化縣田中鎮北路里新福路43號", tags: ["經銷商"] },
+  { name: "美閣典藏家具行", displayName: "美閣典藏家具行", address: "嘉義市西區世賢路一段334號", tags: ["經銷商"] },
+  { name: "台南文化店  荷蘭英黛爾", displayName: "台南文化店  荷蘭英黛爾", address: "臺南市東區忠孝里崇明路286號", tags: ["經銷商"] },
+  { name: "雅茲寢飾生活館", displayName: "雅茲寢飾生活館", address: "高雄市小港區六苓里漢民路686號", tags: ["經銷商"] },
+  { name: "御鋒木器行(御鋒家具)", displayName: "御鋒木器行(御鋒家具)", address: "宜蘭縣冬山鄉群英村冬山路三段338號", tags: ["經銷商"] },
+  { name: "薇閣寢飾行", displayName: "薇閣寢飾行", address: "宜蘭縣羅東鎮賢文里忠孝路101號", tags: ["經銷商"] },
+];
+
 const storeGroups = [
-  { name: "北部地區", en: "NORTH", stores: stores.filter((store) => /台北市|新北市|基隆市|桃園市|新竹/.test(store.address)) },
-  { name: "中部地區", en: "CENTRAL", stores: stores.filter((store) => /苗栗|台中市|彰化|南投|雲林/.test(store.address) && store.name !== "台中榮總") },
-  { name: "南部地區", en: "SOUTH", stores: stores.filter((store) => /嘉義|台南|高雄|屏東/.test(store.address)) },
+  { name: "北部地區", en: "NORTH", stores: [...stores, ...dealers].filter((store) => /台北市|臺北市|新北市|基隆市|桃園市|新竹/.test(store.address)) },
+  { name: "中部地區", en: "CENTRAL", stores: [...stores, ...dealers].filter((store) => /苗栗|台中市|臺中市|彰化|南投|雲林/.test(store.address) && store.name !== "台中榮總") },
+  { name: "南部地區", en: "SOUTH", stores: [...stores, ...dealers].filter((store) => /嘉義|台南|臺南|高雄|屏東/.test(store.address)) },
+  { name: "東部地區", en: "EAST", stores: dealers.filter((store) => /宜蘭|花蓮|臺東|台東/.test(store.address)) },
   { name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: stores.filter((store) => store.name === "台中榮總") },
 ];
+
+const storeLocationCount = storeGroups.reduce((count, group) => count + group.stores.length, 0);
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -702,7 +723,7 @@ export default function Home() {
       {storeModalOpen ? <div className="product-modal-backdrop store-modal-backdrop" onMouseDown={() => setStoreModalOpen(false)}>
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
-          <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 12 處門市與專櫃，歡迎於前往前確認營業時間與試躺服務。</p></header>
+          <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 {storeLocationCount} 處門市、專櫃與經銷據點，歡迎於前往前確認營業時間與試躺服務。</p></header>
           <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
           <footer className="store-modal-footer"><p>門市資料依上品寢具官方網站目前刊載內容整理。</p></footer>
         </section>
