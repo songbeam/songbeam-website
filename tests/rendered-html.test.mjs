@@ -355,6 +355,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /hydrophilic-title-lines/);
   assert.match(source, /const hydrophilicType = item\.name\.endsWith\("止鼾枕"\) \? "止鼾枕" : "海鷗枕"/);
   assert.match(source, /selectedSeriesItemIndex/);
+  assert.match(source, /cbd-tencel-pillow-2026\.png/);
+  assert.match(source, /cbd-down-pillow-2026\.png/);
+  assert.match(source, /cbd-sleep-cloud-pillow-2026\.png/);
   assert.match(source, /cbd-double-layer-protector-set-2026\.png/);
   assert.match(source, /cbd-pet-comfort-mat-quilt-2026\.png/);
   assert.match(source, /pet-comfort-series-image/);
@@ -391,7 +394,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "90% 天然羽毛＋10% 天然羽絨",
     "重量：1.2 kg",
     "羽毛絨可隨溫度變化自然收縮膨脹",
-    "cbd-down-pillow-bedroom.png",
+    "cbd-down-pillow-2026.png",
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
@@ -409,7 +412,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "GLORY 獨家專利「Tempwiser 親水棉」",
     "正睡、側睡，都能完美支撐",
     "接觸空氣後會產生泛黃狀況",
-    "cbd-sleep-cloud-pillow-bedroom.png",
+    "cbd-sleep-cloud-pillow-2026.png",
   ]) assert.match(source, new RegExp(detail));
   for (const detail of [
     "獨家比利時萃取微膠囊技術",

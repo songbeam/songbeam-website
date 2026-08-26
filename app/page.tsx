@@ -140,7 +140,7 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 天絲枕",
     en: "TENCEL PILLOW",
-    image: "/sleep-concerns-cbd-pillow-wide.png",
+    image: "/cbd-tencel-pillow-2026.png",
     statement: "30% 天絲＋70% 聚酯纖維，立體邊設計，表布鋪棉。",
     detail: "100% 純棉表布、天絲親膚纖維，親膚抑菌抗敏。",
     highlights: ["睡感偏軟", "包覆性佳", "枕型飽滿，高度適中"],
@@ -155,7 +155,7 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 羽絨枕",
     en: "DOWN PILLOW",
-    image: "/cbd-down-pillow-bedroom.png",
+    image: "/cbd-down-pillow-2026.png",
     statement: "睡感軟硬適中，枕型飽滿，支撐性高。",
     detail: "羽絨枕芯表布為緹花樣式，每批花色不同。",
     highlights: [
@@ -175,7 +175,7 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 好眠雲朵枕",
     en: "SLEEP CLOUD PILLOW",
-    image: "/cbd-sleep-cloud-pillow-bedroom.png",
+    image: "/cbd-sleep-cloud-pillow-2026.png",
     statement: "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
     detail: "保有親水記憶枕支撐性佳、服貼肩頸的特性，同時擁有羽絨枕的可塑性與纖維枕的蓬鬆感。",
     highlights: [
