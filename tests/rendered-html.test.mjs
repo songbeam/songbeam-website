@@ -281,6 +281,7 @@ test("defines the official store directory dialog", async () => {
   for (const dealer of dealerNames) assert.ok(source.includes(dealer), `${dealer} should be listed as a dealer`);
   assert.equal((source.match(/tags: \["經銷商"\]/g) || []).length, 16);
   assert.doesNotMatch(source, /聯絡方式|02-25023383|0968-139507/);
+  assert.doesNotMatch(source, /門市資料依上品寢具官方網站目前刊載內容整理/);
   assert.doesNotMatch(source, /songbeam\.com\.tw\/v2\/Shop\/StoreList\/38775|查看官方門市頁/);
   assert.doesNotMatch(source, /預約門市體驗/);
 });
