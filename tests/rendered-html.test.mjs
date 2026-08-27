@@ -401,16 +401,18 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /cbd-tempwiser-seagull-pillow-2026\.png/);
   assert.match(source, /cbd-tempwiser-anti-snore-pillow-2026\.png/);
   assert.match(source, /cbd-seagull-pressure-relief-pillow-2026\.png/);
-  assert.match(source, /cbd-seagull-spine-support-pillow-2026\.png/);
+  assert.match(source, /cbd-seagull-spine-support-pillow-2026-v2\.png/);
   assert.match(source, /cbd-travel-pillowcase-2026\.png/);
   assert.match(source, /cbd-sleep-eye-mask-2026\.png/);
   assert.match(source, /cbd-travel-neck-pillow-2026\.png/);
   assert.match(source, /cbd-travel-sleep-set-2026\.png/);
   assert.match(source, /en: "TRAVEL PILLOWCASE"/);
+  assert.match(source, /down-pillow-series-image/);
   assert.match(source, /className="product-modal pillow-series-detail pillow-series-expanded"/);
   assert.doesNotMatch(source, /selectedProductIndex === 0 \? "pillow-series-expanded"/);
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
+  assert.match(styles, /\.down-pillow-series-image\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.shop-product-card:first-child[^{]*\{[^}]*object-fit:contain/);
   assert.match(styles, /\.shop-product-info strong\{[^}]*font-size:10pt/);
@@ -438,7 +440,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
   for (const detail of [
     "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     "護脊枕」為商品系列名稱",
-    "cbd-seagull-spine-support-pillow-2026.png",
+    "cbd-seagull-spine-support-pillow-2026-v2.png",
   ]) assert.match(source, new RegExp(detail));
 });
 

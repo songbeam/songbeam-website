@@ -610,6 +610,7 @@
 .pillow-catalog-copy b{color:#a78b72;font-size:15px;font-weight:400}
 .pillow-detail-layer{z-index:1010;background:rgba(49,56,52,.68)}
 .pillow-series-image{object-position:center}
+.down-pillow-series-image{box-sizing:border-box;object-fit:contain;object-position:center;padding:clamp(12px,2.3vw,30px);background:linear-gradient(145deg,#dfe6dd,#e9ede7)}
 .pet-comfort-series-image{object-fit:cover;object-position:50% 50%}
 .pillow-series-expanded{width:min(1240px,100%);grid-template-columns:43% 57%}
 .pillow-series-expanded .product-modal-visual{min-height:760px}
