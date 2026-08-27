@@ -374,7 +374,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD 草本忘憂好眠寢具 好眠 長纖細棉 床包",
     "CBD 草本忘憂好眠寢具 雙層平面保潔墊（保潔墊＋枕套）",
     "CBD 草本忘憂好眠寢具 毛小孩安撫墊被",
-    "CBD 草本忘憂好眠寢具 信封式枕頭套",
+    "CBD 草本忘憂好眠寢具 旅行隨身枕頭套",
     "CBD 草本忘憂好眠寢具 好眠眼罩",
     "CBD 草本忘憂好眠寢具 旅行好眠頸枕",
     "CBD 草本忘憂好眠寢具 好眠旅行組",
@@ -401,6 +401,12 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /cbd-tempwiser-seagull-pillow-2026\.png/);
   assert.match(source, /cbd-tempwiser-anti-snore-pillow-2026\.png/);
   assert.match(source, /cbd-seagull-pressure-relief-pillow-2026\.png/);
+  assert.match(source, /cbd-seagull-spine-support-pillow-2026\.png/);
+  assert.match(source, /cbd-travel-pillowcase-2026\.png/);
+  assert.match(source, /cbd-sleep-eye-mask-2026\.png/);
+  assert.match(source, /cbd-travel-neck-pillow-2026\.png/);
+  assert.match(source, /cbd-travel-sleep-set-2026\.png/);
+  assert.match(source, /en: "TRAVEL PILLOWCASE"/);
   assert.match(source, /className="product-modal pillow-series-detail pillow-series-expanded"/);
   assert.doesNotMatch(source, /selectedProductIndex === 0 \? "pillow-series-expanded"/);
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
@@ -432,7 +438,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
   for (const detail of [
     "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     "護脊枕」為商品系列名稱",
-    "cbd-seagull-spine-support-pillow-bedroom.png",
+    "cbd-seagull-spine-support-pillow-2026.png",
   ]) assert.match(source, new RegExp(detail));
 });
 

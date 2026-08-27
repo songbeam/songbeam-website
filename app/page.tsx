@@ -256,7 +256,7 @@ const pillowSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     en: "SEAGULL SPINE-SUPPORT PILLOW",
-    image: "/cbd-seagull-spine-support-pillow-bedroom.png",
+    image: "/cbd-seagull-spine-support-pillow-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -384,9 +384,9 @@ const protectorSeries: SeriesProduct[] = [
 
 const travelSeries: SeriesProduct[] = [
   {
-    name: "CBD 草本忘憂好眠寢具 信封式枕頭套",
-    en: "ENVELOPE PILLOWCASE",
-    image: "/cbd-envelope-pillowcase-bedroom.png",
+    name: "CBD 草本忘憂好眠寢具 旅行隨身枕頭套",
+    en: "TRAVEL PILLOWCASE",
+    image: "/cbd-travel-pillowcase-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -405,7 +405,7 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 好眠眼罩",
     en: "SLEEP EYE MASK",
-    image: "/cbd-sleep-eye-mask-bedroom.png",
+    image: "/cbd-sleep-eye-mask-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -423,7 +423,7 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 旅行好眠頸枕",
     en: "TRAVEL NECK PILLOW",
-    image: "/cbd-travel-neck-pillow-bedroom.png",
+    image: "/cbd-travel-neck-pillow-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
@@ -441,7 +441,7 @@ const travelSeries: SeriesProduct[] = [
   {
     name: "CBD 草本忘憂好眠寢具 好眠旅行組",
     en: "TRAVEL SLEEP SET",
-    image: "/cbd-travel-sleep-set-bedroom.png",
+    image: "/cbd-travel-sleep-set-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
     detail: "將 CBD 成分提煉至微膠囊分子，編織進纖維；睡眠時，表布會緩慢且持續釋放出微量的 CBD 油。",
     highlights: [
