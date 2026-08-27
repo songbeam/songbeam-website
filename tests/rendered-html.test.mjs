@@ -352,8 +352,8 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /查看商品連結/);
   assert.match(source, /pillow-catalog-modal/);
   assert.match(source, /titleClass: "pillow-catalog-title-nowrap"/);
-  assert.match(source, /hydrophilic-title-lines/);
-  assert.match(source, /const hydrophilicType = item\.name\.endsWith\("止鼾枕"\) \? "止鼾枕" : "海鷗枕"/);
+  assert.match(source, /tempwiser-catalog-title/);
+  assert.match(source, /tempwiser-title-nowrap/);
   assert.match(source, /selectedSeriesItemIndex/);
   assert.match(source, /cbd-tencel-pillow-2026\.png/);
   assert.match(source, /cbd-down-pillow-2026\.png/);
@@ -365,8 +365,8 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD 草本忘憂好眠寢具 天絲枕",
     "CBD 草本忘憂好眠寢具 羽絨枕",
     "CBD 草本忘憂好眠寢具 好眠雲朵枕",
-    "CBD 草本忘憂好眠寢具 好眠親水枕 海鷗枕",
-    "CBD 草本忘憂好眠寢具 好眠親水枕 止鼾枕",
+    "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 海鷗枕",
+    "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 止鼾枕",
     "CBD 草本忘憂好眠寢具 海鷗減壓枕",
     "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     "CBD 草本忘憂好眠寢具 好眠 長纖細棉 涼被",
@@ -398,6 +398,9 @@ test("defines the two-step CBD product collection dialogs", async () => {
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
+  assert.match(source, /cbd-tempwiser-seagull-pillow-2026\.png/);
+  assert.match(source, /cbd-tempwiser-anti-snore-pillow-2026\.png/);
+  assert.match(source, /cbd-seagull-pressure-relief-pillow-2026\.png/);
   assert.match(source, /className="product-modal pillow-series-detail pillow-series-expanded"/);
   assert.doesNotMatch(source, /selectedProductIndex === 0 \? "pillow-series-expanded"/);
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");

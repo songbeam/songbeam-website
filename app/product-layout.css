@@ -605,6 +605,7 @@
 .pillow-catalog-copy strong{margin:8px 0 18px;color:#586d76;font-size:16px;line-height:1.75;letter-spacing:.05em;font-weight:500}
 .hydrophilic-title-lines span{display:block;white-space:nowrap}
 .pillow-catalog-copy .hydrophilic-title-lines{font-size:14px;letter-spacing:.015em}
+.pillow-catalog-copy .tempwiser-catalog-title{font-size:14px;letter-spacing:.01em;line-height:1.55}
 .pillow-catalog-copy em{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:13px;border-top:1px solid rgba(89,108,116,.14);color:#687a80;font:10pt "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.08em;font-style:normal}
 .pillow-catalog-copy b{color:#a78b72;font-size:15px;font-weight:400}
 .pillow-detail-layer{z-index:1010;background:rgba(49,56,52,.68)}
@@ -617,6 +618,7 @@
   white-space:nowrap;font-size:clamp(28px,3vw,46px)!important;letter-spacing:.045em!important;
 }
 .pillow-series-title-long{font-size:clamp(18px,1.8vw,28px)!important;letter-spacing:.015em!important}
+.pillow-series-copy .tempwiser-title-nowrap{white-space:nowrap!important;font-size:clamp(16px,1.55vw,24px)!important;letter-spacing:.005em!important}
 .pillow-feature-details{margin-top:28px;padding:25px 26px 21px;border-radius:5px 28px;background:rgba(255,255,255,.45)}
 .pillow-feature-details>small{color:#a28672;font:10pt Arial,sans-serif;letter-spacing:.22em}
 .pillow-feature-details h3{margin:8px 0 14px;color:#5d7279;font-size:17px;font-weight:500;letter-spacing:.055em}
@@ -1656,6 +1658,7 @@ footer{background:#d4e0d2}
   .product-modal,.pillow-catalog-modal,.store-modal,.partner-modal{width:100%;max-width:100vw}
   .product-modal-copy,.pillow-series-copy,.store-modal-heading,.store-modal-grid article{min-width:0;max-width:100%}
   .pillow-series-title-nowrap,.pillow-series-title-nowrap span,.hydrophilic-title-lines span,.care-title-lines span,.care-intro-lines span,.wash-instruction-lines span,.store-intro-lines span,.partner-invite p{white-space:normal}
+  .pillow-series-copy .tempwiser-title-nowrap{white-space:nowrap!important;font-size:10pt!important;letter-spacing:-.025em!important}
   .collection-head .collection-eyebrow-nowrap,.cbd-textile-title-nowrap,.structure-title-nowrap,.safety-title-nowrap{white-space:normal}
   .feature-heading .cbd-intro-title-nowrap{white-space:normal;font-size:clamp(24px,7.25vw,32px);line-height:1.55}
   .testimonial-heading .testimonial-title-nowrap{font-size:clamp(13.32px,4.6vw,20px);letter-spacing:.025em}
