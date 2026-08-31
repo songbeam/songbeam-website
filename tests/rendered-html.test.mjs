@@ -356,7 +356,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /tempwiser-title-nowrap/);
   assert.match(source, /selectedSeriesItemIndex/);
   assert.match(source, /cbd-tencel-pillow-2026\.png/);
-  assert.match(source, /cbd-down-pillow-2026\.png/);
+  assert.match(source, /cbd-down-pillow-2026-v2\.png/);
   assert.match(source, /cbd-sleep-cloud-pillow-2026\.png/);
   assert.match(source, /cbd-double-layer-protector-set-2026\.png/);
   assert.match(source, /cbd-pet-comfort-mat-quilt-2026\.png/);
@@ -394,7 +394,7 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "90% 天然羽毛＋10% 天然羽絨",
     "重量：1.2 kg",
     "羽毛絨可隨溫度變化自然收縮膨脹",
-    "cbd-down-pillow-2026.png",
+    "cbd-down-pillow-2026-v2.png",
   ]) assert.match(source, new RegExp(detail));
   assert.match(source, /pillow-series-expanded/);
   assert.match(source, /pillow-series-title-nowrap/);
@@ -407,15 +407,13 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(source, /cbd-travel-neck-pillow-2026\.png/);
   assert.match(source, /cbd-travel-sleep-set-2026\.png/);
   assert.match(source, /en: "TRAVEL PILLOWCASE"/);
-  assert.match(source, /down-pillow-series-image/);
-  assert.match(source, /down-pillow-backdrop/);
-  assert.match(source, /down-pillow-visual/);
+  assert.doesNotMatch(source, /down-pillow-(?:series-image|backdrop|visual)/);
   assert.match(source, /className="product-modal pillow-series-detail pillow-series-expanded"/);
   assert.doesNotMatch(source, /selectedProductIndex === 0 \? "pillow-series-expanded"/);
   const styles = await readFile(new URL("../app/product-layout.css", import.meta.url), "utf8");
   assert.doesNotMatch(styles, /\.pillow-series-image-3\s*\{[^}]*object-fit:contain/);
-  assert.match(styles, /\.down-pillow-series-image\{[^}]*object-fit:contain/);
-  assert.match(styles, /\.down-pillow-backdrop\{[^}]*filter:blur\(28px\)/);
+  assert.doesNotMatch(styles, /\.down-pillow-/);
+  assert.match(styles, /\.product-modal-image\{[^}]*object-fit:cover/);
   assert.doesNotMatch(styles, /\.pillow-catalog-card:nth-child\(4\)[^{]*\{[^}]*object-fit:contain/);
   assert.doesNotMatch(styles, /\.shop-product-card:first-child[^{]*\{[^}]*object-fit:contain/);
   assert.match(styles, /\.shop-product-info strong\{[^}]*font-size:10pt/);
