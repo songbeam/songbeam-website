@@ -38,6 +38,26 @@ const newsItems = [
   },
 ] as const;
 
+const ambassadorFilms = [
+  {
+    number: "01",
+    label: "品牌篇",
+    en: "THE BRAND STORY",
+    title: "品質很重要，沒有錯。\n但是品格，也非常重要。",
+    video: "/wu-ruo-quan-brand-film-01.mp4",
+    paragraphs: [
+      "若權老師和上品的緣分，是從一場廣播專訪開始的。",
+      "那時候他還不是代言人，只是節目裡認識了品牌經營者、也認識了產品的主持人。第一次拿到 CBD 草本忘憂枕，他心裡想的是「好佛心來的」——因為他長期做個人諮詢與輔導，太多個案告訴他，睡覺對他們來說是一件有壓力的事。",
+      "三年之後，上品的執行長來問他，有沒有機會可以合作代言。",
+      "他說他下了很大的決心。代言一個產品，是對自己責任的要求，是對品牌深刻的期許，也是對消費者最大的保障。",
+      "「基於這三個原因的考慮，我覺得非常的榮幸。」",
+    ],
+    closing: "而他拿回家的第一顆枕頭，是給媽媽的。",
+  },
+] as const;
+
+const ambassadorFilmTotal = 3;
+
 const testimonials = [
   {
     name: "林小姐",
@@ -513,6 +533,7 @@ export default function Home() {
   const [selectedTestimonialIndex, setSelectedTestimonialIndex] = useState<number | null>(null);
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [selectedSeriesItemIndex, setSelectedSeriesItemIndex] = useState<number | null>(null);
+  const [selectedAmbassadorFilmIndex, setSelectedAmbassadorFilmIndex] = useState(0);
   const selectedProduct = selectedProductIndex === null ? null : collectionProducts[selectedProductIndex];
   const catalogConfig = selectedProductIndex === 0
     ? { en: "CBD PILLOW COLLECTION", title: "CBD 草本忘憂好眠寢具枕頭系列", titleClass: "pillow-catalog-title-nowrap", copy: "從材質觸感到枕型支撐，選擇一款枕頭查看產品介紹。", items: pillowSeries }
@@ -523,6 +544,7 @@ export default function Home() {
         : null;
   const selectedSeriesItem = selectedSeriesItemIndex === null ? null : catalogConfig?.items[selectedSeriesItemIndex] ?? null;
   const selectedTestimonial = selectedTestimonialIndex === null ? null : testimonials[selectedTestimonialIndex];
+  const selectedAmbassadorFilm = ambassadorFilms[selectedAmbassadorFilmIndex];
   const closeMenu = () => setMenuOpen(false);
   const closeProductModal = () => {
     setSelectedSeriesItemIndex(null);
@@ -689,11 +711,28 @@ export default function Home() {
 
       <section className="endorsement-section section" id="endorsements">
         <div className="section-label"><span>05</span><p>BRAND AMBASSADOR</p></div>
-        <div className="endorsement-intro"><div><p className="eyebrow">品牌代言</p><h2>從好好睡一晚，<br /><span className="endorsement-title-nowrap">開始好好照顧自己。</span></h2></div></div>
-        <div className="endorsement-grid">
-          <article className="ambassador-profile-card"><figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure><div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p></div></article>
-          <article className="ambassador-reason-card"><div><small>WHY GLORY</small><h3>學會放鬆，<br />是送給自己最溫柔的禮物</h3><div className="ambassador-message"><p>年輕的時候，我們總以為人生最重要的是努力。努力工作、努力追求目標、努力成為更好的自己。直到走過更多人生階段才發現，真正重要的，不只是向前奔跑的能力，更必須是懂得在適當的時候停下來，好好照顧自己。</p><p>現代人的生活充滿各種壓力。工作上的責任、家庭中的角色、人際之間的期待，讓我們的大腦即使到了深夜，依然停不下來。許多人真的很想睡，但偏偏就是無法真正放鬆。身體躺下了，思緒卻還在忙碌。於是，睡眠變成一件需要學習的事情。</p><p>我一直相信，每個人都應該為自己保留一段安靜的時間。也許，是一杯溫熱的茶、一段輕柔的音樂，或是一個能讓身心逐漸沉澱的睡眠儀式。因為真正的休息，是閉上眼睛的同時，心也能慢慢安靜下來。當我們願意重視睡眠，其實是在重視自己的生活品質；當我們願意創造舒適放鬆的睡眠環境，也是在告訴自己：辛苦了一整天，值得好好被照顧。</p><p>成熟之後才明白：幸福，不是擁有更多；而是懂得善待自己。讓身體放鬆，讓情緒安定，讓每一個夜晚都成為重新充電的開始。因為每一次安心入睡，都是送給未來的自己，一份最溫柔的禮物。</p></div><blockquote>「幸福，是懂得在忙碌之後，好好放鬆自己。」</blockquote></div></article>
+        <div className="endorsement-intro"><div><p className="eyebrow">吳若權・品牌代言三部曲</p><h2>一段合作的開始，<br /><span className="endorsement-title-nowrap">從相信彼此的品格開始。</span></h2></div><p>三支影片，三段關於品牌、睡眠與陪伴的故事。跟著若權老師的視角，慢慢認識上品寢具。</p></div>
+        <article className="ambassador-profile-strip">
+          <figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure>
+          <div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong></div>
+          <p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p>
+        </article>
+        <div className="ambassador-film-layout">
+          <div className="ambassador-film-stage">
+            <header><span>FILM {selectedAmbassadorFilm.number}</span><p>{selectedAmbassadorFilm.en}</p><strong>{selectedAmbassadorFilm.number} / {String(ambassadorFilmTotal).padStart(2, "0")}</strong></header>
+            <video key={selectedAmbassadorFilm.video} controls playsInline preload="metadata" aria-label={`吳若權品牌代言${selectedAmbassadorFilm.label}影片`}>
+              <source src={selectedAmbassadorFilm.video} type="video/mp4" />
+              您的瀏覽器不支援影片播放。
+            </video>
+          </div>
+          <article className="ambassador-film-copy">
+            <small>{selectedAmbassadorFilm.label}・FILM {selectedAmbassadorFilm.number}</small>
+            <h3>{selectedAmbassadorFilm.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3>
+            <div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            <blockquote>{selectedAmbassadorFilm.closing}</blockquote>
+          </article>
         </div>
+        {ambassadorFilms.length > 1 ? <nav className="ambassador-film-tabs" aria-label="品牌代言影片選擇">{ambassadorFilms.map((film, index) => <button type="button" className={selectedAmbassadorFilmIndex === index ? "active" : ""} key={film.number} onClick={() => setSelectedAmbassadorFilmIndex(index)} aria-pressed={selectedAmbassadorFilmIndex === index}><span>{film.number}</span><strong>{film.label}</strong></button>)}</nav> : null}
       </section>
 
       <section className="testimonial-section section" id="testimonials">

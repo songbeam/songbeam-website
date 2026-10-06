@@ -105,6 +105,100 @@
   .emotion-editorial figcaption{right:17px;bottom:16px;font-size:10pt}
 }
 
+/* Brand ambassador film trilogy. */
+.endorsement-section{padding-top:150px;padding-bottom:170px}
+.endorsement-intro{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.55fr);gap:7vw;
+  align-items:end;margin:54px 0 58px;
+}
+.endorsement-intro>p{
+  max-width:430px;margin:0 0 13px;color:#60766b;font-size:14px;line-height:2;
+  letter-spacing:.035em;
+}
+.ambassador-profile-strip{
+  position:relative;z-index:2;display:grid;grid-template-columns:112px minmax(260px,.75fr) minmax(300px,1fr);
+  gap:28px;align-items:center;margin:0 0 28px;padding:22px 32px 22px 22px;
+  border:1px solid rgba(255,255,255,.72);border-radius:5px 42px 5px 5px;
+  background:rgba(247,248,241,.66);box-shadow:0 22px 60px rgba(50,78,64,.08);
+  backdrop-filter:blur(12px);
+}
+.ambassador-profile-strip .endorsement-portrait{width:112px;height:128px;border-radius:48% 48% 5px 5px / 28% 28% 5px 5px}
+.ambassador-profile-strip small,.ambassador-film-copy>small{
+  color:#9a8069;font:10pt Arial,"Noto Sans TC",sans-serif;letter-spacing:.19em;
+}
+.ambassador-profile-strip h3{margin:6px 0 4px;color:#4d685c;font-size:25px;font-weight:500;letter-spacing:.08em}
+.ambassador-profile-strip strong{display:block;color:#687d73;font-size:10pt;line-height:1.7;font-weight:600;letter-spacing:.04em}
+.ambassador-profile-strip .ambassador-title-lines span{display:block}
+.ambassador-profile-strip>p{margin:0;padding-left:30px;border-left:1px solid rgba(74,108,89,.19);color:#64786f;font-size:10pt;line-height:2}
+.ambassador-film-layout{
+  position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.34fr) minmax(390px,.66fr);
+  gap:28px;align-items:start;
+}
+.ambassador-film-stage{
+  position:sticky;top:116px;overflow:hidden;border:1px solid rgba(255,255,255,.62);
+  border-radius:5px 56px 5px 5px;background:#29463a;
+  box-shadow:0 30px 80px rgba(35,64,50,.2);
+}
+.ambassador-film-stage header{
+  display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
+  min-height:74px;padding:17px 23px;color:#edf3e9;border-bottom:1px solid rgba(255,255,255,.13);
+}
+.ambassador-film-stage header span,.ambassador-film-stage header strong{font:10pt Arial,sans-serif;letter-spacing:.18em}
+.ambassador-film-stage header p{margin:0;color:#c9d6cc;font:10pt Arial,sans-serif;letter-spacing:.2em;font-weight:500}
+.ambassador-film-stage header strong{color:#d6bfa0;font-weight:500}
+.ambassador-film-stage video{display:block;width:100%;aspect-ratio:16/9;background:#17251f;object-fit:contain}
+.ambassador-film-copy{
+  padding:48px 44px 44px;border:1px solid rgba(255,255,255,.78);border-radius:42px 5px 42px 5px;
+  background:linear-gradient(145deg,rgba(251,249,243,.94),rgba(229,237,225,.9));
+  box-shadow:0 24px 65px rgba(50,78,64,.11);
+}
+.ambassador-film-copy h3{
+  margin:18px 0 31px;color:#435f53;font-size:clamp(25px,2.4vw,35px);font-weight:500;
+  line-height:1.65;letter-spacing:.035em;
+}
+.ambassador-film-copy h3 span{display:block}
+.ambassador-film-story{display:grid;gap:20px}
+.ambassador-film-story p{margin:0;color:#34443d;font-size:15px;line-height:2.05;letter-spacing:.015em}
+.ambassador-film-story p:first-child{font-size:17px;font-weight:700;color:#30453b}
+.ambassador-film-copy blockquote{
+  margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(80,116,96,.22);
+  color:#3e7b6f;font-size:17px;font-weight:700;line-height:1.9;letter-spacing:.04em;
+}
+.ambassador-film-tabs{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.ambassador-film-tabs button{
+  display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:center;padding:16px 18px;text-align:left;
+  border:1px solid rgba(67,99,82,.18);border-radius:3px;background:rgba(248,248,241,.55);color:#667a70;cursor:pointer;
+}
+.ambassador-film-tabs button.active{border-color:#a68c6f;background:rgba(251,249,243,.92);color:#405d50}
+.ambassador-film-tabs span{font:10pt Georgia,serif;color:#a48769}.ambassador-film-tabs strong{font-size:10pt;letter-spacing:.08em}
+
+@media(max-width:1100px){
+  .ambassador-film-layout{grid-template-columns:1fr}
+  .ambassador-film-stage{position:relative;top:auto}
+  .ambassador-film-copy{padding:45px 6vw}
+}
+
+@media(max-width:760px){
+  .endorsement-section{padding-top:105px;padding-bottom:110px}
+  .endorsement-intro{grid-template-columns:1fr;gap:22px;margin:38px 0 42px}
+  .endorsement-intro h2{font-size:clamp(38px,10vw,52px)}
+  .endorsement-title-nowrap{white-space:normal}
+  .ambassador-profile-strip{grid-template-columns:92px 1fr;gap:19px;padding:18px;border-radius:4px 28px 4px 4px}
+  .ambassador-profile-strip .endorsement-portrait{width:92px;height:116px}
+  .ambassador-profile-strip h3{font-size:21px}
+  .ambassador-profile-strip>p{grid-column:1/3;padding:17px 0 0;border-left:0;border-top:1px solid rgba(74,108,89,.19)}
+  .ambassador-film-layout{gap:14px}
+  .ambassador-film-stage{border-radius:4px 32px 4px 4px}
+  .ambassador-film-stage header{grid-template-columns:auto 1fr;gap:8px 13px;padding:14px 17px}
+  .ambassador-film-stage header p{font-size:10pt;letter-spacing:.1em}
+  .ambassador-film-stage header strong{grid-column:1/3}
+  .ambassador-film-copy{padding:34px 24px 38px;border-radius:30px 4px}
+  .ambassador-film-copy h3{font-size:clamp(25px,7.5vw,32px)}
+  .ambassador-film-story p{font-size:14px;line-height:2}
+  .ambassador-film-story p:first-child,.ambassador-film-copy blockquote{font-size:16px}
+  .ambassador-film-tabs{grid-template-columns:1fr}
+}
+
 /* HERO — warm morning light led by the supplied CBD pillow photography */
 .site-header{
   background:rgba(248,244,236,.9);border-bottom-color:rgba(114,105,87,.1);

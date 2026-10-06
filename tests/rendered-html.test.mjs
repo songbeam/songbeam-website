@@ -175,10 +175,13 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /ambassador-title-lines/);
   assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
   assert.match(html, /wu-ruo-quan\.jpg/);
-  assert.match(html, /WHY GLORY/);
-  assert.doesNotMatch(html, /為什麼願意成為/);
-  assert.match(html, /學會放鬆/);
-  assert.match(html, /幸福，是懂得在忙碌之後，好好放鬆自己/);
+  assert.match(html, /吳若權・品牌代言三部曲/);
+  assert.match(html, /wu-ruo-quan-brand-film-01\.mp4/);
+  assert.match(html, /吳若權品牌代言品牌篇影片/);
+  assert.match(html, /品質很重要，沒有錯/);
+  assert.match(html, /若權老師和上品的緣分，是從一場廣播專訪開始的/);
+  assert.match(html, /而他拿回家的第一顆枕頭，是給媽媽的/);
+  assert.doesNotMatch(html, /WHY GLORY|學會放鬆，<br\/>是送給自己最溫柔的禮物/);
   assert.doesNotMatch(html, /PROFESSIONAL RECOMMENDATION|professional-card/);
   assert.match(html, /doctor-story-card yang-story/);
   assert.match(html, /中醫藥學博士/);
