@@ -116,13 +116,14 @@
   letter-spacing:.035em;
 }
 .ambassador-profile-strip{
-  position:relative;z-index:2;display:grid;grid-template-columns:230px minmax(240px,.58fr) minmax(360px,1fr);
+  position:relative;z-index:2;display:grid;grid-template-columns:270px minmax(240px,.58fr) minmax(360px,1fr);
   gap:32px;align-items:center;margin:0 0 22px;padding:26px 36px 26px 26px;
   border:1px solid rgba(255,255,255,.72);border-radius:5px 42px 5px 5px;
   background:rgba(247,248,241,.66);box-shadow:0 22px 60px rgba(50,78,64,.08);
   backdrop-filter:blur(12px);
 }
-.ambassador-profile-strip .endorsement-portrait{width:230px;height:286px;border-radius:48% 48% 5px 5px / 24% 24% 5px 5px}
+.ambassador-profile-strip .endorsement-portrait{width:270px;height:441px;border-radius:48% 48% 5px 5px / 18% 18% 5px 5px}
+.ambassador-profile-strip .endorsement-portrait.wu img{object-fit:contain;object-position:50% 0}
 .ambassador-profile-strip small,.ambassador-film-copy small{
   color:#9a8069;font:10pt Arial,"Noto Sans TC",sans-serif;letter-spacing:.19em;
 }
@@ -158,12 +159,14 @@
   line-height:1.65;letter-spacing:.035em;
 }
 .ambassador-film-copy h3 span{display:block}
+.ambassador-film-chapter-label{display:block;margin-top:16px;color:#687d73;font-size:10pt;font-weight:700;letter-spacing:.12em}
 .ambassador-film-story{display:grid;gap:20px}
 .ambassador-film-story p{margin:0;color:#34443d;font-size:15px;line-height:2.05;letter-spacing:.015em}
 .ambassador-film-story p:first-child{font-size:17px;font-weight:700;color:#30453b}
-.ambassador-film-points{display:grid;gap:10px;margin:24px 0 0;padding:0;list-style:none}
-.ambassador-film-points li{position:relative;margin:0;padding:0 0 0 24px;color:#34443d;font-size:15px;line-height:1.95;letter-spacing:.015em}
-.ambassador-film-points li:before{content:"";position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:#9a8069}
+.ambassador-film-story .ambassador-film-quote-line{padding:18px 22px;border-left:3px solid #9a8069;background:rgba(255,255,255,.4);color:#3e6254;font-family:Georgia,"Noto Serif TC",serif;font-size:17px;font-weight:700}
+.ambassador-film-highlights{display:grid;gap:0;margin:24px 0 0;border-top:1px solid rgba(80,116,96,.18)}
+.ambassador-film-highlights p{position:relative;margin:0;padding:16px 18px 16px 30px;border-bottom:1px solid rgba(80,116,96,.18);color:#34443d;font-size:15px;font-weight:700;line-height:1.95;letter-spacing:.015em}
+.ambassador-film-highlights p:before{content:"";position:absolute;left:3px;top:25px;width:11px;height:1px;background:#9a8069}
 .ambassador-film-copy blockquote{
   margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(80,116,96,.22);
   color:#3e7b6f;font-size:17px;font-weight:700;line-height:1.9;letter-spacing:.04em;
@@ -179,8 +182,8 @@
 .ambassador-film-tabs span{font:10pt Georgia,serif;color:#a48769}.ambassador-film-tabs strong{font-size:10pt;letter-spacing:.08em}
 
 @media(max-width:1100px){
-  .ambassador-profile-strip{grid-template-columns:200px 1fr;align-items:center}
-  .ambassador-profile-strip .endorsement-portrait{width:200px;height:248px;grid-row:1/3}
+  .ambassador-profile-strip{grid-template-columns:220px 1fr;align-items:center}
+  .ambassador-profile-strip .endorsement-portrait{width:220px;height:359px;grid-row:1/3}
   .ambassador-profile-bio{grid-column:2;padding:22px 0 0;border-left:0;border-top:1px solid rgba(74,108,89,.19)}
   .ambassador-film-copy{padding:45px 6vw}
 }
@@ -190,8 +193,8 @@
   .endorsement-intro{grid-template-columns:1fr;gap:22px;margin:38px 0 42px}
   .endorsement-intro h2{font-size:clamp(38px,10vw,52px)}
   .endorsement-title-nowrap{white-space:normal}
-  .ambassador-profile-strip{grid-template-columns:150px 1fr;gap:19px;padding:18px;border-radius:4px 28px 4px 4px}
-  .ambassador-profile-strip .endorsement-portrait{width:150px;height:190px;grid-row:auto}
+  .ambassador-profile-strip{grid-template-columns:180px 1fr;gap:19px;padding:18px;border-radius:4px 28px 4px 4px}
+  .ambassador-profile-strip .endorsement-portrait{width:180px;height:294px;grid-row:auto}
   .ambassador-profile-strip h3{font-size:21px}
   .ambassador-profile-bio{grid-column:1/3;padding:17px 0 0;border-left:0;border-top:1px solid rgba(74,108,89,.19)}
   .ambassador-film-layout{gap:14px}
@@ -202,13 +205,13 @@
   .ambassador-film-copy{grid-template-columns:1fr;gap:28px;padding:34px 24px 38px;border-radius:30px 4px}
   .ambassador-film-copy h3{font-size:clamp(25px,7.5vw,32px)}
   .ambassador-film-story p{font-size:14px;line-height:2}
-  .ambassador-film-story p:first-child,.ambassador-film-copy blockquote{font-size:16px}
+  .ambassador-film-story p:first-child,.ambassador-film-story .ambassador-film-quote-line,.ambassador-film-copy blockquote{font-size:16px}
   .ambassador-film-tabs{grid-template-columns:1fr}
 }
 
 @media(max-width:460px){
   .ambassador-profile-strip{grid-template-columns:1fr;text-align:center}
-  .ambassador-profile-strip .endorsement-portrait{width:min(220px,74vw);height:auto;aspect-ratio:230/286;margin:0 auto}
+  .ambassador-profile-strip .endorsement-portrait{width:min(230px,76vw);height:auto;aspect-ratio:1102/1800;margin:0 auto}
   .ambassador-profile-bio{grid-column:1;text-align:left}
 }
 

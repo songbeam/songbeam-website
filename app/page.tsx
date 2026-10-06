@@ -41,6 +41,7 @@ const newsItems = [
 const ambassadorFilms = [
   {
     number: "01",
+    chapter: "第一章",
     label: "品牌篇",
     en: "THE BRAND STORY",
     title: "品質很重要，沒有錯。\n但是品格，也非常重要。",
@@ -57,6 +58,7 @@ const ambassadorFilms = [
   },
   {
     number: "02",
+    chapter: "第二章",
     label: "產品篇",
     en: "THE PRODUCT STORY",
     title: "五星級飯店那顆很貴的枕頭，\n他睡過之後，還是想念家裡那一顆。",
@@ -75,6 +77,7 @@ const ambassadorFilms = [
   },
   {
     number: "03",
+    chapter: "第三章",
     label: "人生篇",
     en: "THE LIFE STORY",
     title: "年輕的時候會覺得，休息就等於可惜。\n等到年紀越來越長之後就知道，休息不是可惜，它是可貴。",
@@ -761,8 +764,8 @@ export default function Home() {
             </video>
           </div>
           <article className="ambassador-film-copy">
-            <header><small>{selectedAmbassadorFilm.label}・FILM {selectedAmbassadorFilm.number}</small><h3>{selectedAmbassadorFilm.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3></header>
-            <div className="ambassador-film-copy-body"><div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>{selectedAmbassadorFilm.points.length ? <ul className="ambassador-film-points">{selectedAmbassadorFilm.points.map((point) => <li key={point}>{point}</li>)}</ul> : null}<blockquote>{selectedAmbassadorFilm.closing}</blockquote></div>
+            <header><small>品牌代言三部曲・{selectedAmbassadorFilm.chapter}</small><span className="ambassador-film-chapter-label">{selectedAmbassadorFilm.label}・FILM {selectedAmbassadorFilm.number}</span><h3>{selectedAmbassadorFilm.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3></header>
+            <div className="ambassador-film-copy-body"><div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p className={paragraph.startsWith("「") ? "ambassador-film-quote-line" : undefined} key={paragraph}>{paragraph}</p>)}</div>{selectedAmbassadorFilm.points.length ? <div className="ambassador-film-highlights" aria-label={`${selectedAmbassadorFilm.label}重點`}>{selectedAmbassadorFilm.points.map((point) => <p key={point}>{point}</p>)}</div> : null}<blockquote>{selectedAmbassadorFilm.closing}</blockquote></div>
           </article>
         </div>
       </section>
