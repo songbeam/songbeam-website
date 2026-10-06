@@ -203,6 +203,8 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(pageSource, /五星級飯店那顆很貴的枕頭/);
   assert.match(pageSource, /微膠囊技術帶來的親膚感/);
   assert.match(pageSource, /ambassador-film-highlights/);
+  assert.match(pageSource, /data-film-number=\{selectedAmbassadorFilm\.number\}/);
+  assert.match(pageSource, /<blockquote><span>\{selectedAmbassadorFilm\.closing\}<\/span><\/blockquote>/);
   assert.match(pageSource, /休息不是可惜，它是可貴/);
   assert.match(pageSource, /請你也把你的愛留給你自己/);
   assert.doesNotMatch(pageSource, /三支影片，三段關於品牌、睡眠與陪伴的故事/);

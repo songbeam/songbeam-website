@@ -2047,6 +2047,17 @@ main h1,main h2,main .cbd-textile-title-nowrap,main .ambassador-film-copy h3{fon
   .cbd-textile-benefits{text-align:left}
   .ambassador-film-copy h3{font-size:clamp(16px,4.8vw,20px)!important;line-height:1.75;letter-spacing:.01em}
   .ambassador-film-copy h3 span{white-space:normal;word-break:normal;overflow-wrap:anywhere}
+  .ambassador-film-copy[data-film-number="01"] blockquote span,
+  .ambassador-film-copy[data-film-number="02"] h3 span:nth-child(2),
+  .ambassador-film-copy[data-film-number="02"] blockquote span,
+  .ambassador-film-copy[data-film-number="02"] .ambassador-film-highlights p:nth-child(2){
+    display:block;width:100%;white-space:nowrap!important;font-size:10pt!important;
+    letter-spacing:-.08em!important;transform-origin:left center;
+  }
+  .ambassador-film-copy[data-film-number="01"] blockquote span{transform:scaleX(.88)}
+  .ambassador-film-copy[data-film-number="02"] h3 span:nth-child(2){transform:scaleX(.78)}
+  .ambassador-film-copy[data-film-number="02"] blockquote span{transform:scaleX(.5)}
+  .ambassador-film-copy[data-film-number="02"] .ambassador-film-highlights p:nth-child(2){transform:scaleX(.62)}
 }
 
 @media(max-width:360px){

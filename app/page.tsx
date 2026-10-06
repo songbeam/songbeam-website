@@ -778,9 +778,9 @@ export default function Home() {
               您的瀏覽器不支援影片播放。
             </video>
           </div>
-          <article className="ambassador-film-copy">
+          <article className="ambassador-film-copy" data-film-number={selectedAmbassadorFilm.number}>
             <header><small>品牌代言三部曲・{selectedAmbassadorFilm.chapter}</small><span className="ambassador-film-chapter-label">{selectedAmbassadorFilm.label}・FILM {selectedAmbassadorFilm.number}</span><h3>{selectedAmbassadorFilm.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3></header>
-            <div className="ambassador-film-copy-body"><div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p className={paragraph.startsWith("「") ? "ambassador-film-quote-line" : undefined} key={paragraph}>{paragraph}</p>)}</div>{selectedAmbassadorFilm.points.length ? <div className="ambassador-film-highlights" aria-label={`${selectedAmbassadorFilm.label}重點`}>{selectedAmbassadorFilm.points.map((point) => <p key={point}>{point}</p>)}</div> : null}<blockquote>{selectedAmbassadorFilm.closing}</blockquote></div>
+            <div className="ambassador-film-copy-body"><div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p className={paragraph.startsWith("「") ? "ambassador-film-quote-line" : undefined} key={paragraph}>{paragraph}</p>)}</div>{selectedAmbassadorFilm.points.length ? <div className="ambassador-film-highlights" aria-label={`${selectedAmbassadorFilm.label}重點`}>{selectedAmbassadorFilm.points.map((point) => <p key={point}>{point}</p>)}</div> : null}<blockquote><span>{selectedAmbassadorFilm.closing}</span></blockquote></div>
           </article>
         </div>
       </section>
