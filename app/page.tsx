@@ -752,7 +752,7 @@ export default function Home() {
           <div className="seagull-editorial">
             <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
             <div className="seagull-copy">
-              <h2 className="seagull-title"><span>海鷗曲線，</span><span>讓肩頸自然找到</span><span>舒服的位置。</span></h2>
+              <h2 className="seagull-title"><span>海鷗曲線，讓肩頸自然找到舒服的位置。</span></h2>
               <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × Tempwiser 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
               <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
             </div>

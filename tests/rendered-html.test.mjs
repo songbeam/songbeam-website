@@ -46,6 +46,8 @@ test("keeps all explicitly sized site text at 10pt or larger", async () => {
   }
   assert.match(styles, /\.site-header\{[^}]*position:fixed[^}]*z-index:900/);
   assert.match(styles, /\.site-header \.glory-brand-logo\{width:104px;height:88px/);
+  assert.match(styles, /:where\(main\) :where\(h1,h2\)\{font-weight:700\}/);
+  assert.match(styles, /\.seagull-combined-layout \.seagull-title\{[^}]*white-space:nowrap/);
 });
 
 test("renders the complete one-page CBD bedding product story", async () => {
@@ -102,6 +104,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /product-press-closeup\.png/);
   assert.doesNotMatch(html, /lifestyle-reading\.png|lifestyle-morning\.png/);
   assert.match(html, /海鷗曲線/);
+  assert.match(html, /海鷗曲線，讓肩頸自然找到舒服的位置。/);
   assert.match(html, /cbd-seagull-pressure-relief-pillow-bedroom\.png/);
   assert.match(html, /GLORY 獨家專利 Tempwiser 親水棉/);
   assert.match(html, /海鷗曲線支撐/);
@@ -224,6 +227,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.doesNotMatch(html, /本產品為一般寢具用品，非藥品或醫療器材；實際使用感受可能因人而異/);
   assert.doesNotMatch(html, /具有治療失眠功效|有效抗焦慮|醫療級|國際認證/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
+  assert.match(pageSource, /<h2 className="seagull-title"><span>海鷗曲線，讓肩頸自然找到舒服的位置。<\/span><\/h2>/);
   assert.ok(html.indexOf('id="safety"') < html.indexOf('id="products"'));
   assert.ok(html.indexOf('id="products"') < html.indexOf('id="technology"'));
 });

@@ -2026,3 +2026,10 @@ footer{background:#d4e0d2}
   .testimonial-modal-copy{padding:42px 25px 55px}
   .testimonial-modal-copy blockquote{font-size:16px;padding-left:20px}
 }
+
+/* Keep every page-level headline emphatic and the Seagull headline intact. */
+:where(main) :where(h1,h2){font-weight:700}
+.seagull-combined-layout .seagull-title{
+  font-size:clamp(13.32px,2.45vw,36px);font-weight:700;letter-spacing:.07em;white-space:nowrap;
+}
+.seagull-combined-layout .seagull-title>span{display:inline;white-space:nowrap}
