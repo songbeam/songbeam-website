@@ -51,6 +51,8 @@ test("keeps all explicitly sized site text at 10pt or larger", async () => {
   assert.match(styles, /\.hero \.hero-series\{[^}]*white-space:nowrap/);
   assert.match(styles, /\.collection-comfort-nowrap\{[^}]*white-space:nowrap/);
   assert.match(styles, /\.cbd-textile-copy \.cbd-textile-title-nowrap\{[^}]*white-space:nowrap!important/);
+  assert.doesNotMatch(styles, /scaleX\(\.(?:5|62|78|88)\)/);
+  assert.match(styles, /\.ambassador-film-copy\[data-film-number="02"\] blockquote span,[\s\S]*?white-space:normal!important;font-size:15px!important/);
 });
 
 test("renders the complete one-page CBD bedding product story", async () => {
