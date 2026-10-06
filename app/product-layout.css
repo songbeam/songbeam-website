@@ -1021,6 +1021,7 @@
 .clinical-charts>p{margin:22px 0 0;color:#909995;font:10pt/1.7 Arial,sans-serif}
 .safety-proof-banner{position:relative;z-index:2;margin:30px 0 0;padding:0;overflow:hidden;border:1px solid rgba(255,255,255,.88);border-radius:5px 34px;background:#e6ece3;box-shadow:0 22px 58px rgba(73,99,84,.09)}
 .safety-proof-banner img{display:block;width:100%;height:auto;filter:saturate(.58) sepia(.08) hue-rotate(35deg) contrast(.96) brightness(.99)}
+.safety-proof-mobile{display:none}
 .cbd-textile-story{
   position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.9fr);
   margin-top:36px;overflow:hidden;border:1px solid rgba(255,255,255,.86);border-radius:58px 6px;
@@ -2045,6 +2046,15 @@ main h1,main h2,main .cbd-textile-title-nowrap,main .ambassador-film-copy h3{fon
     white-space:nowrap!important;font-size:clamp(24px,7.5vw,31px)!important;letter-spacing:.015em!important;
   }
   .cbd-textile-benefits{text-align:left}
+  .safety-proof-banner{width:calc(100% + 8vw);margin-left:-4vw;border-radius:4px 28px}
+  .safety-proof-desktop{display:none!important}
+  .safety-proof-mobile{display:grid;gap:1px;background:rgba(83,126,116,.18)}
+  .safety-proof-mobile span{position:relative;display:block;overflow:hidden;background:#edf5f4}
+  .safety-proof-mobile span:first-child{aspect-ratio:3.93/1}
+  .safety-proof-mobile span:last-child{aspect-ratio:5/1}
+  .safety-proof-mobile img{position:absolute;top:0;max-width:none;height:auto;filter:none}
+  .safety-proof-mobile span:first-child img{left:0;width:227.3%}
+  .safety-proof-mobile span:last-child img{left:-78.6%;width:178.6%}
   .ambassador-film-copy h3{font-size:clamp(16px,4.8vw,20px)!important;line-height:1.75;letter-spacing:.01em}
   .ambassador-film-copy h3 span{white-space:normal;word-break:normal;overflow-wrap:anywhere}
   .ambassador-film-copy[data-film-number="01"] blockquote span,

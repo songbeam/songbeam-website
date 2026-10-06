@@ -130,6 +130,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /除臭/);
   assert.doesNotMatch(html, /Patrick Lin, D\.C\.|全台近 400 萬人/);
   assert.match(html, /cbd-clinical-certification-banner\.png/);
+  assert.match(html, /safety-proof-mobile/);
   assert.match(html, /2025 MDPI 國際期刊認證/);
   assert.match(html, /cbd-textile-benefits/);
   assert.doesNotMatch(html, /class="safety-feature-grid"/);

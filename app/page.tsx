@@ -701,7 +701,13 @@ export default function Home() {
           <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
-        <figure className="safety-proof-banner"><img src="/cbd-clinical-certification-banner.png" alt="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證" /></figure>
+        <figure className="safety-proof-banner" aria-label="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證">
+          <img className="safety-proof-desktop" src="/cbd-clinical-certification-banner.png" alt="" />
+          <div className="safety-proof-mobile" aria-hidden="true">
+            <span><img src="/cbd-clinical-certification-banner.png" alt="" /></span>
+            <span><img src="/cbd-clinical-certification-banner.png" alt="" /></span>
+          </div>
+        </figure>
 
       </section>
 
