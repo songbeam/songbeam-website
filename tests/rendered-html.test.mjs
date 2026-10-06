@@ -46,7 +46,7 @@ test("keeps all explicitly sized site text at 10pt or larger", async () => {
   }
   assert.match(styles, /\.site-header\{[^}]*position:fixed[^}]*z-index:900/);
   assert.match(styles, /\.site-header \.glory-brand-logo\{width:104px;height:88px/);
-  assert.match(styles, /:where\(main\) :where\(h1,h2\)\{font-weight:700\}/);
+  assert.match(styles, /main h1,main h2\{font-weight:700!important\}/);
   assert.match(styles, /\.seagull-combined-layout \.seagull-title\{[^}]*white-space:nowrap/);
 });
 
