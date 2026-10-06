@@ -2028,8 +2028,38 @@ footer{background:#d4e0d2}
 }
 
 /* Keep every page-level headline emphatic and the Seagull headline intact. */
-main h1,main h2{font-weight:700!important}
+main h1,main h2,main .cbd-textile-title-nowrap,main .ambassador-film-copy h3{font-weight:700!important}
 .seagull-combined-layout .seagull-title{
   font-size:clamp(13.32px,2.45vw,36px);font-weight:700;letter-spacing:.07em;white-space:nowrap;
 }
 .seagull-combined-layout .seagull-title>span{display:inline;white-space:nowrap}
+
+@media(max-width:640px){
+  .hero-content{align-items:center;text-align:center}
+  .hero .hero-series{
+    width:max-content;max-width:none;margin-left:auto;margin-right:auto;white-space:nowrap;
+    letter-spacing:.02em;transform:scale(.75);transform-origin:center;
+  }
+  .hero .hero-actions{justify-content:center}
+  .section-label{justify-content:center}
+  .collection-head>div,.structure-heading>div,.endorsement-intro>div,
+  .testimonial-heading>div,.news-heading>div,.care-wash-layout>header,
+  .safety-editorial-head,.cbd-textile-copy{text-align:center}
+  .collection-head h2{font-size:32px;letter-spacing:.055em}
+  .collection-comfort-nowrap{display:block;white-space:nowrap}
+  .cbd-textile-copy .cbd-textile-title-nowrap{
+    white-space:nowrap!important;font-size:clamp(24px,7.5vw,31px)!important;letter-spacing:.015em!important;
+  }
+  .cbd-textile-benefits{text-align:left}
+  .ambassador-film-copy{text-align:center}
+  .ambassador-film-copy h3{font-size:clamp(16px,4.8vw,20px)!important;line-height:1.75;letter-spacing:.01em}
+  .ambassador-film-copy h3 span{white-space:normal;word-break:normal;overflow-wrap:anywhere}
+  .ambassador-film-story,.ambassador-film-copy-body{text-align:left}
+  .ambassador-film-tabs button{text-align:center}
+}
+
+@media(max-width:360px){
+  .hero .hero-series{transform:scale(.68)}
+  .collection-head h2{font-size:29px}
+  .ambassador-film-copy h3{font-size:15px!important}
+}

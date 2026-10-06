@@ -707,7 +707,7 @@ export default function Home() {
 
       <section className="product-showcase section" id="products">
         <div className="collection-head">
-          <div><div className="section-label"><span>03</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow collection-eyebrow-nowrap">CBD 草本忘憂好眠寢具</p><h2>從臥室到旅途，<br />延續熟悉的舒服。</h2></div>
+          <div><div className="section-label"><span>03</span><p>CBD SLEEP COLLECTION</p></div><p className="eyebrow collection-eyebrow-nowrap">CBD 草本忘憂好眠寢具</p><h2>從臥室到旅途，<br /><span className="collection-comfort-nowrap">延續熟悉的舒服。</span></h2></div>
         </div>
         <div className="shop-product-grid">
           {collectionProducts.map((product, index) => (

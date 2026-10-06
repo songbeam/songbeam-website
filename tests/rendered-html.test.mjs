@@ -46,8 +46,11 @@ test("keeps all explicitly sized site text at 10pt or larger", async () => {
   }
   assert.match(styles, /\.site-header\{[^}]*position:fixed[^}]*z-index:900/);
   assert.match(styles, /\.site-header \.glory-brand-logo\{width:104px;height:88px/);
-  assert.match(styles, /main h1,main h2\{font-weight:700!important\}/);
+  assert.match(styles, /main h1,main h2,main \.cbd-textile-title-nowrap,main \.ambassador-film-copy h3\{font-weight:700!important\}/);
   assert.match(styles, /\.seagull-combined-layout \.seagull-title\{[^}]*white-space:nowrap/);
+  assert.match(styles, /\.hero \.hero-series\{[^}]*white-space:nowrap/);
+  assert.match(styles, /\.collection-comfort-nowrap\{[^}]*white-space:nowrap/);
+  assert.match(styles, /\.cbd-textile-copy \.cbd-textile-title-nowrap\{[^}]*white-space:nowrap!important/);
 });
 
 test("renders the complete one-page CBD bedding product story", async () => {
@@ -93,6 +96,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /CBD 草本忘憂好眠寢具保潔墊組/);
   assert.match(html, /CBD 草本忘憂好眠寢具隨身旅行組/);
   assert.match(html, /讓頭頸找到最舒服的位置/);
+  assert.match(html, /collection-comfort-nowrap/);
   assert.match(html, /乾淨，是舒適睡眠的開始/);
   assert.match(html, /無論走到哪裡，都睡得安心/);
   assert.doesNotMatch(html, /CBD 草本忘憂好眠寢具親水枕|隨身旅行頸枕／眼罩/);
