@@ -116,13 +116,13 @@
   letter-spacing:.035em;
 }
 .ambassador-profile-strip{
-  position:relative;z-index:2;display:grid;grid-template-columns:112px minmax(260px,.75fr) minmax(300px,1fr);
+  position:relative;z-index:2;display:grid;grid-template-columns:168px minmax(260px,.75fr) minmax(300px,1fr);
   gap:28px;align-items:center;margin:0 0 28px;padding:22px 32px 22px 22px;
   border:1px solid rgba(255,255,255,.72);border-radius:5px 42px 5px 5px;
   background:rgba(247,248,241,.66);box-shadow:0 22px 60px rgba(50,78,64,.08);
   backdrop-filter:blur(12px);
 }
-.ambassador-profile-strip .endorsement-portrait{width:112px;height:128px;border-radius:48% 48% 5px 5px / 28% 28% 5px 5px}
+.ambassador-profile-strip .endorsement-portrait{width:168px;height:208px;border-radius:48% 48% 5px 5px / 24% 24% 5px 5px}
 .ambassador-profile-strip small,.ambassador-film-copy>small{
   color:#9a8069;font:10pt Arial,"Noto Sans TC",sans-serif;letter-spacing:.19em;
 }
@@ -160,6 +160,9 @@
 .ambassador-film-story{display:grid;gap:20px}
 .ambassador-film-story p{margin:0;color:#34443d;font-size:15px;line-height:2.05;letter-spacing:.015em}
 .ambassador-film-story p:first-child{font-size:17px;font-weight:700;color:#30453b}
+.ambassador-film-points{display:grid;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.ambassador-film-points li{position:relative;margin:0;padding:0 0 0 24px;color:#34443d;font-size:15px;line-height:1.95;letter-spacing:.015em}
+.ambassador-film-points li:before{content:"";position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:#9a8069}
 .ambassador-film-copy blockquote{
   margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(80,116,96,.22);
   color:#3e7b6f;font-size:17px;font-weight:700;line-height:1.9;letter-spacing:.04em;
@@ -183,8 +186,8 @@
   .endorsement-intro{grid-template-columns:1fr;gap:22px;margin:38px 0 42px}
   .endorsement-intro h2{font-size:clamp(38px,10vw,52px)}
   .endorsement-title-nowrap{white-space:normal}
-  .ambassador-profile-strip{grid-template-columns:92px 1fr;gap:19px;padding:18px;border-radius:4px 28px 4px 4px}
-  .ambassador-profile-strip .endorsement-portrait{width:92px;height:116px}
+  .ambassador-profile-strip{grid-template-columns:124px 1fr;gap:19px;padding:18px;border-radius:4px 28px 4px 4px}
+  .ambassador-profile-strip .endorsement-portrait{width:124px;height:158px}
   .ambassador-profile-strip h3{font-size:21px}
   .ambassador-profile-strip>p{grid-column:1/3;padding:17px 0 0;border-left:0;border-top:1px solid rgba(74,108,89,.19)}
   .ambassador-film-layout{gap:14px}

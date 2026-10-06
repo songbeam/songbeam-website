@@ -53,6 +53,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(html, /讓夜晚/);
   assert.match(html, /慢慢鬆開/);
   assert.match(html, /從草本放鬆到貼合支撐/);
@@ -177,10 +178,17 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /吳若權・品牌代言三部曲/);
   assert.match(html, /wu-ruo-quan-brand-film-01\.mp4/);
+  assert.match(pageSource, /wu-ruo-quan-product-film-02\.mp4/);
+  assert.match(pageSource, /wu-ruo-quan-life-film-03\.mp4/);
   assert.match(html, /吳若權品牌代言品牌篇影片/);
   assert.match(html, /品質很重要，沒有錯/);
   assert.match(html, /若權老師和上品的緣分，是從一場廣播專訪開始的/);
   assert.match(html, /而他拿回家的第一顆枕頭，是給媽媽的/);
+  assert.match(pageSource, /五星級飯店那顆很貴的枕頭/);
+  assert.match(pageSource, /微膠囊技術帶來的親膚感/);
+  assert.match(pageSource, /休息不是可惜，它是可貴/);
+  assert.match(pageSource, /請你也把你的愛留給你自己/);
+  assert.doesNotMatch(pageSource, /三支影片，三段關於品牌、睡眠與陪伴的故事/);
   assert.doesNotMatch(html, /WHY GLORY|學會放鬆，<br\/>是送給自己最溫柔的禮物/);
   assert.doesNotMatch(html, /PROFESSIONAL RECOMMENDATION|professional-card/);
   assert.match(html, /doctor-story-card yang-story/);

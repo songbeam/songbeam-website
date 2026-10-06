@@ -52,7 +52,41 @@ const ambassadorFilms = [
       "他說他下了很大的決心。代言一個產品，是對自己責任的要求，是對品牌深刻的期許，也是對消費者最大的保障。",
       "「基於這三個原因的考慮，我覺得非常的榮幸。」",
     ],
+    points: [],
     closing: "而他拿回家的第一顆枕頭，是給媽媽的。",
+  },
+  {
+    number: "02",
+    label: "產品篇",
+    en: "THE PRODUCT STORY",
+    title: "五星級飯店那顆很貴的枕頭，\n他睡過之後，還是想念家裡那一顆。",
+    video: "/wu-ruo-quan-product-film-02.mp4",
+    paragraphs: [
+      "「怎麼還是我家那一顆 CBD，讓我比較安心、睡得比較好。」",
+      "若權老師的工作免不了外宿，在外面演講、上課。很多人都有「認床」的問題——換了一組寢具，第一個晚上就是睡不好。",
+      "用了三年，他說感受最深的是三件事：",
+    ],
+    points: [
+      "外型非常符合人體工學",
+      "支撐度不是第一、二個月，是從第一年到第二年都沒有變形、沒有軟塌",
+      "微膠囊技術帶來的親膚感",
+    ],
+    closing: "而出門的時候，可以不用帶一整顆枕頭——帶那個特別設計的枕頭套就好。",
+  },
+  {
+    number: "03",
+    label: "人生篇",
+    en: "THE LIFE STORY",
+    title: "年輕的時候會覺得，休息就等於可惜。\n等到年紀越來越長之後就知道，休息不是可惜，它是可貴。",
+    video: "/wu-ruo-quan-life-film-03.mp4",
+    paragraphs: [
+      "這一支，若權老師沒有談枕頭。他談的是他自己。",
+      "他說很多人來上時間管理的課，是為了做更多的事、擁有更多的效率。這些都沒有錯——但所有工作效率最後的核心價值，其實是想要擁有更好的生活品質，並且更肯定自己生命的意義。",
+      "給正在為別人努力的你，老師說：",
+      "「照顧自己並不是奢侈的事，照顧自己其實是非常值得的事。」",
+    ],
+    points: [],
+    closing: "「當你為別人、為這個世界付出了很多，請你也把你的愛留給你自己。」",
   },
 ] as const;
 
@@ -711,7 +745,7 @@ export default function Home() {
 
       <section className="endorsement-section section" id="endorsements">
         <div className="section-label"><span>05</span><p>BRAND AMBASSADOR</p></div>
-        <div className="endorsement-intro"><div><p className="eyebrow">吳若權・品牌代言三部曲</p><h2>一段合作的開始，<br /><span className="endorsement-title-nowrap">從相信彼此的品格開始。</span></h2></div><p>三支影片，三段關於品牌、睡眠與陪伴的故事。跟著若權老師的視角，慢慢認識上品寢具。</p></div>
+        <div className="endorsement-intro"><div><p className="eyebrow">吳若權・品牌代言三部曲</p><h2>一段合作的開始，<br /><span className="endorsement-title-nowrap">從相信彼此的品格開始。</span></h2></div></div>
         <article className="ambassador-profile-strip">
           <figure className="endorsement-portrait wu"><img src="/wu-ruo-quan.jpg" alt="吳若權老師" /></figure>
           <div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong></div>
@@ -729,6 +763,7 @@ export default function Home() {
             <small>{selectedAmbassadorFilm.label}・FILM {selectedAmbassadorFilm.number}</small>
             <h3>{selectedAmbassadorFilm.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3>
             <div className="ambassador-film-story">{selectedAmbassadorFilm.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            {selectedAmbassadorFilm.points.length ? <ul className="ambassador-film-points">{selectedAmbassadorFilm.points.map((point) => <li key={point}>{point}</li>)}</ul> : null}
             <blockquote>{selectedAmbassadorFilm.closing}</blockquote>
           </article>
         </div>
