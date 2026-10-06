@@ -174,6 +174,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /枕頭合不合適/);
   assert.match(html, /吳若權 老師/);
   assert.match(html, /ambassador-title-lines/);
+  assert.match(html, /ambassador-profile-bio/);
+  assert.match(html, /長期透過廣播、演講、課程與個人諮詢/);
+  assert.match(html, /ambassador-film-copy-body/);
   assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /吳若權・品牌代言三部曲/);
@@ -189,6 +192,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(pageSource, /休息不是可惜，它是可貴/);
   assert.match(pageSource, /請你也把你的愛留給你自己/);
   assert.doesNotMatch(pageSource, /三支影片，三段關於品牌、睡眠與陪伴的故事/);
+  assert.ok(pageSource.indexOf('className="ambassador-film-tabs"') < pageSource.indexOf('className="ambassador-film-layout"'));
   assert.doesNotMatch(html, /WHY GLORY|學會放鬆，<br\/>是送給自己最溫柔的禮物/);
   assert.doesNotMatch(html, /PROFESSIONAL RECOMMENDATION|professional-card/);
   assert.match(html, /doctor-story-card yang-story/);
