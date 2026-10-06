@@ -526,11 +526,26 @@ const stores = [
   { name: "大里館", address: "台中市大里區國光路二段 711 號", tags: ["可刷卡", "國旅卡"] },
   { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", tags: ["可刷卡", "國旅卡"] },
   { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", tags: ["可刷卡", "國旅卡"] },
+];
+
+const medicalStores = [
   {
     name: "台中榮總",
     displayName: "上品寢具 CBD 專櫃【台中榮總】",
     address: "台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）",
     tags: ["CBD 專櫃"],
+  },
+  {
+    name: "三總醫院",
+    displayName: "三總醫院-極織房專櫃",
+    address: "台北市內湖區成功路二段325號B1商場",
+    tags: ["極織房專櫃"],
+  },
+  {
+    name: "亞東醫院",
+    displayName: "亞東醫院-極織房專櫃",
+    address: "新北市板橋區南雅南路二段21號B1商場",
+    tags: ["極織房專櫃"],
   },
 ];
 
@@ -555,10 +570,10 @@ const dealers = [
 
 const storeGroups = [
   { name: "北部地區", en: "NORTH", stores: [...stores, ...dealers].filter((store) => /台北市|臺北市|新北市|基隆市|桃園市|新竹/.test(store.address)) },
-  { name: "中部地區", en: "CENTRAL", stores: [...stores, ...dealers].filter((store) => /苗栗|台中市|臺中市|彰化|南投|雲林/.test(store.address) && store.name !== "台中榮總") },
+  { name: "中部地區", en: "CENTRAL", stores: [...stores, ...dealers].filter((store) => /苗栗|台中市|臺中市|彰化|南投|雲林/.test(store.address)) },
   { name: "南部地區", en: "SOUTH", stores: [...stores, ...dealers].filter((store) => /嘉義|台南|臺南|高雄|屏東/.test(store.address)) },
   { name: "東部地區", en: "EAST", stores: dealers.filter((store) => /宜蘭|花蓮|臺東|台東/.test(store.address)) },
-  { name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: stores.filter((store) => store.name === "台中榮總") },
+  { name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: medicalStores },
 ];
 
 const storeLocationCount = storeGroups.reduce((count, group) => count + group.stores.length, 0);

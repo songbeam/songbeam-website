@@ -299,6 +299,11 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /name: "斗六館"/);
   assert.match(source, /displayName: "上品寢具 CBD 專櫃【台中榮總】"/);
   assert.match(source, /台中市西屯區福聯里台灣大道四段1650號（門診後棟2樓領藥區前商場）/);
+  assert.match(source, /displayName: "三總醫院-極織房專櫃"/);
+  assert.match(source, /台北市內湖區成功路二段325號B1商場/);
+  assert.match(source, /displayName: "亞東醫院-極織房專櫃"/);
+  assert.match(source, /新北市板橋區南雅南路二段21號B1商場/);
+  assert.match(source, /\{ name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: medicalStores \}/);
   const dealerNames = ["律倫企業有限公司", "康裕網路行銷有限公司(茉莉床單)", "璽品屋國際有限公司", "貝里恩有限公司", "家禾傢俱行(睡眠工藝)", "東城精品寢飾生活館", "愛豐健康股份有限公司", "名坊生活館(上品田中館)", "美閣典藏家具行", "雅茲寢飾生活館", "御鋒木器行(御鋒家具)", "薇閣寢飾行"];
   for (const dealer of dealerNames) assert.ok(source.includes(dealer), `${dealer} should be listed as a dealer`);
   assert.equal((source.match(/tags: \["經銷商"\]/g) || []).length, 16);
