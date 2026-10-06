@@ -754,7 +754,7 @@ export default function Home() {
           <div><small>BRAND AMBASSADOR</small><h3>吳若權 老師</h3><strong className="ambassador-title-lines"><span>GLORY 葛洛麗品牌</span><span>CBD 草本忘憂好眠寢具代言人</span></strong></div>
           <div className="ambassador-profile-bio"><p>以溫柔而真誠的生活觀點，陪伴品牌傳遞舒適、安定且貼近日常的好眠想像。</p><p>長期透過廣播、演講、課程與個人諮詢，陪伴人們整理生活節奏與內在感受；這次也從實際使用經驗出發，分享他對品牌品格、睡眠選擇與人生休息的理解。</p></div>
         </article>
-        {ambassadorFilms.length > 1 ? <nav className="ambassador-film-tabs" aria-label="品牌代言影片選擇">{ambassadorFilms.map((film, index) => <button type="button" className={selectedAmbassadorFilmIndex === index ? "active" : ""} key={film.number} onClick={() => setSelectedAmbassadorFilmIndex(index)} aria-pressed={selectedAmbassadorFilmIndex === index}><span>{film.number}</span><strong>{film.label}</strong></button>)}</nav> : null}
+        {ambassadorFilms.length > 1 ? <nav className="ambassador-film-tabs" aria-label="品牌代言三部曲影片選擇">{ambassadorFilms.map((film, index) => <button type="button" className={selectedAmbassadorFilmIndex === index ? "active" : ""} key={film.number} onClick={() => setSelectedAmbassadorFilmIndex(index)} aria-pressed={selectedAmbassadorFilmIndex === index}><span>{film.number}</span><strong>品牌三部曲・{film.chapter}<small>{film.label}</small></strong></button>)}</nav> : null}
         <div className="ambassador-film-layout">
           <div className="ambassador-film-stage">
             <header><span>FILM {selectedAmbassadorFilm.number}</span><p>{selectedAmbassadorFilm.en}</p><strong>{selectedAmbassadorFilm.number} / {String(ambassadorFilmTotal).padStart(2, "0")}</strong></header>

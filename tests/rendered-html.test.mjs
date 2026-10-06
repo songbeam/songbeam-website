@@ -180,6 +180,9 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /品牌代言三部曲/);
   assert.match(pageSource, /品牌代言三部曲・\{selectedAmbassadorFilm\.chapter\}/);
   assert.match(html, /ambassador-film-chapter-label/);
+  assert.match(html, /品牌代言三部曲影片選擇/);
+  assert.match(html, /品牌三部曲/);
+  assert.match(pageSource, /品牌三部曲・\{film\.chapter\}/);
   assert.match(html, /GLORY 葛洛麗品牌<\/span><span>CBD 草本忘憂好眠寢具代言人/);
   assert.match(html, /wu-ruo-quan\.jpg/);
   assert.match(html, /吳若權・品牌代言三部曲/);
