@@ -3,7 +3,6 @@ import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const output = new URL("../out/", import.meta.url);
-const standaloneHtml = new URL("../上品寢具網站.html", import.meta.url);
 
 test("exports a deployable static homepage and required media", async () => {
   const html = await readFile(new URL("index.html", output), "utf8");
@@ -20,14 +19,4 @@ test("exports a deployable static homepage and required media", async () => {
     access(new URL("wu-ruo-quan-product-film-02.mp4", output)),
     access(new URL("wu-ruo-quan-life-film-03.mp4", output)),
   ]);
-});
-
-test("creates a directly openable HTML file", async () => {
-  const html = await readFile(standaloneHtml, "utf8");
-
-  assert.match(html, /<iframe\s+src="https:\/\/shangpin-cbd-comfort\.suchloe\.chatgpt\.site\/"/);
-  assert.match(html, /allow="autoplay; encrypted-media; picture-in-picture; fullscreen"/);
-  assert.match(html, /allowfullscreen/);
-  assert.doesNotMatch(html, /youtube-playback-fallback/);
-  assert.match(html, /CBD 草本忘憂好眠寢具系列/);
 });

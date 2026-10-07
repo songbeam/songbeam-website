@@ -5,7 +5,7 @@ import "./morandi.css";
 import "./render-depth.css";
 import "./product-layout.css";
 
-const siteUrl = "https://shangpin-cbd-comfort.suchloe.chatgpt.site";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://shangpin-cbd-comfort.suchloe.chatgpt.site").replace(/\/$/, "");
 const ogUrl = `${siteUrl}/og-morandi.png`;
 
 export const metadata: Metadata = {
