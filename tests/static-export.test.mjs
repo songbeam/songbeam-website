@@ -26,6 +26,9 @@ test("creates a directly openable HTML file", async () => {
   const html = await readFile(standaloneHtml, "utf8");
 
   assert.match(html, /<base href="https:\/\/shangpin-cbd-comfort\.suchloe\.chatgpt\.site\/"\/>/);
+  assert.match(html, /<style>[^<]+<\/style>/);
+  assert.doesNotMatch(html, /<link rel="stylesheet"/);
+  assert.doesNotMatch(html, /\b(?:src|href|poster)="\/(?!\/)/);
   assert.match(html, /CBD 草本忘憂好眠寢具系列/);
   assert.match(html, /wu-ruo-quan-brand-film-01\.mp4/);
 });
