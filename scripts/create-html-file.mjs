@@ -21,6 +21,10 @@ for (const match of stylesheetMatches) {
 
 standaloneHtml = standaloneHtml
   .replace("<head>", `<head><base href="${siteUrl}"/>`)
-  .replace(/\b(src|href|poster)="\/(?!\/)/g, `$1="${siteUrl}`);
+  .replace(/\b(src|href|poster)="\/(?!\/)/g, `$1="${siteUrl}`)
+  .replace(
+    /<iframe src="https:\/\/www\.youtube\.com\/embed\/BmpU3CbUALE[^"]+"/,
+    `<iframe src="${siteUrl}video-player"`,
+  );
 
 await writeFile(destination, standaloneHtml, "utf8");

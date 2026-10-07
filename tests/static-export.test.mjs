@@ -19,6 +19,7 @@ test("exports a deployable static homepage and required media", async () => {
     access(new URL("wu-ruo-quan-brand-film-01.mp4", output)),
     access(new URL("wu-ruo-quan-product-film-02.mp4", output)),
     access(new URL("wu-ruo-quan-life-film-03.mp4", output)),
+    access(new URL("video-player/index.html", output)),
   ]);
 });
 
@@ -29,6 +30,8 @@ test("creates a directly openable HTML file", async () => {
   assert.match(html, /<style>[^<]+<\/style>/);
   assert.doesNotMatch(html, /<link rel="stylesheet"/);
   assert.doesNotMatch(html, /\b(?:src|href|poster)="\/(?!\/)/);
+  assert.match(html, /<iframe src="https:\/\/shangpin-cbd-comfort\.suchloe\.chatgpt\.site\/video-player"/);
+  assert.doesNotMatch(html, /<iframe src="https:\/\/www\.youtube\.com\/embed\//);
   assert.match(html, /CBD 草本忘憂好眠寢具系列/);
   assert.match(html, /wu-ruo-quan-brand-film-01\.mp4/);
 });

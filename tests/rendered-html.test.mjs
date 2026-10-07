@@ -298,6 +298,16 @@ test("uses the requested navigation architecture without duplicating section anc
   }
 });
 
+test("renders a dedicated hosted YouTube player for local HTML embedding", async () => {
+  const response = await render("/video-player");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /youtube-proxy-player/);
+  assert.match(html, /youtube\.com\/embed\/BmpU3CbUALE/);
+  assert.match(html, /referrerPolicy="strict-origin-when-cross-origin"/);
+});
+
 test("defines the official store directory dialog", async () => {
   const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.doesNotMatch(source, /const faqs|openFaq|href="#faq"|id="faq"|常見問題|FREQUENTLY ASKED/);
