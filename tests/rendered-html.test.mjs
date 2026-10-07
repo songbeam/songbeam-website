@@ -84,7 +84,10 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /cbd-feature-panel/);
   assert.match(html, /cbd-doctor-card/);
   assert.match(html, /cbd-video-frame/);
-  assert.match(html, /youtube-nocookie\.com\/embed\/BmpU3CbUALE/);
+  assert.match(html, /youtube\.com\/embed\/BmpU3CbUALE\?rel=0&amp;playsinline=1&amp;origin=https%3A%2F%2Fshangpin-cbd-comfort\.suchloe\.chatgpt\.site/);
+  assert.match(html, /referrerPolicy="strict-origin-when-cross-origin"/);
+  assert.match(html, /youtube-playback-fallback/);
+  assert.match(html, /youtube\.com\/watch\?v=BmpU3CbUALE/);
   assert.match(html, /CBD 漢麻二酚介紹影片/);
   assert.doesNotMatch(html, /cbd-seagull-spine-support-pillow-bedroom\.png|CBD \/ CANNABIDIOL \/ TEXTILE/);
   assert.match(html, /seagull-combined-layout/);
