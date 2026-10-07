@@ -1,30 +1,30 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 
-const source = new URL("../out/index.html", import.meta.url);
 const destination = new URL("../上品寢具網站.html", import.meta.url);
 const siteUrl = "https://shangpin-cbd-comfort.suchloe.chatgpt.site/";
 
-const exportedHtml = await readFile(source, "utf8");
-const stylesheetPattern = /<link rel="stylesheet" href="([^"]+)"[^>]*\/>/g;
-const stylesheetMatches = [...exportedHtml.matchAll(stylesheetPattern)];
-
-let standaloneHtml = exportedHtml;
-for (const match of stylesheetMatches) {
-  const stylesheetPath = match[1].replace(/^\//, "");
-  const stylesheet = await readFile(new URL(`../out/${stylesheetPath}`, import.meta.url), "utf8");
-  const portableStylesheet = stylesheet.replace(
-    /url\((['"]?)\/(?!\/)/g,
-    `url($1${siteUrl}`,
-  );
-  standaloneHtml = standaloneHtml.replace(match[0], `<style>${portableStylesheet}</style>`);
-}
-
-standaloneHtml = standaloneHtml
-  .replace("<head>", `<head><base href="${siteUrl}"/>`)
-  .replace(/\b(src|href|poster)="\/(?!\/)/g, `$1="${siteUrl}`)
-  .replace(
-    /<iframe src="https:\/\/www\.youtube\.com\/embed\/BmpU3CbUALE[^"]+"/,
-    `<iframe src="${siteUrl}video-player"`,
-  );
+const standaloneHtml = `<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>上品寢具 CBD 草本忘憂好眠寢具系列</title>
+    <style>
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #eef1ea; }
+      iframe { display: block; width: 100%; height: 100%; border: 0; }
+    </style>
+  </head>
+  <body>
+    <iframe
+      src="${siteUrl}"
+      title="上品寢具 CBD 草本忘憂好眠寢具系列"
+      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <noscript><a href="${siteUrl}">開啟上品寢具網站</a></noscript>
+  </body>
+</html>
+`;
 
 await writeFile(destination, standaloneHtml, "utf8");

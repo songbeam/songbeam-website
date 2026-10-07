@@ -86,8 +86,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /cbd-video-frame/);
   assert.match(html, /youtube\.com\/embed\/BmpU3CbUALE\?rel=0&amp;playsinline=1&amp;origin=https%3A%2F%2Fshangpin-cbd-comfort\.suchloe\.chatgpt\.site/);
   assert.match(html, /referrerPolicy="strict-origin-when-cross-origin"/);
-  assert.match(html, /youtube-playback-fallback/);
-  assert.match(html, /youtube\.com\/watch\?v=BmpU3CbUALE/);
+  assert.doesNotMatch(html, /youtube-playback-fallback|youtube\.com\/watch\?v=BmpU3CbUALE/);
   assert.match(html, /CBD 漢麻二酚介紹影片/);
   assert.doesNotMatch(html, /cbd-seagull-spine-support-pillow-bedroom\.png|CBD \/ CANNABIDIOL \/ TEXTILE/);
   assert.match(html, /seagull-combined-layout/);
@@ -296,16 +295,6 @@ test("uses the requested navigation architecture without duplicating section anc
     assert.ok(index > previousLabelIndex, `${label} should use the current page sequence number`);
     previousLabelIndex = index;
   }
-});
-
-test("renders a dedicated hosted YouTube player for local HTML embedding", async () => {
-  const response = await render("/video-player");
-  assert.equal(response.status, 200);
-  const html = await response.text();
-
-  assert.match(html, /youtube-proxy-player/);
-  assert.match(html, /youtube\.com\/embed\/BmpU3CbUALE/);
-  assert.match(html, /referrerPolicy="strict-origin-when-cross-origin"/);
 });
 
 test("defines the official store directory dialog", async () => {
