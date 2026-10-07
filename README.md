@@ -11,8 +11,11 @@ npm run build
 
 完成後，請將 `out/` 目錄內的全部檔案上傳到靜態主機的網站根目錄。可用於 Netlify、Cloudflare Pages、AWS S3、一般虛擬主機或其他支援 HTML/CSS/JavaScript 的空間。
 
+建置完成時也會在專案根目錄產生 `上品寢具網站.html`。這是可以直接點開的單一 HTML 入口檔，圖片、影片與互動程式會從目前正式網站載入，因此開啟時需要網路連線。
+
 - 建置指令：`npm run build`
 - 發布目錄：`out`
+- 單一 HTML 檔案：`上品寢具網站.html`
 - Node.js 版本：`22.13.0` 以上
 - 不需要資料庫、伺服器端 API 或環境變數
 
@@ -36,6 +39,7 @@ npm run build:sites
 
 - `npm run dev`：啟動原有的即時預覽環境
 - `npm run build`：輸出可直接部署的靜態網站至 `out/`
+- `上品寢具網站.html`：直接開啟的單一 HTML 入口檔
 - `npm run test:static`：重新輸出並檢查靜態網站必要檔案
 - `npm run build:sites`：建立原有 Sites 發布版本
 - `npm test`：檢查 Sites 版本的頁面內容與樣式規則
