@@ -1,0 +1,73 @@
+/* Lighter Morandi rendering: dusty blue, muted sage, warm greige and soft mauve. */
+:root{
+  --night:#718592;
+  --night-deep:#586c79;
+  --moon:#e6dcc8;
+  --mist:#d8dfe0;
+  --warm:#c6ad91;
+  --ivory:#f3efe8;
+  --paper:#f3efe8;
+  --ink:#4f626d;
+  --sage:#8c9b92;
+  --champagne:#b39a7d;
+  --line:rgba(79,98,109,.16);
+}
+
+body{background:#f3efe8;color:#53656f}
+main{background:linear-gradient(180deg,#8496a1 0,#f2eee7 15%,#e9edeb 43%,#eee8e2 74%,#f3efe8 100%)}
+.site-header{background:rgba(244,240,233,.94);border-color:rgba(79,98,109,.12)}
+.site-header .nav{color:#60727c}.nav-cta{background:#7d8f99;border-color:#c8b59d;color:#fffaf2}
+
+.hero{background:#7d909d;color:#fffaf2}
+.hero-photo{filter:saturate(.48) contrast(.88) brightness(1.08)}
+.hero-wash{background:linear-gradient(90deg,rgba(105,124,136,.95) 0%,rgba(113,132,144,.84) 30%,rgba(128,142,148,.39) 54%,rgba(188,168,147,.06) 76%),linear-gradient(0deg,rgba(91,108,119,.32),transparent 50%),radial-gradient(circle at 74% 30%,rgba(226,196,160,.28),transparent 24%)}
+.dream-haze{background:rgba(225,203,177,.18)}
+.hero-curve{border-color:rgba(238,228,210,.48)}
+.summer-moon{color:#f1e6d1;text-shadow:0 0 28px rgba(241,230,209,.36)}
+.hero .overline{color:#e5e9e7}.hero .hero-series{color:#fffaf3}.hero h1{color:#fffaf3;text-shadow:0 3px 22px rgba(65,77,84,.18)}
+.hero .hero-lead{color:#eff1ed}.hero .button.primary{background:rgba(247,242,233,.22);border-color:rgba(244,232,210,.85);color:#fffaf3}.hero .button.primary:hover{background:#f2eadf;color:#586b76}
+.vertical-note{color:rgba(255,250,243,.78)}
+
+.section-label span{color:#a58b72}.section-label p{color:#768994}.section-label:after{background:linear-gradient(90deg,#b39a7d,transparent)}
+.eyebrow{color:#9b7f71}.text-link{color:#687e88}.button.dark{background:#82939b;border-color:#c9b59f}.button.outline-dark{color:#596d77;border-color:rgba(89,109,119,.28)}
+.emotion-copy h2,.series-product-copy h2,.feature-heading h2,.pillow-heading h2,.fit-copy h2,.structure-heading h2,.scene-heading h2,.care-layout h2,.faq-title h2,.spec-heading h2,.buy-copy h2,.stores h2{color:#5a6f7a}
+
+.consultation{background:radial-gradient(circle at 80% 27%,rgba(190,164,152,.18),transparent 28%),linear-gradient(150deg,#f3efe8,#e5e9e9)}
+.emotion-editorial img{filter:saturate(.56) contrast(.9) brightness(1.04)}
+
+.series-home{background:linear-gradient(145deg,#879ba5,#9faaa7 68%,#b6aaa1);color:#fffaf3}
+.series-home:before,.series-home:after{border-color:rgba(244,233,216,.34)}
+.series-home .section-label p,.series-home .eyebrow{color:#f0e2ce}.series-product-copy h2{color:#fffaf3}.series-product-copy>p:not(.eyebrow){color:#f1f1eb}
+.series-product-image img{filter:drop-shadow(0 28px 38px rgba(77,91,96,.18)) saturate(.62) brightness(1.05)}
+.series-short-points span{background:rgba(247,243,236,.9);border-color:rgba(180,155,127,.34);color:#5a6d76}
+
+.core-features{background:radial-gradient(circle at 12% 42%,rgba(157,174,165,.2),transparent 25%),linear-gradient(145deg,#efede7,#e2e7e5)}
+.feature-editorial img{filter:saturate(.52) contrast(.9) brightness(1.04)}
+.pillow-section{background:linear-gradient(180deg,#f3efe8,#e0e6e5 76%,#c8d0d0)}
+.posture-comparison article,.callout{background:rgba(248,245,239,.84);border-color:rgba(179,154,125,.25);color:#566a74}
+
+.sleep-fit{background:linear-gradient(150deg,#8fa1a8,#aeb6b0 62%,#c9b9aa);color:#fffaf3}
+.sleep-fit .section-label p,.sleep-fit .eyebrow{color:#f1e3d0}.sleep-fit h2{color:#fffaf3}.fit-list p{color:#f4f3ed;border-color:rgba(255,255,255,.2)}
+.scale-panel{background:rgba(248,245,238,.93);color:#586b74;border-color:rgba(244,232,210,.66)}
+.scale-dots i{border-color:#99a7aa}.scale-dots i.active{background:#aa9180;border-color:#aa9180}
+
+.structure{background:linear-gradient(160deg,#f3efe8,#e8ece9)}
+.exploded-visual{background:radial-gradient(ellipse at center,rgba(183,197,192,.46),transparent 69%)}
+.safety{background:linear-gradient(145deg,#899a98,#aab0a7);color:#fffaf3}
+.safety-copy h2{color:#fffaf3}.safety-copy>p:last-child{color:#f2f0e9}.safety .section-label p,.safety .eyebrow{color:#f1dfc7}
+.evidence-list article{background:rgba(249,246,239,.18);border-color:rgba(248,237,220,.42)}.evidence-list article h3{color:#fffaf3}.evidence-list article p{color:#f2f0e9}
+
+.usage-scenes{background:linear-gradient(155deg,#e4e9e8,#eee5df 73%,#f3efe8)}
+.scene-grid.magazine img{filter:saturate(.5) contrast(.9) brightness(1.04)}
+.scene-grid.magazine article>div{background:rgba(247,243,236,.86);border-color:rgba(179,154,125,.26)}
+.care{background:linear-gradient(160deg,#f3efe8,#e4e9e6)}
+.faq{background:linear-gradient(145deg,#dfe5e4,#eee7e2)}
+.specs{background:linear-gradient(155deg,#f3efe8,#e7ebe8)}
+
+.buy-panel{background:linear-gradient(140deg,#8799a2,#aaa9a1);color:#fffaf3}
+.buy-image img{filter:saturate(.5) brightness(.94) contrast(.9)}.buy-copy h2{color:#fffaf3}.buy-copy>p:not(.overline){color:#f0eee8}.buy-copy .button.primary{background:#eee5da;color:#5c6e76}
+.stores{background:linear-gradient(145deg,#cfd8d5,#e6ddd5)}
+footer{background:#758791;color:#fffaf3}.footer-top>p,.footer-nav,.footer-bottom{color:#e7ebe8}.footer-bottom{border-color:rgba(245,234,217,.28)}
+
+@media(max-width:980px){.hero-wash{background:linear-gradient(0deg,rgba(103,123,135,.95) 0%,rgba(113,132,143,.78) 50%,rgba(139,150,151,.16) 90%)}}
+@media(max-width:640px){.hero-wash{background:linear-gradient(0deg,rgba(101,121,133,.97) 0%,rgba(112,131,142,.86) 55%,rgba(145,151,148,.18) 92%)}}
