@@ -515,7 +515,14 @@ const travelSeries: SeriesProduct[] = [
   },
 ];
 
-const stores = [
+type StoreLocation = {
+  name: string;
+  displayName?: string;
+  address: string;
+  tags: string[];
+};
+
+const stores: StoreLocation[] = [
   { name: "南京館", address: "台北市松山區南京東路五段 8 號", tags: ["可刷卡", "國旅卡"] },
   { name: "竹北館", address: "新竹縣竹北市文興路一段 136 號", tags: ["可刷卡", "停車場"] },
   { name: "豐原館", address: "台中市豐原區中山路 39 號", tags: ["可刷卡", "停車場"] },
@@ -528,7 +535,7 @@ const stores = [
   { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", tags: ["可刷卡", "國旅卡"] },
 ];
 
-const medicalStores = [
+const medicalStores: StoreLocation[] = [
   {
     name: "台中榮總",
     displayName: "上品寢具 CBD 專櫃【台中榮總】",
@@ -549,7 +556,7 @@ const medicalStores = [
   },
 ];
 
-const dealers = [
+const dealers: StoreLocation[] = [
   { name: "律倫企業有限公司", displayName: "律倫企業有限公司", address: "臺北市中山區大佳里松江路523號", tags: ["經銷商"] },
   { name: "康裕網路行銷有限公司(茉莉床單)", displayName: "康裕網路行銷有限公司(茉莉床單)", address: "臺北市士林區天祿里士東路91巷17號1樓", tags: ["經銷商"] },
   { name: "亞梭傢俬國際股份有限公司－新光A8", displayName: "亞梭傢俬國際股份有限公司", address: "臺北市信義區西村里松高路12號6樓 (新光A8)", tags: ["經銷商"] },
