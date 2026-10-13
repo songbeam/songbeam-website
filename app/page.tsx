@@ -554,6 +554,12 @@ const medicalStores: StoreLocation[] = [
     address: "新北市板橋區南雅南路二段21號B1商場",
     tags: ["極織房專櫃"],
   },
+  {
+    name: "中山醫學大學附設醫院",
+    displayName: "上品寢具中山醫學大學附設醫院CBD專櫃",
+    address: "台中市南區建國北路一段110號",
+    tags: ["CBD 專櫃"],
+  },
 ];
 
 const dealers: StoreLocation[] = [
@@ -567,7 +573,7 @@ const dealers: StoreLocation[] = [
   { name: "亞梭傢俬國際股份有限公司－新竹巨城", displayName: "亞梭傢俬國際股份有限公司", address: "新竹市東區復中里中央路239號號5樓(新竹巨城)", tags: ["經銷商"] },
   { name: "東城精品寢飾生活館", displayName: "東城精品寢飾生活館", address: "臺中市沙鹿區鹿寮里福星路6號", tags: ["經銷商"] },
   { name: "愛豐健康股份有限公司", displayName: "愛豐健康股份有限公司", address: "臺中市豐原區東勢里中興路61號", tags: ["經銷商"] },
-  { name: "名坊生活館(上品田中館)", displayName: "名坊生活館(上品田中館)", address: "彰化縣田中鎮北路里新福路43號", tags: ["經銷商"] },
+  { name: "上品寢具床墊館-田中館", displayName: "上品寢具床墊館-田中館", address: "彰化縣田中鎮北路里新福路43號", tags: ["經銷商"] },
   { name: "美閣典藏家具行", displayName: "美閣典藏家具行", address: "嘉義市西區世賢路一段334號", tags: ["經銷商"] },
   { name: "台南文化店  荷蘭英黛爾", displayName: "台南文化店  荷蘭英黛爾", address: "臺南市東區忠孝里崇明路286號", tags: ["經銷商"] },
   { name: "雅茲寢飾生活館", displayName: "雅茲寢飾生活館", address: "高雄市小港區六苓里漢民路686號", tags: ["經銷商"] },
@@ -705,7 +711,7 @@ export default function Home() {
         <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
 
         <div className="clinical-data-card">
-          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>近 7 成</strong><span>受驗者明顯改善睡眠品質</span></div></div>
+          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>3位中有2位有效</strong><span>受驗者明顯改善睡眠品質</span></div></div>
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
         <figure className="safety-proof-banner" aria-label="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證">
@@ -753,7 +759,7 @@ export default function Home() {
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
           <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
-          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>Tempwiser 親水棉枕芯</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
+          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>獨家Tempwiser獨家恆溫親水棉</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
         <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>Tempwiser 親水棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
       </section>

@@ -119,7 +119,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /海鷗曲線支撐/);
   assert.match(html, /可調高度設計/);
   assert.doesNotMatch(html, /SLEEP FEEL GUIDE|五段式定位|id="fit"/);
-  assert.match(html, /Tempwiser 親水棉枕芯/);
+  assert.match(html, /獨家Tempwiser獨家恆溫親水棉/);
   assert.doesNotMatch(html, /親水記憶棉/);
   assert.match(html, /structure-title-nowrap/);
   assert.match(html, /structure-editorial/);
@@ -127,7 +127,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /cbd-hydrophilic-contour-pillow-bedroom\.png/);
   assert.doesNotMatch(html, /材質資訊，一目了然/);
   assert.doesNotMatch(html, /已確認的資訊清楚呈現；尺寸、產地或內套配置等未有正式文件的項目/);
-  assert.match(html, /近 7 成/);
+  assert.match(html, /3位中有2位有效/);
   assert.match(html, /全台近 500 萬人/);
   assert.match(html, /總睡眠、淺眠與深睡變化/);
   assert.match(html, /獨家比利時萃取/);
@@ -319,8 +319,10 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /台北市內湖區成功路二段325號B1商場/);
   assert.match(source, /displayName: "亞東醫院-極織房專櫃"/);
   assert.match(source, /新北市板橋區南雅南路二段21號B1商場/);
+  assert.match(source, /displayName: "上品寢具中山醫學大學附設醫院CBD專櫃"/);
+  assert.match(source, /台中市南區建國北路一段110號/);
   assert.match(source, /\{ name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: medicalStores \}/);
-  const dealerNames = ["律倫企業有限公司", "康裕網路行銷有限公司(茉莉床單)", "璽品屋國際有限公司", "貝里恩有限公司", "家禾傢俱行(睡眠工藝)", "東城精品寢飾生活館", "愛豐健康股份有限公司", "名坊生活館(上品田中館)", "美閣典藏家具行", "雅茲寢飾生活館", "御鋒木器行(御鋒家具)", "薇閣寢飾行"];
+  const dealerNames = ["律倫企業有限公司", "康裕網路行銷有限公司(茉莉床單)", "璽品屋國際有限公司", "貝里恩有限公司", "家禾傢俱行(睡眠工藝)", "東城精品寢飾生活館", "愛豐健康股份有限公司", "上品寢具床墊館-田中館", "美閣典藏家具行", "雅茲寢飾生活館", "御鋒木器行(御鋒家具)", "薇閣寢飾行"];
   for (const dealer of dealerNames) assert.ok(source.includes(dealer), `${dealer} should be listed as a dealer`);
   assert.equal((source.match(/tags: \["經銷商"\]/g) || []).length, 16);
   assert.doesNotMatch(source, /聯絡方式|02-25023383|0968-139507/);
