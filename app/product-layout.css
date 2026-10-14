@@ -1011,7 +1011,9 @@
 }
 .clinical-seven strong{display:flex;flex-direction:column;align-items:center;font-size:25px;font-weight:500;line-height:1.22;letter-spacing:.08em}
 .clinical-seven strong span{display:block;white-space:nowrap}
+.clinical-seven strong span:first-child{font-size:.78em;letter-spacing:.1em}
 .clinical-seven .clinical-seven-caption{display:block;width:120px;margin-top:9px;font-size:10pt;line-height:1.55;letter-spacing:.06em;text-align:center}
+.clinical-quality-nowrap{display:block;white-space:nowrap}
 .clinical-charts{padding:43px 38px 30px;display:flex;flex-direction:column;justify-content:center}
 .clinical-charts .sleep-chart-grid{gap:14px;margin:0}
 .clinical-charts .sleep-chart-grid article{
