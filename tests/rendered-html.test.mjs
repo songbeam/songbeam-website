@@ -132,7 +132,7 @@ test("renders the complete one-page CBD bedding product story", async () => {
   assert.match(html, /有2位/);
   assert.doesNotMatch(html, /有2位有效/);
   assert.match(html, /clinical-observation-nowrap/);
-  assert.match(html, /clinical-seven-caption/);
+  assert.match(html, /clinical-statistic-copy/);
   assert.match(html, /clinical-quality-nowrap/);
   assert.match(html, /受驗者明顯改善/);
   assert.match(html, /睡眠品質/);

@@ -1009,11 +1009,9 @@
   border-radius:50%;color:#fff;background:radial-gradient(circle at 34% 28%,#91b777,#4f8766 58%,#34684f);
   box-shadow:0 18px 44px rgba(61,107,78,.18),inset 0 0 0 9px rgba(255,255,255,.12);
 }
-.clinical-seven strong{display:flex;flex-direction:column;align-items:center;font-size:25px;font-weight:500;line-height:1.22;letter-spacing:.08em}
-.clinical-seven strong span{display:block;white-space:nowrap}
-.clinical-seven strong span:first-child{font-size:.78em;letter-spacing:.1em}
-.clinical-seven .clinical-seven-caption{display:block;width:120px;margin-top:9px;font-size:10pt;line-height:1.55;letter-spacing:.06em;text-align:center}
-.clinical-quality-nowrap{display:block;white-space:nowrap}
+.clinical-seven .clinical-statistic-copy{display:flex;flex-direction:column;align-items:center;font-size:19px;font-weight:500;line-height:1.38;letter-spacing:.07em}
+.clinical-statistic-copy span{display:block;white-space:nowrap}
+.clinical-quality-nowrap{white-space:nowrap}
 .clinical-charts{padding:43px 38px 30px;display:flex;flex-direction:column;justify-content:center}
 .clinical-charts .sleep-chart-grid{gap:14px;margin:0}
 .clinical-charts .sleep-chart-grid article{
@@ -1359,8 +1357,7 @@
   .clinical-data-card{width:calc(100% + 8vw);margin-left:-4vw;border-radius:4px 30px}
   .clinical-data-intro{display:block;padding:35px 22px}
   .clinical-seven{width:155px;height:155px;margin-top:27px}
-  .clinical-seven strong{font-size:22px}
-  .clinical-seven .clinical-seven-caption{width:112px;font-size:10pt;line-height:1.5}
+  .clinical-seven .clinical-statistic-copy{font-size:17px;line-height:1.38}
   .clinical-charts{padding:30px 18px}
   .clinical-charts .sleep-chart-grid{grid-template-columns:1fr}
   .clinical-charts .sleep-chart-grid article{padding:24px 22px}
