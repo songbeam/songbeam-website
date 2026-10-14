@@ -531,6 +531,7 @@ const stores: StoreLocation[] = [
   { name: "精誠館", address: "台中市西區精誠路 340 號", tags: ["可刷卡", "停車場", "國旅卡"] },
   { name: "惠中館", address: "台中市西屯區惠中路二段 43 號", tags: ["可刷卡", "停車場", "國旅卡"] },
   { name: "大里館", address: "台中市大里區國光路二段 711 號", tags: ["可刷卡", "國旅卡"] },
+  { name: "田中館", displayName: "上品寢具床墊館-田中館", address: "彰化縣田中鎮北路里新福路43號", tags: [] },
   { name: "草屯館", address: "南投縣草屯鎮成功路一段 153-1 號", tags: ["可刷卡", "國旅卡"] },
   { name: "斗六館", address: "雲林縣斗六市雲林路三段 10 號", tags: ["可刷卡", "國旅卡"] },
 ];
@@ -556,7 +557,7 @@ const medicalStores: StoreLocation[] = [
   },
   {
     name: "中山醫學大學附設醫院",
-    displayName: "上品寢具中山醫學大學附設醫院CBD專櫃",
+    displayName: "上品寢具 CBD 專櫃【中山醫學大學附設醫院】",
     address: "台中市南區建國北路一段110號",
     tags: ["CBD 專櫃"],
   },
@@ -573,7 +574,6 @@ const dealers: StoreLocation[] = [
   { name: "亞梭傢俬國際股份有限公司－新竹巨城", displayName: "亞梭傢俬國際股份有限公司", address: "新竹市東區復中里中央路239號號5樓(新竹巨城)", tags: ["經銷商"] },
   { name: "東城精品寢飾生活館", displayName: "東城精品寢飾生活館", address: "臺中市沙鹿區鹿寮里福星路6號", tags: ["經銷商"] },
   { name: "愛豐健康股份有限公司", displayName: "愛豐健康股份有限公司", address: "臺中市豐原區東勢里中興路61號", tags: ["經銷商"] },
-  { name: "上品寢具床墊館-田中館", displayName: "上品寢具床墊館-田中館", address: "彰化縣田中鎮北路里新福路43號", tags: ["經銷商"] },
   { name: "美閣典藏家具行", displayName: "美閣典藏家具行", address: "嘉義市西區世賢路一段334號", tags: ["經銷商"] },
   { name: "台南文化店  荷蘭英黛爾", displayName: "台南文化店  荷蘭英黛爾", address: "臺南市東區忠孝里崇明路286號", tags: ["經銷商"] },
   { name: "雅茲寢飾生活館", displayName: "雅茲寢飾生活館", address: "高雄市小港區六苓里漢民路686號", tags: ["經銷商"] },
@@ -711,7 +711,7 @@ export default function Home() {
         <header className="safety-editorial-head"><p className="eyebrow">檢驗與安全說明</p><h2>從睡眠數據，<br /><span className="safety-title-nowrap">看見安心的依據。</span></h2></header>
 
         <div className="clinical-data-card">
-          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong>3位中有2位有效</strong><span>受驗者明顯改善睡眠品質</span></div></div>
+          <div className="clinical-data-intro"><small>CLINICAL SLEEP OBSERVATION</small><h3>全台近 500 萬人<br />失眠福音</h3><p>市場獨家醫學大學臨床試驗，觀察 CBD 枕頭使用前後的總睡眠、淺眠與深睡變化。</p><div className="clinical-seven"><strong><span>3位中</span><span>有2位有效</span></strong><span className="clinical-seven-caption">受驗者明顯改善睡眠品質</span></div></div>
           <div className="clinical-charts"><div className="sleep-chart-grid"><article><h4>總睡眠數</h4><div className="chart-bars"><div><i style={{ height: "55%" }} /><strong>約 355</strong><span>使用前</span></div><div><i className="after" style={{ height: "76%" }} /><strong>約 376</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>淺眠</h4><div className="chart-bars"><div><i style={{ height: "60%" }} /><strong>約 208</strong><span>使用前</span></div><div><i className="after" style={{ height: "88%" }} /><strong>約 230</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article><article><h4>深睡</h4><div className="chart-bars"><div><i style={{ height: "53%" }} /><strong>約 61</strong><span>使用前</span></div><div><i className="after" style={{ height: "68%" }} /><strong>約 67</strong><span>使用後</span></div></div><small>睡眠時間／分</small></article></div><p>Effect of cannabidiol (CBD) containing pillow protector on sleep quality in health providers working at hospital.</p></div>
         </div>
         <figure className="safety-proof-banner" aria-label="CBD 獨家比利時萃取微膠囊技術、醫療臨床試驗、睡眠品質改善與 2025 MDPI 國際期刊認證">
@@ -759,7 +759,7 @@ export default function Home() {
         <div className="structure-heading structure-heading-editorial"><div><p className="eyebrow">材質與產品結構</p><h2 className="structure-title"><span>每一層，</span><span className="structure-title-nowrap">都為舒適睡眠而設計。</span></h2></div></div>
         <div className="structure-editorial">
           <figure className="structure-product-photo"><span>CBD PILLOW / SIDE VIEW</span><img src="/cbd-hydrophilic-contour-pillow-bedroom.png" alt="晨光臥室中的 CBD 草本忘憂好眠寢具好眠親水枕" /><figcaption>柔和表布與貼合枕芯，共同構成每晚靠近肌膚的舒適層次。</figcaption></figure>
-          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>獨家Tempwiser獨家恆溫親水棉</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
+          <div className="structure-layers"><header><small>THREE-LAYER COMFORT</small><h3>由外而內，<br />看見每一層的角色。</h3></header><article><span>01</span><div><h4>CBD 機能外布套</h4><p>草本微膠囊機能針織表布，建立柔和、親膚的接觸層。</p></div></article><article><span>02</span><div><h4>內層與保護結構</h4><p>位於表布與枕芯之間；實際內套、拉鍊及拆卸方式依各款商品規格為準。</p></div></article><article><span>03</span><div><h4>獨家Tempwiser恆溫親水棉</h4><p>以貼合、慢回彈與水氣調節，承接頭頸並回應不同睡姿。</p></div></article></div>
         </div>
         <div className="structure-spec-panel"><table><tbody><tr><th>表布特色</th><td>CBD 草本微膠囊機能針織表布</td><th>枕芯材質</th><td>Tempwiser 親水棉</td></tr><tr><th>睡感重點</th><td>柔和觸感、貼合承托、慢回彈</td><th>日常清潔</th><td>枕芯與外布套分開處理，依商品洗標為準</td></tr><tr><th>結構配置</th><td>依不同枕款的內套、拉鍊與可拆設計為準</td><th>商品規格</th><td>尺寸、高度與產地請以正式商品標示為準</td></tr></tbody></table></div>
       </section>
@@ -772,7 +772,7 @@ export default function Home() {
             <figure className="seagull-photo"><img src="/cbd-seagull-pressure-relief-pillow-bedroom.png" alt="晨光臥室中展示 CBD 草本忘憂好眠寢具海鷗減壓枕型" /><figcaption>SEAGULL CONTOUR / NATURAL SUPPORT</figcaption></figure>
             <div className="seagull-copy">
               <h2 className="seagull-title"><span>海鷗曲線，讓肩頸自然找到舒服的位置。</span></h2>
-              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × Tempwiser 親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
+              <div className="product-details seagull-details"><article><span>01</span><div><h3>草本科技 × 獨家Tempwiser恆溫親水棉</h3><p>結合漢麻二酚天然草本技術，枕芯採用 GLORY 獨家專利 Tempwiser 親水棉，兼顧包覆與回彈。</p></div></article><article><span>02</span><div><h3>海鷗曲線支撐</h3><p>特殊海鷗造型回應仰睡、側睡的不同承托需求，讓頭頸與肩部自然找到合適位置。</p></div></article><article><span>03</span><div><h3>可調高度設計</h3><p>可依不同身形與睡眠習慣增添高度，更貼合頸部曲線，減少肩頸懸空與壓迫感。</p></div></article></div>
               <a className="button dark capsule seagull-button" href="#stores">到門市實際感受 <span>↗</span></a>
             </div>
           </div>
@@ -831,7 +831,7 @@ export default function Home() {
         <section className="store-modal" id="store-directory-dialog" role="dialog" aria-modal="true" aria-labelledby="store-modal-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="關閉門市資訊" onClick={() => setStoreModalOpen(false)} autoFocus>×</button>
           <header className="store-modal-heading"><small>SONG BEAM STORE DIRECTORY</small><h2 id="store-modal-title">全台門市資訊</h2><p>共 {storeLocationCount} 處門市、專櫃與經銷據點，歡迎於前往前確認營業時間與試躺服務。</p></header>
-          <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p><ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
+          <div className="store-regions">{storeGroups.map((group) => <section className="store-region" key={group.name}><header><small>{group.en}</small><h3>{group.name}</h3><span>{group.stores.length} 處</span></header>{group.stores.length ? <div className="store-modal-grid">{group.stores.map((store, index) => <article key={store.name}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{store.displayName ?? `上品寢具床墊館【${store.name}】`}</h3><p>{store.address}</p>{store.tags.length ? <ul>{store.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul> : null}</div></article>)}</div> : <p className="store-region-empty">此區目前尚無門市資訊，最新據點將持續更新。</p>}</section>)}</div>
         </section>
       </div> : null}
 
