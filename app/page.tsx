@@ -233,11 +233,11 @@ const pillowSeries: SeriesProduct[] = [
     name: "CBD 草本忘憂好眠寢具 好眠雲朵枕",
     en: "SLEEP CLOUD PILLOW",
     image: "/cbd-sleep-cloud-pillow-2026.png",
-    statement: "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
+    statement: "獨家Tempwiser 恆溫親水棉粒填充，兼具支撐、可塑與蓬鬆包覆。",
     detail: "保有親水記憶枕支撐性佳、服貼肩頸的特性，同時擁有羽絨枕的可塑性與纖維枕的蓬鬆感。",
     highlights: [
       "順應睡姿包覆頭頸部，紓壓護頸，正躺、側躺都好眠",
-      "Tempwiser 親水棉有效吸濕排熱",
+      "獨家Tempwiser 恆溫親水棉有效吸濕排熱",
       "棉粒間保有空隙，加速排熱並增加涼爽舒適度",
     ],
     featureDetails: [
@@ -247,7 +247,7 @@ const pillowSeries: SeriesProduct[] = [
       "正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
     ],
-    note: "Tempwiser 親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
+    note: "獨家Tempwiser 恆溫親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
     name: "CBD 草本忘憂好眠寢具 Tempwiser 恆溫親水棉 海鷗枕",
@@ -687,7 +687,7 @@ export default function Home() {
           <header className="pillow-catalog-heading"><small>{catalogConfig.en}</small><h2 id="pillow-catalog-title" className={catalogConfig.titleClass ?? ""}>{catalogConfig.title}</h2><p>{catalogConfig.copy}</p></header>
           <div className="pillow-catalog-grid">{catalogConfig.items.map((item, index) => {
             const isTempwiserContour = item.name.includes("Tempwiser");
-            return <button className={`pillow-catalog-card ${isTempwiserContour ? "hydrophilic-catalog-card" : ""}`} type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong className={isTempwiserContour ? "tempwiser-catalog-title" : ""}>{item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>;
+            return <button className="pillow-catalog-card" type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img className={item.en === "SEAGULL PRESSURE-RELIEF PILLOW" ? "pressure-relief-image" : ""} src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong className={isTempwiserContour ? "tempwiser-catalog-title" : ""}>{item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>;
           })}</div>
         </section>
       </div> : selectedProduct ? <div className="product-modal-backdrop" onMouseDown={closeProductModal}>
@@ -701,7 +701,7 @@ export default function Home() {
       {selectedSeriesItem ? <div className="product-modal-backdrop pillow-detail-layer" onMouseDown={() => setSelectedSeriesItemIndex(null)}>
         <section className="product-modal pillow-series-detail pillow-series-expanded" role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="返回產品系列" onClick={() => setSelectedSeriesItemIndex(null)} autoFocus>←</button>
-          <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex} ${selectedSeriesItem.en === "PET COMFORT MAT QUILT" ? "pet-comfort-series-image" : ""}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
+          <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex} ${selectedSeriesItem.en === "PET COMFORT MAT QUILT" ? "pet-comfort-series-image" : ""} ${selectedSeriesItem.en === "SEAGULL PRESSURE-RELIEF PILLOW" ? "pressure-relief-image" : ""}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
           <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name.includes("Tempwiser") ? "tempwiser-title-nowrap" : ""}`}>{selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}

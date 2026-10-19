@@ -474,12 +474,16 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(styles, /\.shop-product-info p\{[^}]*font-size:10pt/);
   assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:10pt/);
   for (const detail of [
-    "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
+    "獨家Tempwiser 恆溫親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
     "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
+    "獨家Tempwiser 恆溫親水棉有效吸濕排熱",
     "正睡、側睡，都能完美支撐",
     "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況",
     "cbd-sleep-cloud-pillow-2026.png",
   ]) assert.match(source, new RegExp(detail));
+  assert.doesNotMatch(styles, /hydrophilic-catalog-card/);
+  assert.match(source, /pressure-relief-image/);
+  assert.match(styles, /\.pressure-relief-image\{transform:scale\(1\.18\)\}/);
   for (const detail of [
     "獨家比利時萃取微膠囊技術",
     "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
