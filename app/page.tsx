@@ -242,7 +242,7 @@ const pillowSeries: SeriesProduct[] = [
     ],
     featureDetails: [
       "漢麻二酚，天然草本技術製成",
-      "GLORY 獨家專利「Tempwiser 親水棉」",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
       "醫藥大學臨床實驗證明",
       "正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
@@ -250,7 +250,7 @@ const pillowSeries: SeriesProduct[] = [
     note: "Tempwiser 親水棉接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
-    name: "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 海鷗枕",
+    name: "CBD 草本忘憂好眠寢具 Tempwiser 恆溫親水棉 海鷗枕",
     en: "HYDROPHILIC SEAGULL PILLOW",
     image: "/cbd-tempwiser-seagull-pillow-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -262,15 +262,15 @@ const pillowSeries: SeriesProduct[] = [
     ],
     featureDetails: [
       "漢麻二酚，天然草本技術製成",
-      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
       "醫藥大學臨床實驗證明",
       "特殊造型，正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
     ],
-    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
+    note: "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。",
   },
   {
-    name: "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 止鼾枕",
+    name: "CBD 草本忘憂好眠寢具 Tempwiser 恆溫親水棉 止鼾枕",
     en: "HYDROPHILIC ANTI-SNORE PILLOW",
     image: "/cbd-tempwiser-anti-snore-pillow-2026.png",
     statement: "獨家比利時萃取微膠囊技術",
@@ -282,12 +282,12 @@ const pillowSeries: SeriesProduct[] = [
     ],
     featureDetails: [
       "漢麻二酚，天然草本技術製成",
-      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
       "醫藥大學臨床實驗證明",
       "特殊造型，正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
     ],
-    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效。",
+    note: "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「止鼾枕」為商品系列名稱，不代表具有醫療或治療功效。",
   },
   {
     name: "CBD 草本忘憂好眠寢具 海鷗減壓枕",
@@ -302,13 +302,13 @@ const pillowSeries: SeriesProduct[] = [
     ],
     featureDetails: [
       "漢麻二酚，天然草本技術製成",
-      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
       "醫藥大學臨床實驗證明",
       "特殊海鷗造型，正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
       "可依照不同身形添增高度，更加貼合保護頸椎。",
     ],
-    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。實際高度調整方式與適用睡姿，請以正式商品標示及門市試躺結果為準。",
+    note: "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。實際高度調整方式與適用睡姿，請以正式商品標示及門市試躺結果為準。",
   },
   {
     name: "CBD 草本忘憂好眠寢具 海鷗護脊枕",
@@ -323,13 +323,13 @@ const pillowSeries: SeriesProduct[] = [
     ],
     featureDetails: [
       "漢麻二酚，天然草本技術製成",
-      "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+      "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
       "醫藥大學臨床實驗證明",
       "特殊海鷗造型，正睡、側睡，都能完美支撐。",
       "完全釋放肩頸壓力，給你最佳的睡眠品質。",
       "可依照不同身形添增高度，更加貼合保護頸椎。",
     ],
-    note: "Tempwiser 親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「護脊枕」為商品系列名稱，實際高度與適用睡姿請以正式商品標示及門市說明為準。",
+    note: "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況，屬於正常現象，不影響正常使用。「護脊枕」為商品系列名稱，實際高度與適用睡姿請以正式商品標示及門市說明為準。",
   },
 ];
 
@@ -558,7 +558,7 @@ const medicalStores: StoreLocation[] = [
   {
     name: "中山醫學大學附設醫院",
     displayName: "上品寢具 CBD 專櫃【中山醫學大學附設醫院】",
-    address: "台中市南區建國北路一段110號",
+    address: "臺中市南區樹德里建國北路一段110號(誠愛樓 1F杏一美食生活廣場)",
     tags: ["CBD 專櫃"],
   },
 ];
@@ -686,7 +686,7 @@ export default function Home() {
           <button className="product-modal-close" type="button" aria-label="關閉產品系列" onClick={closeProductModal} autoFocus>×</button>
           <header className="pillow-catalog-heading"><small>{catalogConfig.en}</small><h2 id="pillow-catalog-title" className={catalogConfig.titleClass ?? ""}>{catalogConfig.title}</h2><p>{catalogConfig.copy}</p></header>
           <div className="pillow-catalog-grid">{catalogConfig.items.map((item, index) => {
-            const isTempwiserContour = item.name.includes("Tempwiser 親水棉");
+            const isTempwiserContour = item.name.includes("Tempwiser");
             return <button className={`pillow-catalog-card ${isTempwiserContour ? "hydrophilic-catalog-card" : ""}`} type="button" key={item.name} onClick={() => setSelectedSeriesItemIndex(index)}><span className="pillow-catalog-image"><img src={item.image} alt={item.name} /><i>{String(index + 1).padStart(2, "0")}</i></span><span className="pillow-catalog-copy"><small>{item.en}</small><strong className={isTempwiserContour ? "tempwiser-catalog-title" : ""}>{item.name}</strong><em>查看產品介紹 <b>→</b></em></span></button>;
           })}</div>
         </section>
@@ -702,7 +702,7 @@ export default function Home() {
         <section className="product-modal pillow-series-detail pillow-series-expanded" role="dialog" aria-modal="true" aria-labelledby="pillow-detail-title" onMouseDown={(event) => event.stopPropagation()}>
           <button className="product-modal-close" type="button" aria-label="返回產品系列" onClick={() => setSelectedSeriesItemIndex(null)} autoFocus>←</button>
           <div className="product-modal-visual"><img className={`product-modal-image pillow-series-image pillow-series-image-${selectedSeriesItemIndex} ${selectedSeriesItem.en === "PET COMFORT MAT QUILT" ? "pet-comfort-series-image" : ""}`} src={selectedSeriesItem.image} alt={selectedSeriesItem.name} /></div>
-          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name.includes("Tempwiser 親水棉") ? "tempwiser-title-nowrap" : ""}`}>{selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
+          <div className="product-modal-copy pillow-series-copy"><small>{selectedSeriesItem.en}</small><h2 id="pillow-detail-title" className={`pillow-series-title-nowrap ${selectedSeriesItem.name.length > 18 ? "pillow-series-title-long" : ""} ${selectedSeriesItem.name.includes("Tempwiser") ? "tempwiser-title-nowrap" : ""}`}>{selectedSeriesItem.name}</h2><strong>{selectedSeriesItem.statement}</strong><p>{selectedSeriesItem.detail}</p><ul>{selectedSeriesItem.highlights.map((item) => <li key={item}>{item}</li>)}</ul>{selectedSeriesItem.featureDetails?.length ? <section className="pillow-feature-details" aria-label={`${selectedSeriesItem.name}產品特色`}><small>PRODUCT FEATURES</small><h3>{selectedSeriesItemIndex === 0 && selectedProductIndex === 0 ? "草本科技與天絲親膚特色" : "草本科技與產品特色"}</h3><ol>{selectedSeriesItem.featureDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></section> : null}<p className="product-modal-note">{selectedSeriesItem.note}</p><div className="product-modal-actions"><a className="button dark capsule" href="#stores" onClick={closeProductModal}>到門市體驗 <span>↗</span></a><button className="pillow-back-button" type="button" onClick={() => setSelectedSeriesItemIndex(null)}>返回系列商品</button></div></div>
         </section>
       </div> : null}
 

@@ -328,7 +328,7 @@ test("defines the official store directory dialog", async () => {
   assert.match(source, /displayName: "亞東醫院-極織房專櫃"/);
   assert.match(source, /新北市板橋區南雅南路二段21號B1商場/);
   assert.match(source, /displayName: "上品寢具 CBD 專櫃【中山醫學大學附設醫院】"/);
-  assert.match(source, /台中市南區建國北路一段110號/);
+  assert.match(source, /臺中市南區樹德里建國北路一段110號\(誠愛樓 1F杏一美食生活廣場\)/);
   assert.match(source, /\{ name: "醫療院所", en: "MEDICAL INSTITUTIONS", stores: medicalStores \}/);
   assert.match(source, /name: "田中館", address: "彰化縣田中鎮北路里新福路43號", tags: \["可刷卡"\]/);
   const dealerNames = ["律倫企業有限公司", "康裕網路行銷有限公司(茉莉床單)", "璽品屋國際有限公司", "貝里恩有限公司", "家禾傢俱行(睡眠工藝)", "東城精品寢飾生活館", "愛豐健康股份有限公司", "美閣典藏家具行", "雅茲寢飾生活館", "御鋒木器行(御鋒家具)", "薇閣寢飾行"];
@@ -419,8 +419,8 @@ test("defines the two-step CBD product collection dialogs", async () => {
     "CBD 草本忘憂好眠寢具 天絲枕",
     "CBD 草本忘憂好眠寢具 羽絨枕",
     "CBD 草本忘憂好眠寢具 好眠雲朵枕",
-    "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 海鷗枕",
-    "CBD 草本忘憂好眠寢具 Tempwiser 親水棉 止鼾枕",
+    "CBD 草本忘憂好眠寢具 Tempwiser 恆溫親水棉 海鷗枕",
+    "CBD 草本忘憂好眠寢具 Tempwiser 恆溫親水棉 止鼾枕",
     "CBD 草本忘憂好眠寢具 海鷗減壓枕",
     "CBD 草本忘憂好眠寢具 海鷗護脊枕",
     "CBD 草本忘憂好眠寢具 好眠 長纖細棉 涼被",
@@ -475,14 +475,14 @@ test("defines the two-step CBD product collection dialogs", async () => {
   assert.match(styles, /\.shop-product-info \.product-detail-trigger\{[^}]*font:10pt/);
   for (const detail of [
     "Tempwiser 親水棉粒填充，兼具支撐、可塑與蓬鬆包覆",
-    "GLORY 獨家專利「Tempwiser 親水棉」",
+    "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
     "正睡、側睡，都能完美支撐",
-    "接觸空氣後會產生泛黃狀況",
+    "獨家Tempwiser 恆溫親水棉材質接觸空氣後會產生泛黃狀況",
     "cbd-sleep-cloud-pillow-2026.png",
   ]) assert.match(source, new RegExp(detail));
   for (const detail of [
     "獨家比利時萃取微膠囊技術",
-    "枕芯採用 GLORY 獨家專利「Tempwiser 親水棉」",
+    "枕芯採用 GLORY 獨家專利「Tempwiser 恆溫親水棉」",
     "特殊造型，正睡、側睡，都能完美支撐",
     "止鼾枕」為商品系列名稱",
     "cbd-hydrophilic-contour-pillow-bedroom.png",
